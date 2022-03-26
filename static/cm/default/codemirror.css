@@ -1,53 +1,18 @@
 body{
  margin: 0;
- padding: 1rem;
- background: radial-gradient(transparent, rgb(104, 104, 104));
 }
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
-  height: 75vh;
-  width: 90vw;
+  font-family: monospace !important;
+  height: 33.2vh;
+  width: 47.5vw;
   color: rgb(197, 197, 197);
   direction: ltr;
   border: .1rem solid rgba(0, 0, 0, 0.25);
   font-size: 1.025rem;
   border-bottom: solid .25rem #07AEFF;
-  position: relative;
-  transition: all 500ms ease;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
 }
-
-.CodeMirror.maxed{
-  position: absolute !important;
-  top: 50%;
-  left: 50%;
-  transform: scale(1.5) translate(-30.5%, -37.5%);
-  z-index: +1;
-}
-
-.CodeMirror:not(:first-of-type){
-  margin-top: 2rem;
-}
-/*
-.CodeMirror::before{
-  content: '↕';
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1.75rem;
-  width: 1.75rem;
-  background-color: rgba(100, 100, 100, 0.5);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 23932;
-  cursor: pointer;
-} */
 
 .CodeMirror:last-child{
   border-bottom: solid .25rem transparent;
@@ -94,10 +59,10 @@ body{
 /* CURSOR */
 
 .CodeMirror-cursor {
-  background-color: gray;
+  border-left: solid 2px #4286df;
   width: 0;
-  border-right: solid 2px #07AEFF;
-  border-radius: 2px;
+  background: rgba(122, 122, 122, 0.253);
+  
 }
 /* Shown when moving in bi-directional text */
 .CodeMirror div.CodeMirror-secondarycursor {

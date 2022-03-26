@@ -4,7 +4,7 @@ body{
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
+  font-family: monospace !important;
   height: 60vh;
   width: 60vw;
   color: rgb(197, 197, 197);

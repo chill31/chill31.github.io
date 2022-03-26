@@ -1,0 +1,267 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-shadows: #ffffff;
+  --btn-bg: rgb(80, 80, 80);
+  --btn-txtclr: #fff;
+  --scrollbar-bg: #919191;
+  --scrollbar-thumb-bg: #5e5e5e;
+  --top-btm-bg: #5865f2;
+  --a-clr: #2293fa;
+  --selection-clr: hsla(235, 86%, 75%, .5);
+  --accent: var(--a-clr);
+}
+
+*::selection {
+  background-color: var(--selection-clr);
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg);
+  border-radius: 50vw;
+  margin-block: 0.15em;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border: 0.02rem solid rgb(12, 12, 12);
+  border-radius: 500vw;
+  transition: 0.35s ease;
+}
+
+.top-header-cnt {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 13vh;
+  background: #54c0eb;
+  z-index: 10000;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+ul,
+.projects-a {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 250;
+}
+
+.ytb path,
+.dsc path {
+  transition: fill 500ms ease;
+}
+
+.ytb:hover path {
+  fill: red;
+}
+
+.dsc:hover path {
+  fill: #5865f2;
+}
+
+a,
+.projects-a {
+  color: var(--a-clr);
+  text-decoration: none;
+}
+
+.gear-icon {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transition: transform 500ms cubic-bezier(0.78, 0.1, 0.72, 1.02);
+}
+
+.gear-icon:hover {
+  transform: rotate(180deg);
+}
+
+.gear-icon path {
+  fill: hsl(0, 0%, 11%);
+  transition: fill 500ms ease;
+}
+
+.gear-icon:hover path {
+  fill: currentColor;
+}
+
+.mid-container {
+  height: calc(100 - 13vh);
+  position: absolute;
+  top: 13vh;
+  padding: 1rem;
+  padding-top: 4rem !important;
+  height: 100%;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom right,
+    var(--accent) 47.5%,
+    rgb(38, 42, 46) 5%
+  );
+  font-family: cursive;
+}
+
+.mid-container > .intro{
+  text-align: center !important;
+  font-size: 1.375rem;
+  margin-top: -2rem;
+}
+
+.mid-container > label{
+  font-size: 1.2rem;
+}
+
+.mid-container > ul{
+ list-style-type: "»    ";
+}
+
+.mid-container > ul *{
+  color: rgb(58, 65, 80);
+  transition: color 250ms ease;
+}
+.mid-container > ul *:hover{
+  color: rgb(0, 0, 0) !important;
+  text-decoration: underline;
+  
+}
+
+.mid-container h3 {
+  font-weight: 100;
+  font-size: larger;
+  color: rgb(38, 42, 46);
+}
+
+.mid-container p {
+  width: 50ch;
+  color: rgb(38, 42, 46) !important;
+  text-shadow: -1px -1px var(--accent);
+}
+
+.i{
+  width: 40ch !important;
+  border-radius: 1rem;
+  margin-bottom: .5rem;
+  transform: rotateZ(-30deg);
+  position: absolute;
+  left: 20vw;
+  bottom: 50vh;
+}
+
+.s {
+  height: 50vh;
+  aspect-ratio: 1;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  bottom: 30vh;
+  right: 20vh;
+}
+
+.s path {
+  fill: rgb(54, 71, 90);
+}
+
+#input_forproj {
+  font-size: 1rem;
+  height: 2rem;
+  width: 40%;
+  background-color: rgb(230, 230, 230);
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 7px 14px 9px;
+  transition: 0.4s;
+}
+
+.redirect_to_lang {
+  cursor: pointer;
+  margin-left: 1%;
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: cornflowerblue;
+  transition: 500ms ease;
+}
+
+.redirect_to_lang:hover {
+  background: rgb(72, 121, 211);
+  transform: scale(1.05) translateY(-0.25rem);
+}
+
+#notification-area {
+  position: fixed;
+  bottom: 1rem;
+  right: 10px;
+  width: 250px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#notification-area .notification {
+  position: relative;
+  padding: 0.875rem 1.75rem;
+  background: #111;
+  color: #f5f5f5;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  opacity: 0;
+  left: 2rem;
+  animation: showNotification 500ms ease-in-out forwards;
+}
+@keyframes showNotification {
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+#notification-area .notification.success {
+  background: #49cc7b;
+}
+#notification-area .notification.error {
+  background: rgb(190, 51, 0);
+}
+#notification-area .notification.info {
+  background: #00acee;
+}
+
+.notification:not(.notification.info)::selection {
+  background: #00acee;
+}
+
+.notification.info::selection {
+  background: #006c97;
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic HTML Tags</title>
+  <link rel="stylesheet" href="../../css/html_tags.css">
+  <link rel="stylesheet" href="../../static/cm/default/codemirror3.css">
+  <link rel="stylesheet" href="/css/util/utility.css">
+
+  <link rel="stylesheet" href="/css/util/learnFiles.UTIL.css">
+</head>
+
+<body>
+  <h1 style="text-align: center;">Basic Tags</h1>
+
+  <p class="intro" style="text-align: center; font-size: 1.6rem;">Hi, welcome!<br />In this page, you will get started
+    in html by learning a few tags used in websites.</p><br /><br />
+   <br /><br /><br />
+
+  <div id="title-ex" class="tags-div">
+
+    <h2>"Title" Tag</h2>
+
+    <p>This tag is used to give a title to the webpage, like, if you look up in your browser, you see a heading "Basic
+      HTML Tags", this is done with the help of this tag.</p>
+
+    <textarea id="ta-title" disabled><title>Some title</title>
+
+
+
+<!-- ( tip: this is how you comment )
+The above line of code defines the title of the webpage
+--></textarea>
+
+  </div><br /><br /><br /><br />
+
+  <!-- seperator -->
+  <div style="height: .2rem; width: 100%; background: var(--text-color); position: relative;"></div>
+  <!-- seperator end-->
+
+  <div id="p-ex">
+
+    <h2>"p" Tag</h2>
+
+    <p>This tag is used to define a paragraph in the webpage, see the example below</p>
+
+    <textarea id="ta-p" disabled><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illo facilis itaque, consectetur distinctio maiores qui! Voluptatum dicta veritatis at!</p>
+        
+        
+<!-- 
+The above line of code defines a paragraph, and the random text is the "Lorem Ipsum" text used to define empty spaces for filling up example spaces.
+-->
+</textarea>
+
+  </div><br /><br /><br /><br />
+
+  <!-- seperator -->
+  <div style="height: .2rem; width: 100%; background: var(--text-color); position: relative;"></div>
+  <!-- seperator end-->
+
+  <div id="img-ex">
+
+    <h2>"img" Tag</h2>
+
+    <p>This tag is used to show an image in the webpage.</p>
+
+    <textarea id="ta-img" disabled><img src="a link or path">
+        
+        
+<!-- 
+
+The above line of code shows the image given in it's attribute "src" ( src="link or path" )
+the "img" tag does not need an ending tag like the above 2 tags.
+-->
+</textarea>
+
+  </div><br /><br /><br /><br />
+
+  <!-- seperator -->
+  <div style="height: .2rem; width: 100%; background: var(--text-color); position: relative;"></div>
+  <!-- seperator end-->
+
+  <div id="input-ex">
+
+    <h2>"input" Tag</h2>
+
+    <p>This tag is used to take input from a user, it has many types, like <code>date</code>, <code>color</code>,
+      <code>button</code> and more.
+    </p>
+
+    <textarea id="ta-input" disabled><input>
+        
+        
+<!-- 
+
+The normal <input> tag gives a text input in which users can fill in letters, words, etc ( basically anything )
+The <input type=""> defines what type of input it should be.
+
+for example:
+-->
+
+
+
+<input type="button"> <!-- same as <button> tag -->
+
+<input type="checkbox"> <!-- it's a checkbox, as the type defines. when a user clicks it, it becomes checked and the attribute "checked" becomes true -->
+
+<input type="color"> <!-- simple color picker as the name says. -->
+
+<input type="date"> <!-- MM-DD-YYYY Date format date input. -->
+
+<input type="datetime-local"> <!-- same as above but taken in local. -->
+
+<input type="email"> <!-- email address input. -->
+
+<input type="file"> <!-- file input, takes a file, not a folder.-->
+
+<input type="hidden"> <!-- hidden input, as the name suggests. -->
+
+<input type="image"> <!-- image input, supports image extensions such as .png, .jpg, etc. -->
+
+<input type="month"> <!-- month input like january, october, december, etc. -->
+
+<input type="number"> <!-- number input like 1, 2, 7, 0, 4, etc. -->
+
+<input type="password"> <!-- password input, has the hide feature which shows the password as dots. -->
+
+<input type="radio"> <!-- these type of inputs are connected by the "name" attribute, they work like checkboxes, but only 1 in a group of these inputs can be checked. -->
+
+<input type="range"> <!-- a number input through a slider. -->
+
+<input type="reset"> <!-- this input works on forms, resetting everything entered in the form. -->
+
+<input type="search"> <!-- this input is designed for the user to enter search queries. -->
+
+<input type="submit"> <!-- this input type is used to submit a form. ( if in one ) -->
+
+<input type="tel"> <!-- this input type is used to take in a telephone number. -->
+
+<input type="text"> <!-- this is pretty much "<input>" but it's recommended you define a type. -->
+
+<input type="time"> <!-- this input takes in a specific time, the design varies from system to system. -->
+
+<input type="url"> <!-- this type of input takes in a url ( https:// ) -->
+
+<input type="week"> <!-- this input takes in a week. -->
+
+</textarea>
+
+  </div><br /><br /><br /><br />
+
+  <!-- seperator -->
+  <div style="height: .2rem; width: 100%; background: var(--text-color); position: relative;"></div>
+  <!-- seperator end-->
+
+
+  <div id="div-ex">
+
+    <h2>"div" Tag</h2>
+
+    <p>These tags are used for containing things, like tables, and inputs, etc.</p>
+
+    <textarea id="ta-div" disabled>
+<div>    
+    <input type="button">  
+    <img src="url or path" alt="image"> <!-- alt attribute gives out text if the image url/path is invalid. -->
+</div>
+</textarea>
+
+  </div><br /><br /><br /><br />
+
+  <!-- seperator -->
+  <div style="height: .2rem; width: 100%; background: var(--text-color); position: relative;"></div>
+  <!-- seperator end-->
+
+  <div id="ul-ex">
+
+    <h2>"ul" Tag</h2>
+
+    <p>These tags are used for listing, it has another tag, "ol" ( explained below ), "ul" means un-ordered list (
+      bulleted ), and "ol" means ordered list ( numbered )</p>
+
+    <textarea id="ta-ul" disabled>
+<ul>    
+    <li>List Item #1</li>
+    <li>List Item #2</li>
+</ul>
+
+<!-- "ol" tag is the same, just change the starting and ending tags to "<ol>" and "</ol>" -->
+</textarea>
+
+  </div><br /><br /><br /><br />
+
+  <!-- seperator -->
+  <div style="height: .2rem; width: 100%; background: var(--text-color); position: relative;"></div>
+  <!-- seperator end-->
+
+  <div id="footer-ex">
+
+    <h2>"footer" Tag</h2>
+
+    <p>These tags are used to give a footer ( positioned in the bottom ), mostly used for credits and rights.</p>
+
+    <textarea disabled id="ta-footer">
+<footer>Lorem ipsum dolor sit amet.</footer>
+
+<!-- this will be positioned at the bottom of the screen. -->
+</textarea>
+
+  </div><br /><br /><br /><br />
+  
+
+  <p style="text-align: center; font-size: 1.2rem;">To test these, you can go over to the <a href="../Playground.html" style="color: var(--a-clr); text-decoration: none;">Playground</a></p>
+
+  <script src="../../static/cm/default/codemirror.js"></script>
+  <script src="../../static/cm/modes/html/m-html.js"></script>
+  <script src="../../static/cm/modes/css/m-css.js"></script>
+  <script src="../../static/cm/modes/js/m-js.js"></script>
+  <script src="../../static/cm/modes/xml/m-xml.js"></script>
+  <script src="../../static/cm/extra/autoCloseBrackets.js"></script>
+  <script src="../../static/cm/extra/highlightHoveredBrackets.js"></script>
+  <script src="../../static/cm/extra/matchHTML_tags.js"></script>
+  <script src="../../static/cm/modes/xml/extra-xml.js"></script>
+  <script src="/js/util/utility.js"></script>
+  <script>
+
+    const first = document.getElementById("ta-title");
+    const second = document.getElementById("ta-p");
+    const third = document.getElementById("ta-img");
+    const fourth = document.getElementById("ta-input");
+    const fifth = document.getElementById("ta-div");
+    const sixth = document.getElementById("ta-ul");
+    const seventh = document.getElementById("ta-footer");
+
+    var editor = CodeMirror.fromTextArea(first, {
+        lineNumbers: true,
+        lineWrap: true,
+        mode: "htmlmixed",
+        autoclosetags: true,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        matchTags: true,
+        autoCloseTags: true,
+        readOnly: true
+      });
+
+    var editor2 = CodeMirror.fromTextArea(second, {
+      lineNumbers: true,
+      lineWrap: true,
+      mode: "htmlmixed",
+      autoclosetags: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      matchTags: true,
+      autoCloseTags: true,
+      readOnly: true
+    });
+
+    var editor3 = CodeMirror.fromTextArea(third, {
+      lineNumbers: true,
+      lineWrap: true,
+      mode: "htmlmixed",
+      autoclosetags: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      matchTags: true,
+      autoCloseTags: true,
+      readOnly: true
+    });
+
+    var editor4 = CodeMirror.fromTextArea(fourth, {
+      lineNumbers: true,
+      lineWrap: true,
+      mode: "htmlmixed",
+      autoclosetags: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      matchTags: true,
+      autoCloseTags: true,
+      readOnly: true
+    });
+
+    var editor5 = CodeMirror.fromTextArea(fifth, {
+      lineNumbers: true,
+      lineWrap: true,
+      mode: "htmlmixed",
+      autoclosetags: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      matchTags: true,
+      autoCloseTags: true,
+      readOnly: true
+    });
+
+    var editor6 = CodeMirror.fromTextArea(sixth, {
+      lineNumbers: true,
+      lineWrap: true,
+      mode: "htmlmixed",
+      autoclosetags: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      matchTags: true,
+      autoCloseTags: true,
+      readOnly: true
+    });
+
+    var editor7 = CodeMirror.fromTextArea(seventh, {
+      lineNumbers: true,
+      lineWrap: true,
+      mode: "htmlmixed",
+      autoclosetags: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      matchTags: true,
+      autoCloseTags: true,
+      readOnly: true
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-shadows: #ffffff;
+  --btn-bg: rgb(80, 80, 80);
+  --btn-txtclr: #fff;
+  --scrollbar-bg: #91919100;
+  --scrollbar-thumb-bg: #5e5e5e00;
+  --top-btm-bg: #5865f2;
+  --a-clr: rgb(34, 147, 250);
+  --selection-clr: hsla(235, 86%, 75%, .5);
+}
+
+*::selection {
+  background-color: var(--selection-clr);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+  overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+*::-moz-scrollbar{
+  visibility: hidden;
+  display: none;
+}
+
+.top-header-cnt {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 11%;
+  background-color: var(--top-btm-bg);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  z-index: 2339990;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.intro {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p,
+ul {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 250;
+}
+
+.ytb path,
+.dsc path {
+  transition: fill 500ms ease;
+}
+
+.ytb:hover path {
+  fill: red;
+}
+
+.dsc:hover path {
+  fill: #5865f2;
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background: var(--top-btm-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-nav-as-container {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.nav-a {
+  background: rgba(58, 58, 58, 0.219);
+  padding: 0.1rem;
+  border: solid 0.1rem;
+  border-radius: 0.1rem;
+  font-size: 1.15rem;
+  color: black;
+}
+
+.nav-a:hover {
+  background: rgba(121, 121, 121, 0.219);
+}
+
+.gear-icon {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transition: transform 500ms cubic-bezier(0.78, 0.1, 0.72, 1.02);
+}
+
+.gear-icon:hover {
+  transform: rotate(180deg);
+}
+
+.gear-icon path {
+  fill: hsl(0, 0%, 11%);
+  transition: fill 500ms ease;
+}
+
+.gear-icon:hover path {
+  fill: currentColor;
+}
+
+#input_forproj {
+  font-size: 1rem;
+  height: 2rem;
+  width: 40%;
+  background-color: rgb(230, 230, 230);
+  border-radius: 0.25rem;
+  margin-left: 1%;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+.redirect_to_proj {
+  cursor: pointer;
+  margin-left: 1%;
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: cornflowerblue;
+  transition: 500ms ease;
+}
+
+.redirect_to_proj:hover {
+  background: rgb(72, 121, 211);
+  transform: scale(1.05) translateY(-0.25rem);
+}
+
+#notification-area {
+  position: fixed;
+  bottom: 1rem;
+  right: 10px;
+  width: 250px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#notification-area .notification {
+  position: relative;
+  padding: 1rem 2rem;
+  background: #111;
+  color: #f5f5f5;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  opacity: 0;
+  left: 2rem;
+  animation: showNotification 500ms ease-in-out forwards;
+}
+@keyframes showNotification {
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+#notification-area .notification.success {
+  background: #49cc7b;
+}
+#notification-area .notification.error {
+  background: rgb(190, 51, 0);
+}
+#notification-area .notification.info {
+  background: #00acee;
+}
+
+.notification:not(.notification.info)::selection {
+  background: #00acee;
+}
+
+.notification.info::selection {
+  background: #006c97;
+}
+
+
+.container{
+  text-align: center;
+  position: relative;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, 15%);
+  border: solid 1px black;
+  height: 60vh;
+  width: 50vw;
+  padding: 1rem;
+}
+
+.controlsc{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 95%;
+  bottom: .2rem;
+}
+
+.controlsc label{
+  font-size: 1.3rem;
+}
+
+.controls{
+  height: 2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.project-a_s{
+  font-size: 1.4rem;
+  color: var(--a-clr);
+}
+
+.project-a_s:hover{
+  text-decoration: underline;
+}
+
+.text-container{
+
+  --card-height: 80%;
+
+  border: solid 1px black;
+  border-radius: 1rem;
+  height: var(--card-height);
+  position: relative;
+  transition: all 250ms ease;
+  overflow: hidden;
+}
+
+.text-container > *{
+  transition: all 250ms linear;
+}
+
+.text-container:is(:hover, :focus) > p{
+  transition-delay: 300ms;
+}
+
+.text-container > p{
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+}
+
+.text-container:is(:hover, :focus) > p{
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-container > a{
+  position: absolute;
+  bottom: 40%;
+  transform: translate(-50%);
+  font-size: 2rem;
+}
+
+.text-container:is(:hover, :focus) > a{
+  transform: translate(-50%, -15vh);
+  margin-top: 3rem;
+}
+
+.text-container .bg{
+  height: var(--card-height);
+  width: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, .2));
+  position: absolute;
+  top: 200%;
+  transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: -1;
+}
+
+.text-container:hover .bg{
+  top: 0;
+}
+
+.text-container:last-child{
+  margin-bottom: 3rem;
+}
+
+/* newest div */
+
+.newest{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 20vw;
+  background-color: rgba(0, 255, 76, 0.5);
+  padding: .5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 22vh;
+  left: -19vw;
+  border-radius: .2rem;
+  transition: 500ms ease;
+  cursor: pointer;
+}
+
+.newest a{
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+  border-bottom: solid .1rem black;
+}
+
+.newest a:hover{
+  border-bottom: solid .025rem black;
+}
+
+.newest.active{
+  left: .1rem;
+}
+
+.newest > *:first-child{
+  margin-right: 1rem;
+}
+
+.exm{
+  height: 1.5rem;
+  aspect-ratio: 1;
+  fill: rgb(26, 141, 78);
+}

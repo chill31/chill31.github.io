@@ -1,0 +1,263 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-shadows: #ffffff;
+  --btn-bg: rgb(80, 80, 80);
+  --btn-txtclr: #fff;
+  --scrollbar-bg: #919191;
+  --scrollbar-thumb-bg: #5e5e5e;
+  --top-btm-bg: #5865f2;
+  --a-clr: #2293fa;
+  --selection-clr: hsla(235, 86%, 75%, .5);
+  /* this file only variables */
+  --dsc-embed-background: #292b2f;
+  --ytb-embed-background: rgb(231, 231, 231);
+}
+
+*::selection {
+  background-color: var(--selection-clr);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg);
+  border-radius: 50vw;
+  margin-block: 0.15em;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border: 0.02rem solid rgb(12, 12, 12);
+  border-radius: 500vw;
+  transition: 0.35s ease;
+}
+
+.top-header-cnt {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 10%;
+  background-color: var(--top-btm-bg);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.intro {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p,
+ul {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 250;
+}
+
+.ytb path,
+.dsc path {
+  transition: fill 500ms ease;
+}
+
+.ytb:hover path {
+  fill: red;
+}
+
+.dsc:hover path {
+  fill: #5865f2;
+}
+
+.social-ul {
+  font-family: sans-serif;
+  font-weight: 250;
+  list-style-type: "\203A    ";
+}
+
+b::selection {
+  color: black;
+}
+
+a {
+  color: var(--a-clr);
+  text-decoration: none;
+}
+
+.gear-icon {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transition: transform 500ms cubic-bezier(0.78, 0.1, 0.72, 1.02);
+}
+
+.gear-icon:hover {
+  transform: rotate(180deg);
+}
+
+.gear-icon path {
+  fill: hsl(0, 0%, 11%);
+  transition: fill 500ms ease;
+}
+
+.gear-icon:hover path {
+  fill: currentColor;
+}
+
+b {
+  font-weight: 475;
+}
+
+.prof-flex{
+  height: 3.5rem;
+  width: 20rem;
+}
+
+.prof-flex.youtube_{
+  display: flex;
+  align-items: center;
+}
+
+.discord_{
+ background: var(--dsc-embed-background);
+ position: relative;
+}
+
+.imglol{
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  width: fit-content;
+  margin-left: .25rem;
+}
+
+.discord_ label{
+  cursor: pointer;
+  color: white;
+  position: relative;
+  top: -3rem;
+  margin-left: 3rem;
+}
+
+.discord_ .small{
+  position: absolute;
+  top: 0;
+}
+
+.discord_ .small::before{
+  content: '💩 html, css, j...';
+  position: absolute;
+  top: 2rem;
+  font-size: .25rem;
+  color: rgb(177, 177, 177);
+  width: 20ch;
+}
+
+.discord_:hover .small::before{
+  content: '#3715';
+  top: 2.2rem;
+  margin-left: .5rem;
+  animation: psudoContentAnimation 250ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.discord_ svg{
+  fill: #b9bbbe;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: .5rem;
+  cursor: pointer;
+  transition: fill 250ms ease;
+}
+
+.discord_ svg:hover{
+  fill: #dcddde
+}
+
+.youtube_{
+  background: var(--ytb-embed-background);
+  padding-left: .5rem;
+}
+  
+.prof_img{
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.prof_img.ytb{
+  margin-right: 1rem;
+}
+
+.prof-lbl{
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+#copy-popup{
+  height: 2rem;
+  width: 5rem;
+  background-color: rgb(104, 211, 104);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 250ms ease;
+  position: relative;
+  top: 2rem;
+  left: 8rem;
+  color: rgb(50, 52, 63);
+}
+
+#copy-popup::after{
+  content: '';
+  border: .5rem solid transparent;
+  border-top-color: rgb(104, 211, 104);
+  position: absolute;
+  top: 100%;
+}
+
+#copy-popup.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes psudoContentAnimation {
+  0%{
+    opacity: 1;
+  }
+
+  50%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}

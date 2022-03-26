@@ -1,0 +1,115 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-shadows: #ffffff;
+  --btn-bg: rgb(80, 80, 80);
+  --btn-txtclr: #fff;
+  --scrollbar-bg: #919191;
+  --scrollbar-thumb-bg: #5e5e5e;
+  --top-btm-bg: #5865f2;
+  --a-clr: #2293fa;
+  --selection-clr: hsla(235, 86%, 75%, .5);
+}
+
+*::selection {
+  background-color: var(--selection-clr);
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg);
+  border-radius: 50vw;
+  margin-block: 0.15em;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border: 0.02rem solid rgb(12, 12, 12);
+  border-radius: 500vw;
+  transition: 0.35s ease;
+}
+
+h1{
+  color: var(--text-color);
+}
+
+.label-and-check-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+}
+
+.text-counter-check{
+  height: 3rem;
+  cursor: pointer;
+}
+
+.label-and-check-container label{
+  font-size: 1.14rem;
+  margin-right: 2rem;
+}
+
+.show-count-label{
+  font-size: 1.14rem;
+  margin-left: 1rem;
+  position: absolute;
+  top: 40vh;
+}
+
+.show-count-label.act{
+  margin-left: calc(1rem + 14rem);
+}
+
+.textareas{
+  width: 95%;
+  background: var(--input-bg);
+  resize: none;
+  height: 40vh;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-family: sans-serif;
+  font-size: 1.05rem;
+  border: solid 1px black;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50vh; 
+}
+
+.textareas:focus{
+  border: solid 2px var(--a-clr);
+}
+
+.textareas::-webkit-scrollbar {
+  width: 0.5rem;
+  margin-right: 2rem;
+}
+
+.textareas::-webkit-scrollbar-track{
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+.textareas::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 0.02rem solid transparent;
+  transition: 0.35s ease;
+  border-radius: 1rem;
+}
+
+.ea{
+  color: var(--text-color);
+}

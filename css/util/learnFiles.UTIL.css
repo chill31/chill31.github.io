@@ -1,0 +1,7 @@
+body{
+ overflow-y: auto;
+}
+
+.CodeMirror{
+    font-family: 'Jetbrains Mono';
+}

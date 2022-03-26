@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn: Playground</title>
+  <link rel="stylesheet" href="../css/Playground.css">
+  <link rel="stylesheet" href="/css/util/utility.css">
+  <link rel="stylesheet" href="../static/cm/default/codemirror.css">
+
+  <link rel="stylesheet" href="/css/util/learnFiles.UTIL.css">
+</head>
+
+<body>
+
+  <h2>HTML/CSS Playground</h2>
+  <h3 style="font-weight: 100; color: var(--text-color); text-align: center;">This playground can be used as a fully functioning code editor like visual studio code, it has emmet, syntax highlighting, pretty much a codepen clone, just without sharing.<br /><sub>(P.S: it also saves when you refresh the website, so to refresh the code, just press the refresh button )</sub><br><sub>The emmet Abbreviations do not really work without the tab key, enter key does not work for emmet, so no tab key,
+    no emmet.</sub></h3><br />
+    
+    <p style="text-align: center; color: var(--text-color);">The first textarea is for HTML, second is for CSS, and third is for JS<br><br>If your changes do not take place after clicking on save code button, consider refreshing the webpage</p>
+
+    <br /><br /><br /><br />
+<!--
+    <div class="file-input">
+
+      <button class="click html">HTML</button>
+
+      <button class="click css">CSS</button>
+
+    </div> -->
+
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.25rem; width: 100%;">
+    
+      <button class="saveCode-Op399KhBkAJhOyNmUU-OPArims" id="rfcd">Refresh Code</button>
+      <button class="saveCode-Op399KhBkAJhOyNmUU-OPArims" style="margin-left: 1rem;" id="svcd">Save
+        Code</button><br /><br />
+    
+    </div>
+
+    <div class="flex" style="justify-content: space-between;">
+
+      <div class="tac">
+    
+      <textarea class="lolText cs_kkJIUUI9-0-JU2Y7ihbHY78bJNJj2iM html_ta" id="custom" placeholder="Write HTML here..."></textarea>
+    
+      <textarea class="lolTexta cs_kkJIUUI9-0-JU2Y7ihbHY78bJNJj2iM css_ta" id="custom_" placeholder="Write CSS here..."></textarea>
+
+      <textarea class="jsLol cs_kkJIUUI9-0-JU2Y7ihbHY78bJNJj2iM js_ta" id="_custom_" placeholder="Write JS here..."></textarea>
+
+      </div>
+
+      <span class="sepr"></span>
+
+
+      <iframe style="height: 101.5vh; width: 51.5vw;background: var(--input-bg); border: solid .1rem var(--text-color)"></iframe>
+
+    </div>
+    
+    </div><br /><br />
+
+    <div class="flex2">
+
+    <label id="labelfor" class="show"></label>
+
+    </div><br /><br />
+
+    <div class="browser-tabpreview hide">
+
+      <div class="box">
+        <img style="height: 1rem; width: 1rem;">
+        <label id="title-iframe">[{Iframe HTMLContent}]</label>
+      </div>
+<!--
+      <div class="flex">
+      -->
+      <p style="text-align: center;">To reload this, you need to reload the website. ( after saving your code )</p>
+<!--
+      </div> -->
+
+    </div>
+  <script src="../static/cm/default/codemirror.js"></script>
+  <script src="../static/cm/modes/html/m-html.js"></script>
+  <script src="../static/cm/modes/css/m-css.js"></script>
+  <script src="../static/cm/modes/js/m-js.js"></script>
+  <script src="../static/cm/modes/xml/m-xml.js"></script>
+  <script src="../static/cm/extra/autoCloseBrackets.js"></script>
+  <script src="../static/cm/extra/highlightHoveredBrackets.js"></script>
+  <script src="../static/cm/extra/codeFolding.js"></script>
+  <script src="../static/cm/extra/foldGutters.js"></script>
+  <script src="../static/cm/extra/matchHTML_tags.js"></script>
+  <script src="../static/cm/modes/xml/extra-xml.js"></script>
+  <script src="../static/cm/modes/xml/xml-fold.js"></script>
+  <script src="../static/cm/extra/placeHolder.js"></script>
+  <script src="../static/emmet/browser.js"></script>
+  <script src="/js/util/utility.js"></script>
+  <script>
+    const myTextarea = document.querySelector(".lolText");
+    const myTextarea_ = document.querySelector(".lolTexta");
+    const jsTextarea = document.querySelector(".jsLol");
+
+    const htmlButton = document.querySelector(".click.html");
+    const cssButton = document.querySelector(".click.css");
+
+      var editor = CodeMirror.fromTextArea(myTextarea, {
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: "htmlmixed",
+        matchBrackets: true,
+        autoCloseBrackets: "()[]{}''\"\"``",
+        matchTags: true,
+        extraKeys: {
+          'Tab': 'emmetExpandAbbreviation',
+          'Esc': 'emmetResetAbbreviation',
+          'Enter': 'emmetInsertLineBreak'
+        },
+      });
+
+      var editor2 = CodeMirror.fromTextArea(myTextarea_, {
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: "css",
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        matchTags: true,
+        extraKeys: {
+          'Tab': 'emmetExpandAbbreviation',
+          'Esc': 'emmetResetAbbreviation',
+          'Enter': 'emmetInsertLineBreak'
+        }
+      });
+
+      var editor3 = CodeMirror.fromTextArea(jsTextarea, {
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: "javascript",
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        matchTags: true,
+        extraKeys: {
+          'Tab': 'emmetExpandAbbreviation',
+          'Esc': 'emmetResetAbbreviation',
+          'Enter': 'emmetInsertLineBreak'
+        }
+      });
+
+        const iframe = document.querySelector("iframe");
+        const iframe_content = iframe.contentDocument;
+
+    //    const consoleOutput = document.querySelector(".console");
+
+        const saveCodeBtn = document.getElementById("svcd");
+        const refCodeBtn = document.getElementById("rfcd");
+
+          let titleContent;
+          let href;
+
+        saveCodeBtn.addEventListener("click", () => {
+
+          const htmlCode = editor.getValue();
+          const cssCode = editor2.getValue();
+          const jsCode = editor3.getValue();
+
+          iframe_content.body.innerHTML = `<style> ${cssCode} </style> ${htmlCode}`;
+          iframe.contentWindow.eval(jsCode);
+          
+
+
+          localStorage.setItem("htmlCode", htmlCode);
+          localStorage.setItem("cssCode", cssCode);
+          localStorage.setItem("jsCode", jsCode);
+        });
+
+        refCodeBtn.addEventListener("click", () => {
+          editor.setValue("");
+          editor2.setValue("");
+          editor3.setValue("");
+
+          iframe_content.body.innerHTML = "";
+          iframe.contentWindow.eval("");
+
+          localStorage.setItem("htmlCode", "");
+          localStorage.setItem("cssCode", "");
+          localStorage.setItem("jsCode", "");
+        });
+
+        editor.setValue(localStorage.getItem("htmlCode"));
+        editor2.setValue(localStorage.getItem("cssCode"));
+        editor3.setValue(localStorage.getItem("jsCode"));
+
+        iframe_content.body.innerHTML = `<style> ${localStorage.getItem("cssCode")} </style> ${localStorage.getItem("htmlCode")}`;
+        iframe.contentWindow.eval(localStorage.getItem("jsCode"));
+
+        const showPrevLabel = document.getElementById("labelfor");
+        const prevInput = document.getElementById("browser-preview");
+        const prevDiv = document.querySelector(".browser-tabpreview");
+        const label = document.querySelector(".browser-tabpreview .box label");
+        const prevImage = document.querySelector(".browser-tabpreview .box img");
+
+        showPrevLabel.textContent = "Show Browser Tab Preview";
+
+        showPrevLabel.addEventListener("click", () => {
+            if(prevDiv.classList.contains("hide")){
+              prevDiv.classList.remove("hide");
+              showPrevLabel.textContent = "Hide Browser Tab Preview";
+            } else if(!prevDiv.classList.contains("hide")){
+              prevDiv.classList.add("hide");
+              showPrevLabel.textContent = "Show Browser Tab Preview";
+            }
+        });
+
+        const title = iframe_content.querySelector("title");
+        const img = iframe_content.querySelector(`link[rel="icon"]`);
+
+          if (!img) {
+            href = "../assets/img/no-favicon.svg";
+          } else if (img && img.href) {
+            href = img.href;
+          } else {
+            href = "../assets/img/no-favicon.svg";
+          }
+
+          if (!title) {
+            titleContent = "[{Iframe HTMLContent}]";
+          } else if (title.textContent == "" || !title.textContent) {
+            titleContent = "[{Iframe HTMLContent}]";
+          } else if (title.textContent) {
+            titleContent = title.textContent;
+          }
+
+          label.textContent = titleContent;
+          prevImage.setAttribute("src", href);
+
+  </script>
+</body>
+
+</html>

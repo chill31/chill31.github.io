@@ -1,0 +1,88 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-shadows: #ffffff;
+  --btn-bg: rgb(80, 80, 80);
+  --btn-txtclr: #fff;
+  --scrollbar-bg: #919191;
+  --scrollbar-thumb-bg: #5e5e5e;
+  --top-btm-bg: #5865f2;
+  --a-clr: #2293fa;
+  --selection-clr: hsla(235, 86%, 75%, .5);
+}
+
+*::selection {
+  background-color: var(--selection-clr);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg);
+  border-radius: 50vw;
+  margin-block: 0.15em;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border: 0.02rem solid rgb(12, 12, 12);
+  border-radius: 500vw;
+  transition: 0.35s ease;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text-color);
+}
+.bs-inr {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.1rem;
+}
+p {
+  font-weight: 250;
+}
+a {
+  color: var(--a-clr);
+  text-decoration: none;
+}
+#input_forproj {
+  font-size: 1rem;
+  height: 2rem;
+  width: 40%;
+  background-color: rgb(230, 230, 230);
+  border-radius: .25rem;
+  margin-left: 1%;
+  border: 1px solid #ccc;
+  padding: 7px 14px 9px;
+  transition: 0.4s;
+}
+code {
+  font-family: monospace;
+}
+.redirect_to_tag {
+  cursor: pointer;
+  margin-left: 1%;
+  width: 7rem;
+  height: 2rem;
+  border: none;
+  border-radius: .25rem;
+  background-color: cornflowerblue;
+  transition: 500ms ease;
+}
+.redirect_to_tag:hover {
+  background: rgb(72, 121, 211);
+  transform: scale(1.05) translateY(-.25rem);
+}
