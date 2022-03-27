@@ -103,11 +103,7 @@ body{
   transition: all 250ms ease;
   z-index: 99994939843434839493043403849343949;
   max-height: 80vh;
-}
-
-.wrapperContextMenu *::selection{
-    background: transparent !important;
-    color: inherit !important;
+  user-select: none;
 }
 
 .wrapperContextMenu .menu{
@@ -264,10 +260,10 @@ h1, h2, h3, h4, h5, h6, header{
   font-family: 'Quicksand Medium';
 }
 
-div, a, p, input, label, span, li, i, b, select, strong, textarea, button{
+div, div > *, a, p, input, label, span, li, i, b, select, strong, textarea, button{
   font-family: 'Quicksand' !important;
 }
 
 code, .CodeMirror span{
-  font-family: 'Jetbrains Mono' !important;
+  font-family: 'Jetbrains Mono', monospace !important;
 }

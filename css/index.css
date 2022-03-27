@@ -95,12 +95,12 @@ a {
 }
 
 .social-cc {
-  width: 20ch;
+  width: 30ch;
   height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 2vw;
+  cursor: pointer;
 }
 
 .social-cc.dsc {
@@ -110,6 +110,13 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+.social-cc.ytb{
+  justify-content: left;
+  padding-left: 1ch;
+}
+
+
 
 .intro {
   font-size: 1.375rem;
@@ -131,13 +138,14 @@ a,
   text-decoration: none;
 }
 
-.ytb path,
-.dsc path {
-  transition: fill 500ms ease;
+.ytb, .ytb > *,
+.dsc, .dsc > * {
+  transition: 500ms ease;
+  cursor: pointer;
 }
 
 .ytb:hover path {
-  fill: red;
+  fill: #ff0000;
 }
 
 .dsc:hover path {
