@@ -101,6 +101,11 @@
       "description": "An advanced tool with voice options which converts your text to speech with just a click of a button",
       "location": "projects/TextToSpeech.html"
     },
+    {
+      "title": "Net Speed Test",
+      "description": "A simple test which tells you your internet speed in MBPS",
+      "location": "projects/NetSpeed.html"
+    },
 
     {
       "title": "...",

@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6, header{
   font-family: 'Quicksand Medium';
 }
 
-a, p, input, label, span, li, i, b, select, strong, textarea, button{
+div, a, p, input, label, span, li, i, b, select, strong, textarea, button{
   font-family: 'Quicksand' !important;
 }
 
