@@ -8,20 +8,20 @@
   --scrollbar-thumb-bg: #5e5e5e;
   --top-btm-bg: #5865f2;
   --a-clr: #2293fa;
-  --selection-clr: hsla(235, 86%, 75%, .5);
+  --selection-clr: hsla(235, 86%, 75%, 0.5);
 }
 
 *::selection {
   background-color: var(--selection-clr);
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: sans-serif;
-  background: var(--bg-color);
+  background: radial-gradient(transparent, rgba(1, 1, 1, 0.212));
   margin: 0;
   transition-property: background, color, background-color;
   transition-duration: 500ms;
@@ -90,4 +90,32 @@ ul,
 
 .dsc:hover path {
   fill: #5865f2;
+}
+
+#save-cog {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+ul.settings-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 2rem;
+  width: 75vw;
+  position: absolute;
+}
+
+ul.settings-list > li {
+  border-left: solid 0.4rem var(--a-clr);
+  padding: 1rem;
+}
+
+ul.settings-list li:first-of-type {
+  margin-right: 25%;
 }

@@ -360,3 +360,38 @@ hamMenuItems.settings.addEventListener("click", () => {
   
 
 });
+
+if(!localStorage.getItem("normalFont")){
+  localStorage.setItem("normalFont", "Quicksand");
+}
+
+if(!localStorage.getItem("codeFont")){
+  localStorage.setItem("codeFont", "Jetbrains Mono");
+}
+
+document.body.style.setProperty(
+  "--ff-primary",
+  localStorage.getItem("normalFont")
+);
+document.body.style.setProperty(
+  "--ff-primary-light",
+  `${localStorage.getItem("normalFont")} Light`
+);
+document.body.style.setProperty(
+  "--ff-primary-normal",
+  `${localStorage.getItem("normalFont")} normal`
+);
+document.body.style.setProperty(
+  "--ff-primary-medium",
+  `${localStorage.getItem("normalFont")} Medium`
+);
+document.body.style.setProperty(
+  "--ff-primary-semibold",
+  `${localStorage.getItem("normalFont")} Semibold`
+);
+document.body.style.setProperty(
+  "--ff-primary-bold",
+  `${localStorage.getItem("normalFont")} Bold`
+);
+
+document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));

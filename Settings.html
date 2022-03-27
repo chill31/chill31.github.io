@@ -21,12 +21,58 @@
 
   <ul class="settings-list">
 
-    <h1 style="margin-top: 15vh;">No Settings For this website yet</h1>
+    <!-- <h1 style="margin-top: 15vh;">No Settings For this website yet</h1> -->
+
+    <li> <!-- Fonts List Item in settings list. -->
+      Fonts
+
+      <br>
+      <br>
+
+        <ul>  <!--  fonts types list.  -->
+
+          <li>Normal: <br>
+          <select class="normal-font-select">
+            <option value="Quicksand" selected>Quicksand</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Raleway">Raleway</option>
+          </select>
+          </li>
+
+          <br>
+
+          <li>Code: <br>
+          <select class="code-font-select">
+            <option value="Jetbrains Mono" selected>Jetbrains Mono</option>
+            <option value="Consolas">Consolas</option>
+            <option value="FiraCode">Fira Code</option>
+          </select>
+          </li>
+
+        </ul>
+    </li>
+
+
+    <li>Saved Font Settings:
+
+      <br>
+      <br>
+
+      Normal Font: <label class="normal-font-saved"></label>
+      <br>
+      Code Font: <label class="code-font-saved"></label>
+
+    </li>
+
+
 
   </ul>
 
+  <button class="save-btn settings-save" id="save-cog">Save</button>
+
 
   <script src="js/util/utility.js"></script>
+  <script src="js/settings.js"></script>
 </body>
 
 </html>

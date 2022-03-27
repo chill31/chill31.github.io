@@ -1,11 +1,22 @@
-:root{
+body{
   --ff-primary: 'Quicksand', sans-serif;
   --ff-primary-light: 'Quicksand Light', sans-serif;
   --ff-primary-normal: 'Quicksand normal', sans-serif;
   --ff-primary-medium: 'Quicksand Medium', sans-serif;
   --ff-primary-semibold: 'Quicksand Semibold', sans-serif;
   --ff-primary-bold: 'Quicksand Bold', sans-serif;
+
   --ff-code: 'Jetbrains Mono', monospace;
+}
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  src: url(/assets/fonts/CODE-FONTS/Jetbrains-Mono.ttf);
+}
+
+@font-face {
+  font-family: 'FiraCode';
+  src: url(/assets/fonts/CODE-FONTS/FiraCode.otf);
 }
 
 /**
@@ -35,7 +46,7 @@
 }
 
 @font-face {
-  font-family: 'Quicksand SemiBold';
+  font-family: 'Quicksand Semibold';
   src: url(/assets/fonts/quicksand/Quicksand-SemiBold.ttf);
 }
 
@@ -72,7 +83,7 @@
 }
 
 @font-face {
-  font-family: 'Raleway SemiBold';
+  font-family: 'Raleway Semibold';
   src: url(/assets/fonts/raleway/Raleway-SemiBold.ttf);
 }
 
@@ -108,7 +119,7 @@
 }
 
 @font-face {
-  font-family: 'Poppins SemiBold';
+  font-family: 'Poppins Semibold';
   src: url(/assets/fonts/poppins/Poppins-Semibold.otf);
 }
 
@@ -346,8 +357,6 @@ body{
 
 **/
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
-
 h1, h2, h3, h4, h5, h6, header{
   font-family: var(--ff-primary-medium);
 }
@@ -357,5 +366,5 @@ div, div > *, a, p, input, label, span, li, i, b, select, strong, textarea, butt
 }
 
 code, .CodeMirror span{
-  font-family: var(--ff-code), 'Consolas', monospace !important;
+  font-family: var(--ff-code), monospace !important;
 }
