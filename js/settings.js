@@ -64,3 +64,43 @@ document.body.style.setProperty(
 );
 
 document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
+
+
+
+/**
+ * Enabling/Disabling Redirecting Process
+ */
+
+const toggleProcessBtn = document.querySelector(".toggle-process");
+
+
+if(!localStorage.getItem("redirect-process")){
+  localStorage.setItem("redirect-process", "true");
+}
+
+toggleProcessBtn.addEventListener("click", () => {
+
+  if(localStorage.getItem("redirect-process") == "true"){
+
+    toggleProcessBtn.textContent = "Enable Redirecting Process";
+
+    localStorage.setItem("redirect-process", "false");
+
+  } else if (localStorage.getItem("redirect-process") == "false") {
+
+    toggleProcessBtn.textContent = "Disable Redirecting Process";
+
+    localStorage.setItem("redirect-process", "true");
+
+  }
+  
+
+});
+
+if(localStorage.getItem("redirect-process") == "true"){
+  toggleProcessBtn.textContent = "Disable Redirecting Process";
+}
+
+else if(localStorage.getItem("redirect-process") == "false"){
+  toggleProcessBtn.textContent = "Enable Redirecting Process";
+}

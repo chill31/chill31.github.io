@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting To Requested Location</title>
+    
+    <link rel="stylesheet" href="/css/util/utility.css">
+</head>
+<body class="redirect redirect-body Osjah5bodyhtml5">
+
+    <h1 id="redirect-h1">Redirecting...</h1>
+
+    <h3 id="patient-text">Please be patient.</h3>
+
+    <footer>(P.S): You can disable this process through the website's settings page.</footer>
+    
+    <script src="/js/util/utility.js"></script>
+
+    <style>
+
+h1#redirect-h1{
+ position: absolute;
+ top: 40%;
+ left: 50%;
+ transform: translate(-50%, -40%);
+}
+
+h3#patient-text{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+footer{
+ position: absolute;
+ bottom: .5rem;
+ left: 50%;
+ transform: translate(-50%);
+}
+
+    </style>
+
+    <script>
+
+    const searchParamFn = new URLSearchParams(window.location.search);
+    const valueLocation = searchParamFn.get("query");
+
+    setTimeout(() => {
+        redirect(valueLocation);
+    }, 5000);
+
+    </script>
+</body>
+</html>

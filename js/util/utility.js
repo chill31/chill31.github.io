@@ -33,12 +33,32 @@ function advancedAttrHandler(elem, fn, attr, attrValue) {
   }
 }
 
+if(!localStorage.getItem("redirect-process")){
+  localStorage.setItem("redirect-process", "true");
+}
+
 /**
  * @param {URL} redirectLocation
  */
 
 function redirect(redirectLocation) {
-  window.location.href = redirectLocation;
+
+  console.log(localStorage.getItem("redirect-process"));
+
+  if(localStorage.getItem("redirect-process") == "true"){
+
+    if (document.body.classList.contains("Osjah5bodyhtml5")) {
+      window.location.href = redirectLocation;
+    } else {
+      window.location.href = `/redirecting/redirect.html?query=${redirectLocation}`;
+    }
+
+  } else if(localStorage.getItem("redirect-process") == "false"){
+
+    window.location.href = redirectLocation;
+
+  }
+
 }
 
 /**
@@ -395,3 +415,20 @@ document.body.style.setProperty(
 );
 
 document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
+
+
+const settingsCogIcon = document.querySelector(".gear-icon");
+
+if(!settingsCogIcon){
+
+  console.error("No settings icon found, terminating click process.")
+
+} else {
+
+settingsCogIcon.addEventListener("click", () => {
+
+  redirect("/Settings.html");
+
+});
+
+}

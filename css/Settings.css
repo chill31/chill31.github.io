@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: sans-serif;
-  background: radial-gradient(transparent, rgba(1, 1, 1, 0.212));
+  background: radial-gradient(transparent, rgba(34, 146, 250, 0.26));
   margin: 0;
   transition-property: background, color, background-color;
   transition-duration: 500ms;
@@ -93,12 +93,13 @@ ul,
 }
 
 #save-cog {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
   transform: translate(-50%);
   padding: 0.5rem 1rem;
   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(100%);
 }
 
 ul.settings-list {
@@ -108,7 +109,7 @@ ul.settings-list {
   justify-content: left;
   padding: 2rem;
   width: 75vw;
-  position: absolute;
+  position: relative;
 }
 
 ul.settings-list > li {
@@ -118,4 +119,10 @@ ul.settings-list > li {
 
 ul.settings-list li:first-of-type {
   margin-right: 25%;
+}
+
+
+.toggle-process{
+  padding: .5rem 1rem;
+  cursor: pointer;
 }
