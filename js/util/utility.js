@@ -297,17 +297,17 @@ document.body.prepend(createdHamMenu);
 createdHamMenu.innerHTML = `
 
 <div class="items-container">
-  <h1 class="menu-item item-home">Home</h1>
+  <h1 class="menu-item item-home item1">Home</h1>
 
-  <h1 class="menu-item item-projects">Projects</h1>
+  <h1 class="menu-item item-projects item2">Projects</h1>
 
-  <h1 class="menu-item item-feed">Feed</h1>
+  <h1 class="menu-item item-feed item3">Feed</h1>
 
-  <h1 class="menu-item item-learn">Learn Webdev</h1>
+  <h1 class="menu-item item-learn item4">Learn Webdev</h1>
 
-  <h1 class="menu-item item-feedback">Feedback and Reviews</h1>
+  <h1 class="menu-item item-feedback item5">Feedback and Reviews</h1>
 
-  <h1 class="menu-item item-settings">Settings</h1>
+  <h1 class="menu-item item-settings item6">Settings</h1>
 </div>
 
 `;

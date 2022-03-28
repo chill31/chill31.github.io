@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: sans-serif;
-  background: radial-gradient(transparent, rgba(34, 146, 250, 0.26));
+  background: radial-gradient(transparent, rgba(34, 146, 250, 0.25));
   margin: 0;
   transition-property: background, color, background-color;
   transition-duration: 500ms;
@@ -125,4 +125,9 @@ ul.settings-list li:first-of-type {
 .toggle-process{
   padding: .5rem 1rem;
   cursor: pointer;
+}
+
+label.small{
+  font-size: 1rem;
+  word-wrap: break-word;
 }
