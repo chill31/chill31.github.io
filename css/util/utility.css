@@ -336,39 +336,42 @@ body{
 #menu.active .menu-item{
   opacity: 1;
   pointer-events: all;
-  transition-delay: 500ms;
-  transition-property: opacity;
 }
 
-#menu.active .menu-item.item2{
+#menu.active .menu-item.item1{
   transition-delay: calc(var(--delay) + var(--increment)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item3{
+#menu.active .menu-item.item2{
   transition-delay: calc(var(--delay) + calc(var(--increment) * 2)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item4{
+#menu.active .menu-item.item3{
   transition-delay: calc(var(--delay) + calc(var(--increment) * 3)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item5{
+#menu.active .menu-item.item4{
   transition-delay: calc(var(--delay) + calc(var(--increment) * 4)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item6{
+#menu.active .menu-item.item5{
   transition-delay: calc(var(--delay) + calc(var(--increment) * 5)) !important;
+  transition-property: opacity;
+}
+
+#menu.active .menu-item.item6{
+  transition-delay: calc(var(--delay) + calc(var(--increment) * 6)) !important;
   transition-property: opacity;
 }
 
 #menu .menu-item{
   font-weight: 100;
   cursor: pointer;
-  transition-property: background-color, color;
+  transition-property: background-color, color, opacity;
   transition-duration: 500ms;
   transition-timing-function: ease;
   border-radius: 1rem;
@@ -379,8 +382,7 @@ body{
 }
 
 #menu .menu-item:hover{
-  background-color: rgb(67, 73, 83);
-  color: whitesmoke;
+  text-decoration: underline;
 }
 
 @keyframes text-stroke {
