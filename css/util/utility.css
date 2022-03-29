@@ -1,21 +1,21 @@
-body{
-  --ff-primary: 'Quicksand', sans-serif;
-  --ff-primary-light: 'Quicksand Light', sans-serif;
-  --ff-primary-normal: 'Quicksand normal', sans-serif;
-  --ff-primary-medium: 'Quicksand Medium', sans-serif;
-  --ff-primary-semibold: 'Quicksand Semibold', sans-serif;
-  --ff-primary-bold: 'Quicksand Bold', sans-serif;
+body {
+  --ff-primary: "Quicksand", sans-serif;
+  --ff-primary-light: "Quicksand Light", sans-serif;
+  --ff-primary-normal: "Quicksand normal", sans-serif;
+  --ff-primary-medium: "Quicksand Medium", sans-serif;
+  --ff-primary-semibold: "Quicksand Semibold", sans-serif;
+  --ff-primary-bold: "Quicksand Bold", sans-serif;
 
-  --ff-code: 'Jetbrains Mono', monospace;
+  --ff-code: "Jetbrains Mono", monospace;
 }
 
 @font-face {
-  font-family: 'Jetbrains Mono';
+  font-family: "Jetbrains Mono";
   src: url(/assets/fonts/CODE-FONTS/Jetbrains-Mono.ttf);
 }
 
 @font-face {
-  font-family: 'FiraCode';
+  font-family: "FiraCode";
   src: url(/assets/fonts/CODE-FONTS/FiraCode.otf);
 }
 
@@ -26,35 +26,34 @@ body{
 **/
 
 @font-face {
-  font-family: 'Quicksand Light';
+  font-family: "Quicksand Light";
   src: url(/assets/fonts/quicksand/Quicksand-Light.ttf);
 }
 
 @font-face {
-  font-family: 'Quicksand normal';
+  font-family: "Quicksand normal";
   src: url(/assets/fonts/quicksand/Quicksand-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   src: url(/assets/fonts/quicksand/Quicksand-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Quicksand Medium';
+  font-family: "Quicksand Medium";
   src: url(/assets/fonts/quicksand/Quicksand-Medium.ttf);
 }
 
 @font-face {
-  font-family: 'Quicksand Semibold';
+  font-family: "Quicksand Semibold";
   src: url(/assets/fonts/quicksand/Quicksand-SemiBold.ttf);
 }
 
 @font-face {
-  font-family: 'Quicksand Bold';
+  font-family: "Quicksand Bold";
   src: url(/assets/fonts/quicksand/Quicksand-Bold.ttf);
 }
-
 
 /**
 
@@ -63,32 +62,32 @@ body{
 **/
 
 @font-face {
-  font-family: 'Raleway Light';
+  font-family: "Raleway Light";
   src: url(/assets/fonts/raleway/Raleway-Light.ttf);
 }
 
 @font-face {
-  font-family: 'Raleway normal';
+  font-family: "Raleway normal";
   src: url(/assets/fonts/raleway/Raleway-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   src: url(/assets/fonts/raleway/Raleway-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Raleway Medium';
+  font-family: "Raleway Medium";
   src: url(/assets/fonts/raleway/Raleway-Medium.ttf);
 }
 
 @font-face {
-  font-family: 'Raleway Semibold';
+  font-family: "Raleway Semibold";
   src: url(/assets/fonts/raleway/Raleway-SemiBold.ttf);
 }
 
 @font-face {
-  font-family: 'Raleway Bold';
+  font-family: "Raleway Bold";
   src: url(/assets/fonts/raleway/Raleway-Bold.ttf);
 }
 
@@ -99,46 +98,43 @@ body{
 **/
 
 @font-face {
-  font-family: 'Poppins Light';
+  font-family: "Poppins Light";
   src: url(/assets/fonts/poppins/Poppins-Light.otf);
 }
 
 @font-face {
-  font-family: 'Poppins normal';
+  font-family: "Poppins normal";
   src: url(/assets/fonts/poppins/Poppins-Regular.otf);
 }
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   src: url(/assets/fonts/poppins/Poppins-Regular.otf);
 }
 
 @font-face {
-  font-family: 'Poppins Medium';
+  font-family: "Poppins Medium";
   src: url(/assets/fonts/poppins/Poppins-Medium.otf);
 }
 
 @font-face {
-  font-family: 'Poppins Semibold';
+  font-family: "Poppins Semibold";
   src: url(/assets/fonts/poppins/Poppins-Semibold.otf);
 }
 
 @font-face {
-  font-family: 'Poppins Bold';
+  font-family: "Poppins Bold";
   src: url(/assets/fonts/poppins/Poppins-Bold.otf);
 }
 
-
-
-
-body{
+body {
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-.top-header-cnt > *{
+.top-header-cnt > * {
   font-family: var(--ff-primary-medium);
-  letter-spacing: -.075rem;
+  letter-spacing: -0.075rem;
 }
 
 #notification-area {
@@ -165,7 +161,7 @@ body{
   left: 2rem;
   animation: showNotification 500ms ease-in-out forwards;
 }
-.notification.contextMenu{
+.notification.contextMenu {
   width: 30ch;
   left: -4.25rem !important;
   animation: showNotification 500ms ease-in-out forwards;
@@ -195,7 +191,7 @@ body{
   background: #006c97;
 }
 
-.wrapperContextMenu{
+.wrapperContextMenu {
   opacity: 0;
   pointer-events: none;
   position: fixed;
@@ -210,13 +206,13 @@ body{
   user-select: none;
 }
 
-.wrapperContextMenu .menu{
+.wrapperContextMenu .menu {
   padding: 10px 12px !important;
 }
-.wrapperContextMenu .menu:last-child{
+.wrapperContextMenu .menu:last-child {
   padding-top: 0rem !important;
 }
-.wrapperContextMenu .content .item{
+.wrapperContextMenu .content .item {
   list-style: none;
   font-size: 22px;
   height: 50px;
@@ -230,23 +226,23 @@ body{
   color: white !important;
   transition: 500ms ease;
 }
-.wrapperContextMenu .content .item:hover{
+.wrapperContextMenu .content .item:hover {
   background: #fff;
   color: black !important;
 }
-.wrapperContextMenu .content .item span{
+.wrapperContextMenu .content .item span {
   margin-left: 8px !important;
   font-size: 19px !important;
 }
-.wrapperContextMenu .content .normal{
+.wrapperContextMenu .content .normal {
   display: flex !important;
-  margin: .75rem !important;
+  margin: 0.75rem !important;
   border-top: 1px solid #ccc;
 }
 
 /* hamburger menu code now */
 
-#toggle-menu{
+#toggle-menu {
   height: 1.5rem;
   width: 2.5rem;
   position: fixed;
@@ -255,16 +251,21 @@ body{
   cursor: pointer;
   z-index: 9999999999999999999;
   background-color: rgba(35, 39, 44, 0.288);
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: hidden;
 }
 
-#toggle-menu, #toggle-menu > *, .span, .span-c, #menu, #menu > *{
+#toggle-menu,
+#toggle-menu > *,
+.span,
+.span-c,
+#menu,
+#menu > * {
   box-sizing: content-box !important;
 }
 
-.span{
-  height: .15rem;
+.span {
+  height: 0.15rem;
   width: 2.375rem;
   border-radius: 1rem;
   background-color: rgb(255, 255, 255);
@@ -275,34 +276,34 @@ body{
   transition: 500ms ease;
 }
 
-.span:not(:is(:last-of-type, :first-of-type)){
+.span:not(:is(:last-of-type, :first-of-type)) {
   top: 42%;
 }
 
-.span:last-of-type{
+.span:last-of-type {
   top: calc(42% + 22%);
 }
 
-.span-c.active .span{
+.span-c.active .span {
   background-color: black !important;
 }
 
-.span-c.active .span:first-of-type{
+.span-c.active .span:first-of-type {
   transform: translate(-50%) rotate(-45deg);
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
 
-.span-c.active .span:not(:is(:last-of-type, :first-of-type)){
+.span-c.active .span:not(:is(:last-of-type, :first-of-type)) {
   opacity: 0;
 }
 
-.span-c.active .span:last-of-type{
+.span-c.active .span:last-of-type {
   transform: translate(-50%) rotate(75deg);
-  margin-bottom: .1.5rem;
-  margin-right: .5rem;
+  margin-bottom: 0.1.5rem;
+  margin-right: 0.5rem;
 }
 
-#menu{
+#menu {
   height: 0vh;
   width: 0vw;
   z-index: -100; /* to hide the top strip */
@@ -316,7 +317,7 @@ body{
   align-items: center;
 }
 
-#menu .menu-item{
+#menu .menu-item {
   opacity: 0;
   pointer-events: none;
   transition: opacity 500ms ease;
@@ -330,70 +331,70 @@ body{
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.menu-item{
+.menu-item {
   --delay: 500ms;
   --increment: 100ms;
 }
 
-#menu.active .menu-item{
+#menu.active .menu-item {
   opacity: 1;
   pointer-events: all;
 }
 
-#menu.active .menu-item.item1{
+#menu.active .menu-item.item1 {
   transition-delay: calc(var(--delay) + var(--increment)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item2{
+#menu.active .menu-item.item2 {
   transition-delay: calc(var(--delay) + calc(var(--increment) * 2)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item3{
+#menu.active .menu-item.item3 {
   transition-delay: calc(var(--delay) + calc(var(--increment) * 3)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item4{
+#menu.active .menu-item.item4 {
   transition-delay: calc(var(--delay) + calc(var(--increment) * 4)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item5{
+#menu.active .menu-item.item5 {
   transition-delay: calc(var(--delay) + calc(var(--increment) * 5)) !important;
   transition-property: opacity;
 }
 
-#menu.active .menu-item.item6{
+#menu.active .menu-item.item6 {
   transition-delay: calc(var(--delay) + calc(var(--increment) * 6)) !important;
   transition-property: opacity;
 }
 
-#menu .menu-item{
+#menu .menu-item {
   font-weight: 100;
   cursor: pointer;
   transition-property: background-color, color, opacity;
   transition-duration: 500ms;
   transition-timing-function: ease;
   border-radius: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   width: 90vw;
   text-transform: uppercase;
   font-family: var(--ff-primary-medium);
 }
 
-#menu .menu-item:hover{
+#menu .menu-item:hover {
   text-decoration: underline;
 }
 
 @keyframes text-stroke {
-  50%{
+  50% {
     color: black;
     -webkit-text-stroke: 1px white;
   }
 
-  100%{
+  100% {
     color: white;
     -webkit-text-stroke: 1px black;
   }
@@ -405,14 +406,47 @@ body{
 
 **/
 
-h1, h2, h3, h4, h5, h6, header{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header {
   font-family: var(--ff-primary-medium);
 }
 
-div, div > *, a, p, input, label, span, li, i, b, select, strong, textarea, button, output, abbr, footer{
+div,
+div > *,
+a,
+p,
+input,
+label,
+span,
+li,
+i,
+b,
+select,
+strong,
+textarea,
+button,
+output,
+abbr,
+footer,
+sub,
+sup,
+details,
+summary,
+article,
+section,
+table,
+th,
+td
+{
   font-family: var(--ff-primary) !important;
 }
 
-code, .CodeMirror span{
+code,
+.CodeMirror span {
   font-family: var(--ff-code), monospace !important;
 }
