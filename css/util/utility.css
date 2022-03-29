@@ -305,11 +305,11 @@ body{
 #menu{
   height: 0vh;
   width: 0vw;
-  z-index: 10000000000000000000000000; /* to hide the top strip */
+  z-index: -100; /* to hide the top strip */
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
   transition: 500ms ease;
   display: flex;
   justify-content: center;
@@ -326,6 +326,8 @@ body{
 #menu.active {
   height: 100vh;
   width: 100vw;
+  z-index: 10000000000000000000000000;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .menu-item{
@@ -407,7 +409,7 @@ h1, h2, h3, h4, h5, h6, header{
   font-family: var(--ff-primary-medium);
 }
 
-div, div > *, a, p, input, label, span, li, i, b, select, strong, textarea, button{
+div, div > *, a, p, input, label, span, li, i, b, select, strong, textarea, button, output, abbr, footer{
   font-family: var(--ff-primary) !important;
 }
 
