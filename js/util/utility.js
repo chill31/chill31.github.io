@@ -157,9 +157,6 @@ createdContextMenu.innerHTML = `
         <li class="item myprojs">
             <span>My Projects</span>
         </li>
-        <li class="item learndev">
-            <span>Learn Webdev</span>
-        </li>
         <li class="item opencog">
             <span>Open Settings</span>
         </li>
@@ -247,10 +244,6 @@ customBtns.copyLink.addEventListener("click", () => {
   notify(`Successfully copied the link to this website`, "success");
 });
 
-customBtns.learnWebdev.addEventListener("click", () => {
-  redirect("/Learn.html");
-});
-
 customBtns.myProjects.addEventListener("click", () => {
   redirect("/Projects.html");
 });
@@ -303,11 +296,9 @@ createdHamMenu.innerHTML = `
 
   <h1 class="menu-item item-feed item3">Feed</h1>
 
-  <h1 class="menu-item item-learn item4">Learn Webdev</h1>
+  <h1 class="menu-item item-feedback item4">Feedback and Reviews</h1>
 
-  <h1 class="menu-item item-feedback item5">Feedback and Reviews</h1>
-
-  <h1 class="menu-item item-settings item6">Settings</h1>
+  <h1 class="menu-item item-settings item5">Settings</h1>
 </div>
 
 `;
@@ -339,7 +330,6 @@ const hamMenuItems = {
   home: document.querySelector(".item-home"),
   projects: document.querySelector(".item-projects"),
   feed: document.querySelector(".item-feed"),
-  learnWebdev: document.querySelector(".item-learn"),
   reviews: document.querySelector(".item-feedback"),
   settings: document.querySelector(".item-settings")
 };
@@ -359,12 +349,6 @@ hamMenuItems.projects.addEventListener("click", () => {
 hamMenuItems.feed.addEventListener("click", () => {
 
   redirect("/Feed.html");
-
-});
-
-hamMenuItems.learnWebdev.addEventListener("click", () => {
-
-  redirect("/Learn.html")
 
 });
 

@@ -322,6 +322,8 @@ body {
   pointer-events: none;
   transition: opacity 500ms ease;
   font-weight: 100;
+
+  text-align: center;
 }
 
 #menu.active {
@@ -446,7 +448,6 @@ td
   font-family: var(--ff-primary) !important;
 }
 
-code,
-.CodeMirror span {
+code{
   font-family: var(--ff-code), monospace !important;
 }
