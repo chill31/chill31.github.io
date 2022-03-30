@@ -31,6 +31,11 @@
 
     </div> -->
 
+    <button class="saveCode-Op399KhBkAJhOyNmUU-OPArims" id="initial" style="position: absolute; left: 50%; transform: translate(-50%);">Remove External Code</button>
+
+    <br>
+    <br>
+
     <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.25rem; width: 100%;">
     
       <button class="saveCode-Op399KhBkAJhOyNmUU-OPArims" id="rfcd">Refresh Code</button>
@@ -158,18 +163,20 @@
 
         saveCodeBtn.addEventListener("click", () => {
 
-          const htmlCode = editor.getValue();
+          const queryCode = editor.getValue();
           const cssCode = editor2.getValue();
           const jsCode = editor3.getValue();
 
-          iframe_content.body.innerHTML = `<style> ${cssCode} </style> ${htmlCode}`;
+          iframe_content.body.innerHTML = `<style> ${cssCode} </style> ${queryCode}`;
           iframe.contentWindow.eval(jsCode);
           
 
 
-          localStorage.setItem("htmlCode", htmlCode);
+          localStorage.setItem("queryCode", queryCode);
           localStorage.setItem("cssCode", cssCode);
           localStorage.setItem("jsCode", jsCode);
+
+          window.location.href = "/learn/Playground.html";
         });
 
         refCodeBtn.addEventListener("click", () => {
@@ -180,16 +187,16 @@
           iframe_content.body.innerHTML = "";
           iframe.contentWindow.eval("");
 
-          localStorage.setItem("htmlCode", "");
+          localStorage.setItem("queryCode", "");
           localStorage.setItem("cssCode", "");
           localStorage.setItem("jsCode", "");
         });
 
-        editor.setValue(localStorage.getItem("htmlCode"));
+        editor.setValue(localStorage.getItem("queryCode"));
         editor2.setValue(localStorage.getItem("cssCode"));
         editor3.setValue(localStorage.getItem("jsCode"));
 
-        iframe_content.body.innerHTML = `<style> ${localStorage.getItem("cssCode")} </style> ${localStorage.getItem("htmlCode")}`;
+        iframe_content.body.innerHTML = `<style> ${localStorage.getItem("cssCode")} </style> ${localStorage.getItem("queryCode")}`;
         iframe.contentWindow.eval(localStorage.getItem("jsCode"));
 
         const showPrevLabel = document.getElementById("labelfor");
@@ -222,15 +229,450 @@
           }
 
           if (!title) {
-            titleContent = "[{Iframe HTMLContent}]";
+            titleContent = "Document";
           } else if (title.textContent == "" || !title.textContent) {
-            titleContent = "[{Iframe HTMLContent}]";
+            titleContent = "Document";
           } else if (title.textContent) {
             titleContent = title.textContent;
           }
 
           label.textContent = titleContent;
           prevImage.setAttribute("src", href);
+
+          const urlSearchParams = new URLSearchParams(window.location.search);
+
+          const query = urlSearchParams.get("query");
+          const queryCode = urlSearchParams.get("code");
+
+          if(query == "htmlCode"){
+
+            if(queryCode == "title"){
+
+              editor.setValue(
+`<title>Some title</title>
+<!-- Sets the title which you see on the browser tab -->
+`)
+
+            }
+
+            if(queryCode == "p"){
+
+              editor.setValue(
+`<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illo facilis itaque, consectetur distinctio maiores qui! Voluptatum dicta veritatis at!</p>
+
+<!-- this defines a medium font-size paragraph in your webpage -->
+`
+              )
+
+            }
+
+            if(queryCode == "img"){
+
+              editor.setValue(
+`<img src="a link or path"> 
+
+<!-- you can also define an "alt=" attribute like the src, so if the link or file path is incorrect or cannot load, the text given in alt="" shows up. -->
+`
+              )
+
+            }
+
+            if(queryCode == "input"){
+
+              editor.setValue(
+`<!-- 
+
+The normal <input> tag gives a text input in which users can fill in letters, words, etc ( basically anything )
+The <input type=""> defines what type of input it should be.
+
+for example:
+
+also, the <br> tag gives a line break. ( moves to new line )
+-->
+
+
+
+<input type="button"> <!-- same as <button> tag -->
+
+<br>
+
+<input type="checkbox"> <!-- it's a checkbox, as the type defines. when a user clicks it, it becomes checked and the attribute "checked" becomes true -->
+
+<br>
+
+<input type="color"> <!-- simple color picker as the name says. -->
+
+<br>
+
+<input type="date"> <!-- MM-DD-YYYY Date format date input. -->
+
+<br>
+
+<input type="datetime-local"> <!-- same as above but taken in local. -->
+
+<br>
+
+<input type="email"> <!-- email address input. -->
+
+<br>
+
+<input type="file"> <!-- file input, takes a file, not a folder.-->
+
+<br>
+
+<input type="hidden"> <!-- hidden input, as the name suggests. -->
+
+<br>
+
+<input type="image"> <!-- image input, supports image extensions such as .png, .jpg, etc. -->
+
+<br>
+
+<input type="month"> <!-- month input like january, october, december, etc. -->
+
+<br>
+
+<input type="number"> <!-- number input like 1, 2, 7, 0, 4, etc. -->
+
+<br>
+
+<input type="password"> <!-- password input, has the hide feature which shows the password as dots. -->
+
+<br>
+
+<input type="radio"> <!-- these type of inputs are connected by the "name" attribute, they work like checkboxes, but only 1 in a group of these inputs can be checked. -->
+
+<br>
+
+<input type="range"> <!-- a number input through a slider. -->
+
+<br>
+
+<input type="reset"> <!-- this input works on forms, resetting everything entered in the form. -->
+
+<br>
+
+<input type="search"> <!-- this input is designed for the user to enter search queries. -->
+
+<br>
+
+<input type="submit"> <!-- this input type is used to submit a form. ( if in one ) -->
+
+<br>
+
+<input type="tel"> <!-- this input type is used to take in a telephone number. -->
+
+<br>
+
+<input type="text"> <!-- this is pretty much "<input>" but it's recommended you define a type. -->
+
+<br>
+
+<input type="time"> <!-- this input takes in a specific time, the design varies from system to system. -->
+
+<br>
+
+<input type="url"> <!-- this type of input takes in a url ( https:// ) -->
+
+<br>
+
+<input type="week"> <!-- this input takes in a week. -->
+`
+              )
+
+            }
+
+            if(queryCode == "div"){
+
+              editor.setValue(
+`<div>    
+    <input type="button">  
+    <img src="url or path" alt="image"> <!-- alt attribute gives out text if the image url/path is invalid. -->
+</div>
+`
+              )
+
+            }
+
+            if(queryCode == "ul"){
+
+              editor.setValue(
+`<ul>    
+    <li>List Item #1</li>
+    <li>List Item #2</li>
+</ul>
+`
+              )
+
+            }
+
+            if(queryCode == "footer"){
+
+              editor.setValue(
+`<footer>Lorem ipsum dolor sit amet.</footer>
+`
+              )
+
+            }
+
+          }
+
+          if(query == "cssCode"){
+
+            if(queryCode == "selecting-elements"){
+
+              editor.setValue("")
+
+              editor2.setValue(
+`/* assuming a HTML element has the id: "cool_thing" */
+
+    #cool_thing{
+      /* css */
+    }
+
+
+
+/* assuminng a HTML element has the class: "some_thing" */
+
+    .some_thing{
+      /* css */
+    }
+
+
+
+/* to just select all elements, just type in the element name: */
+
+     p{
+       /* css code */
+     }
+
+/* assuming there are 3 or more <p> tags, this selects the 3rd <p> tag. */
+
+     p:nth-child(3){ 
+       /* css code */
+     }
+
+
+
+/* you can also select elements according to their attributes ( like type="" in <input> tag). Custom attributes work too. */
+
+    input[type="color"] {
+      /* css code */
+    }
+
+
+
+/* you can also select elements according to their states, for example, :checked, or :focus, are states of the element. ":checked" only works for checkboxes and radio checkboxes. */
+
+   input:checked{ 
+      /* css code */
+   }
+
+
+
+/* you can select different tags or elements with the "," keyword, and the styles provided will apply for all the elements. for example: */
+
+p, input, div{
+  /* css code */
+}
+
+/* the "+" keyword, selects adjacent elements, ( simply only works if 2 tags are beside each other ) */
+
+#first_para + #second_para {
+  /* css code */
+}
+
+
+
+/* the general selector "~" selects every element of the value given in it's parent container, for example: "h1 ~ h6" selects every h6 element which are in the same container (body). */
+
+/* now for css: */
+
+p ~ span{ 
+ /* css code */
+}
+
+
+
+/* the selector ">" selects everything ( on the right side of ">" ) if it's contained inside the element given on the left side of ">" */
+/* for example, here's an HTML snippet:
+
+<div id="container">
+
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, laudantium?</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, laudantium?</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, laudantium?</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, laudantium?</p>
+
+  <div class="sub-container">
+    <p>Lorem ipsum...</p>
+  </div>
+
+</div>
+
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis unde soluta qui deleniti iure ullam.</p>
+
+*/
+/* now for the css */
+
+.container > p{
+  /* selects all the <p> tags inside of the div ( .container )  but will not select the <p> tag inside the .sub-container div. */
+}
+
+
+
+/* this selector is very similar to the ">" selector, but it doesn't have a key, just a simple space works, and seeing the above snippet for the > selector, the " " selector selects EVERY element, whether it be in a sub-container, sub-sub-container. */
+
+/* to explain, take the above selector's HTML snippet */
+/* now css */
+
+.container p{
+  /* selects all the <p> tags inside of .container div. also .sub-container div because it's inside .container. */
+}
+
+
+
+/* ( tip: this is how you comment ) 
+    
+as you read in the basic page of html startup, we can differentiate same elements by using id's or classes, or in some cases, both, so now, the above code shows how to select elements.
+*/
+`
+              )
+
+            }
+
+            if(queryCode == "transition"){
+
+              editor.setValue(
+`<p>Lorem Ipsum...</p>
+
+<div class="box">
+
+</div>
+`              
+              )
+
+              editor2.setValue(
+`p{
+  color: black;
+  transition: color 500ms ease-in;
+}
+
+p:hover{
+  color: red;
+}
+
+/* this means that a 500ms ( half of a second ) transition will take place when we place our mouseover the <p> tag, changing the color to red. */
+
+/* example with "transform" property: */
+
+.box{
+  height: 100px;
+  width: 100px;
+  transition: transform 200ms ease-in-out;
+  background: red;
+}
+
+/* first value is the thing you want the transition to be on, second is the time, and third is the way you want the transition to be. */
+
+.box:hover{
+  transform: scale(1.05); /* see below for more examples on how to use this property */
+}
+`
+              )
+
+            }
+
+            if(queryCode == "transform"){
+
+              editor.setValue(`<div class="box"></div>`)
+
+              editor2.setValue(
+`.box{
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+.box:hover{
+  transform: rotate(45deg);
+}
+`
+)
+
+            }
+
+            if(queryCode == "fonts"){
+
+              editor.setValue("<p>Lorem Ipsum</p>");
+
+              editor2.setValue(
+`p{
+  font-family: sans-serif;
+  /* this defines the font-family of an element. */
+  /* the browser saved fonts are : serif, sans-serif, monospace, cursive; these are basics, there are many more */
+
+  font-weight: 500;
+  /* this defines the boldness of the font, it has word properties too, like "bold", "bolder", "normal", etc. */
+
+  font-size: 20px;
+  /* this defines the size of the font, 16px is default for many elements. */
+
+  font-style: italic;
+  /* this defines how the font is shown, like oblique, italic, etc. */
+}
+`
+              )
+
+            }
+
+            if(queryCode == "colors"){
+
+              editor.setValue(
+`<div class="test-container">
+
+     <p class="test-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium esse odio recusandae repudiandae totam, nobis aut tempora fuga quae eveniet.</p>
+
+     <button class="test-btn">Click Me</button>
+
+</div>
+`                
+              )
+
+              editor2.setValue(
+`.test-container{
+  background-color: cornflowerblue;
+  border-color: lime;
+}
+
+.test-container .test-paragraph{
+  color: indianred;
+}
+
+.test-container .test-btn{
+  background-color: gray;
+  color: black;
+}
+
+/*
+  background-color defines the color of the background of an element, in this case, the test-container
+  border-color defines the color of the border of an element, in this case, the test-container
+  color defines the text color of an element's text, in this case, test-btn and test-paragraph.
+*/
+`                
+              )
+
+            }
+
+          }
+
+  const removeSearchParams = document.getElementById("initial");
+
+  removeSearchParams.addEventListener("click", () => {
+
+    window.location.href = `/learn/Playground.html`;
+
+  });
 
   </script>
 </body>

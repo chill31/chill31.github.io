@@ -35,6 +35,10 @@
 The above line of code defines the title of the webpage
 --></textarea>
 
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
+
   </div><br /><br /><br /><br />
 
   <!-- seperator -->
@@ -54,6 +58,10 @@ The above line of code defines the title of the webpage
 The above line of code defines a paragraph, and the random text is the "Lorem Ipsum" text used to define empty spaces for filling up example spaces.
 -->
 </textarea>
+
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
 
   </div><br /><br /><br /><br />
 
@@ -76,6 +84,10 @@ The above line of code shows the image given in it's attribute "src" ( src="link
 the "img" tag does not need an ending tag like the above 2 tags.
 -->
 </textarea>
+
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
 
   </div><br /><br /><br /><br />
 
@@ -150,6 +162,10 @@ for example:
 
 </textarea>
 
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
+
   </div><br /><br /><br /><br />
 
   <!-- seperator -->
@@ -161,7 +177,7 @@ for example:
 
     <h2>"div" Tag</h2>
 
-    <p>These tags are used for containing things, like tables, and inputs, etc.</p>
+    <p>These tags are used for containing things, like tables, and inputs, etc. Their full form is "division" which explains a lot.</p>
 
     <textarea id="ta-div" disabled>
 <div>    
@@ -169,6 +185,10 @@ for example:
     <img src="url or path" alt="image"> <!-- alt attribute gives out text if the image url/path is invalid. -->
 </div>
 </textarea>
+
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
 
   </div><br /><br /><br /><br />
 
@@ -192,6 +212,10 @@ for example:
 <!-- "ol" tag is the same, just change the starting and ending tags to "<ol>" and "</ol>" -->
 </textarea>
 
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
+
   </div><br /><br /><br /><br />
 
   <!-- seperator -->
@@ -210,10 +234,14 @@ for example:
 <!-- this will be positioned at the bottom of the screen. -->
 </textarea>
 
+<br>
+
+<button class="test test-title-tag">Test on Playground</button>
+
   </div><br /><br /><br /><br />
   
 
-  <p style="text-align: center; font-size: 1.2rem;">To test these, you can go over to the <a href="../Playground.html" style="color: var(--a-clr); text-decoration: none;">Playground</a></p>
+  <p style="text-align: center; font-size: 1.2rem;">To test these, you can go over to the <a href="../Playground.html" style="color: var(--a-clr); text-decoration: none;">Playground</a> or click on the test buttons.</p>
 
   <script src="../../static/cm/default/codemirror.js"></script>
   <script src="../../static/cm/modes/html/m-html.js"></script>
@@ -317,6 +345,50 @@ for example:
       matchTags: true,
       autoCloseTags: true,
       readOnly: true
+    });
+
+    const testBtns = document.querySelectorAll(".test");
+    
+    testBtns[0].addEventListener("click", () => {
+
+      redirect(`/learn/Playground.html?query=htmlCode&code=title`);
+
+    });
+
+    testBtns[1].addEventListener("click", () => {
+
+      redirect(`/learn/Playground.html?query=htmlCode&code=p`)
+
+    });
+
+    testBtns[2].addEventListener("click", () => {
+
+        redirect(`/learn/Playground.html?query=htmlCode&code=img`)
+
+    });
+
+    testBtns[3].addEventListener("click", () => {
+
+        redirect(`/learn/Playground.html?query=htmlCode&code=input`)
+
+    });
+
+    testBtns[4].addEventListener("click", () => {
+
+      redirect(`/learn/Playground.html?query=htmlCode&code=div`)
+
+    });
+
+    testBtns[5].addEventListener("click", () => {
+
+        redirect(`/learn/Playground.html?query=htmlCode&code=ul`)
+
+    });
+
+    testBtns[6].addEventListener("click", () => {
+
+      redirect(`/learn/Playground.html?query=htmlCode&code=footer`)
+
     })
 
   </script>
