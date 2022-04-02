@@ -405,7 +405,7 @@ const settingsCogIcon = document.querySelector(".gear-icon");
 
 if(!settingsCogIcon){
 
-  console.error("No settings icon found, terminating click process.")
+  console.warn("[DEV] No settings icon found, terminating click process.\n\nYou do not need to pay attention to this.")
 
 } else {
 

@@ -1,0 +1,120 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --text-shadows: #ffffff;
+  --btn-bg: rgb(80, 80, 80);
+  --btn-txtclr: #fff;
+  --scrollbar-bg: #919191;
+  --scrollbar-thumb-bg: #5e5e5e;
+  --top-btm-bg: #5865f2;
+  --a-clr: #2293fa;
+  --selection-clr: hsla(235, 86%, 75%, .5);
+}
+
+body{
+ background-color: var(--bg-color);
+ margin: 0;
+}
+
+.top-header-cnt {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 11%;
+  background-color: var(--top-btm-bg);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--a-clr)
+}
+
+.intro {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  text-align: center;
+
+  margin-top: 7rem;
+}
+
+/** the real things start now **/
+
+div#details {
+ border-radius: 1rem;
+ height: fit-content;
+ width: fit-content;
+}
+
+div#details > h3{
+  background-color: rgb(37, 204, 37);
+  width: 30rem;
+  border-top-right-radius: .5rem !important;
+  border-radius: 0;
+
+  cursor: pointer;
+  transition: 500ms ease;
+
+  user-select: none;
+  margin: 0;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+div#details > h3.opened{
+ background-color: rgb(37, 204, 37);
+}
+
+div#details > h3::after{
+ content: '';
+ background-image: url(/assets/img/square-plus-regular.svg);
+ background-repeat: none;
+
+ background-size: 1.2rem;
+
+ height: 1.2rem;
+ width: 1.2rem;
+}
+
+div#details > h3.opened::after{
+ content: '';
+ background-image: url(/assets/img/square-minus-regular.svg);
+}
+
+
+div#details > h3 ~ div{
+    border-radius: .5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 500ms ease;
+    padding: 1rem;
+
+    background-color: rgb(37, 204, 37, .69);
+}
+
+div#details > h3.opened ~ div{
+    height: inherit;
+    opacity: 1;
+    pointer-events: all;
+    width: 30rem;
+}

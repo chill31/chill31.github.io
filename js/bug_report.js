@@ -7,6 +7,24 @@ const defText = document.getElementById("spann");
 const submit_btn = document.querySelector(".submit input[type=\"button\"");
 const bug_desc = document.getElementById("comment");
 
+/** name inputs */
+
+let svg = getElement(0, ".msg-validator.first svg");
+let svg_path = getElement(0, ".msg-validator.first svg path");
+let name_input = getElement(1, "name");
+let svg_container = getElement(0, ".msg-validator.first");
+
+let svg_2 = getElement(0, ".msg-validator.second svg");
+let svg_path_2 = getElement(0, ".msg-validator.second svg path");
+let name_input_2 = getElement(0, ".feedback-input.browser");
+let svg_container_2 = getElement(0, ".msg-validator.second");
+
+let svg_3 = getElement("0", ".msg-validator.third svg");
+let svg_path_3 = getElement("0", ".msg-validator.third svg path");
+let name_input_3 = getElement("0", ".feedback-input.browser-link");
+
+let svg_container_3 = getElement("0", ".msg-validator.third");
+
 
 /**
  * defining if the input values are valid or not "variable(s)"
@@ -90,11 +108,6 @@ darkener.addEventListener("click", () => {
 
 // first message validator, "name" input.
 
-let svg = getElement(0, ".msg-validator.first svg");
-let svg_path = getElement(0, ".msg-validator.first svg path");
-let name_input = getElement(1, "name");
-let svg_container = getElement(0, ".msg-validator.first");
-
 name_input.addEventListener("input", () => {
   svg.innerHTML =
     '<path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/>';
@@ -118,11 +131,6 @@ name_input.addEventListener("input", () => {
 
 // second message validator, "browser" input.
 
-let svg_2 = getElement(0, ".msg-validator.second svg");
-let svg_path_2 = getElement(0, ".msg-validator.second svg path");
-let name_input_2 = getElement(0, ".feedback-input.browser");
-let svg_container_2 = getElement(0, ".msg-validator.second");
-
 name_input_2.addEventListener("input", () => {
 
   browser_name = true;
@@ -140,12 +148,6 @@ name_input_2.addEventListener("input", () => {
 });
 
 // third message validator, "browser link" input.
-
-let svg_3 = getElement("0", ".msg-validator.third svg");
-let svg_path_3 = getElement("0", ".msg-validator.third svg path");
-let name_input_3 = getElement("0", ".feedback-input.browser-link");
-
-let svg_container_3 = getElement("0", ".msg-validator.third");
 
 name_input_3.addEventListener("input", () => {
   svg_3.innerHTML =
@@ -190,18 +192,23 @@ submit_btn.addEventListener("click", () => {
         bug_description: bug_desc.value,
       };
 
-      FORM.reset();
-      window.location.href = window.location.href;
+      notify("Bug reported successfully, our team will try to fix it as soon as possible", "success");
 
-      console.log(`
-Form was submitted. 
-Entered Information Below:
 
-Name: ${enteredInfo.name}
-Description: ${enteredInfo.bug_description}
-Browser Name: ${enteredInfo.browser_name}
-Browser Link: ${enteredInfo.browser_link}
-`);
+      setTimeout(() => {
+        FORM.reset();
+        advancedClassHandler(svg_container, "remove", "valid-content");
+        svg.innerHTML =
+          '<path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z" />';
+
+        advancedClassHandler(svg_container_2, "remove", "valid-content");
+        svg_2.innerHTML =
+          '<path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z" />';
+
+        advancedClassHandler(svg_container_3, "remove", "valid-content");
+        svg_3.innerHTML =
+          '<path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z" />';
+      }, 500);
 
   }
 

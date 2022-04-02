@@ -106,8 +106,14 @@
       "description": "A simple test which tells you your internet speed in MBPS",
       "location": "projects/NetSpeed.html"
     },
-
     {
+      "title": "Country Information",
+      "description": "This tool provides you basic information of countries like their continent, population, capital, etc.",
+      "location": "projects/Country_Info.html"
+    }
+
+
+    ,{
       "title": "...",
       "description": "More projects coming soon...",
       "location": "#"
