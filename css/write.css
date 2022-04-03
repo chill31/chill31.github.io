@@ -44,7 +44,7 @@ body {
   transition: 0.35s ease;
 }
 
-.top-header-cnt {
+.top-header-strip {
   position: fixed;
   top: 0;
   width: 100vw;

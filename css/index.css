@@ -28,7 +28,7 @@ body {
   font-family: sans-serif;
   background: var(--bg-color);
   margin: 0;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 *::-webkit-scrollbar {
@@ -45,7 +45,7 @@ body {
   transition: 0.35s ease;
 }
 
-.top-header-cnt {
+.top-header-strip {
   position: fixed;
   top: 0;
   width: 100%;
@@ -94,7 +94,7 @@ a {
   color: #000000;
 }
 
-.social-cc {
+.social-containers {
   width: 30ch;
   height: fit-content;
   display: flex;
@@ -103,7 +103,7 @@ a {
   cursor: pointer;
 }
 
-.social-cc.dsc {
+.social-containers.discord-container{
   width: 30ch;
   height: fit-content;
   display: flex;
@@ -111,7 +111,7 @@ a {
   justify-content: center;
 }
 
-.social-cc.ytb{
+.social-containers.youtube-container {
   justify-content: left;
   padding-left: 1ch;
 }
@@ -138,17 +138,23 @@ a,
   text-decoration: none;
 }
 
-.ytb, .ytb > *,
-.dsc, .dsc > * {
+.social-media-svg {
+  height: 4.2rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.youtube-container, .youtube-container *,
+.discord-container, .discord-container * {
   transition: 500ms ease;
   cursor: pointer;
 }
 
-.ytb:hover path {
+.youtube-container:hover path {
   fill: #ff0000;
 }
 
-.dsc:hover path {
+.discord-container:hover path {
   fill: #5865f2;
 }
 
@@ -175,12 +181,12 @@ a,
   fill: currentColor;
 }
 
-#social- {
+#social-flex {
   width: fit-content;
   border-radius: 1rem;
 }
 
-.s {
+.big-icon-show {
   height: 50vh;
   aspect-ratio: 1;
   transform: rotateZ(-45deg);
@@ -189,12 +195,6 @@ a,
   right: 20vh;
 }
 
-.s path {
+.big-icon-show path {
   fill: rgb(54, 71, 90);
-}
-
-.scm {
-  height: 4rem;
-  aspect-ratio: 1;
-  cursor: pointer;
 }

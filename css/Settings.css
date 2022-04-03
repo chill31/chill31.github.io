@@ -20,12 +20,6 @@ html {
 }
 
 body {
-  font-family: sans-serif;
-  background: linear-gradient(
-    to bottom right,
-    rgba(34, 146, 250, 0.1),
-    rgba(88, 101, 242, 0.1)
-  );
   margin: 0;
   transition-property: background, color, background-color;
   transition-duration: 500ms;
@@ -48,7 +42,7 @@ body {
   transition: 0.35s ease;
 }
 
-.top-header-cnt {
+.top-header-strip {
   position: absolute;
   top: 0;
   width: 100%;
@@ -81,19 +75,6 @@ ul,
   font-size: 1.25rem;
   color: var(--text-color);
   font-weight: 250;
-}
-
-.ytb path,
-.dsc path {
-  transition: fill 500ms ease;
-}
-
-.ytb:hover path {
-  fill: red;
-}
-
-.dsc:hover path {
-  fill: #5865f2;
 }
 
 #save-cog {
@@ -134,4 +115,5 @@ ul.settings-list li:first-of-type {
 label.small{
   font-size: 1rem;
   word-wrap: break-word;
+  cursor: pointer;
 }

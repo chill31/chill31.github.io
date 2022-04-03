@@ -2,9 +2,9 @@ const container = document.querySelector(".container");
 
 const prevBtn = document.querySelector(".controls.previous");
 const nextBtn = document.querySelector(".controls.next");
-const lbl = document.getElementById("project-num");
+const lbl = document.getElementById("project-number");
 
-const spanContainerC = document.querySelector(".newest");
+const spanContainerC = document.querySelector(".newest-project-div");
 const editSpan = document.querySelector("span.edit");
 
 fetch("/assets/web/projects.json").then(res => res.json()).then(data => {

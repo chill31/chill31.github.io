@@ -12,7 +12,7 @@
 
 <body>
 
-  <div class="top-header-cnt">
+  <div class="top-header-strip">
 
     <h1>My Projects</h1>
 
@@ -25,9 +25,9 @@
 
   </div><br /><br /><br /><br /><br />
 
-  <div class="newest">
+  <div class="newest-project-div">
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="exm">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-attention">
       <path
         d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM232 152C232 138.8 242.8 128 256 128s24 10.75 24 24v128c0 13.25-10.75 24-24 24S232 293.3 232 280V152zM256 400c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 385.9 273.4 400 256 400z" />
     </svg>
@@ -38,24 +38,26 @@
       Latest Project: 
     </span>
     <span class="edit">
-
+      <!-- The newest project shows up here magically with the help of javascript. -->
     </span>
 
     </div>
   </div>
 
-  <div class="container-co" style="display: flex; justify-items: center;">
+  <div class="container-position" style="display: flex; justify-items: center;">
 
   <div class="container">
 
-    <div class="controlsc">
+    <div class="controls-arrows-container">
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="controls previous">
       <path
         d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z" />
     </svg>
 
-    <label id="project-num"></label>
+    <label id="project-number">
+      <!-- The project number displayed will be shown here.-->
+    </label>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="controls next">
       <path

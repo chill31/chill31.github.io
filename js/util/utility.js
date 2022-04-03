@@ -289,7 +289,7 @@ document.body.prepend(createdHamMenu);
 
 createdHamMenu.innerHTML = `
 
-<div class="items-container">
+<div class="items-container" style="user-select: none">
   <h1 class="menu-item item-home item1">Home</h1>
 
   <h1 class="menu-item item-projects item2">Projects</h1>
