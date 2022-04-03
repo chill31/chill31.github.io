@@ -1,0 +1,172 @@
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --text-shadows: #ffffff;
+    --btn-bg: rgb(80, 80, 80);
+    --btn-txtclr: #fff;
+    --scrollbar-bg: #919191;
+    --scrollbar-thumb-bg: #5e5e5e;
+    --top-btm-bg: #5865f2;
+    --a-clr: #2293fa;
+    --selection-clr: rgb(136, 145, 246);
+}
+
+*::selection {
+    background-color: var(--selection-clr);
+}
+
+a::selection,
+ff::selection {
+    color: var(--a-clr);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    overflow: hidden !important;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg);
+    border: 0.02rem solid rgb(12, 12, 12);
+    transition: 0.35s ease;
+}
+
+.top-header-strip {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 13vh;
+    background: #54c0eb;
+    z-index: 10000;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+ul,
+.projects-a {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    font-weight: 250;
+}
+
+a,
+.projects-a {
+    color: var(--a-clr);
+    text-decoration: none;
+}
+
+.mid-container {
+    height: 87vh;
+    position: absolute;
+    top: 13vh;
+    padding: 1rem;
+    padding-top: 4rem !important;
+    height: 100%;
+    width: 100vw;
+    background: linear-gradient(to bottom right,
+            var(--a-clr) 47.5%,
+            #262a2e 5%);
+    font-family: cursive;
+}
+
+.mid-container h3 {
+    font-weight: 100;
+    font-size: larger;
+    color: rgb(38, 42, 46);
+}
+
+.mid-container p {
+    width: 50ch;
+    color: #000000;
+}
+
+.mid-container p a{
+    color: black;
+    position: relative;
+    transition: color 500ms ease;
+}
+
+.mid-container p a:hover{
+ color: white;
+}
+
+.mid-container p a::after{
+ content: '';
+ height: 3px;
+ width: 100%;
+ background-color: black;
+ position: absolute;
+ top: 100%;
+ right: 50%;
+ transform: translate(50%);
+
+ transition: 500ms ease;
+}
+
+.mid-container p a:hover::after{
+ content: '';
+ width: 100%;
+ height: 100%;
+ top: 0;
+
+ animation: content-frames 500ms 500ms ease forwards;
+}
+
+@keyframes content-frames {
+    0%{
+     content: 'Bug Report';
+     content-visibility: none;
+    }
+
+    100%{
+     content: 'Bug Report';
+     content-visibility: visible;
+    }
+}
+
+.mid-container p a::selection{
+    filter: brightness(10);
+}
+
+.mid-container .about-me-heading {
+    color: #000000;
+}
+
+.big-icon-show {
+    height: 50vh;
+    aspect-ratio: 1;
+    transform: rotateZ(-45deg);
+    position: absolute;
+    bottom: 35vh;
+    right: 20vh;
+}
+
+.big-icon-show path {
+    fill: rgb(54, 71, 90);
+}
+
+entered-page{
+ font-weight: bolder;
+}
