@@ -181,3 +181,8 @@ quote{
  user-select: none;
  color: rgb(38, 42, 46);
 }
+
+.mid-container p:not(.a) a{
+ color: var(--text-color);
+ text-decoration: underline 2px;
+}
