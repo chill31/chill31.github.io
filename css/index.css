@@ -278,7 +278,7 @@ button.show-skills[data-show-skills]#show-skills:hover{
  width: 90%;
  background-color: white;
  border: solid 1px black;
- height: 1.5rem;
+ height: 1.2rem;
  position: absolute;
  border-radius: 1rem;
 
@@ -300,18 +300,15 @@ button.show-skills[data-show-skills]#show-skills:hover{
  content: attr(data-progress);
  position: absolute;
  left: 2%;
- font-size: 1.2rem;
+ font-size: 1.1rem;
 }
-
-.actual-progress.progress-python::after{
- color: white;
-}
-
 .actual-progress{
   transition: width 500ms ease;
-  height: 95%;
+  height: 100%;
   border-radius: 1rem;
   width: 0;
+
+  background-color: var(--a-clr);
 }
 
 .full-progress-bar.full-html{
