@@ -26,7 +26,7 @@ html {
 
 body {
   font-family: sans-serif;
-  background: var(--bg-color);
+  background: var(--a-clr);
   margin: 0;
   overflow: hidden !important;
 }
@@ -77,6 +77,7 @@ a {
     var(--a-clr) 47.5%,
     #262a2e 5%
   );
+  transition: opacity 250ms ease;
 }
 
 .mid-container h3 {
@@ -146,7 +147,7 @@ a,
 
 .youtube-container, .youtube-container *,
 .discord-container, .discord-container * {
-  transition: 500ms ease;
+  transition: fill 500ms ease;
   cursor: pointer;
 }
 
@@ -197,4 +198,138 @@ a,
 
 .big-icon-show path {
   fill: rgb(54, 71, 90);
+}
+
+button.show-skills[data-show-skills]#show-skills{
+ padding: .5em 1em;
+ cursor: pointer;
+ position: absolute;
+ top: 40vh;
+ right: 30vw;
+ transform: rotate(-30deg);
+
+ background-color: rgb(58, 213, 56);
+ border: solid 1px black;
+ border-radius: 1rem;
+
+ transition: 500ms ease;
+}
+
+button.show-skills[data-show-skills]#show-skills:hover{
+  background: rgb(138, 255, 136);
+}
+
+.experience-and-things:not(.hidden) ~ .mid-container{ /* if the skills container is not hidden, then show the skills and hide the actual content. */
+ opacity: 0;
+ pointer-events: none;
+}
+
+.experience-and-things.hidden ~ .mid-container { /* if the skills container is hidden, then show the actual content. */
+  opacity: 1;
+  pointer-events: all;
+}
+
+.experience-and-things{
+  height: 87vh;
+  position: absolute;
+  top: 13vh;
+  padding: 1rem;
+  padding-top: 4rem !important;
+  height: 100%;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom right,
+    var(--a-clr) 47.5%,
+    #262a2e 5%
+  );
+
+  transition: opacity 500ms ease;
+}
+
+.experience-and-things:not(.hidden){
+  opacity: 1;
+  pointer-events: all;
+}
+
+.experience-and-things.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.experience-and-things .header{
+ font-weight: 100;
+ font-size: 1.5rem;
+}
+
+/* skills container css now */
+
+.progress-container{
+  padding: 1.5rem;
+  background-color: white;
+  width: 50vw;
+  height: 40vh;
+  position: relative;
+  
+  box-shadow: 0 0 .5rem black;
+  border-radius: 1rem;
+}
+
+.full-progress-bar{
+ width: 90%;
+ background-color: white;
+ border: solid 1px black;
+ height: 1.5rem;
+ position: absolute;
+ border-radius: 1rem;
+
+ --top-number: 3rem;
+ --increment: 3.5rem;
+
+ display: flex;
+ align-items: center;
+}
+
+.full-progress-bar::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: -1.3rem;
+  font-size: 1.2rem;
+}
+
+.actual-progress::after{
+ content: attr(data-progress);
+ position: absolute;
+ left: 2%;
+ font-size: 1.2rem;
+}
+
+.actual-progress.progress-python::after{
+ color: white;
+}
+
+.actual-progress{
+  transition: width 500ms ease;
+  height: 95%;
+  border-radius: 1rem;
+  width: 0;
+}
+
+.full-progress-bar.full-html{
+ top: var(--top-number);
+}
+
+.full-progress-bar.full-css{
+ top: calc(var(--top-number) + var(--increment));
+}
+
+.full-progress-bar.full-js{
+ top: calc(var(--top-number) + calc(var(--increment) * 2));
+}
+
+.full-progress-bar.full-python{
+ top: calc(var(--top-number) + calc(var(--increment) * 3));
+}
+
+.full-progress-bar.full-java{
+ top: calc(var(--top-number) + calc(var(--increment) * 4));
 }
