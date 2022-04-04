@@ -267,7 +267,7 @@ button.show-skills[data-show-skills]#show-skills:hover{
   padding: 1.5rem;
   background-color: white;
   width: 50vw;
-  height: 40vh;
+  height: 45vh;
   position: relative;
   
   box-shadow: 0 0 .5rem black;
@@ -282,8 +282,8 @@ button.show-skills[data-show-skills]#show-skills:hover{
  position: absolute;
  border-radius: 1rem;
 
- --top-number: 3rem;
- --increment: 3.5rem;
+ --top-number: 10%;
+ --increment: 17.5%;
 
  display: flex;
  align-items: center;
