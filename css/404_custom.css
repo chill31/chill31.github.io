@@ -108,6 +108,10 @@ a,
     transition: color 500ms ease;
 }
 
+.mid-container p a::selection{
+ color: rgba(255, 255, 255, 0.653);
+}
+
 .mid-container p a, .mid-container p a::before, .mid-container p a::after{
  --duration: 350ms;
 }
@@ -151,10 +155,6 @@ a,
     }
 }
 
-.mid-container p a::selection{
-    filter: brightness(10);
-}
-
 .mid-container .about-me-heading {
     color: #000000;
 }
@@ -173,5 +173,11 @@ a,
 }
 
 entered-page{
- font-weight: bolder;
+ color: rgb(46, 45, 66);
+ text-decoration: underline;
+}
+
+quote{
+ user-select: none;
+ color: rgb(38, 42, 46);
 }
