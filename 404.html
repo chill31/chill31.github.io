@@ -43,16 +43,28 @@ const element = document.querySelector("entered-page");
 
 element.textContent = window.location.href;
 
+let textLOL = "";
+
 if(window.location.href.toString().endsWith("/review/") || window.location.href.toString().endsWith("/reviews/")){
 
-    const p = document.createElement("p");
-    p.innerHTML = `
+    textLOL = `
 If you are looking for the reviews pages, then head over to the <a href="/Write.html">Reviews</a> page.
 `;
 
-mid_container.append(p);
+}
+
+if(window.location.href.toString().endsWith("/projects/") || window.location.href.toString().endsWith("/project/")){
+ 
+    textLOL = `
+If you are looking for this website's utilities/projects, then head over to the <a href="/Projects.html">Projects</a> page.
+`
 
 }
+
+const p = document.createElement("p");
+p.innerHTML = textLOL;
+
+mid_container.append(p);
 
     </script>
 </body>
