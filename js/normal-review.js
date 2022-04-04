@@ -73,3 +73,29 @@ darkener.addEventListener("click", () => {
   advancedClassHandler(imgt, "remove", "focused");
   advancedClassHandler(darkener, "remove", "active");
 });
+
+
+const form = document.querySelector("form.form#form1");
+
+const submit_btn = document.querySelector("[data-thing=\"submit\"]");
+const input_name = document.querySelector("input.feedback-input#name");
+const comment = document.querySelector("textarea.feedback-input#comment");
+
+const name_reg = new RegExp(/^[^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/i);
+
+submit_btn.addEventListener("click", () => {
+
+  if(!input_name.value.match(name_reg)){ notify("Please enter a valid name!", "error"); } 
+  else {
+
+  if(comment.value.length < 5){ notify("Please enter sufficient information in the message section!", "error"); }
+  else {
+
+  form.reset();
+  notify("Review successfully submitted, thanks for taking out your time to fill out this form!", "success");
+
+  }
+
+  }
+
+});
