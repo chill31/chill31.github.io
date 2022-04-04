@@ -43,7 +43,7 @@ const element = document.querySelector("entered-page");
 
 element.textContent = window.location.href;
 
-if(window.location.href.toString().endsWith("/review") || window.location.href.toString().endsWith("/reviews")){
+if(window.location.href.toString().endsWith("/review/") || window.location.href.toString().endsWith("/reviews/")){
 
     const p = document.createElement("p");
     p.innerHTML = `
