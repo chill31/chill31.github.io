@@ -37,9 +37,22 @@
 
     <script>
 
+
+const mid_container = document.querySelector(".mid-container");
 const element = document.querySelector("entered-page");
 
 element.textContent = window.location.href;
+
+if(window.location.href.toString().endsWith("/review") || window.location.href.toString().endsWith("/reviews")){
+
+    const p = document.createElement("p");
+    p.innerHTML = `
+If you are looking for the reviews pages, then head over to the <a href="/Write.html">Reviews</a> page.
+`;
+
+mid_container.append(p);
+
+}
 
     </script>
 </body>
