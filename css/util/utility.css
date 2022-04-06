@@ -381,13 +381,35 @@ body {
   transition-timing-function: ease;
   border-radius: 1rem;
   padding: 0.5rem;
-  width: 90vw;
+  width: fit-content;
   text-transform: uppercase;
   font-family: var(--ff-primary-medium);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
 }
 
-#menu .menu-item:hover {
-  text-decoration: underline;
+#menu .menu-item::after{
+ --bg-clr-neutral: linear-gradient(45deg, #2293fa 50%, #262a2e 5%);;
+
+ content: '';
+ width: 100%;
+ height: 3px;
+ background: var(--bg-clr-neutral);
+ position: absolute;
+ top: 100%;
+ left: 50%;
+ transform: translate(-50%) scale(0);
+
+ transition: transform 500ms ease;
+ transform-origin: right;
+}
+
+#menu .menu-item:hover::after{
+  content: '';
+  background: var(--bg-clr-neutral);
+  transform-origin: left;
+  transform: translate(-50%) scale(1);
 }
 
 @keyframes text-stroke {
