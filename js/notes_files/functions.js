@@ -156,7 +156,7 @@ function showDetails(count){
 
     popHead.textContent = title;
 
-    popDate.textContent += date;
+    popDate.textContent = "Created At: " + date;
     popDesc.textContent = description;
 
     popEditSpan.textContent = `Last Edited At: ${e_text}`;
