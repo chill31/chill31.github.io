@@ -12,7 +12,7 @@
 }
 
 *::selection {
-  background-color: var(--selection-clr);
+  background: var(--selection-clr);
 }
 
 a::selection,
@@ -308,7 +308,7 @@ button.show-skills[data-show-skills]#show-skills:hover{
   border-radius: 1rem;
   width: 0;
 
-  background: linear-gradient(45deg, #2293fa 75%, #262a2e 5%);
+  background: linear-gradient(45deg, #2293fa 60%, #262a2e 5%);
 }
 
 .actual-progress.progress-java{

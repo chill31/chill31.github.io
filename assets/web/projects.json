@@ -110,6 +110,11 @@
       "title": "Country Information",
       "description": "This tool provides you basic information of countries like their continent, population, capital, etc.",
       "location": "projects/Country_Info.html"
+    },
+    {
+      "title": "Notes App",
+      "description": "This tool lets you make notes! You can update them, delete them, and create new ones...",
+      "location": "projects/Notes.html"
     }
 
 
