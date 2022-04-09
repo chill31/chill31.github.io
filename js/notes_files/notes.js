@@ -7,9 +7,11 @@ const descTag = popupBox.querySelector("textarea");
 
 const deleteAllBtn = document.querySelector(".delete-all");
 
-addBox.addEventListener("click", () => {
 
-    if (notes.length == 10) { alert("You have reached the limits of notes for this website."); return; };
+const notes = JSON.parse(localStorage.getItem("notes")) ?? [];
+let isUpdate = false, updateId;
+
+addBox.addEventListener("click", () => {
 
     popupBox.classList.add("show");
 
@@ -18,18 +20,21 @@ addBox.addEventListener("click", () => {
 closeIcon.addEventListener("click", () => {
 
     hidePopup();
+    setTimeout(() => {
+      window.location.href = window.location.href;
+    }, 100);
 
 });
 document.body.addEventListener("keyup", (e) => {
 
     if(e.key == "Escape"){
         hidePopup();
+        setTimeout(() => {
+          window.location.href = window.location.href;
+        }, 100);
     }
 
 });
-
-const notes = JSON.parse(localStorage.getItem("notes")) ?? [];
-let isUpdate = false, updateId;
 
 addBtn.addEventListener("click", (e) => {
 
@@ -55,7 +60,9 @@ addBtn.addEventListener("click", (e) => {
     let noteInfo = {
       title: noteTitle,
       description: noteDesc,
-      date: formattedDate
+      date: formattedDate,
+      edited: false,
+      edit_date: null
     };
 
     if(!isUpdate){

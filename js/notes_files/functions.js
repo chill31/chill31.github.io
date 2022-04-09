@@ -81,13 +81,85 @@ function deleteNote(noteCount) {
 
 function updateNote(index, title, desc){
 
+    const dateNow = new Date();
+    const dateYear = dateNow.getFullYear();
+    const dateMonth = dateNow.getMonth();
+    const dateDay = dateNow.getDay();
+    const dateDate = dateNow.getDate();
+    const dateHour = dateNow.getHours();
+    const dateMinute = dateNow.getMinutes();
+    const dateSeconds = dateNow.getSeconds();
+
+    const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(
+      dateDate
+    )} (${fixDay(
+      dateDay
+    )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
+
+    const stored = [];
+    JSON.parse(localStorage.getItem("notes")).forEach(note => {
+        stored.push(note);
+    });
+
+    stored[index].edited = true;
+    stored[index].edit_date = formattedDate;
+
+    localStorage.setItem("notes", JSON.stringify(stored));
+
+    console.log(localStorage.getItem("notes"));
+    console.log(formattedDate);
+
     isUpdate = true;
     updateId = index;
 
     addBox.click();
 
     titleTag.value = title;
-    descTag.value = desc;
+    descTag.value = desc;   
+
+}
+
+function showDetails(count){
+
+    const detailPopup = document.querySelector(".detail-popup");
+    const actualPopup = detailPopup.querySelector(".actual-popup");
+
+    const popHead = actualPopup.querySelector("h1");
+    const popDate = actualPopup.querySelector("span.popup-date");
+    const popDesc = actualPopup.querySelector("p");
+    const popEditSpan = actualPopup.querySelector(".edited");
+
+    detailPopup.classList.add("shown");
+
+    const title = JSON.parse(localStorage.getItem("notes"))[count].title;
+    const description = JSON.parse(localStorage.getItem("notes"))[count].description;
+    const date = JSON.parse(localStorage.getItem("notes"))[count].date;
+
+    const edited = JSON.parse(localStorage.getItem("notes"))[count].edited;
+    
+
+    const close = actualPopup.querySelector("i");
+
+    close.addEventListener("click", () => {
+
+        detailPopup.classList.remove("shown");
+
+    });
+
+    document.body.addEventListener("keyup", (e) => {
+
+        if(e.key == "Escape") detailPopup.classList.remove("shown");
+
+    });
+
+    let e_text = edited ? JSON.parse(localStorage.getItem("notes"))[count].edit_date : "Not Edited";
+
+    popHead.textContent = title;
+
+    popDate.textContent += date;
+    popDesc.textContent = description;
+
+    popEditSpan.textContent = `Last Edited At: ${e_text}`;
 
 }
 
@@ -104,7 +176,9 @@ function showNotes(){
         <span>${note.description}</span>
     </div>
     <div class="bottom-content">
-        <span>${note.date}</span>
+        <span>
+          <button class="show-details" onclick="showDetails(${index})">Show Details</button>
+        </span>
 
         <div class="settings">
             <i onclick="showSettingsMenu(this)" class="uil uil-ellipsis-h" data-show-menu></i>
