@@ -20,7 +20,7 @@ function fixMonth(m){
 
 function fixDay(d){
 
-    const fixDayDays = [0, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const fixDayDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     return fixDayDays[d];
 
 }
@@ -81,41 +81,44 @@ function deleteNote(noteCount) {
 
 function updateNote(index, title, desc){
 
-    const dateNow = new Date();
-    const dateYear = dateNow.getFullYear();
-    const dateMonth = dateNow.getMonth();
-    const dateDay = dateNow.getDay();
-    const dateDate = dateNow.getDate();
-    const dateHour = dateNow.getHours();
-    const dateMinute = dateNow.getMinutes();
-    const dateSeconds = dateNow.getSeconds();
-
-    const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(
-      dateDate
-    )} (${fixDay(
-      dateDay
-    )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
-
-    const stored = [];
-    JSON.parse(localStorage.getItem("notes")).forEach(note => {
-        stored.push(note);
-    });
-
-    stored[index].edited = true;
-    stored[index].edit_date = formattedDate;
-
-    localStorage.setItem("notes", JSON.stringify(stored));
-
-    console.log(localStorage.getItem("notes"));
-    console.log(formattedDate);
-
     isUpdate = true;
     updateId = index;
 
     addBox.click();
 
     titleTag.value = title;
-    descTag.value = desc;   
+    descTag.value = desc;
+
+    addBtn.addEventListener("click", () => {
+
+        console.log("clicked on edit");
+
+        const dateNow = new Date();
+        const dateYear = dateNow.getFullYear();
+        const dateMonth = dateNow.getMonth();
+        const dateDay = dateNow.getDay();
+        const dateDate = dateNow.getDate();
+        const dateHour = dateNow.getHours();
+        const dateMinute = dateNow.getMinutes();
+        const dateSeconds = dateNow.getSeconds();
+
+        const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(
+          dateDate
+        )} (${fixDay(
+          dateDay
+        )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
+
+        const stored = [];
+        JSON.parse(localStorage.getItem("notes")).forEach((note) => {
+          stored.push(note);
+        });
+
+        stored[index].edited = true;
+        stored[index].edit_date = formattedDate;
+
+        localStorage.setItem("notes", JSON.stringify(stored));
+
+    });
 
 }
 

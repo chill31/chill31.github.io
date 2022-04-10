@@ -4,8 +4,10 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
     const newest_proj_element = document.querySelector("custom-newest-proj");
     const most_famous_proj = document.querySelector("custom-famous-proj");
 
-    const count = data.projects.length - 2;
-    const newest_projObject = data.projects[count];
+    const count = data.projects.length - 1;
+    const newest_project_count = count - 1;
+
+    const newest_projObject = data.projects[newest_project_count];
 
     num_proj_element.textContent = count;
     newest_proj_element.innerHTML = `
