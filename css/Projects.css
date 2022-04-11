@@ -40,7 +40,7 @@ body.grid-view{
   display: flex;
   align-content: center;
   justify-content: center;
-  z-index: 3432943;
+  z-index: 10;
 }
 
 h1 {
@@ -212,7 +212,7 @@ ul {
   transition: 500ms ease;
   cursor: pointer;
 
-  z-index: 6;
+  z-index: 9;
 }
 
 .newest-project-div a{

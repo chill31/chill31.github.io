@@ -1,25 +1,6 @@
 :root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #919191;
-  --scrollbar-thumb-bg: #5e5e5e;
-  --top-btm-bg: #5865f2;
-  --a-clr: #2293fa;
-  --selection-clr: hsla(235, 86%, 75%, .5);
-  /* this page only variables */
   --form-btn-hover-bg: rgb(15, 15, 15);
   --form-btn-hover-clr: #ffdf00;
-}
-
-*::selection {
-  background-color: var(--selection-clr);
-}
-
-a::selection, ff::selection{
-  color: var(--a-clr);
 }
 
 body {
@@ -218,7 +199,7 @@ div.text{
   background-color: var(--form-btn-hover-bg);
 }
 
-.img-{
+.img{
   height: 100%;
   width: 100%;
   display: none;
@@ -280,30 +261,11 @@ div.text{
   transition-property: background;
 }
 
-.img-.focused{
-  z-index: 343954098594854;
+.img.focused{
+  z-index: 10;
   transform: scale3d(2, 2, 2) rotate(360deg);
 }
 
-.text.errcodediv{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row-reverse;
+span#span{
+font-size: 2rem;
 }
-
-.text.errcodediv span{
-  background-color: #fbfbfb;
-  height: 3.75rem;
-  width: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.1rem;
-  border-right: solid .2rem black;
-}
-
-.feedback-input.errcode:focus + span{
-  color:#2293fa;
-}
-

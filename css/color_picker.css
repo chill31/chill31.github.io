@@ -1,28 +1,16 @@
-:root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #919191;
-  --scrollbar-thumb-bg: #5e5e5e;
-  --top-btm-bg: #5865f2;
-  --a-clr: #2293fa;
-  --selection-clr: hsla(235, 86%, 75%, .5);
-}
-
-*::selection {
-  background-color: var(--selection-clr);
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: sans-serif;
   background: var(--bg-color);
   margin: 0;
+}
+
+h1{
+ text-align: center;
+}
+
+.intro{
+ font-size: 1.25rem;
+ text-align: center;
 }
 
 .color-picker {
@@ -41,10 +29,6 @@ h4 {
   font-weight: 300;
 }
 
-code {
-  font-family: monospace;
-}
-
 .clr-div {
   position: absolute;
   left: 47.5%;
@@ -55,56 +39,6 @@ code {
   position: absolute;
   overflow: visible;
   transform: translateY(0);
-}
-
-#notification-area {
-  position: fixed;
-  bottom: 1rem;
-  right: 10px;
-  width: 325px;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-#notification-area .notification {
-  position: relative;
-  padding: 0.875rem 1.75rem;
-  background: #111;
-  color: #f5f5f5;
-  font-family: sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  opacity: 0;
-  left: 2rem;
-  animation: showNotification 250ms ease-in-out forwards;
-}
-@keyframes showNotification {
-  to {
-    opacity: 1;
-    left: 0px;
-  }
-}
-
-#notification-area .notification.success {
-  background: #49cc7b;
-}
-#notification-area .notification.error {
-  background: rgb(190, 51, 0);
-}
-#notification-area .notification.info {
-  background: #00acee;
-}
-
-.notification:not(.notification.info)::selection {
-  background: #00acee;
-}
-
-.notification.info::selection {
-  background: #006c97;
 }
 
 /* color picker */
@@ -120,11 +54,10 @@ code {
 
 .pickr .pcr-button {
   position: relative;
+  top: +2rem;
   height: 2.375rem;
   width: 2.375rem;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Helvetica Neue", Arial, sans-serif;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
     no-repeat center;
@@ -211,8 +144,10 @@ code {
 }
 
 .pcr-app {
-  position: fixed;
-  z-index: 10000000000;
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-40%);
+  z-index: 100;
   border-radius: 0.1em;
   background: rgb(255, 255, 255);
   opacity: 0;
@@ -542,7 +477,7 @@ code {
 .pcr-app[data-theme="classic"] .pcr-selection .pcr-color-chooser .pcr-slider {
   background: linear-gradient(
     to bottom,
-    red,
+    rgb(255, 0, 0),
     #ff0,
     lime,
     cyan,

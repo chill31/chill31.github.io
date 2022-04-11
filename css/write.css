@@ -50,7 +50,7 @@ body {
   width: 100vw;
   height: 13vh;
   background: #54c0eb;
-  z-index: 10000;
+  z-index: 10;
 }
 
 h1 {

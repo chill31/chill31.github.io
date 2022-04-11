@@ -20,12 +20,12 @@
     <div id="form-div">
       <form class="form" id="form1" method="post">
 
-        <label for="name" class="lbl">Name: </label><sup style="color: rgb(238, 53, 53);">*required</sup> <br>
+        <label for="name" class="lbl">Name: </label><sup>*required</sup> <br>
         <div class="name">
           <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" spellcheck="false" maxlength="25" required />
         </div><br />
 
-        <label for="comment" class="lbl">Your Message: </label><sup style="color: rgb(238, 53, 53);">*required</sup>
+        <label for="comment" class="lbl">Your Message: </label><sup>*required</sup>
         <p class="text">
           <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" spellcheck="false"
             placeholder="Comment" required></textarea>
@@ -200,13 +200,13 @@
         </div><br /><br />
 
 
-      <div class="imgc">
+      <div class="img-container">
         
         <label for="" class="lbl">Attachments: </label><br /><br />
         <input type="file" class="image-input"><br />
         <div class="preview-container" style="height: 15rem; width: 90%; border: solid 1px var(--text-color); display: flex; justify-content: center; align-items: center;">
-          <img src="" class="img-" id="ll">
-          <span style="font-size: 2rem;" id="spann">Your Attachment</span>
+          <img src="" class="img" id="toggle-size">
+          <span style="font-size: 2rem;" id="span">Your Attachment</span>
         </div>
 
       </div>

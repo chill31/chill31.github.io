@@ -1,15 +1,3 @@
-:root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #919191;
-  --scrollbar-thumb-bg: #5e5e5e;
-  --top-btm-bg: #5865f2;
-  --a-clr: #2293fa;
-  --selection-clr: hsla(235, 86%, 75%, .5);
-}
 body{
   display: flex;
   align-items: center;
@@ -18,10 +6,6 @@ body{
   padding: 0 10px;
   background: var(--a-clr);
   overflow: hidden;
-}
-::selection{
-  color: #fff;
-  background: var(--a-clr);
 }
 .wrapper{
   width: 370px;
@@ -53,6 +37,7 @@ form input{
   font-size: 17px;
   padding: 0 15px;
   border: 1px solid #999;
+  width: 95%;
 }
 form input:focus{
   padding: 0 14px;

@@ -1,6 +1,6 @@
 const img_input = document.querySelector(".image-input");
-const imgt = document.getElementById("ll");
-const defText = document.getElementById("spann");
+const imgt = document.getElementById("toggle-size");
+const defText = document.getElementById("span");
 
 img_input.addEventListener("change", (event) => {
   event.preventDefault();

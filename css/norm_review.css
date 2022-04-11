@@ -401,7 +401,7 @@ div.name{
   width: inherit;
 }
 
-.img-{
+.img{
   height: 100%;
   width: 100%;
   display: none;
@@ -414,14 +414,16 @@ div.name{
   color: var(--text-color)
 }
 
+z-index
+
 .image-input{
   font-family: sans-serif;
   color: var(--text-color);
   cursor: pointer;
 }
 
-.img-.focused{
-  z-index: 343954098594854;
+.img.focused{
+  z-index: 10;
   transform: scale3d(2, 2, 2) rotate(360deg);
 }
 
@@ -451,55 +453,9 @@ div.name{
   background: rgba(0, 0, 0, 0.288);
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 20;
 }
 
-#notification-area {
-  position: fixed;
-  bottom: 1rem;
-  right: 10px;
-  width: 250px;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-#notification-area .notification {
-  position: relative;
-  padding: 0.875rem 1.75rem;
-  background: #111;
-  color: #f5f5f5;
-  font-family: sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  opacity: 0;
-  left: 2rem;
-  animation: showNotification 500ms ease-in-out forwards;
-}
-@keyframes showNotification {
-  to {
-    opacity: 1;
-    left: 0px;
-  }
-}
-
-#notification-area .notification.success {
-  background: #49cc7b;
-}
-#notification-area .notification.error {
-  background: rgb(190, 51, 0);
-}
-#notification-area .notification.info {
-  background: #00acee;
-}
-
-.notification:not(.notification.info)::selection {
-  background: #00acee;
-}
-
-.notification.info::selection {
-  background: #006c97;
+sup{
+color: rgb(238, 53, 53);
 }

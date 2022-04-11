@@ -60,11 +60,11 @@ restart_btn.style.pointerEvents = "none";
     restart_btn.style.opacity = "1";
     restart_btn.style.pointerEvents = "all";
 
-    document.getElementById("dk").classList.add("active");
+    document.getElementById("darkener").classList.add("active");
 
   }, 60000);
 
   restart_btn.addEventListener("click", () => {
       window.location.href = window.location.href;
-  })
+  });
 });

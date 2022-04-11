@@ -1,36 +1,10 @@
-:root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #91919100;
-  --scrollbar-thumb-bg: #5e5e5e00;
-  --top-btm-bg: #5865f2;
-  --a-clr: rgb(34, 147, 250);
-  --selection-clr: var(--a-clr);
-}
-
-*::selection {
-  background-color: var(--selection-clr);
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--bg-color);
   margin: 0;
 }
 
-*::-moz-scrollbar{
-  visibility: hidden;
-  display: none;
-}
-
 .top-header-strip {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 11%;
@@ -38,13 +12,17 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  z-index: 2339990;
+  z-index: 10;
 }
 
-h1 {
+.top-header-strip h1 {
   text-align: center;
   text-transform: uppercase;
   font-family: sans-serif;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 a {
@@ -130,56 +108,6 @@ ul {
   fill: currentColor;
 }
 
-#notification-area {
-  position: fixed;
-  bottom: 1rem;
-  right: 10px;
-  width: 250px;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-#notification-area .notification {
-  position: relative;
-  padding: 1rem 2rem;
-  background: #111;
-  color: #f5f5f5;
-  font-family: sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  opacity: 0;
-  left: 2rem;
-  animation: showNotification 500ms ease-in-out forwards;
-}
-@keyframes showNotification {
-  to {
-    opacity: 1;
-    left: 0px;
-  }
-}
-
-#notification-area .notification.success {
-  background: #49cc7b;
-}
-#notification-area .notification.error {
-  background: rgb(190, 51, 0);
-}
-#notification-area .notification.info {
-  background: #00acee;
-}
-
-.notification:not(.notification.info)::selection {
-  background: #00acee;
-}
-
-.notification.info::selection {
-  background: #006c97;
-}
-
 /* actual feed css */
 
 :root {
@@ -232,13 +160,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -266,17 +187,6 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-body {
-  display: grid;
-  place-content: center;
-  min-height: 100vh;
-
-  font-family: var(--ff-primary);
-  font-weight: var(--fw-400);
-
-  background-color: hsl(var(--clr-neutral-200));
 }
 
 h1,

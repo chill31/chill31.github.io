@@ -51,7 +51,7 @@ body {
   width: 100%;
   height: 13vh;
   background: #54c0eb;
-  z-index: 10000;
+  z-index: 10;
 }
 
 h1 {
@@ -116,8 +116,6 @@ a {
   justify-content: left;
   padding-left: 1ch;
 }
-
-
 
 .intro {
   font-size: 1.375rem;
@@ -204,13 +202,13 @@ button.show-skills[data-show-skills]#show-skills{
  padding: .5em 1em;
  cursor: pointer;
  position: absolute;
- top: 40vh;
- right: 30vw;
- transform: rotate(-30deg);
+ bottom: 2vh;
+ right: 50%;
 
  background-color: rgb(58, 213, 56);
  border: solid 1px black;
  border-radius: 1rem;
+ transform: translate(50%);
 
  transition: 500ms ease;
 }

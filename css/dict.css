@@ -4,18 +4,11 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-:root{
-  --a-clr: #2293fa
-}
 body{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: var(--a-clr);
-}
-::selection{
-  color: #fff;
   background: var(--a-clr);
 }
 .wrapper{
@@ -51,14 +44,21 @@ body{
 .search input::placeholder{
   color: #B8B8B8;
 }
-.search :where(i, span){
+.search span{
   position: absolute;
   top: 50%;
   color: #999;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
+}
+svg{
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ left: .3rem;
+
+ height: 1.25rem !important;
 }
 .search i{
-  left: 18px;
   pointer-events: none;
   font-size: 16px;
 }

@@ -9,6 +9,32 @@ body {
   --ff-code: "Jetbrains Mono", monospace;
 }
 
+:root{
+--bg-color: white;
+--text-color: black;
+--text-shadows: #ffffff;
+--btn-bg: rgb(80, 80, 80);
+--btn-txtclr: #fff;
+--scrollbar-bg: #919191;
+--scrollbar-thumb-bg: #5e5e5e;
+--top-btm-bg: #5865f2;
+--a-clr: #2293fa;
+--selection-clr: hsla(235, 86%, 75%, .5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: var(--selection-clr);
+}
+
+a::selection,
+ff::selection {
+  color: var(--a-clr);
+}
+
 @font-face {
   font-family: "Jetbrains Mono";
   src: url(/assets/fonts/CODE-FONTS/Jetbrains-Mono.ttf);

@@ -1,8 +1,8 @@
 const FORM = document.querySelector("form");
 
 const img_input = document.querySelector(".image-input");
-const imgt = document.getElementById("ll");
-const defText = document.getElementById("spann");
+const imgt = document.getElementById("toggle-size");
+const defText = document.getElementById("span");
 
 const submit_btn = document.querySelector(".submit input[type=\"button\"");
 const bug_desc = document.getElementById("comment");

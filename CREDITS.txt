@@ -1,0 +1,13 @@
+Fontawesome: Icons; (https://fontawesome.com/)
+REST Countries: Country Information; (https://restcountries.com/)
+Random Paragraphs: Typing Test; (https://randomwordgenerator.com/paragraph.php/)
+Open Weather Map: Weather Report App; (https://openweathermap.org);
+@simonwep/pickr: Color Picker; (https://github.com/Simonwep/pickr);
+Currencies:
+    •  flagcdn : flags small png. (https://flagcdn.com/)
+    •  exchangerate-api : all the currencies; (https://www.exchangerate-api.com/);
+Dictionary API: Dictionary App; (https://dictionaryapi.dev/);
+QR-Code API: QR-Code Generator; (https://goqr.me) (https://api.qrserver.com);
+
+Lots of help from Mozilla Developers Website (https://developer.mozilla.org/);
+Helped with basic, advanced and most of the things in this website like animations, backgrounds, functions, etc.
