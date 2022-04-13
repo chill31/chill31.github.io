@@ -36,13 +36,15 @@ I like/dislike github for a few reasons:
 ```json
 
 {
- "name": "Chill shaur31", // not real ofc.
+ "name": "Chill shaur31",
  "age": 13,
  "likes": ["coding [web]", "talking", "sometimes gaming"],
  "dislikes": ["nothing specific."]
 }
 
 ```
+
+[the name was not real of course.];
 
 Well, that's about it, see ya..
 
