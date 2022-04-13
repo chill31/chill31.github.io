@@ -1,3 +1,7 @@
+html{
+ scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color);
   margin: 0;
@@ -156,13 +160,14 @@ ol[role="list"] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+a {
   text-decoration-skip-ink: auto;
+  color: var(--a-clr);
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -171,22 +176,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 h1,

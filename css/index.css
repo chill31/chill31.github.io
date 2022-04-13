@@ -54,6 +54,22 @@ body {
   z-index: 10;
 }
 
+/* body:not(.loading) div.loading-content{
+ visibility: hidden;
+}
+
+body.loading div.loading-content{
+ visibility: visible;
+}
+
+body.loading{
+ background-color: inherit;
+}
+
+body.loading .loaded-content{
+ visibility: hidden;
+} */
+
 h1 {
   text-transform: uppercase;
   font-family: sans-serif;
@@ -115,12 +131,6 @@ a {
 .social-containers.youtube-container {
   justify-content: left;
   padding-left: 1ch;
-}
-
-.intro {
-  font-size: 1.375rem;
-  color: var(--text-color);
-  text-align: center;
 }
 
 p,
@@ -210,11 +220,11 @@ button.show-skills[data-show-skills]#show-skills{
  border-radius: 1rem;
  transform: translate(50%);
 
- transition: 500ms ease;
+ transition: background-color 500ms ease;
 }
 
 button.show-skills[data-show-skills]#show-skills:hover{
-  background: rgb(138, 255, 136);
+  background-color: rgb(138, 255, 136);
 }
 
 .experience-and-things:not(.hidden) ~ .mid-container{ /* if the skills container is not hidden, then show the skills and hide the actual content. */

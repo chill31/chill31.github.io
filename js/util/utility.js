@@ -43,21 +43,7 @@ if(!localStorage.getItem("redirect-process")){
 
 function redirect(redirectLocation) {
 
-  console.log(localStorage.getItem("redirect-process"));
-
-  if(localStorage.getItem("redirect-process") == "true"){
-
-    if (document.body.classList.contains("Osjah5bodyhtml5")) {
-      window.location.href = redirectLocation;
-    } else {
-      window.location.href = `/redirecting/redirect.html?query=${redirectLocation}`;
-    }
-
-  } else if(localStorage.getItem("redirect-process") == "false"){
-
-    window.location.href = redirectLocation;
-
-  }
+  window.location.href = redirectLocation;
 
 }
 
@@ -425,3 +411,52 @@ document.head.innerHTML += `
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 `;
+
+/** loading process before accessing a webpage. **/
+
+const loadingContentDiv = document.createElement("div");
+loadingContentDiv.classList.add("loading-content");
+
+loadingContentDiv.innerHTML = `
+<div class="spinner">
+
+</div>
+
+    <div class="loading-text">
+
+      <h1 class="loading-header">Please Wait...</h1>
+
+      <span class="loading-info">Gathering Data...</span>
+
+    </div>
+`;
+
+document.body.prepend(loadingContentDiv);
+
+document.body.classList.add("loading");
+
+const load_time = 3500;
+const changing_time = 1000;
+
+const changingTexts = [
+ "Loading Content...",
+ "Accessing Data...",
+ "Verifying Data..."
+];
+
+const changeTextElement = document.querySelector(".loading-info");
+
+// giving a timeout before the loop starts.
+
+setTimeout(() => {
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => {
+      changeTextElement.textContent = changingTexts[i];
+    }, changing_time * i);
+  }
+}, 500);
+
+
+setTimeout(() => {
+  document.body.classList.remove("loading");
+}, load_time);

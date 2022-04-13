@@ -130,10 +130,12 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
     }
 
     prevBtn.addEventListener("click", () => {
+      prevBtn.classList.remove("focused");
       moveBack();
     });
 
     nextBtn.addEventListener("click", () => {
+      nextBtn.classList.remove("focused");
       moveNext();
     });
 

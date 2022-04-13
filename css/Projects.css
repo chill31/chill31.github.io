@@ -20,7 +20,6 @@ html{
 }
 
 body {
-  font-family: sans-serif;
   background: var(--bg-color);
   margin: 0;
   overflow: hidden !important;
@@ -122,12 +121,14 @@ ul {
   transition: 250ms ease;
   border-radius: 50%;
   transition-property: box-shadow, background-color;
+  border: solid 1px transparent;
 }
 
 .controls.focused{
-  background-color: rgba(189, 189, 189, 0.5);
-  box-shadow: 0 0 1.5rem gray;
-  transition: 250ms ease;
+  border: solid 1px rgb(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 .35rem rgba(0, 0, 0, .75);
+  transition: 100ms ease;
   transition-property: box-shadow, background-color;
 }
 

@@ -19,7 +19,7 @@ body {
 --scrollbar-thumb-bg: #5e5e5e;
 --top-btm-bg: #5865f2;
 --a-clr: #2293fa;
---selection-clr: hsla(235, 86%, 75%, .5);
+--selection-clr: hsl(235, 86%, 75%);
 }
 
 html {
@@ -28,11 +28,7 @@ html {
 
 *::selection {
   background-color: var(--selection-clr);
-}
-
-a::selection,
-ff::selection {
-  color: var(--a-clr);
+  color: white;
 }
 
 @font-face {
@@ -185,12 +181,12 @@ body {
   margin: 0.5rem 0;
   opacity: 0;
   left: 2rem;
-  animation: showNotification 500ms ease-in-out forwards;
+  animation: showNotification 500ms forwards alternate;
 }
 .notification.contextMenu {
   width: 30ch;
   left: -4.25rem !important;
-  animation: showNotification 500ms ease-in-out forwards;
+  animation: showNotification 500ms forwards alternate;
 }
 @keyframes showNotification {
   to {
@@ -372,6 +368,8 @@ body {
 .menu-item {
   --delay: 500ms;
   --increment: 100ms;
+
+  color: black !important;
 }
 
 #menu.active .menu-item {
@@ -508,4 +506,55 @@ td
 
 code{
   font-family: var(--ff-code), monospace !important;
+}
+
+body:not(.loading) div.loading-content {
+  visibility: hidden;
+}
+
+body.loading div.loading-content {
+  visibility: visible;
+}
+
+body.loading {
+  background-color: inherit;
+}
+
+body.loading .loaded-content {
+  visibility: hidden;
+}
+
+.spinner {
+  height: 10rem;
+  width: 10rem;
+  border: 1rem solid transparent;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, .125);
+  border-top-color: var(--a-clr);
+
+  animation: loading-spinner 1000ms infinite linear;
+
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes loading-spinner {
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+.loading-text {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-text h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
 }
