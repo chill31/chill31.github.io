@@ -121,7 +121,7 @@ a {
 }
 
 .social-containers.discord-container{
-  width: 30ch;
+  width: fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -130,7 +130,6 @@ a {
 
 .social-containers.youtube-container {
   justify-content: left;
-  padding-left: 1ch;
 }
 
 p,
