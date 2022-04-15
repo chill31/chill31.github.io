@@ -412,51 +412,51 @@ document.head.innerHTML += `
 <link rel="manifest" href="/site.webmanifest">
 `;
 
-/** loading process before accessing a webpage. **/
+/** LOADING PROCESS BUT COMMENTED BECAUSE TOO ANNOYING. **/
 
-const loadingContentDiv = document.createElement("div");
-loadingContentDiv.classList.add("loading-content");
+// const loadingContentDiv = document.createElement("div");
+// loadingContentDiv.classList.add("loading-content");
 
-loadingContentDiv.innerHTML = `
-<div class="spinner">
+// loadingContentDiv.innerHTML = `
+// <div class="spinner">
 
-</div>
+// </div>
 
-    <div class="loading-text">
+//     <div class="loading-text">
 
-      <h1 class="loading-header">Please Wait...</h1>
+//       <h1 class="loading-header">Please Wait...</h1>
 
-      <span class="loading-info">Gathering Data...</span>
+//       <span class="loading-info">Gathering Data...</span>
 
-    </div>
-`;
+//     </div>
+// `;
 
-document.body.prepend(loadingContentDiv);
+// document.body.prepend(loadingContentDiv);
 
-document.body.classList.add("loading");
+// document.body.classList.add("loading");
 
-const load_time = 3500;
-const changing_time = 1000;
+// const load_time = 3500;
+// const changing_time = 1000;
 
-const changingTexts = [
- "Loading Content...",
- "Accessing Data...",
- "Verifying Data..."
-];
+// const changingTexts = [
+//  "Loading Content...",
+//  "Accessing Data...",
+//  "Verifying Data..."
+// ];
 
-const changeTextElement = document.querySelector(".loading-info");
+// const changeTextElement = document.querySelector(".loading-info");
 
-// giving a timeout before the loop starts.
+// // giving a timeout before the loop starts.
 
-setTimeout(() => {
-  for (let i = 0; i < 3; i++) {
-    setTimeout(() => {
-      changeTextElement.textContent = changingTexts[i];
-    }, changing_time * i);
-  }
-}, 500);
+// setTimeout(() => {
+//   for (let i = 0; i < 3; i++) {
+//     setTimeout(() => {
+//       changeTextElement.textContent = changingTexts[i];
+//     }, changing_time * i);
+//   }
+// }, 500);
 
 
-setTimeout(() => {
-  document.body.classList.remove("loading");
-}, load_time);
+// setTimeout(() => {
+//   document.body.classList.remove("loading");
+// }, load_time);

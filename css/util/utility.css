@@ -508,7 +508,10 @@ code{
   font-family: var(--ff-code), monospace !important;
 }
 
-body:not(.loading) div.loading-content {
+
+/** LOADING ANIMATION BUT TOO BAD SO I COMMENTED IT.  **/
+
+/* body:not(.loading) div.loading-content {
   visibility: hidden;
 }
 
@@ -542,7 +545,7 @@ body.loading .loaded-content {
 
 @keyframes loading-spinner {
   to {
-    transform: translate(-50%, -50%) rotate(1turn);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
@@ -557,4 +560,4 @@ body.loading .loaded-content {
 .loading-text h1 {
   font-size: 2rem;
   text-transform: capitalize;
-}
+} */
