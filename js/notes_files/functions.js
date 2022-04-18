@@ -91,8 +91,6 @@ function updateNote(index, title, desc){
 
     addBtn.addEventListener("click", () => {
 
-        console.log("clicked on edit");
-
         const dateNow = new Date();
         const dateYear = dateNow.getFullYear();
         const dateMonth = dateNow.getMonth();

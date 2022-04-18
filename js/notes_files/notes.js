@@ -58,7 +58,7 @@ addBtn.addEventListener("click", (e) => {
     const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(dateDate)} (${fixDay(dateDay)}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
 
     let noteInfo = {
-      title: noteTitle,
+      title: noteTitle.replaceAll("\"", "").replaceAll("'", ""),
       description: noteDesc,
       date: formattedDate,
       edited: false,
