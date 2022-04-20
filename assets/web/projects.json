@@ -115,6 +115,11 @@
       "title": "Notes App",
       "description": "This tool lets you make notes! You can update them, delete them, and create new ones...",
       "location": "projects/Notes.html"
+    },
+    {
+      "title": "Language Translator",
+      "description": "A simple language translator tool with most languages",
+      "location": "projects/Language/"
     }
 
 
