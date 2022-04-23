@@ -4,129 +4,152 @@
       "title": "Calculator",
       "description":
         "The calculator just like in phones, with advanced maths functions like SIN, COS, TAN, etc.",
-      "location": "projects/Calculator.html"
+      "location": "projects/Calculator.html",
+      "webLocation": "chill31.github.io/projects/Calculator.html"
     },
     {
       "title": "Clock",
       "description":
         "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
-      "location": "projects/Clock.html"
+      "location": "projects/Clock.html",
+      "webLocation": "chill31.github.io/projects/Clock.html"
     },
     {
       "title": "CoinFlip",
       "description":
         "This provides a fair way to choose between heads and tails when you don't have a coin!",
-      "location": "projects/CoinFlip.html"
+      "location": "projects/CoinFlip.html",
+      "webLocation": "chill31.github.io/projects/CoinFlip.html"
     },
     {
       "title": "Color Picker",
       "description":
         "The Color Picker, customised, lets you pick your colors, or some basic default colors if you are having some trouble choosing...",
-      "location": "projects/Color_picker.html"
+      "location": "projects/Color_picker.html",
+      "webLocation": "chill31.github.io/projects/Color_picker.html"
     },
     {
       "title": "Currency Convertor",
       "description":
         "This currency tool helps you in converting currencies to another, because its a lot of trouble doing that yourself, most of the currencies are supported",
-      "location": "projects/Currency.html"
+      "location": "projects/Currency.html",
+      "webLocation": "chill31.github.io/projects/Currency.html"
     },
     {
       "title": "Dice Roll",
       "description":
         "This simple tool rolls two die with random numbers from 1 - 6",
-      "location": "projects/Diceroll.html"
+      "location": "projects/Diceroll.html",
+      "webLocation": "chill31.github.io/projects/Diceroll.html"
     },
     {
       "title": "Password Generator",
       "description": "Helps you build a custom strong password!",
-      "location": "projects/Password_Generator.html"
+      "location": "projects/Password_Generator.html",
+      "webLocation": "chill31.github.io/projects/Password_Generator.html"
     },
     {
       "title": "Random Choice Picker",
       "description": "Picks a random choice from the list of choices you enter.",
-      "location": "projects/Random_Choice.html"
+      "location": "projects/Random_Choice.html",
+      "webLocation": "chill31.github.io/projects/Random_Choice.html"
     },
     {
       "title": "Temperature Convertor",
       "description":
         "This basic tool helps you in converting celsius to fahrenheit or the vise-versa.",
-      "location": "projects/Temperature.html"
+      "location": "projects/Temperature.html",
+      "webLocation": "chill31.github.io/projects/Temperature.html"
     },
     {
       "title": "Text Manipulation",
       "description":
         "This is a text tool, with some few things, like, converting to uppercase, or lowercase, character counting, etc.",
-      "location": "projects/Text_manipulation.html"
+      "location": "projects/Text_manipulation.html",
+      "webLocation": "chill31.github.io/projects/Text_manipulation.html"
     },
     {
       "title": "TicTacToe",
       "description":
         "Not a tool, this is a game played by many, it takes skill, go on, play!",
-      "location": "projects/TicTacToe.html"
+      "location": "projects/TicTacToe.html",
+      "webLocation": "chill31.github.io/projects/TicTacToe.html"
     },
     {
       "title": "Weather Reporter",
       "description":
         "Advanced weather reported for cities, type in the name of a city, press get weather, and there you go!",
-      "location": "projects/weather/index.html"
+      "location": "projects/weather/index.html",
+      "webLocation": "chill31.github.io/projects/weather/index.html"
     },
     {
       "title": "Typing Test",
       "description":
         "A simple 1 minute typing test with over 50+ random paragraphs and sentences, test your speed!",
-      "location": "projects/typing/index.html"
+      "location": "projects/typing/index.html",
+      "webLocation": "chill31.github.io/projects/typing/html"
     },
     {
       "title": "Click The Box!",
       "description": "A simple game where you have to click on the randomly spawning box which appears randomly in the screen everytime you click, score as much as you can in 60 seconds.",
-      "location": "projects/ClickBox.html"
+      "location": "projects/ClickBox.html",
+      "webLocation": "chill31.github.io/projects/ClickBox.html"
     },
     {
       "title": "2048 Game",
       "description": "A simple game which is meant to clone the original <a href=\"https://2048daily.com\">2048daily</a> game, hope you enjoy!",
-      "location": "projects/2048_game/index.html"
+      "location": "projects/2048_game/index.html",
+      "webLocation": "chill31.github.io/projects/2048_game/.html"
     },
     {
       "title": "English Dictionary",
       "description": "A simple dictionary ( english ) which gives the meaning and an example of the given word.",
-      "location": "projects/Dictionary.html"
+      "location": "projects/Dictionary.html",
+      "webLocation": "chill31.github.io/projects/Dictionary.html"
     },
     {
       "title": "QR Code Generator",
       "description": "A simple QR Code generator which generates custom QR Codes according to the entered value.",
-      "location": "projects/QR-Code.html"
+      "location": "projects/QR-Code.html",
+      "webLocation": "chill31.github.io/projects/QR-Code.html"
     },
     {
       "title": "Text To Speech",
       "description": "An advanced tool with voice options which converts your text to speech with just a click of a button",
-      "location": "projects/TextToSpeech.html"
+      "location": "projects/TextToSpeech.html",
+      "webLocation": "chill31.github.io/projects/TextToSpeech.html"
     },
     {
       "title": "Net Speed Test",
       "description": "A simple test which tells you your internet speed in MBPS",
-      "location": "projects/NetSpeed.html"
+      "location": "projects/NetSpeed.html",
+      "webLocation": "chill31.github.io/projects/NetSpeed.html"
     },
     {
       "title": "Country Information",
       "description": "This tool provides you basic information of countries like their continent, population, capital, etc.",
-      "location": "projects/Country_Info.html"
+      "location": "projects/Country_Info.html",
+      "webLocation": "chill31.github.io/projects/Country_Info.html"
     },
     {
       "title": "Notes App",
       "description": "This tool lets you make notes! You can update them, delete them, and create new ones...",
-      "location": "projects/Notes.html"
+      "location": "projects/Notes.html",
+      "webLocation": "chill31.github.io/projects/Notes.html"
     },
     {
       "title": "Language Translator",
       "description": "A simple language translator tool with most languages",
-      "location": "projects/Language/"
+      "location": "projects/Language/index.html",
+      "webLocation": "chill31.github.io/projects/Language/index.html"
     }
 
 
     ,{
       "title": "...",
       "description": "More projects coming soon...",
-      "location": "#"
+      "location": "#",
+      "webLocation": "#"
     }
   ]
 }
