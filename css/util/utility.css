@@ -22,6 +22,11 @@ body {
 --selection-clr: hsl(235, 86%, 75%);
 }
 
+.dark{
+  --bg-color: #0f1112;
+  --text-color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -164,7 +169,7 @@ body {
   bottom: 1rem;
   right: 10px;
   width: 250px;
-  height: 90%;
+  height: 10%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -326,18 +331,22 @@ body {
 }
 
 #menu {
-  height: 0vh;
-  width: 0vw;
   position: fixed;
   top: 0;
   left: 0;
   background: transparent;
-  z-index: 10000000000000000000000000;
+  z-index: 1000;
   transition: 500ms ease;
-  transition-property: height, width, background-color;
+  transition-property: transform;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  transform: scale(0);
+  transform-origin: bottom right;
 }
 
 #menu .items-container{
@@ -349,11 +358,8 @@ body {
 }
 
 #menu.active {
-  height: 100vh;
-  width: 100vw;
-  z-index: 10000000000000000000000000; /* to hide the top strip */
-  /* background-color: rgba(255, 255, 255, 0.9); */
-  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1);
+  transform-origin: top left;
 }
 
 #menu .menu-item {

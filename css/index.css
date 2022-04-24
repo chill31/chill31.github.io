@@ -53,23 +53,6 @@ body {
   background: #54c0eb;
   z-index: 10;
 }
-
-/* body:not(.loading) div.loading-content{
- visibility: hidden;
-}
-
-body.loading div.loading-content{
- visibility: visible;
-}
-
-body.loading{
- background-color: inherit;
-}
-
-body.loading .loaded-content{
- visibility: hidden;
-} */
-
 h1 {
   text-transform: uppercase;
   font-family: sans-serif;

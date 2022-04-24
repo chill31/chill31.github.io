@@ -2,7 +2,6 @@ const save_settings_btn = document.getElementById("save-cog");
 
 const normalFontSelect = document.querySelector(".normal-font-select");
 const codeFontSelect = document.querySelector(".code-font-select");
-
 const normalFontLbl = document.querySelector(".normal-font-saved");
 const codeFontLbl = document.querySelector(".code-font-saved");
 

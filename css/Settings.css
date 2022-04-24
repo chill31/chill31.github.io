@@ -78,14 +78,16 @@ ul,
   font-weight: 250;
 }
 
-#save-cog {
-  transform: translate(-50%);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(100%);
+#save-cog{
+ padding: .5em 1.25em;
+
+ position: absolute;
+ left: 50%;
+ transform: translate(-50%);
+
+ margin-top: 1rem;
+ margin-bottom: 1rem;
+ cursor: pointer;
 }
 
 ul.settings-list {
@@ -98,12 +100,12 @@ ul.settings-list {
   position: relative;
 }
 
-ul.settings-list > li {
+ul > li {
   border-left: solid 0.4rem var(--a-clr);
   padding: 1rem;
 }
 
-ul.settings-list li:first-of-type {
+ul.settings-list:first-of-type li:first-of-type {
   margin-right: 25%;
 }
 
