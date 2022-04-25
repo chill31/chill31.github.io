@@ -82,11 +82,10 @@ ul,
  padding: .5em 1.25em;
 
  position: absolute;
- left: 50%;
+ left: 60%;
  transform: translate(-50%);
 
- margin-top: 1rem;
- margin-bottom: 1rem;
+ top: 90%;
  cursor: pointer;
 }
 

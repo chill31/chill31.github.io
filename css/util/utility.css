@@ -567,3 +567,55 @@ body.loading .loaded-content {
   font-size: 2rem;
   text-transform: capitalize;
 } */
+
+.shortcut-menu{
+  position: absolute;
+  top: 1rem;
+  left: 7vw;
+  height: 2rem;
+  width: fit-content;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgba(1, 1, 1, .5);
+  z-index: 100;
+  padding: .2rem;
+  gap: .75rem;
+
+  transition: 500ms ease;
+  transition-property: opacity;
+}
+
+.shortcut-menu.disabled{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shortcut-menu svg{
+ height: 1.5rem;
+ cursor: pointer;
+}
+
+.shortcut-menu svg path{
+ fill: #efefef;
+ transition: fill 250ms ease;
+}
+
+.shortcut-menu svg:hover path{
+ fill: var(--a-clr);
+}
+
+@media (max-width: 1080px){
+  .shortcut-menu{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 959px){
+  .big-icon-show, .s{
+    display: none;
+  }
+}

@@ -5,6 +5,31 @@ const codeFontSelect = document.querySelector(".code-font-select");
 const normalFontLbl = document.querySelector(".normal-font-saved");
 const codeFontLbl = document.querySelector(".code-font-saved");
 
+const toggleShortcutsBtn = document.getElementById("toggle-shortcuts-btn");
+
+if(!localStorage.getItem("shortcuts")) localStorage.setItem("shortcuts", "enabled");
+
+if(localStorage.getItem("shortcuts") == "enabled"){
+  toggleShortcutsBtn.textContent = "Disable Shortcuts";
+} else if(localStorage.getItem("shortcuts") == "disabled"){
+  toggleShortcutsBtn.textContent = "Enable Shortcuts";
+}
+
+toggleShortcutsBtn.addEventListener("click", () => {
+
+  if(toggleShortcutsBtn.textContent.toLowerCase() == "disable shortcuts"){
+    toggleShortcutsBtn.textContent = "Enable Shortcuts";
+    localStorage.setItem("shortcuts", "disabled");
+  } else if(toggleShortcutsBtn.textContent.toLowerCase() == "enable shortcuts"){
+    toggleShortcutsBtn.textContent = "Disable Shortcuts";
+    localStorage.setItem("shortcuts", "enabled");
+  }
+
+  refreshPage();
+
+});
+
+
 if(!localStorage.getItem("normalFont")){
     normalFontLbl.textContent = "Quicksand";
 }

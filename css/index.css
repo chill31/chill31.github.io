@@ -324,3 +324,7 @@ button.show-skills[data-show-skills]#show-skills:hover{
 .full-progress-bar.full-java{
  top: calc(var(--top-number) + calc(var(--increment) * 4));
 }
+
+label[for]{
+  color: black;
+}
