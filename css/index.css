@@ -157,6 +157,10 @@ a {
     transform: translate(-50%, -50%);
   }
 
+  custom-header small{
+    font-size: medium;
+  }
+
 }
 
 .mid-container .about-me-heading{
