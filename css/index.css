@@ -28,7 +28,8 @@ body {
   font-family: sans-serif;
   background: var(--a-clr);
   margin: 0;
-  overflow: hidden !important;
+
+  overflow: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -52,6 +53,8 @@ body {
   height: 13vh;
   background: #54c0eb;
   z-index: 10;
+
+  transition: height 500ms ease;
 }
 h1 {
   text-transform: uppercase;
@@ -64,13 +67,12 @@ a {
 }
 
 .mid-container {
-  height: 87vh;
   position: absolute;
   top: 13vh;
+  padding-top: 4rem;
   padding: 1rem;
-  padding-top: 4rem !important;
-  height: 100%;
-  width: 100vw;
+  width: 100%;
+  height: 90%;
   background: linear-gradient(
     to bottom right,
     var(--a-clr) 47.5%,
@@ -88,6 +90,73 @@ a {
 .mid-container p {
   width: 50ch;
   color: #000000;
+}
+
+.social-media-accounts-div{
+  transition: opacity 500ms ease;
+}
+
+@media (max-width: 640px) {
+  .mid-container p{
+   width: 30ch;
+  }
+
+  .social-media-accounts-div{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@media (max-height: 545px){
+  .social-media-accounts-div{
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@media (max-height: 575px){
+  .top-header-strip {
+    height: 15vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .mid-container p{
+    font-size: large;
+  }
+}
+
+@media (max-width: 325px){
+
+  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  custom-header{
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+@media (max-height: 430px){
+
+  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  custom-header{
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 }
 
 .mid-container .about-me-heading{

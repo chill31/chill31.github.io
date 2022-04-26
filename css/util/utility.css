@@ -154,11 +154,6 @@ html {
   src: url(/assets/fonts/poppins/Poppins-Bold.otf);
 }
 
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 .top-header-cnt > * {
   font-family: var(--ff-primary-medium);
   letter-spacing: -0.075rem;
@@ -569,7 +564,7 @@ body.loading .loaded-content {
 } */
 
 .shortcut-menu{
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: 7vw;
   height: 2rem;
