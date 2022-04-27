@@ -35,6 +35,8 @@ body{
   background: #fff;
   border-radius: 7px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+
+  min-height: 20rem;
 }
 .wrapper header{
   display: flex;

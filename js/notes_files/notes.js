@@ -1,3 +1,5 @@
+
+
 const addBox = document.querySelector(".add-box");
 const popupBox = document.querySelector(".popup-box");
 const closeIcon = popupBox.querySelector("header i");
@@ -57,9 +59,12 @@ addBtn.addEventListener("click", (e) => {
 
     const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(dateDate)} (${fixDay(dateDay)}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
 
+    let noteTitleVariable = noteTitle.replaceAll("\"", "").replaceAll("'", "");
+    let noteDescVariable = noteDesc.replaceAll("\"", "").replaceAll("'", "");
+
     let noteInfo = {
-      title: noteTitle.replaceAll("\"", "").replaceAll("'", ""),
-      description: noteDesc,
+      title: noteTitleVariable,
+      description: noteDescVariable,
       date: formattedDate,
       edited: false,
       edit_date: null
@@ -69,7 +74,7 @@ addBtn.addEventListener("click", (e) => {
 
     notes.push(noteInfo);
 
-    localStorage.setItem("notes", JSON.stringify(notes));    
+    localStorage.setItem("notes", JSON.stringify(notes));
 
     hidePopup();
     e.target.parentElement.reset();

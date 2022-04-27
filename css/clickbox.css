@@ -5,8 +5,6 @@
   font-family: sans-serif;
 }
 
-z-index
-
 body{
   display: flex;
   align-items: center;
@@ -14,6 +12,8 @@ body{
   min-height: 100vh;
   padding: 0 10px;
   background: var(--a-clr);
+
+  overflow: hidden;
 }
 body.game-started{
  background: inherit;
@@ -138,6 +138,9 @@ body.game-started label{
     height: 100vh;
     width: 100vw;
     z-index: -1;
+
+    top: 0;
+    left: 0;
 }
 
 .darkener.active{

@@ -1,15 +1,17 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+.wrapper *{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
+
 body{
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: var(--a-clr);
+
+  overflow: hidden;
 }
 .wrapper{
   width: 420px;
@@ -50,7 +52,7 @@ body{
   color: #999;
   transform: translateY(-100%);
 }
-svg{
+.wrapper svg{
  position: absolute;
  top: 50%;
  transform: translateY(-50%);
