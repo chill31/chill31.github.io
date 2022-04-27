@@ -27,7 +27,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
     let newest = data.projects.length - 2;
     editSpan.innerHTML =
-      `<a href=\"/${data.projects[newest].location}\">` +
+      `<a href=\"${data.projects[newest].location}\">` +
       data.projects[newest].title.toString().substring(0, 7) +
       "</a>" +
       "...";

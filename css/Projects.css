@@ -248,6 +248,8 @@ ul {
 
   display: flex;
   justify-content: space-around;
+
+  transition: width 500ms ease;
 }
 
 .display-btns{

@@ -511,3 +511,18 @@ if(localStorage.getItem("shortcuts") == "enabled"){
 } else if(localStorage.getItem("shortcuts") == "disabled"){
   shortCutContainer.classList.add("disabled");
 }
+
+/** ADDING TOO SMALL TEXT TO EACH PAGE.  **/
+
+const customHeader = document.createElement("custom-header");
+customHeader.innerHTML = `
+  Your Device Is Not Big Enough to View This Site
+
+  <br>
+
+  <small>
+    (Maybe if you're on a desktop device, and this shows up, its probably because of too much zoom)
+  </small>
+`;
+
+document.body.prepend(customHeader);

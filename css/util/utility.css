@@ -154,11 +154,6 @@ html {
   src: url(/assets/fonts/poppins/Poppins-Bold.otf);
 }
 
-.top-header-cnt > * {
-  font-family: var(--ff-primary-medium);
-  letter-spacing: -0.075rem;
-}
-
 #notification-area {
   position: fixed;
   bottom: 1rem;
@@ -613,4 +608,56 @@ body.loading .loaded-content {
   .big-icon-show, .s{
     display: none;
   }
+}
+
+.top-header-strip{
+  max-height: 5rem;
+  min-height: 4rem;
+}
+
+custom-header{
+  opacity: 0;
+  transition: opacity 500ms ease;
+
+  position: fixed;
+}
+
+@media (max-width: 325px){
+
+  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  custom-header{
+    font-size: large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+  }
+
+}
+
+@media (max-height: 430px){
+
+  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  custom-header{
+    font-size: large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 1;
+  }
+
+  custom-header small{
+    font-size: medium;
+  }
+
 }
