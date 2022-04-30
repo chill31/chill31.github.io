@@ -88,3 +88,25 @@ document.body.style.setProperty(
 );
 
 document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
+
+const secondSettings = document.querySelector("ul.settings-list:last-of-type");
+
+const options = {
+  threshold:  .5
+ };
+
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+
+    console.log(entry.isIntersecting)
+    
+    if(entry.isIntersecting){
+      secondSettings.classList.remove("hide");
+    } else {
+      secondSettings.classList.add("hide");
+    }
+
+  });
+}, options);
+
+observer.observe(secondSettings)

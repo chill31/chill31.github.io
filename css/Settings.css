@@ -119,3 +119,21 @@ label.small{
   word-wrap: break-word;
   cursor: pointer;
 }
+
+ul.settings-list:last-of-type {
+  transition: 1000ms ease;
+  transition-property: opacity;
+}
+
+ul.settings-list:not(.hide){
+  opacity: 1;
+}
+
+ul.settings-list:last-of-type {
+  margin-top: 3rem;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

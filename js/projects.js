@@ -20,6 +20,21 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
       document.body.classList.add("grid-view");
 
+      const cards = document.querySelectorAll(".grid-card");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+        })
+      }, {
+        threshold: .5
+      }
+      );
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+
     });
 
     const spanContainerC = document.querySelector(".newest-project-div");

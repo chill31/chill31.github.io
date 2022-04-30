@@ -306,6 +306,8 @@ body.grid-view .grid-container{
   position: relative;
 
   text-align: center;
+  opacity: 0;
+  transition: opacity 500ms ease;
 }
 
 .grid-container .grid-card > p{
@@ -329,4 +331,8 @@ body.grid-view .grid-container{
 .grid-container .grid-card > a:hover{
   color: white;
   background-color: #2293fa;
+}
+
+.grid-card.show {
+  opacity: 1;
 }
