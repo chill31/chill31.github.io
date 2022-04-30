@@ -645,6 +645,8 @@ custom-header{
   .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
     opacity: 0;
     pointer-events: none;
+    transform: scale(0);
+    z-index: -100;
   }
 
   custom-header{

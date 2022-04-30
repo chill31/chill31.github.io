@@ -126,7 +126,7 @@ function copyText(text) {
   navigator.clipboard.writeText(text);
 }
 
-/* context menu code. */
+/** CONTEXT MENU */
 
 const createdContextMenu = document.createElement("div");
 createdContextMenu.classList.add("wrapperContextMenu");
@@ -196,7 +196,7 @@ const customBtns = {
   myProjects: document.querySelector(".myprojs"),
   learnWebdev: document.querySelector(".learndev"),
   openSettings: document.querySelector(".opencog"),
-  // normal buttons now.
+
   reloadPage: document.querySelector(".reloadPage"),
   copyText: document.querySelector(".copyThing")
 };
@@ -211,8 +211,6 @@ window.addEventListener("contextmenu", (e) => {
   let _y = e.y + contextMenu.offsetHeight > window.innerHeight ? window.innerHeight - contextMenu.offsetHeight : e.y;
   let _x = e.x + contextMenu.offsetWidth > window.innerWidth ? window.innerWidth - contextMenu.offsetWidth : e.x;
 
- // contextMenu.style.left = `${e.x}px`;
- // contextMenu.style.top = `${e.y}px`;
  contextMenu.style.top = _y + "px";
  contextMenu.style.left = _x + "px";
 
@@ -255,7 +253,7 @@ customBtns.copyText.addEventListener("click", () => {
 
 });
 
-/* big full page hamburger menu */
+/** CREATING FULL SCREEN MENU */
 
 
 const createdHamMenu = document.createElement("div");
@@ -407,7 +405,7 @@ settingsCogIcon.addEventListener("click", () => {
 
 }
 
-/** || inserting favicons || **/
+/** || inserting favicons || */
 
 document.head.innerHTML += `
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
@@ -416,7 +414,7 @@ document.head.innerHTML += `
 <link rel="manifest" href="/site.webmanifest">
 `;
 
-/** LOADING PROCESS BUT COMMENTED BECAUSE TOO ANNOYING. **/
+/** LOADING PROCESS BUT COMMENTED BECAUSE TOO ANNOYING. */
 
 // const loadingContentDiv = document.createElement("div");
 // loadingContentDiv.classList.add("loading-content");
@@ -512,7 +510,7 @@ if(localStorage.getItem("shortcuts") == "enabled"){
   shortCutContainer.classList.add("disabled");
 }
 
-/** ADDING TOO SMALL TEXT TO EACH PAGE.  **/
+/** ADDING TOO SMALL TEXT TO EACH PAGE.  */
 
 const customHeader = document.createElement("custom-header");
 customHeader.innerHTML = `
