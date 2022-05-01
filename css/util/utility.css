@@ -675,3 +675,20 @@ italic{
 bold{
   font-style: bold;
 }
+
+button:not(.custom) {
+  transition: 100ms;
+  background-color: var(--a-clr);
+  border: none;
+  padding: .75em 1.5em;
+  cursor: pointer;
+  border-radius: .25em;
+}
+
+button {
+  transition: 100ms;
+}
+
+button:focus {
+  outline: rgb(0, 0, 0) solid 3px;
+}

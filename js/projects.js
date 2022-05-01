@@ -25,6 +25,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           entry.target.classList.toggle("show", entry.isIntersecting);
+          if(entry.isIntersecting) observer.unobserve(entry.target);
         })
       }, {
         threshold: .5
@@ -63,8 +64,8 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
     const container = document.querySelector(".container");
 
-    const prevBtn = document.querySelector(".controls.previous");
-    const nextBtn = document.querySelector(".controls.next");
+    const prevBtn = document.querySelector(".controls-btn.previous");
+    const nextBtn = document.querySelector(".controls-btn.next");
     const lbl = document.getElementById("project-number");
 
     const createdCard = document.createElement("div");

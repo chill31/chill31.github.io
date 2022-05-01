@@ -1,5 +1,3 @@
-
-
 const addBox = document.querySelector(".add-box");
 const popupBox = document.querySelector(".popup-box");
 const closeIcon = popupBox.querySelector("header i");
@@ -57,7 +55,7 @@ addBtn.addEventListener("click", (e) => {
     const dateMinute = creationDate.getMinutes();
     const dateSeconds = creationDate.getSeconds();
 
-    const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(dateDate)} (${fixDay(dateDay)}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
+    const formattedDate = `${fixMonth(dateMonth)} ${formatDate(dateDate)} (${fixDay(dateDay)}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
 
     let noteTitleVariable = noteTitle.replaceAll("\"", "").replaceAll("'", "");
     let noteDescVariable = noteDesc.replaceAll("\"", "").replaceAll("'", "");

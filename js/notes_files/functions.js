@@ -10,46 +10,6 @@ function err(e) {
   }
 }
 
-function fixMonth(m){
-
-    const fixMonthsMonths = [0, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    return fixMonthsMonths[m];
-
-}
-
-function fixDay(d){
-
-    const fixDayDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    return fixDayDays[d];
-
-}
-
-function addPrefix(n){
-    
-    switch(n){
-
-        case 1:
-            return "1st";
-        case 2:
-            return "2nd";
-        case 3:
-            return "3rd";
-        case 21:
-            return "21st";
-        case 22:
-            return "22nd";
-        case 23:
-            return "23rd";
-        case 31:
-            return "31st";
-        default:
-            return `${n}th`;
-
-    }
-
-}
-
 function showSettingsMenu(param){
 
     param.parentElement.classList.add("show");
@@ -100,7 +60,7 @@ function updateNote(index, title, desc){
         const dateMinute = dateNow.getMinutes();
         const dateSeconds = dateNow.getSeconds();
 
-        const formattedDate = `${fixMonth(dateMonth)} ${addPrefix(
+        const formattedDate = `${fixMonth(dateMonth)} ${formatDate(
           dateDate
         )} (${fixDay(
           dateDay
@@ -178,7 +138,7 @@ function showNotes(){
     </div>
     <div class="bottom-content">
         <span>
-          <button class="show-details" onclick="showDetails(${index})">Show Details</button>
+          <button class="show-details custom" onclick="showDetails(${index})">Show Details</button>
         </span>
 
         <div class="settings">
