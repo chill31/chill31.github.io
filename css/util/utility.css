@@ -189,7 +189,7 @@ html {
 
 .notif.notif-timer {
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
   border-radius: .5rem;
   left: 0;
   height: 4px;
