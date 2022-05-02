@@ -258,11 +258,57 @@ ul {
   cursor: pointer;
   border: solid 3px #5865f2;
   border-radius: .2rem;
+
+  position: relative;
 }
 
 .display-btns.selected{
   background-color: rgb(0, 119, 255);
   border: solid 3px var(--a-clr);
+}
+
+.display-btns::before {
+  content: attr(data-display);
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1rem;
+  background-color: var(--a-clr);
+  color: white;
+  padding: .25em .75em;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+
+.display-btns::after {
+  --size: 10px;
+
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  
+  border-top: var(--size) solid var(--a-clr);
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+
+.display-btns:hover::after {
+  opacity: 1;
+}
+
+.display-btns:hover::before {
+  opacity: 1;
 }
 
 body:not(.grid-view) .grid-container{
@@ -358,6 +404,8 @@ fieldset {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  padding: 1rem;
 }
 
 legend {
