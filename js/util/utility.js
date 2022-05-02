@@ -189,133 +189,6 @@ function copyText(text) {
   navigator.clipboard.writeText(text);
 }
 
-/** CONTEXT MENU */
-
-const createdContextMenu = document.createElement("div");
-createdContextMenu.classList.add("wrapperContextMenu");
-document.body.append(createdContextMenu);
-
-createdContextMenu.innerHTML = `
-<div class="content">
-    <ul class="menu">
-        <li class="item backHome">
-            <span>Home</span>
-        </li>
-        <li class="item myFeed">
-            <span>Feed</span>
-        </li>
-        <li class="item copylink">
-            <span>Copy Link</span>
-        </li>
-        <li class="item myprojs">
-            <span>My Projects</span>
-        </li>
-        <li class="item opencog">
-            <span>Open Settings</span>
-        </li>
-      </ul>
-      <div class="normal">
-         <ul class="menu">
-          <li class="item reloadPage">
-            <span>Reload Page</span>
-          </li>
-          <li class="item copyThing">
-            <span>Copy</span>
-          </li>
-         </ul>
-      </div>
-</div>
-`;
-
-var mouseX;
-var mouseY;
-
-document.addEventListener("mousemove", (e) => {
-
-  mouseX = e.pageX;
-  mouseY = e.pageY;
-
-});
-
-function rmVis(emt) {
-  emt.style.opacity = "0";
-  emt.style.pointerEvents = "none";
-  emt.style.height = "0";
-  emt.style.width = "0";
-}
-
-function addVis(emt) {
-  emt.style.opacity = "1";
-  emt.style.pointerEvents = "all";
-  emt.style.height = "inherit";
-  emt.style.width = "22.5vw";
-}
-
-const contextMenu = document.querySelector(".wrapperContextMenu");
-
-const customBtns = {
-  goHome: document.querySelector(".backHome"),
-  copyLink: document.querySelector(".copylink"),
-  myProjects: document.querySelector(".myprojs"),
-  learnWebdev: document.querySelector(".learndev"),
-  openSettings: document.querySelector(".opencog"),
-
-  reloadPage: document.querySelector(".reloadPage"),
-  copyText: document.querySelector(".copyThing")
-};
-
-var selected;
-
-window.addEventListener("contextmenu", (e) => {
-
-  selected = getSelectionText();
-  e.preventDefault();
-
-  let _y = e.y + contextMenu.offsetHeight > window.innerHeight ? window.innerHeight - contextMenu.offsetHeight : e.y;
-  let _x = e.x + contextMenu.offsetWidth > window.innerWidth ? window.innerWidth - contextMenu.offsetWidth : e.x;
-
- contextMenu.style.top = _y + "px";
- contextMenu.style.left = _x + "px";
-
-  addVis(contextMenu);
-});
-document.addEventListener("click", () => rmVis(contextMenu));
-document.addEventListener("keyup", (e) => {
-  if (e.key.toLowerCase() === "escape") {
-    rmVis(contextMenu);
-  }
-});
-
-customBtns.goHome.addEventListener("click", () => {
-  redirect("/");
-});
-
-customBtns.copyLink.addEventListener("click", () => {
-  copyText(window.location.href);
-  notify(`Successfully copied the link to this website`, "success");
-});
-
-customBtns.myProjects.addEventListener("click", () => {
-  redirect("/Projects.html");
-});
-
-customBtns.openSettings.addEventListener("click", () => {
-  redirect("/Settings.html");
-});
-
-customBtns.reloadPage.addEventListener("click", () => {
-
-  window.location.href = window.location.href;
-
-})
-
-customBtns.copyText.addEventListener("click", () => {
-
-  copyText(selected);
-  notify("Successfully copied the text.", "success");
-
-});
-
 /** CREATING FULL SCREEN MENU */
 
 
@@ -477,55 +350,6 @@ document.head.innerHTML += `
 <link rel="manifest" href="/site.webmanifest">
 `;
 
-/** LOADING PROCESS BUT COMMENTED BECAUSE TOO ANNOYING. */
-
-// const loadingContentDiv = document.createElement("div");
-// loadingContentDiv.classList.add("loading-content");
-
-// loadingContentDiv.innerHTML = `
-// <div class="spinner">
-
-// </div>
-
-//     <div class="loading-text">
-
-//       <h1 class="loading-header">Please Wait...</h1>
-
-//       <span class="loading-info">Gathering Data...</span>
-
-//     </div>
-// `;
-
-// document.body.prepend(loadingContentDiv);
-
-// document.body.classList.add("loading");
-
-// const load_time = 3500;
-// const changing_time = 1000;
-
-// const changingTexts = [
-//  "Loading Content...",
-//  "Accessing Data...",
-//  "Verifying Data..."
-// ];
-
-// const changeTextElement = document.querySelector(".loading-info");
-
-// // giving a timeout before the loop starts.
-
-// setTimeout(() => {
-//   for (let i = 0; i < 3; i++) {
-//     setTimeout(() => {
-//       changeTextElement.textContent = changingTexts[i];
-//     }, changing_time * i);
-//   }
-// }, 500);
-
-
-// setTimeout(() => {
-//   document.body.classList.remove("loading");
-// }, load_time);
-
 /** ADDING SHORTCUTS TO THE TOP OF THE SCREEN AFTER THE MENU  **/
 
 const shortCutContainer = document.createElement("div");
@@ -573,7 +397,7 @@ if(localStorage.getItem("shortcuts") == "enabled"){
   shortCutContainer.classList.add("disabled");
 }
 
-/** ADDING TOO SMALL TEXT TO EACH PAGE.  */
+/** ADDING TEXT TO EACH PAGE IF IT'S TOO SMALL  */
 
 const customHeader = document.createElement("custom-header");
 customHeader.innerHTML = `

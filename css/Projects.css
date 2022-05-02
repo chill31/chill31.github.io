@@ -258,8 +258,6 @@ ul {
   cursor: pointer;
   border: solid 3px #5865f2;
   border-radius: .2rem;
-
-  transition: 0ms;
 }
 
 .display-btns.selected{
@@ -354,4 +352,15 @@ body.grid-view .grid-container{
     width: 100% !important;
   }
 
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+legend {
+  border: solid 1px black;
+  border-radius: .1rem;
 }

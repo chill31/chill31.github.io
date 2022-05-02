@@ -32,10 +32,6 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
-  user-select: none;
-}
-
 *::selection {
   background-color: var(--selection-clr);
   color: white;
@@ -159,6 +155,8 @@ img {
   src: url(/assets/fonts/poppins/Poppins-Bold.otf);
 }
 
+/** NOTIFICATION CODE */
+
 #notification-area {
   position: fixed;
   bottom: 1rem;
@@ -213,56 +211,7 @@ img {
   background: #006c97;
 }
 
-.wrapperContextMenu {
-  opacity: 0;
-  pointer-events: none;
-  position: fixed;
-  width: 0;
-  min-width: 0;
-  height: 0;
-  border-radius: 1rem;
-  background: rgb(57, 61, 68);
-  transition: all 250ms ease;
-  z-index: 99994939843434839493043403849343949;
-  max-height: 80vh;
-  user-select: none;
-}
-
-.wrapperContextMenu .menu {
-  padding: 10px 12px !important;
-}
-.wrapperContextMenu .menu:last-child {
-  padding-top: 0rem !important;
-}
-.wrapperContextMenu .content .item {
-  list-style: none;
-  font-size: 22px;
-  height: 50px;
-  display: flex;
-  width: 18.75vw;
-  cursor: pointer;
-  align-items: center;
-  border-radius: 5px !important;
-  margin-bottom: 2px !important;
-  padding: 0 5px 0 10px !important;
-  color: white !important;
-  transition: 500ms ease;
-}
-.wrapperContextMenu .content .item:hover {
-  background: #fff;
-  color: black !important;
-}
-.wrapperContextMenu .content .item span {
-  margin-left: 8px !important;
-  font-size: 19px !important;
-}
-.wrapperContextMenu .content .normal {
-  display: flex !important;
-  margin: 0.75rem !important;
-  border-top: 1px solid #ccc;
-}
-
-/* hamburger menu code now */
+/** FULL SCREEN MENU CODE */
 
 #toggle-menu {
   height: 1.5rem;
@@ -461,7 +410,7 @@ img {
 
 /**
 
-  Setting Font Families for every element.
+  USING CUSTOM-FONTS
 
 **/
 
@@ -508,60 +457,6 @@ td
 code{
   font-family: var(--ff-code), monospace !important;
 }
-
-
-/** LOADING ANIMATION BUT TOO BAD SO I COMMENTED IT.  **/
-
-/* body:not(.loading) div.loading-content {
-  visibility: hidden;
-}
-
-body.loading div.loading-content {
-  visibility: visible;
-}
-
-body.loading {
-  background-color: inherit;
-}
-
-body.loading .loaded-content {
-  visibility: hidden;
-}
-
-.spinner {
-  height: 10rem;
-  width: 10rem;
-  border: 1rem solid transparent;
-  border-radius: 100%;
-  background-color: rgba(0, 0, 0, .125);
-  border-top-color: var(--a-clr);
-
-  animation: loading-spinner 1000ms infinite linear;
-
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes loading-spinner {
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-.loading-text {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.loading-text h1 {
-  font-size: 2rem;
-  text-transform: capitalize;
-} */
 
 .shortcut-menu{
   position: fixed;
@@ -682,18 +577,14 @@ bold{
 }
 
 button:not(.custom) {
-  transition: 100ms;
   background-color: var(--a-clr);
+  padding: .5em 1em;
   border: none;
-  padding: .75em 1.5em;
+  border-radius: .5em;
   cursor: pointer;
-  border-radius: .25em;
-}
-
-button {
-  transition: 100ms;
+  transition: outline 100ms;
 }
 
 button:focus {
-  outline: rgb(0, 0, 0) solid 3px;
+  outline: rgb(0, 0, 0) solid 3px !important;
 }
