@@ -164,7 +164,7 @@ function notify(message, type, context) {
       createdDiv.classList.add("contextMenu");
     }
 
-    createdDiv.innerHTML = message;
+    createdDiv.innerHTML = `${message}\n<span class="notif notif-timer"></span>`;
     document.getElementById("notification-area").prepend(createdDiv);
 
     setTimeout(() => {

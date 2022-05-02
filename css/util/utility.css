@@ -186,10 +186,33 @@ html {
   left: -4.25rem !important;
   animation: showNotification 500ms forwards alternate;
 }
+
+.notif.notif-timer {
+  position: absolute;
+  bottom: 0;
+  border-radius: .5rem;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: var(--a-clr);
+
+  animation: notf-timer 5000ms ease forwards;
+}
+
+.notification.info .notif.notif-timer{
+  background-color: var(--a-clr-dark);
+}
+
 @keyframes showNotification {
   to {
     opacity: 1;
     left: 0px;
+  }
+}
+
+@keyframes notf-timer {
+  to {
+    width: 0;
   }
 }
 
