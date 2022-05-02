@@ -76,7 +76,7 @@ a {
   background: linear-gradient(
     to bottom right,
     var(--a-clr) 47.5%,
-    #262a2e 5%
+    var(--a-clr-dark) 5%
   );
   transition: opacity 250ms ease;
 }
@@ -303,7 +303,7 @@ button.show-skills[data-show-skills]#show-skills:hover{
   background: linear-gradient(
     to bottom right,
     var(--a-clr) 47.5%,
-    #262a2e 5%
+    var(--a-clr-dark) 5%
   );
 
   transition: opacity 500ms ease;
@@ -371,7 +371,7 @@ button.show-skills[data-show-skills]#show-skills:hover{
   border-radius: 1rem;
   width: 0;
 
-  background: linear-gradient(45deg, #2293fa 60%, #262a2e 5%);
+  background: linear-gradient(45deg, #2293fa 60%, var(--a-clr-dark) 5%);
 }
 
 .actual-progress.progress-java{

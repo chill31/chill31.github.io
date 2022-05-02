@@ -43,26 +43,26 @@ const element = document.querySelector("entered-page");
 
 element.textContent = window.location.href;
 
-let textLOL = "";
+let hintText = "";
 
-if(window.location.href.toString().endsWith("/review/") || window.location.href.toString().endsWith("/reviews/")){
+if(window.location.href.toString().endsWith("review/") || window.location.href.toString().endsWith("reviews/") || window.location.href.toString().endsWith("reviews") || window.location.href.toString().endsWith("review")){
 
-    textLOL = `
+    hintText = `
 If you are looking for the reviews pages, then head over to the <a href="/Write.html">Reviews</a> page.
 `;
 
 }
 
-if(window.location.href.toString().endsWith("/projects/") || window.location.href.toString().endsWith("/project/")){
+if(window.location.href.toString().endsWith("projects/") || window.location.href.toString().endsWith("project/") || window.location.href.toString().endsWith("projects") || window.location.href.toString().endsWith("project")){
  
-    textLOL = `
+    hintText = `
 If you are looking for this website's utilities/projects, then head over to the <a href="/Projects.html">Projects</a> page.
 `
 
 }
 
 const p = document.createElement("p");
-p.innerHTML = textLOL;
+p.innerHTML = hintText;
 
 mid_container.append(p);
 

@@ -95,10 +95,8 @@ const options = {
   threshold:  .5
  };
 
-const observer = new IntersectionObserver(function(entries, observer) {
+const observer = new IntersectionObserver(function(entries) {
   entries.forEach(entry => {
-
-    console.log(entry.isIntersecting)
     
     if(entry.isIntersecting){
       secondSettings.classList.remove("hide");

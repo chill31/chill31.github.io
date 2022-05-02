@@ -86,7 +86,7 @@ a,
   background: linear-gradient(
     to bottom right,
     var(--a-clr) 47.5%,
-    #262a2e 5%
+    var(--a-clr-dark) 5%
   );
 
   position: absolute;

@@ -258,6 +258,8 @@ ul {
   cursor: pointer;
   border: solid 3px #5865f2;
   border-radius: .2rem;
+
+  transition: 0ms;
 }
 
 .display-btns.selected{
@@ -286,9 +288,10 @@ body.grid-view .grid-container{
 .grid-container{
   margin-top: 2rem;
   position: absolute;
-  top: 40vh;
+  top: 30vh;
   left: 50%;
   transform: translate(-50%);
+  padding: 1rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -307,7 +310,9 @@ body.grid-view .grid-container{
 
   text-align: center;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: 500ms ease;
+  transition-property: opacity, transform;
+  transform: translateX(-15%);
 }
 
 .grid-container .grid-card > p{
@@ -334,5 +339,19 @@ body.grid-view .grid-container{
 }
 
 .grid-card.show {
+  transform: translateX(0);
   opacity: 1;
+}
+
+@media (max-width: 660px) {
+
+  .grid-container {
+    grid-template-columns: repeat(1, 3fr);
+    width: 80% !important;
+  }
+
+  .grid-card {
+    width: 100% !important;
+  }
+
 }

@@ -24,9 +24,9 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          entry.target.classList.toggle("show", entry.isIntersecting);
-          if(entry.isIntersecting) observer.unobserve(entry.target);
-        })
+          if(entry.isIntersecting) entry.target.classList.add("show");
+          else if(!entry.isIntersecting) entry.target.classList.remove("show");
+        });
       }, {
         threshold: .5
       }

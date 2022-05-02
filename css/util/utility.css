@@ -19,6 +19,7 @@ body {
 --scrollbar-thumb-bg: #5e5e5e;
 --top-btm-bg: #5865f2;
 --a-clr: #2293fa;
+--a-clr-dark: #262a2e;
 --selection-clr: hsl(235, 86%, 75%);
 }
 
@@ -29,6 +30,10 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+img {
+  user-select: none;
 }
 
 *::selection {
@@ -420,7 +425,7 @@ html {
 }
 
 #menu .menu-item::after{
- --bg-clr-neutral: linear-gradient(45deg, #2293fa 50%, #262a2e 5%);
+ --bg-clr-neutral: linear-gradient(45deg, var(--a-clr) 50%, var(--a-clr-dark) 5%);
 
  content: '';
  width: 100%;
