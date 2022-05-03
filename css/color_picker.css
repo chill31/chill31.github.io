@@ -1,5 +1,4 @@
 body {
-  font-family: sans-serif;
   background: var(--bg-color);
   margin: 0;
 }
@@ -25,7 +24,6 @@ h4 {
   position: absolute;
   top: 65%;
   color: var(--text-color);
-  font-family: sans-serif;
   font-weight: 300;
 }
 
@@ -145,22 +143,20 @@ h4 {
 
 .pcr-app {
   position: absolute;
-  top: 50% !important;
-  transform: translateY(-40%);
+  top: 60% !important;
+  left: 50%;
+  transform: scale(0) translate(-50%, -50%);
+  transform-origin: top left;
   z-index: 100;
   border-radius: 0.1em;
   background: rgb(255, 255, 255);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0s 0.3s;
-  font-family: sans-serif;
+  transition: transform 500ms ease;
   box-shadow: 0 0.15em 0.15em 0 rgb(0, 0, 0), 0 0 1em 0 rgb(0, 0, 0);
 }
 
 .pcr-app.visible {
-  transition: opacity 0.3s;
-  visibility: visible;
-  opacity: 1;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: bottom right;
 }
 
 .pcr-app .pcr-swatches {

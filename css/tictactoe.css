@@ -1,6 +1,3 @@
-:root{
-  --a-clr: #2293fa;
-}
 body{
   background:var(--a-clr);
 }

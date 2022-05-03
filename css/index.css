@@ -1,22 +1,8 @@
-:root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #919191;
-  --scrollbar-thumb-bg: #5e5e5e;
-  --top-btm-bg: #5865f2;
-  --a-clr: #2293fa;
-  --selection-clr: rgb(136, 145, 246);
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: sans-serif;
   background: var(--a-clr);
   margin: 0;
 
@@ -49,7 +35,6 @@ body {
 }
 h1 {
   text-transform: uppercase;
-  font-family: sans-serif;
   text-align: center;
 }
 

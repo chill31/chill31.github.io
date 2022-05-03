@@ -1,17 +1,4 @@
 :root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #919191;
-  --scrollbar-thumb-bg: #5e5e5e;
-  --top-btm-bg: #5865f2;
-  --a-clr: #2293fa;
-  --placeholder-textclr: rgb(80, 80, 80);
-  --input-bg: rgb(200, 200, 200);
-  --selection-clr: hsla(235, 86%, 75%, .5);
-  /* this page only variables */
   --form-btn-hover-bg: rgb(15, 15, 15);
   --form-btn-hover-clr: #ffdf00;
   --confirm-bg: rgb(236, 236, 236);
@@ -23,7 +10,6 @@ html{
 }
 
 body {
-  font-family: sans-serif;
   background: var(--bg-color);
   margin: 0;
 }
@@ -50,7 +36,6 @@ html {
 }
 
 body {
-  font-family: sans-serif;
   background: var(--bg-color);
   margin: 0;
 }
@@ -62,13 +47,11 @@ body::-webkit-scrollbar {
 h1 {
   color: var(--text-color);
   text-align: center;
-  font-family: sans-serif;
 }
 
 .intro {
   color: var(--text-color);
   text-align: center;
-  font-family: sans-serif;
   font-size: 1.5rem;
   font-weight: 250;
 }
@@ -76,7 +59,6 @@ h1 {
 p {
   color: var(--text-color);
   text-align: center;
-  font-family: sans-serif;
   font-weight: 250;
   font-size: 1.25rem;
 }
@@ -97,7 +79,6 @@ div.name{
 
 .feedback-input {
   color: #3c3c3c;
-  font-family: sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 0;
@@ -410,10 +391,7 @@ div.name{
   color: var(--text-color)
 }
 
-z-index
-
 .image-input{
-  font-family: sans-serif;
   color: var(--text-color);
   cursor: pointer;
 }
@@ -431,7 +409,6 @@ z-index
   border: none;
   cursor: pointer;
   border: none;
-  font-family: sans-serif;
   text-transform: uppercase;
   word-spacing: 0;
   transition: 500ms ease;

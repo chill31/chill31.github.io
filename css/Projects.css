@@ -1,16 +1,3 @@
-:root {
-  --bg-color: white;
-  --text-color: black;
-  --text-shadows: #ffffff;
-  --btn-bg: rgb(80, 80, 80);
-  --btn-txtclr: #fff;
-  --scrollbar-bg: #91919100;
-  --scrollbar-thumb-bg: #5e5e5e00;
-  --top-btm-bg: #5865f2;
-  --a-clr: rgb(34, 147, 250);
-  --selection-clr: hsla(235, 86%, 75%, .5);
-}
-
 html{
   scroll-behavior: smooth;
 }
@@ -41,7 +28,6 @@ body.grid-view{
 h1 {
   text-align: center;
   text-transform: uppercase;
-  font-family: sans-serif;
 }
 
 a {
