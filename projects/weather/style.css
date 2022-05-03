@@ -25,11 +25,6 @@ body{
   background: var(--a-clr);
 }
 
-::selection{
- color: white;
- background: var(--a-clr);
-}
-
 .wrapper{
   width: 400px;
   background: #fff;

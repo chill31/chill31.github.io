@@ -11,15 +11,6 @@
   --selection-clr: rgb(136, 145, 246);
 }
 
-*::selection {
-  background: var(--selection-clr);
-}
-
-a::selection,
-ff::selection {
-  color: var(--a-clr);
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -127,7 +118,7 @@ a {
 
 @media (max-width: 325px){
 
-  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+  .loaded-content, #menu, #toggle-menu{
     opacity: 0;
     pointer-events: none;
   }
@@ -144,7 +135,7 @@ a {
 
 @media (max-height: 430px){
 
-  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+  .loaded-content, #menu, #toggle-menu{
     opacity: 0;
     pointer-events: none;
   }
@@ -260,7 +251,7 @@ a,
 }
 
 .big-icon-show path {
-  fill: rgb(54, 71, 90);
+  fill: var(--big-icon-fill);
 }
 
 button.show-skills[data-show-skills]#show-skills{

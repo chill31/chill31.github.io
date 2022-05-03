@@ -11,10 +11,6 @@
   --selection-clr: hsla(235, 86%, 75%, .5);
 }
 
-*::selection {
-  background-color: var(--selection-clr);
-}
-
 html{
   scroll-behavior: smooth;
 }

@@ -7,10 +7,6 @@ body{
   background: var(--a-clr);
   overflow: hidden;
 }
-::selection{
-  color: #fff;
-  background: var(--a-clr);
-}
 .wrapper{
   width: 370px;
   height: 50vh;

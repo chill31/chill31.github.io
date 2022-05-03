@@ -288,11 +288,6 @@ h4 {
   color: #fff;
 }
 
-.pcr-app .pcr-interaction .pcr-result::selection {
-  background: var(--a-clr);
-  color: #fff;
-}
-
 .pcr-app .pcr-interaction .pcr-type.active {
   color: #fff;
   background: var(--a-clr);

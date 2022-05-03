@@ -25,10 +25,6 @@ body{
   min-height: 100vh;
   background: var(--a-clr);
 }
-::selection{
-  color: #fff;
-  background: var(--a-clr);
-}
 .wrapper{
   width: 770px;
   padding: 35px;
@@ -193,62 +189,4 @@ li:not(:first-child) span{
   .content button{
     margin-top: 10px;
   }
-}
-
-#notification-area {
-  position: fixed;
-  bottom: 1rem;
-  right: 10px;
-  width: 250px;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-#notification-area .notification:not(:last-child){
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-#notification-area .notification:last-child {
-  display: inherit;
-  position: relative;
-  padding: 0.875rem 1.75rem;
-  width: max-content;
-  background: #111;
-  color: #f5f5f5;
-  font-family: sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  opacity: 0;
-  left: 2rem;
-  animation: showNotification 500ms ease-in-out forwards;
-}
-@keyframes showNotification {
-  to {
-    opacity: 1;
-    left: -5rem;
-  }
-}
-
-#notification-area .notification.success {
-  background: #49cc7b;
-}
-#notification-area .notification.error {
-  background: rgb(190, 51, 0);
-}
-#notification-area .notification.info {
-  background: #00acee;
-}
-
-.notification:not(.notification.info)::selection {
-  background: #00acee;
-}
-
-.notification.info::selection {
-  background: #006c97;
 }

@@ -19,13 +19,10 @@ body {
 --scrollbar-thumb-bg: #5e5e5e;
 --top-btm-bg: #5865f2;
 --a-clr: #2293fa;
---a-clr-dark: #262a2e;
---selection-clr: hsl(235, 86%, 75%);
-}
-
-.dark{
-  --bg-color: #0f1112;
-  --text-color: white;
+/* --a-clr-dark: #262a2e; */
+--a-clr-dark: #121417;
+--big-icon-fill: #404756;
+--selection-color: #00b6ff;
 }
 
 html {
@@ -33,8 +30,8 @@ html {
 }
 
 *::selection {
-  background-color: var(--selection-clr);
-  color: white;
+  background-color: var(--selection-color);
+  color: black;
 }
 
 @font-face {
@@ -531,7 +528,7 @@ custom-header{
 
 @media (max-width: 325px){
 
-  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+  .loaded-content, #menu, #toggle-menu{
     opacity: 0;
     pointer-events: none;
   }
@@ -549,7 +546,7 @@ custom-header{
 
 @media (max-height: 430px){
 
-  .loaded-content, .wrapperContextMenu, #menu, #toggle-menu{
+  .loaded-content, #menu, #toggle-menu{
     opacity: 0;
     pointer-events: none;
     transform: scale(0);

@@ -1,11 +1,6 @@
 :root{
   --a-clr: #2293fa;
 }
-
-::selection{
-  color: #fff;
-  background:var(--a-clr);
-}
 body{
   background:var(--a-clr);
 }

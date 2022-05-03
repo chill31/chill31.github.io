@@ -18,10 +18,6 @@
   --acc-clr: rgb(233, 233, 233);
 }
 
-*::selection {
-  background-color: var(--selection-clr);
-}
-
 html{
   scroll-behavior: smooth;
 }

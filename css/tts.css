@@ -15,10 +15,6 @@ body{
   min-height: 100vh;
   background: var(--a-clr);
 }
-::selection{
-  color: #fff;
-  background: var(--a-clr);
-}
 .wrapper{
   width: 370px;
   padding: 25px 30px;

@@ -74,10 +74,6 @@ a,
     transition: color 500ms ease;
 }
 
-.mid-container p.a a::selection{
- color: rgba(255, 255, 255, 0.653);
-}
-
 .mid-container p.a a, .mid-container p.a a::before, .mid-container p.a a::after{
  --duration: 350ms;
 }
@@ -135,7 +131,7 @@ a,
 }
 
 .big-icon-show path {
-    fill: rgb(54, 71, 90);
+    fill: var(--big-icon-fill);
 }
 
 entered-page{
