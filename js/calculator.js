@@ -1,6 +1,12 @@
 var screen = document.querySelector("#screen");
 var btn = document.querySelectorAll(".btn");
 
+const allBtns = document.querySelectorAll("button");
+
+allBtns.forEach(btn => {
+  btn.classList.add("custom");
+});
+
 const CE = document.getElementById("ce");
 const factor = document.getElementById("fact_");
 const AC = document.getElementById("ac");

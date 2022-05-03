@@ -175,7 +175,7 @@ html {
   color: #f5f5f5;
   font-family: var(--ff-primary);
   font-size: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
   margin: 0.5rem 0;
   opacity: 0;
   left: 2rem;
@@ -189,18 +189,14 @@ html {
 
 .notif.notif-timer {
   position: absolute;
-  bottom: 4px;
+  bottom: 0;
   border-radius: .5rem;
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: var(--a-clr);
+  background-color: rgba(0, 0, 0, .5);
 
-  animation: notf-timer 5000ms ease forwards;
-}
-
-.notification.info .notif.notif-timer{
-  background-color: var(--a-clr-dark);
+  animation: notf-timer 5000ms ease-in-out forwards;
 }
 
 @keyframes showNotification {
@@ -417,18 +413,6 @@ html {
   background: var(--bg-clr-neutral);
   transform-origin: left;
   transform: translate(-50%) scale(1);
-}
-
-@keyframes text-stroke {
-  50% {
-    color: black;
-    -webkit-text-stroke: 1px white;
-  }
-
-  100% {
-    color: white;
-    -webkit-text-stroke: 1px black;
-  }
 }
 
 /**
