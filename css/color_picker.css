@@ -265,7 +265,7 @@ h4 {
 }
 
 .pcr-app .pcr-interaction input:focus {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85), 0 0 0 3px royalblue;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85), 0 0 0 3px var(--a-clr);
 }
 
 .pcr-app .pcr-interaction .pcr-result {
@@ -284,18 +284,18 @@ h4 {
 }
 
 .pcr-app .pcr-interaction .pcr-result::-moz-selection {
-  background: royalblue;
+  background: var(--a-clr);
   color: #fff;
 }
 
 .pcr-app .pcr-interaction .pcr-result::selection {
-  background: royalblue;
+  background: var(--a-clr);
   color: #fff;
 }
 
 .pcr-app .pcr-interaction .pcr-type.active {
   color: #fff;
-  background: royalblue;
+  background: var(--a-clr);
 }
 
 .pcr-app .pcr-interaction .pcr-save,
@@ -318,7 +318,16 @@ h4 {
 }
 
 .pcr-app .pcr-interaction .pcr-save {
-  background: royalblue;
+  background: var(--a-clr);
+}
+
+.pcr-app .pcr-interaction .pcr-save-copy {
+  background: linear-gradient(
+    to right,
+    var(--a-clr),
+    rgb(86, 216, 130)
+  );
+  color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-clear,

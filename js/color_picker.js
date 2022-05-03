@@ -657,7 +657,7 @@
                 e.interaction.hsva
               )}>\n            <input :arr="options" class="pcr-type type-cmyk" data-type="CMYK" value="CMYK" type="button" ${l(
                 e.interaction.cmyk
-              )}>\n\n            <input :ref="save" class="pcr-save" value="${c(
+              )}>\n            <input :ref="save" class="pcr-save" value="${c(
                 "btn:save"
               )}" type="button" ${l(e.interaction.save)} aria-label="${c(
                 "aria:btn:save"
@@ -669,7 +669,7 @@
                 "btn:clear"
               )}" type="button" ${l(e.interaction.clear)} aria-label="${c(
                 "aria:btn:clear"
-              )}">\n <input type="button" value="Copy" class="pcr-copy">\n       </div>\n        </div>\n      </div>\n    `
+              )}">\n <input type="button" value="Copy" class="pcr-copy">\n            <input :ref="save-copy" class="pcr-save-copy" value="Save & Copy" type="button" aria-label="Save & Copy">\n       </div>\n        </div>\n      </div>\n    `
             ),
             u = p.interaction;
           return (
@@ -1110,6 +1110,7 @@
         "btn:cancel": "Cancel",
         "btn:clear": "Clear",
         "aria:btn:save": "save and close",
+        "aria:btn:save-copy": "save, copy and close",
         "aria:btn:cancel": "cancel and close",
         "aria:btn:clear": "clear and close",
         "aria:input": "color input field",
@@ -1134,7 +1135,7 @@
         swatches: null,
         inline: !1,
         sliders: null,
-        default: "royalblue",
+        default: "#2293fa",
         position: 'top-middle',
         defaultRepresentation: null,
         adjustableNumbers: !0,
