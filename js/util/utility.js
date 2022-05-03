@@ -218,8 +218,6 @@ createdHamMenu.innerHTML = `
 
   <h1 class="menu-item item-projects item2">Projects</h1>
 
-  <h1 class="menu-item item-feed item3">Feed</h1>
-
   <h1 class="menu-item item-feedback item4">Feedback and Reviews</h1>
 
   <h1 class="menu-item item-settings item5">Settings</h1>
@@ -253,7 +251,6 @@ toggleHamMenu.addEventListener("click", () => {
 const hamMenuItems = {
   home: document.querySelector(".item-home"),
   projects: document.querySelector(".item-projects"),
-  feed: document.querySelector(".item-feed"),
   reviews: document.querySelector(".item-feedback"),
   settings: document.querySelector(".item-settings")
 };
@@ -267,12 +264,6 @@ hamMenuItems.home.addEventListener("click", () => {
 hamMenuItems.projects.addEventListener("click", () => {
 
   redirect("/Projects.html")
-
-});
-
-hamMenuItems.feed.addEventListener("click", () => {
-
-  redirect("/Feed.html");
 
 });
 
@@ -371,12 +362,6 @@ shortCutContainer.innerHTML = `
   <a href="/Write.html">
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z"/></svg>
-
-  </a>
-
-  <a href="/Feed.html">
-
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M25.57 176.1C12.41 175.4 .9117 185.2 .0523 198.4s9.173 24.65 22.39 25.5c120.1 7.875 225.7 112.7 233.6 233.6C256.9 470.3 267.4 480 279.1 480c.5313 0 1.062-.0313 1.594-.0625c13.22-.8438 23.25-12.28 22.39-25.5C294.6 310.3 169.7 185.4 25.57 176.1zM32 32C14.33 32 0 46.31 0 64s14.33 32 32 32c194.1 0 352 157.9 352 352c0 17.69 14.33 32 32 32s32-14.31 32-32C448 218.6 261.4 32 32 32zM63.1 351.9C28.63 351.9 0 380.6 0 416s28.63 64 63.1 64s64.08-28.62 64.08-64S99.37 351.9 63.1 351.9z"/></svg>
 
   </a>
 

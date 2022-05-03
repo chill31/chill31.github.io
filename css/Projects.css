@@ -387,7 +387,20 @@ body.grid-view .grid-container{
   opacity: 1;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 1140px) {
+
+  .grid-container {
+    grid-template-columns: repeat(1, 3fr);
+    width: 65% !important;
+  }
+
+  .grid-card {
+    width: 100% !important;
+  }
+
+}
+
+@media (max-width: 640px) {
 
   .grid-container {
     grid-template-columns: repeat(1, 3fr);

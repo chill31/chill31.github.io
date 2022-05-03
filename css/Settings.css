@@ -104,6 +104,9 @@ ul.settings-list {
   justify-content: left;
   padding: 2rem;
   width: 75vw;
+}
+
+ul.settings-list.font-settings {
   position: relative;
 }
 
@@ -128,13 +131,15 @@ label.small{
   cursor: pointer;
 }
 
-ul.settings-list:last-of-type {
-  transition: 1000ms ease;
-  transition-property: opacity;
+ul.settings-list {
+  transition: 500ms ease;
+  
+  transition-property: opacity, transform;
 }
 
 ul.settings-list:not(.hide){
   opacity: 1;
+  transform: translateX(0);
 }
 
 ul.settings-list:last-of-type {
@@ -142,6 +147,6 @@ ul.settings-list:last-of-type {
 }
 
 .hide {
+  transform: translateX(-10%);
   opacity: 0;
-  pointer-events: none;
 }
