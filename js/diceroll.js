@@ -4,10 +4,10 @@ const img = getElement(0, ".dice-img");
 const img2 = getElement(0, ".dice-img2");
 
 let base = "../assets/img/die/";
-let empty_url = "../assets/img/die/empty.svg";
+let empty_url = "not-rolled.png";
 
-img.src = base + "dice_empty.svg";
-img2.src = base + "dice_empty.svg";
+img.src = base + empty_url;
+img2.src = base + empty_url;
 
 rollBtn.addEventListener("click", () => {
 
