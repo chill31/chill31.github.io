@@ -218,7 +218,9 @@ createdHamMenu.innerHTML = `
 
   <h1 class="menu-item item-projects item2">Projects</h1>
 
-  <h1 class="menu-item item-feedback item4">Feedback and Reviews</h1>
+  <h1 class="menu-item item-feedback item3">Feedback and Reviews</h1>
+
+  <h1 class="menu-item item-contact item4">Contact Me</h1>
 
   <h1 class="menu-item item-settings item5">Settings</h1>
 </div>
