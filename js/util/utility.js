@@ -20,7 +20,7 @@ function fixMonth(m){
 
 function fixDay(d){
 
-  const fixDayDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const fixDayDays = [0, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",  "Sunday"];
   return fixDayDays[d];
 
 }
