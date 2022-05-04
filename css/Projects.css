@@ -400,6 +400,8 @@ fieldset {
   align-items: center;
   justify-content: space-around;
 
+  gap: .25rem;
+
   padding: 1rem;
 }
 

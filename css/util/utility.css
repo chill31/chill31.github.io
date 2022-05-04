@@ -506,6 +506,51 @@ code{
  fill: var(--a-clr);
 }
 
+.shortcut-menu a {
+  position: relative;
+}
+
+.shortcut-menu a::before, .shortcut-menu a::after {
+  transition: opacity 250ms ease;
+}
+
+.shortcut-menu a:hover::before, .shortcut-menu a:hover::after {
+  opacity: 1;
+}
+
+.shortcut-menu a::before {
+  --size: 10px;
+
+  content: '';
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 0; 
+  height: 0; 
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  
+  border-bottom: var(--size) solid var(--a-clr-dark);
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shortcut-menu a::after {
+  content: attr(data-redirect);
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--a-clr-dark);
+  padding: .25em .75em;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 1080px){
   .shortcut-menu{
     opacity: 0;
@@ -583,6 +628,10 @@ italic{
 
 bold{
   font-style: bold;
+}
+
+underline {
+  text-decoration: underline;
 }
 
 button:not(.custom) {
