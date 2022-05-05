@@ -314,7 +314,7 @@ body.grid-view .grid-container{
   margin-bottom: 1rem;
 }
 
-.grid-container .grid-card{
+.grid-card{
   padding: 1rem;
   height: 50vh;
   width: 20vw;
@@ -328,11 +328,11 @@ body.grid-view .grid-container{
   transform: translateX(-15%);
 }
 
-.grid-container .grid-card > p{
+.grid-card > p{
   font-size: 1.15rem;
 }
 
-.grid-container .grid-card > a{
+.grid-card > a{
   padding: 1vh 1vh;
   border: solid 1px black;
   color: currentColor;
@@ -345,7 +345,7 @@ body.grid-view .grid-container{
   transition-property: background-color, color;
 }
 
-.grid-container .grid-card > a:hover{
+.grid-card > a:hover{
   color: white;
   background-color: #2293fa;
 }
@@ -392,4 +392,21 @@ fieldset {
 legend {
   border: solid 1px black;
   border-radius: .1rem;
+}
+
+.star {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.star path {
+  fill: gray;
+}
+
+.star.active path {
+  fill: var(--a-clr);
 }
