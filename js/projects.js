@@ -174,7 +174,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
     for(let i = 0; i < data.projects.length; i++){
 
-      if(i == data.projects.length - 1) break;
+      if(i == data.projects.length) break;
 
       const created = document.createElement("div");
       created.classList.add("grid-card");
