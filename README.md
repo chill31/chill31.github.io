@@ -56,6 +56,7 @@ Here are my most used languages: <br>
 [![Chill31's top used Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=chill31&layout=compact&custom_title=Languages%20I%20Use)](#)
 
 Well, that's about it, see ya..
+[Here's a surprise for you!](#surprise)
 
 <br>
 <br>
@@ -66,4 +67,40 @@ Well, that's about it, see ya..
 <br>
 <br>
 
-<img src="/assets/img/deadserver.gif" style="height: 100vh; width: 100vw;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src="/assets/img/deadserver.gif" style="height: 100vh; width: 100vw;" id="surprise">
