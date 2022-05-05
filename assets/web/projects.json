@@ -110,8 +110,8 @@
     {
       "title": "QR Code Generator",
       "description": "A simple QR Code generator which generates custom QR Codes according to the entered value.",
-      "location": "/projects/QR-Code.html",
-      "webLocation": "https://chill31.github.io/projects/QR-Code.html"
+      "location": "/projects/QR-Code/Generate.html",
+      "webLocation": "https://chill31.github.io/projects/QR-Code/Generate.html"
     },
     {
       "title": "Text To Speech",
@@ -142,14 +142,12 @@
       "description": "A simple language translator tool with most languages",
       "location": "/projects/Language/index.html",
       "webLocation": "https://chill31.github.io/projects/Language/index.html"
-    }
-
-
-    ,{
-      "title": "...",
-      "description": "More projects coming soon...",
-      "location": "#",
-      "webLocation": "#"
+    },
+    {
+      "title": "QR-Code Reader",
+      "description": "A simple QR Code reader where you can upload QR Codes and it shows you the QR's content",
+      "location": "/projects/QR-Code/Reader.html",
+      "webLocation": "https://chill31.github.io/projects/QR-Code/Reader.html"
     }
   ]
 }

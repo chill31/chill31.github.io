@@ -41,7 +41,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
     const spanContainerC = document.querySelector(".newest-project-div");
     const editSpan = document.querySelector("span.edit");
 
-    let newest = data.projects.length - 2;
+    let newest = data.projects.length - 1;
     editSpan.innerHTML =
       `<a href=\"${data.projects[newest].location}\">` +
       data.projects[newest].title.toString().substring(0, 7) +
@@ -97,7 +97,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
     function moveBack() {
       if (sliderCount === 0) {
-        sliderCount = data.projects.length - 2;
+        sliderCount = data.projects.length - 1;
         lbl.textContent = `Project ${sliderCount + 1}`;
       } else {
         sliderCount -= 1;
@@ -121,7 +121,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
     }
 
     function moveNext() {
-      if (sliderCount === data.projects.length - 2) {
+      if (sliderCount === data.projects.length - 1) {
         sliderCount = 0;
         lbl.textContent = `Project ${sliderCount + 1}`;
       } else {

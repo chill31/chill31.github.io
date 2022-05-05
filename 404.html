@@ -43,9 +43,11 @@ const element = document.querySelector("entered-page");
 
 element.textContent = window.location.href;
 
+const checkLocation = window.location.href.toString().toLowerCase();
+
 let hintText = "";
 
-if(window.location.href.toString().endsWith("review/") || window.location.href.toString().endsWith("reviews/") || window.location.href.toString().endsWith("reviews") || window.location.href.toString().endsWith("review")){
+if(checkLocation.endsWith("review/") || checkLocation.endsWith("reviews/") || checkLocation.endsWith("reviews") || checkLocation.endsWith("review")){
 
     hintText = `
 If you are looking for the reviews pages, then head over to the <a href="/Write.html">Reviews</a> page.
@@ -53,13 +55,14 @@ If you are looking for the reviews pages, then head over to the <a href="/Write.
 
 }
 
-if(window.location.href.toString().endsWith("projects/") || window.location.href.toString().endsWith("project/") || window.location.href.toString().endsWith("projects") || window.location.href.toString().endsWith("project")){
+if(checkLocation.endsWith("projects/") || checkLocation.endsWith("project/") || checkLocation.endsWith("projects") || checkLocation.endsWith("project")){
  
     hintText = `
 If you are looking for this website's utilities/projects, then head over to the <a href="/Projects.html">Projects</a> page.
 `
 
 }
+
 
 const p = document.createElement("p");
 p.innerHTML = hintText;

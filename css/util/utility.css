@@ -576,6 +576,10 @@ custom-header{
   position: fixed;
 }
 
+custom-header, custom-header * {
+  pointer-events: none;
+}
+
 @media (max-width: 325px){
 
   .loaded-content, #menu, #toggle-menu{
@@ -590,6 +594,10 @@ custom-header{
     transform: translate(-50%, -50%);
 
     opacity: 1;
+  }
+
+  custom-header, custom-header * {
+    pointer-events: all;
   }
 
 }
@@ -614,6 +622,10 @@ custom-header{
 
   custom-header small{
     font-size: medium;
+  }
+
+  custom-header, custom-header * {
+    pointer-events: all;
   }
 
 }
