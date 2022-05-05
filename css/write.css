@@ -22,7 +22,7 @@ body {
   background: var(--scrollbar-thumb-bg);
   border: 0.02rem solid rgb(12, 12, 12);
   border-radius: 500vw;
-  transition: 0.35s ease;
+  transition: 300ms ease;
 }
 
 .top-header-strip {

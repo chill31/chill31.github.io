@@ -47,10 +47,8 @@ a,
       var(--a-clr) 47.5%,
       var(--a-clr-dark) 5%
     );
-  
     position: absolute;
     top: 12vh;
-  
     padding: 1rem;
     padding-top: 4rem;
   }
@@ -82,7 +80,6 @@ a,
 
 .mid-container p.a a::after{
  content: '';
-
  height: 3px;
  width: 100%;
  background-color: black;
@@ -90,7 +87,6 @@ a,
  top: 100%;
  right: 50%;
  transform: translate(50%);
-
  transition: var(--duration) ease;
 }
 
@@ -99,7 +95,6 @@ a,
  width: 100%;
  height: 100%;
  top: 0;
-
  animation: content-frames var(--duration) var(--duration) ease forwards;
 }
 

@@ -115,7 +115,7 @@ li{
     color: #adadad;
     cursor: pointer;
     font-size: 16px;
-    transition: transform 0.2s ease;
+    transition: transform 200ms ease;
 }
 
 .exchange svg{

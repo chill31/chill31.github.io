@@ -93,7 +93,7 @@ body{
   cursor: pointer;
   border-radius: 5px;
   background: var(--a-clr);
-  transition: transform 0.3s ease;
+  transition: transform 300ms ease;
 }
 .content button:active{
   transform: scale(0.97);

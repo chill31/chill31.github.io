@@ -13,10 +13,12 @@ body {
   align-items: center;
   overflow: hidden;
 }
+
 button {
   border: 0;
   outline: 0;
 }
+
 .container {
   margin: 40px 0;
   width: 400px;
@@ -27,18 +29,21 @@ button {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35),
     0 8px 12px rgba(0, 0, 0, 0.15);
 }
+
 .container h2.title {
   font-size: 1.75rem;
   margin: 10px -5px;
   margin-bottom: 30px;
   color: #fff;
 }
+
 .result {
   position: relative;
   width: 100%;
   height: 65px;
   overflow: hidden;
 }
+
 .result__info {
   position: absolute;
   bottom: 4px;
@@ -48,12 +53,15 @@ button {
   transform: translateY(200%);
   opacity: 0;
 }
+
 .result__info.right {
   right: 8px;
 }
+
 .result__info.left {
   left: 8px;
 }
+
 .result__viewbox {
   width: 100%;
   height: 100%;
@@ -63,9 +71,11 @@ button {
   text-align: center;
   line-height: 65px;
 }
+
 #result h4 {
   cursor: pointer;
 }
+
 .result #copy-btn {
   position: absolute;
   top: var(--y);
@@ -80,13 +90,16 @@ button {
   cursor: pointer;
   z-index: 2;
 }
+
 .result #copy-btn:active {
   box-shadow: 0 0 0 200px rgba(255, 255, 255, 0.08);
 }
+
 .result:hover #copy-btn {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.35);
 }
+
 .field-title {
   position: absolute;
   top: -10px;
@@ -99,11 +112,13 @@ button {
   pointer-events: none;
   user-select: none;
 }
+
 .options {
   width: 100%;
   height: auto;
   margin: 50px 0;
 }
+
 .range__slider {
   position: relative;
   width: 100%;
@@ -115,6 +130,7 @@ button {
   border-radius: 8px;
   margin: 30px 0;
 }
+
 .range__slider::before,
 .range__slider::after {
   position: absolute;
@@ -122,14 +138,17 @@ button {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
 .range__slider::before {
   content: attr(data-min);
   left: 10px;
 }
+
 .range__slider::after {
   content: attr(data-max);
   right: 10px;
 }
+
 .range__slider .length__title::after {
   content: attr(data-length);
   position: absolute;
@@ -137,6 +156,7 @@ button {
   font-variant-numeric: tabular-nums;
   color: #fff;
 }
+
 #slider {
   -webkit-appearance: none;
   width: calc(100% - (70px));
@@ -148,6 +168,7 @@ button {
   margin: 0;
   cursor: pointer;
 }
+
 #slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
@@ -155,12 +176,14 @@ button {
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
+
 #slider::-webkit-slider-thumb:hover {
   background-color: #d4d4d4;
   transform: scale(1.2);
 }
+
 #slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
@@ -168,11 +191,13 @@ button {
   border-radius: 50%;
   background-color: white;
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 150ms ease-in-out;
 }
+
 #slider::-moz-range-thumb:hover {
   background-color: #d4d4d4;
 }
+
 .settings {
   position: relative;
   height: auto;
@@ -180,6 +205,7 @@ button {
   display: flex;
   flex-direction: column;
 }
+
 .settings .setting {
   position: relative;
   width: 100%;
@@ -192,13 +218,16 @@ button {
   color: #fff;
   margin-bottom: 8px;
 }
+
 .settings .setting input {
   opacity: 0;
   position: absolute;
 }
+
 .settings .setting input + label {
   user-select: none;
 }
+
 .settings .setting input + label::before,
 .settings .setting input + label::after {
   content: "";
@@ -209,12 +238,14 @@ button {
   right: 10px;
   cursor: pointer;
 }
+
 .settings .setting input + label::before {
   height: 30px;
   width: 50px;
   border-radius: 30px;
   background: rgba(214, 214, 214, 0.434);
 }
+
 .settings .setting input + label::after {
   height: 24px;
   width: 24px;
@@ -222,26 +253,33 @@ button {
   right: 32px;
   background: #fff;
 }
+
 .settings .setting input:checked + label:before {
   background: var(--a-clr);
   transition: all 150ms cubic-bezier(0, 0, 0, 0.1);
 }
+
 .settings .setting input:checked + label:after {
   right: 14px;
 }
+
 .settings .setting input:focus + label:before {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
 }
+
 .settings .setting input:disabled + label:before,
 .settings .setting input:disabled + label:after {
   cursor: not-allowed;
 }
+
 .settings .setting input:disabled + label:before {
   background: #4f4f6a;
 }
+
 .settings .setting input:disabled + label:after {
   background: #909090;
 }
+
 .btn.generate {
   user-select: none;
   position: relative;
@@ -257,6 +295,7 @@ button {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .btn.generate:active {
   animation: clicked 1000ms forwards alternate-reverse;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);

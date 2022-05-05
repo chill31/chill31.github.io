@@ -305,7 +305,6 @@ html {
   height: 100vh;
   width: 100vw;
   background-color: rgba(255, 255, 255, 0.9);
-
   transform: scale(0);
   transform-origin: bottom right;
 }
@@ -328,7 +327,6 @@ html {
   pointer-events: none;
   transition: opacity 500ms ease;
   font-weight: 100;
-
   text-align: center;
 }
 
@@ -473,16 +471,13 @@ code{
   left: 7vw;
   height: 2rem;
   width: fit-content;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   background-color: rgba(1, 1, 1, .5);
   z-index: 100;
   padding: .2rem;
   gap: .75rem;
-
   transition: 500ms ease;
   transition-property: opacity;
 }
@@ -526,14 +521,11 @@ code{
   top: 95%;
   left: 50%;
   transform: translate(-50%);
-
   width: 0; 
   height: 0; 
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
-  
   border-bottom: var(--size) solid var(--a-clr-dark);
-
   opacity: 0;
   pointer-events: none;
 }
@@ -546,7 +538,6 @@ code{
   transform: translate(-50%);
   background-color: var(--a-clr-dark);
   padding: .25em .75em;
-
   opacity: 0;
   pointer-events: none;
 }
@@ -572,7 +563,6 @@ code{
 custom-header{
   opacity: 0;
   transition: opacity 500ms ease;
-
   position: fixed;
 }
 

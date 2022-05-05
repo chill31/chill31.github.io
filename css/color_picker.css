@@ -17,7 +17,7 @@ h1{
   top: 0%;
   width: 100%;
   height: 70%;
-  background: #cc2020;
+  background-color: var(--a-clr);
 }
 
 h4 {
@@ -39,9 +39,6 @@ h4 {
   transform: translateY(0);
 }
 
-/* color picker */
-
-
 .pickr *{
   box-sizing: border-box;
   outline: none;
@@ -58,9 +55,9 @@ h4 {
   cursor: pointer;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
-    no-repeat center;
+   no-repeat center;
   background-size: 0;
-  transition: all 0.3s;
+  transition: all 300ms;
 }
 
 .pickr .pcr-button::before {
@@ -87,7 +84,7 @@ h4 {
   left: 0;
   height: 100%;
   width: 100%;
-  transition: background 0.3s;
+  transition: background 300ms;
   background: var(--pcr-color);
   border-radius: 0.15em;
 }
@@ -131,7 +128,7 @@ h4 {
 .pickr .pcr-slider,
 .pcr-app .pcr-palette,
 .pcr-app .pcr-slider {
-  transition: box-shadow 0.3s;
+  transition: box-shadow 300ms;
 }
 
 .pickr .pcr-palette:focus,
@@ -187,7 +184,7 @@ h4 {
   margin: 2.5px;
   flex-shrink: 0;
   justify-self: center;
-  transition: all 0.15s;
+  transition: all 150ms;
   overflow: hidden;
   background: transparent;
   z-index: 1;
@@ -251,7 +248,7 @@ h4 {
   color: #75797e;
   background: hsl(210, calc(1 * 9.8%), 20%);
   border-radius: 0.15em;
-  transition: all 0.15s;
+  transition: all 150ms;
   padding: 0.45em 0.5em;
   margin-top: 0.75em;
 }
@@ -269,7 +266,7 @@ h4 {
   text-align: left;
   flex: 1 1 8em;
   min-width: 8em;
-  transition: all 0.2s;
+  transition: all 200ms;
   border-radius: 0.15em;
   background: hsl(210, 9.8%, 20%);
   cursor: text;
@@ -316,7 +313,7 @@ h4 {
   background: linear-gradient(
     to right,
     var(--a-clr),
-    rgb(86, 216, 130)
+    rgb(90, 225, 135)
   );
   color: white;
 }

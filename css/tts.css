@@ -85,7 +85,7 @@ form button{
   cursor: pointer;
   margin-top: 10px;
   background: var(--a-clr);
-  transition: 0.3s ease;
+  transition: 300ms ease;
 }
 form button:hover{
   filter: contrast(3);

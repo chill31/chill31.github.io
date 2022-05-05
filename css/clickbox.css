@@ -11,18 +11,20 @@ body{
   min-height: 100vh;
   padding: 0 10px;
   background: var(--a-clr);
-
   overflow: hidden;
 }
+
 body.game-started{
  background: inherit;
  padding: 0 !important;
 }
+
 body.game-started .start_div{
  visibility: hidden;
  opacity: 0;
  pointer-events: none;
 }
+
 .start_div{
   width: 370px;
   height: 50vh;
@@ -31,6 +33,7 @@ body.game-started .start_div{
   background: #fff;
   display: grid;
 }
+
 .start_div header{
   font-size: 28px;
   font-weight: 500;

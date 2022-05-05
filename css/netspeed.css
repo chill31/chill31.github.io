@@ -8,11 +8,13 @@
   transform: translate(-50%,-50%);
   box-shadow: 0 3px 10px rgb(0 0 0);
 }
+
 .result {
   font-size: 5em;
   line-height: 1.3em;
   text-align: center;
 }
+
 .message{
   text-align: center;
   font-weight: bold;

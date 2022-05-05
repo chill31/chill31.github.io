@@ -5,7 +5,6 @@ html {
 body {
   background: var(--a-clr);
   margin: 0;
-
   overflow: hidden;
 }
 
@@ -20,7 +19,7 @@ body {
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb-bg);
   border: 0.02rem solid rgb(12, 12, 12);
-  transition: 0.35s ease;
+  transition: 350ms ease;
 }
 
 .top-header-strip {
@@ -82,6 +81,7 @@ a {
     pointer-events: none;
   }
 }
+
 @media (max-height: 545px){
   .social-media-accounts-div{
     opacity: 0;
@@ -245,12 +245,10 @@ button.show-skills[data-show-skills]#show-skills{
  position: absolute;
  bottom: 2vh;
  right: 50%;
-
  background-color: rgb(58, 213, 56);
  border: solid 1px black;
  border-radius: 1rem;
  transform: translate(50%);
-
  transition: background-color 500ms ease;
 }
 
@@ -281,7 +279,6 @@ button.show-skills[data-show-skills]#show-skills:hover{
     var(--a-clr) 47.5%,
     var(--a-clr-dark) 5%
   );
-
   transition: opacity 500ms ease;
 }
 
@@ -308,22 +305,20 @@ button.show-skills[data-show-skills]#show-skills:hover{
   width: 50vw;
   height: 45vh;
   position: relative;
-  
   box-shadow: 0 0 .5rem black;
   border-radius: 1rem;
 }
 
 .full-progress-bar{
+ --top-number: 10%;
+ --increment: 17.5%;
+
  width: 90%;
  background-color: white;
  border: solid 1px black;
  height: 1.2rem;
  position: absolute;
  border-radius: 1rem;
-
- --top-number: 10%;
- --increment: 17.5%;
-
  display: flex;
  align-items: center;
 }
@@ -341,12 +336,12 @@ button.show-skills[data-show-skills]#show-skills:hover{
  left: 2%;
  font-size: 1.1rem;
 }
+
 .actual-progress{
   transition: width 500ms ease;
   height: 100%;
   border-radius: 1rem;
   width: 0;
-
   background: linear-gradient(45deg, #2293fa 60%, var(--a-clr-dark) 5%);
 }
 
@@ -387,7 +382,6 @@ label[for]{
   border-radius: .5rem;
   border: solid 1px black;
   position: relative;
-
   height: fit-content;
   transition: background-color 250ms ease;
 }
@@ -408,7 +402,6 @@ label[for]{
   width: 1.25rem;
   height: 1.25rem;
   transform: translate(-50%, -50%) rotate(-45deg);
-
   transition: 250ms ease;
   transition-property: border-right, border-left, transform;
 }
@@ -428,7 +421,6 @@ label[for]{
   width: 15%;
   background-color: black;
   transform: translate(-50%, -50%);
-
   transition: 250ms ease;
   transition-property: transform, background-color;
 }

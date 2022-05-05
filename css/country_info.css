@@ -28,34 +28,34 @@ body {
 }
 
 .search-wrapper {
-    display: grid;
-    grid-template-columns: 9fr 3fr;
-    gap: 1.25em;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.25em;
 }
 
 .search-wrapper button {
-    font-size: 1em;
-    background-color: var(--a-clr);
-    color: #ffffff;
-    padding: 0.8em 0;
-    border: none;
-    border-radius: 1.5em;
+  font-size: 1em;
+  background-color: var(--a-clr);
+  color: #ffffff;
+  padding: 0.8em 0;
+  border: none;
+  border-radius: 1.5em;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .search-wrapper input {
-    font-size: 1em;
-    padding: 0 0.62em;
-    border: none;
-    border-bottom: 2px solid var(--a-clr);
-    outline: none;
-    color: #222a43;
+  font-size: 1em;
+  padding: 0 0.62em;
+  border: none;
+  border-bottom: 2px solid var(--a-clr);
+  outline: none;
+  color: #222a43;
 }
 
 #result {
-    margin-top: 1.25em;
-    transition: 500ms ease;
+  margin-top: 1.25em;
+  transition: 500ms ease;
 }
 
 .container #img-div{
@@ -65,53 +65,50 @@ body {
  border: solid 1px black;
  height: 162.5px;
  transform: translate(-50%);
- 
  cursor: pointer;
 }
 
 .container .flag-img {
-
-    height: 100%;
-    width: 100%;
-
-    cursor: pointer;
-    transition: transform 500ms ease;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 500ms ease;
 }
 
 .container .flag-img.f{
-    position: absolute;
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%) rotate(360deg) scale(3);
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%) rotate(360deg) scale(3);
 }
 
 .container h2 {
-    font-weight: 600;
-    color: #222a43;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1.8em;
+  font-weight: 600;
+  color: var(--a-clr-dark);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.8em;
 }
 
 .data-wrapper {
-    margin-bottom: 1em;
-    letter-spacing: 0.3px;
+  margin-bottom: 1em;
+  letter-spacing: 0.3px;
 }
 
 .container h4 {
-    display: inline;
-    font-weight: 500;
-    color: #222a43;
+  display: inline;
+  font-weight: 500;
+  color: var(--a-clr-dark);
 }
 
 .container span {
-    color: #5d6274;
+  color: #5d6274;
 }
 
 .container h3 {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 400;
-    color: #ff465a;
+   text-align: center;
+   font-size: 1.2em;
+   font-weight: 400;
+   color: #ff465a;
 }

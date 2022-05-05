@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body{
   display: flex;
   align-items: center;
@@ -11,6 +12,7 @@ body{
   padding: 0 10px;
   background: var(--a-clr);
 }
+
 .wrapper{
   width: 370px;
   height: 50vh;
@@ -19,6 +21,7 @@ body{
   background: #fff;
   display: grid;
 }
+
 .wrapper header{
   font-size: 28px;
   font-weight: 500;
@@ -26,12 +29,12 @@ body{
 }
 
 thing .container{
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 #result{
-    font-size: 1.2rem;
+ font-size: 1.2rem;
 }
 
 .result{
@@ -39,18 +42,18 @@ thing .container{
 }
 
 thing button{
-    padding: .5rem;
-    cursor: pointer;
-    border: solid 1px black;
-    border-radius: .1rem;
-    transition: 500ms ease;
-    transition-property: background-color, border, color;
+  padding: .5rem;
+  cursor: pointer;
+  border: solid 1px black;
+  border-radius: .1rem;
+  transition: 500ms ease;
+  transition-property: background-color, border, color;
 }
 
 thing button:hover{
-    background-color: #2293fa;
-    border: solid 1px rgba(0, 0, 0, 0);
-    color: azure;
+  background-color: #2293fa;
+  border: solid 1px rgba(0, 0, 0, 0);
+  color: azure;
 }
 
 .wrapper thing textarea{
@@ -64,5 +67,5 @@ thing button:hover{
 }
 
 .wrapper thing textarea:focus{
-    border: solid .225rem #2293fa;
+ border: solid .225rem #2293fa;
 }
