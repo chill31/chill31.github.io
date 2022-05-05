@@ -148,6 +148,12 @@
       "description": "A simple QR Code reader where you can upload QR Codes and it shows you the QR's content",
       "location": "/projects/QR-Code/Reader.html",
       "webLocation": "https://chill31.github.io/projects/QR-Code/Reader.html"
+    },
+    {
+      "title": "Random Number Generator",
+      "description": "this project generates a random number within the given range of minimum and maximum numbers.",
+      "location": "/projects/Random-Number.html",
+      "webLocation": "https://chill31.github.io/projects/Random-Number.html"
     }
   ]
 }
