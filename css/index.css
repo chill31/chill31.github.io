@@ -342,11 +342,11 @@ button.show-skills[data-show-skills]#show-skills:hover{
   height: 100%;
   border-radius: 1rem;
   width: 0;
-  background: linear-gradient(45deg, #2293fa 60%, var(--a-clr-dark) 5%);
+  background: linear-gradient(45deg, var(--a-clr) 60%, var(--a-clr-dark) 5%);
 }
 
 .actual-progress.progress-java{
-  background: #2293fa;
+  background: var(--a-clr);
 }
 
 .full-progress-bar.full-html{
