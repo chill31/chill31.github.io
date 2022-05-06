@@ -404,3 +404,9 @@ customHeader.innerHTML = `
 `;
 
 document.body.prepend(customHeader);
+
+if(!localStorage.getItem("accent-color")){
+  localStorage.setItem("accent-color", "#2293fa");
+}
+
+document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));

@@ -8,6 +8,8 @@
   <title>Settings</title>
   <link rel="stylesheet" href="css/Settings.css">
   <link rel="stylesheet" href="css/util/utility.css">
+
+  <link rel="stylesheet" href="/static/color/style.css">
 </head>
 
 <body>
@@ -70,7 +72,7 @@
 
   </ul>
 
-  <ul class="settings-list shortcut-settings hide">
+  <ul class="settings-list shortcut-settings">
 
     <li>
     Shortcuts
@@ -96,11 +98,34 @@
 
   </ul>
 
+  <ul class="settings-list color-settings">
+
+    <li>
+      Colors
+
+      <br>
+      <br>
+
+      <ul>
+
+        <li>Change Accent Color:
+          <br>
+
+          <div class="color-picker">
+
+          </div>
+        </li>
+
+      </ul>
+    </li>
+
+  </ul>
+
   </div>
 
 
-  <script src="js/util/utility.js"></script>
-  <script src="js/settings.js"></script>
+  <script src="/js/color_picker.js"></script>
+  <script src="/js/util/utility.js"></script>
+  <script src="/js/settings.js"></script>
 </body>
-
 </html>

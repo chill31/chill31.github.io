@@ -119,7 +119,6 @@ pickr.on("cancel", () => {
 copy_btn.addEventListener("click", () => {
     
     try {
-        // navigator.clipboard.writeText(clr);
         copyText(clr);
         notify("Successfully copied the color!", "success");
     } catch(e){
