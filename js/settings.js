@@ -138,7 +138,7 @@ const pickr = Pickr.create({
           hex: true, // hex(a) color scheme.
           rgba: true, // rgb(a) color scheme
           hsla: true, // hsl(a) color scheme.
-          hsva: true, // hsv(a) color scheme.
+          hsva: false, // hsv(a) color scheme.
           cmyk: false, // cmyk color scheme.
           input: true, // input where we can type in our own colors.
           cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
