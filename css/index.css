@@ -27,7 +27,7 @@ body {
   top: 0;
   width: 100%;
   height: 13vh;
-  background: #54c0eb;
+  background: var(--top-btm-bg);
   z-index: 10;
 
   transition: height 500ms ease;
@@ -99,44 +99,6 @@ a {
   .mid-container p{
     font-size: large;
   }
-}
-
-@media (max-width: 325px){
-
-  .loaded-content, #menu, #toggle-menu{
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  custom-header{
-    font-size: large;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-}
-
-@media (max-height: 430px){
-
-  .loaded-content, #menu, #toggle-menu{
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  custom-header{
-    font-size: large;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  custom-header small{
-    font-size: medium;
-  }
-
 }
 
 .mid-container .about-me-heading{
@@ -428,4 +390,90 @@ label[for]{
 .contact-anchor:hover::before {
   transform: translate(25%, -50%);
   background-color: white;
+}
+
+.localStorage__notif {
+  opacity: 1;
+  height: 35vh;
+  width: 40vw;
+  background-color: white;
+  color: white;
+  position: absolute;
+  bottom: 2vh;
+  left: 1vw;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.localStorage__notif.confirmed__localStorage {
+  opacity: 0;
+}
+
+.localStorage__content {
+  position: relative;
+  margin-top: 23%;
+  text-align: left;
+  top: -30%;
+}
+
+.localStorage__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.localStorage__flex * {
+  --padding: .65em;
+  --padding_: 1em;
+}
+
+.localStorage__confirm {
+  padding: calc(var(--padding) + .25em) calc(var(--padding_) + .25em) !important;
+}
+
+.localStorage__moreInfo {
+ border: solid 1px black;
+ border-radius: .5em;
+ padding: var(--padding) var(--padding_);
+ transition: 250ms ease;
+ transition-property: color, background-color;
+}
+
+.localStorage__moreInfo:hover {
+  background-color: var(--a-clr);
+  color: black;
+}
+
+.localStorage__imgFlex {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 30%;
+ cursor: pointer;
+}
+
+.localStorage__image {
+  height: 100%;
+  width: 30%;
+}
+
+.localStorage__image path {
+  fill: var(--a-clr);
+  transition: fill 250ms ease;
+}
+
+.localStorage__image path:hover {
+  fill: var(--top-btm-bg);
+}
+
+.localStorage__arrPointer {
+  height: 100%;
+  width: 40%;
+  transform: translate(-5%);
+}
+
+.localStorage__imgBrowser {
+  height: 100%;
+  width: 20%;
 }

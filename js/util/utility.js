@@ -390,23 +390,20 @@ if(localStorage.getItem("shortcuts") == "enabled"){
   shortCutContainer.classList.add("disabled");
 }
 
-/** ADDING TEXT TO EACH PAGE IF IT'S TOO SMALL  */
-
-const customHeader = document.createElement("custom-header");
-customHeader.innerHTML = `
-  Your Device Is Not Big Enough to View This Site
-
-  <br>
-
-  <small>
-    (Maybe if you're on a desktop device, and this shows up, its probably because of too much zoom)
-  </small>
-`;
-
-document.body.prepend(customHeader);
-
 if(!localStorage.getItem("accent-color")){
   localStorage.setItem("accent-color", "#2293fa");
 }
 
 document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));
+
+if(!localStorage.getItem("confirmed__localStorage")) {
+  localStorage.setItem("confirmed__localStorage", false);
+  redirect("/");
+}
+
+if(
+  localStorage.getItem("confirmed__localStorage") == "false" &&
+  document.head.querySelector("title").textContent.toLowerCase() != "home"
+) {
+  redirect("/");
+}
