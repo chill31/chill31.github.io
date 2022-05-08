@@ -60,9 +60,9 @@ thing button{
 }
 
 thing button:hover{
-    background-color: #2293fa;
-    border: solid 1px rgba(0, 0, 0, 0);
-    color: azure;
+    background-color: var(--a-clr);
+    border: solid 1px transparent;
+    color: white;
 }
 
 body.game-started h1{
@@ -130,9 +130,9 @@ body.game-started label{
 }
 
 #restart-game:hover{
-    background-color: #2293fa;
+    background-color: var(--a-clr);
     border: solid 1px rgba(0, 0, 0, 0);
-    color: azure;
+    color: white;
 }
 
 .darkener{

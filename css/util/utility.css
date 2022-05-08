@@ -12,11 +12,6 @@ body {
 :root{
 --bg-color: white;
 --text-color: black;
---text-shadows: #ffffff;
---btn-bg: rgb(80, 80, 80);
---btn-txtclr: #fff;
---scrollbar-bg: #919191;
---scrollbar-thumb-bg: #5e5e5e;
 --top-btm-bg: #54c0eb;
 --a-clr: #2293fa;
 --a-clr-dark: #121417;
@@ -34,7 +29,7 @@ html {
 
 *::selection {
   background-color: var(--selection-color);
-  color: black;
+  color: var(--text-color);
 }
 
 @font-face {

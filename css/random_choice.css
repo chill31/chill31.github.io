@@ -18,7 +18,7 @@ body{
   height: 50vh;
   padding: 30px;
   border-radius: 7px;
-  background: #fff;
+  background: white;
   display: grid;
 }
 
@@ -51,9 +51,9 @@ thing button{
 }
 
 thing button:hover{
-  background-color: #2293fa;
+  background-color: var(--a-clr);
   border: solid 1px rgba(0, 0, 0, 0);
-  color: azure;
+  color: white;
 }
 
 .wrapper thing textarea{
@@ -67,5 +67,5 @@ thing button:hover{
 }
 
 .wrapper thing textarea:focus{
- border: solid .225rem #2293fa;
+ border: solid .225rem var(--a-clr);
 }

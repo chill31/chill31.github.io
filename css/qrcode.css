@@ -35,7 +35,7 @@ body{
 
 header p{
  margin-top: .5rem;
- color: #474747;
+ color: var(--big-icon-fill);
  font-size: 1rem;
  text-align: center;
 }
@@ -75,7 +75,7 @@ header p{
 }
 
 .form button{
- color: #fff;
+ color: white;
  cursor: pointer;
  margin-top: 1.3rem;
  font-size: 1rem;

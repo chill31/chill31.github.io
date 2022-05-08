@@ -34,7 +34,7 @@ button {
   font-size: 1.75rem;
   margin: 10px -5px;
   margin-bottom: 30px;
-  color: #fff;
+  color: white;
 }
 
 .result {
@@ -67,7 +67,7 @@ button {
   height: 100%;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  color: #fff;
+  color: white;
   text-align: center;
   line-height: 65px;
 }
@@ -134,7 +134,7 @@ button {
 .range__slider::before,
 .range__slider::after {
   position: absolute;
-  color: #fff;
+  color: white;
   font-size: 0.9rem;
   font-weight: bold;
 }
@@ -154,7 +154,7 @@ button {
   position: absolute;
   right: -16px;
   font-variant-numeric: tabular-nums;
-  color: #fff;
+  color: white;
 }
 
 #slider {
@@ -215,7 +215,7 @@ button {
   display: flex;
   align-items: center;
   padding: 10px 25px;
-  color: #fff;
+  color: white;
   margin-bottom: 8px;
 }
 
@@ -287,7 +287,7 @@ button {
   height: 50px;
   margin: 10px 0;
   border-radius: 8px;
-  color: #fff;
+  color: white;
   border: none;
   background: var(--a-clr);
   letter-spacing: 1px;

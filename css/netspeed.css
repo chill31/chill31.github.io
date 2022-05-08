@@ -18,7 +18,7 @@
 .message{
   text-align: center;
   font-weight: bold;
-  color: #221f1f;
+  color:  var(--big-icon-fill);
   font-size: 4.5vh;
   line-height: 6vh;
   min-height: 6vh;

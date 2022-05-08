@@ -149,10 +149,12 @@ const pickr = Pickr.create({
   },
 });
 
+pickr.show().hide();
+
 const pickr2 = Pickr.create({
   el: '.clr-picker',
   theme: 'classic',
-  default: "#121417",
+  default: '#121417',
 
   swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
   'rgba(244, 67, 54, 1)', // orange.
@@ -189,17 +191,14 @@ components: { // what's included in the color picker.
 },
 });
 
-const actualClrPickrToggles = document.querySelectorAll(".pcr-button");
+pickr2.show().hide();
 
-actualClrPickrToggles[0].click();
+const actualClrPickrToggles = document.querySelectorAll(".pcr-button");
 
 const copy_btns = document.querySelectorAll(".pcr-copy");
 const save_btns = document.querySelectorAll(".pcr-save");
 const resColors = document.querySelectorAll(".pcr-result");
 const cancelBtns = document.querySelectorAll(".pcr-cancel");
-
-cancelBtns[0].click();
-actualClrPickrToggles[0].click();
 
 const clear_btns = document.querySelectorAll(".pcr-clear");
 const save_copys = document.querySelectorAll(".pcr-save-copy");
@@ -286,10 +285,6 @@ copy_btns[0].addEventListener("click", () => {
 
 });
 
-pickr2.show();
-cancelBtns[1].click();
-pickr2.hide();
-cancelBtns[1].click();
 
 let clr2 = "#121417";
 let color_scheme2;
@@ -348,7 +343,7 @@ clear_btns[1].addEventListener("click", () => {
 
   notify("Cleared the color", "info")
 
-})
+});
 
 pickr2.on("cancel", () => {
   pickr2.hide();

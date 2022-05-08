@@ -8,23 +8,6 @@ body {
   transition-duration: 500ms;
 }
 
-*::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-bg);
-  border-radius: 50vw;
-  margin-block: 0.15em;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-bg);
-  border: 0.02rem solid rgb(12, 12, 12);
-  border-radius: 500vw;
-  transition: 300ms ease;
-}
-
 .top-header-strip {
   position: fixed;
   top: 0;

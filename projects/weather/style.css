@@ -93,7 +93,7 @@ header i{
   justify-content: center;
 }
 .input-part button{
-  color: #fff;
+  color: white;
   cursor: pointer;
   background: var(--a-clr);
   transition: background 500ms ease;

@@ -21,7 +21,7 @@
 }
 
 .item.item-mail {
-  background-color: #2292fa80;
+  background-color: #2293fa80;
 }
 
 .item.item-discord {
@@ -31,7 +31,6 @@
 .item.item-github {
   background-color: rgb(71, 118, 206);
 }
-
 
 .item.item-empty {
   background: linear-gradient(

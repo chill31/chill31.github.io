@@ -8,20 +8,6 @@ body {
   overflow: hidden;
 }
 
-*::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-bg);
-}
-
-*::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-bg);
-  border: 0.02rem solid rgb(12, 12, 12);
-  transition: 350ms ease;
-}
-
 .top-header-strip {
   position: fixed;
   top: 0;
@@ -59,12 +45,12 @@ a {
 .mid-container h3 {
   font-weight: 100;
   font-size: larger;
-  color: rgb(38, 42, 46);
+  color: var(--text-color);
 }
 
 .mid-container p {
   width: 50ch;
-  color: #000000;
+  color: var(--text-color);
 }
 
 .social-media-accounts-div{
@@ -102,7 +88,7 @@ a {
 }
 
 .mid-container .about-me-heading{
-  color: #000000;
+  color: var(--text-color);
 }
 
 .social-containers {
@@ -332,12 +318,12 @@ button.show-skills[data-show-skills]#show-skills:hover{
 }
 
 label[for]{
-  color: black;
+  color: var(--text-color);
 }
 
 .contact-anchor {
   font-size: 1.3rem;
-  color: black;
+  color: var(--text-color);
   padding: .5em 1em;
   padding-right: 3em;
   background-color: white;
@@ -444,7 +430,7 @@ label[for]{
 
 .localStorage__moreInfo:hover {
   background-color: var(--a-clr);
-  color: black;
+  color: var(--text-color);
 }
 
 .localStorage__imgFlex {

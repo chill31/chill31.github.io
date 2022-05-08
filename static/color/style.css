@@ -244,25 +244,25 @@
 
 .pcr-app .pcr-interaction .pcr-result::-moz-selection {
   background: var(--pcr-color);
-  color: #fff;
+  color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-type.active {
-  color: #fff;
+  color: white;
   background: var(--a-clr);
 }
 
 .pcr-app .pcr-interaction .pcr-save,
 .pcr-app .pcr-interaction .pcr-cancel,
 .pcr-app .pcr-interaction .pcr-clear {
-  color: #fff;
+  color: white;
   width: auto;
 }
 
 .pcr-app .pcr-interaction .pcr-save,
 .pcr-app .pcr-interaction .pcr-cancel,
 .pcr-app .pcr-interaction .pcr-clear {
-  color: #fff;
+  color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-save:hover,
@@ -305,7 +305,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  left: calc(21.7391% - 9px); top: calc(90.9804% - 9px);
 }
 
 .pcr-app .pcr-selection .pcr-color-palette,

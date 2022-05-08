@@ -195,7 +195,7 @@ ul {
 }
 
 .newest-project-div a{
-  color: rgb(0, 0, 0) !important;
+  color: var(--text-color) !important;
   text-decoration: none;
   border-bottom: solid .1rem black;
 }
@@ -335,7 +335,7 @@ body.grid-view .grid-container{
 .grid-card > a{
   padding: 1vh 1vh;
   border: solid 1px black;
-  color: currentColor;
+  color: var(--text-color);
   border-radius: .35rem;
   position: absolute;
   top: 82.5%;
@@ -347,7 +347,7 @@ body.grid-view .grid-container{
 
 .grid-card > a:hover{
   color: white;
-  background-color: #2293fa;
+  background-color: var(--a-clr);
 }
 
 .grid-card.show {

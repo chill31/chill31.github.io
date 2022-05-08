@@ -23,7 +23,7 @@ body {
 }
 
 .container .instruction{
- color: black;
+ color: var(--text-color);
  margin-left: 26.75%;
 }
 
@@ -36,7 +36,7 @@ body {
 .search-wrapper button {
   font-size: 1em;
   background-color: var(--a-clr);
-  color: #ffffff;
+  color: white;
   padding: 0.8em 0;
   border: none;
   border-radius: 1.5em;
@@ -50,7 +50,7 @@ body {
   border: none;
   border-bottom: 2px solid var(--a-clr);
   outline: none;
-  color: #222a43;
+  color: var(--big-icon-fill);
 }
 
 #result {
@@ -103,7 +103,7 @@ body {
 }
 
 .container span {
-  color: #5d6274;
+  color: var(--big-icon-fill);
 }
 
 .container h3 {

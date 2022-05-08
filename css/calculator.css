@@ -20,7 +20,7 @@ p {
   transform: translate(-50%, -50%);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px white;
 }
 
 .content {
@@ -41,10 +41,10 @@ p {
   margin: 5px;
   border-radius: 4px;
   transition: 100ms;
-  box-shadow: 5px 5px 8px #00000020, -5px -5px 8px #ffff;
+  box-shadow: 5px 5px 8px #00000020, -5px -5px 8px white;
 }
 .row button:hover {
-  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),inset -5px -5px 8px #fff;
+  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),inset -5px -5px 8px white;
   background: #fff;
 }
 .display #screen {
@@ -58,26 +58,26 @@ p {
   padding-right: .5em;
   background: #ecf0f3;
   border-radius: 6px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px white;
 }
 #eval {
-  background: #33ccff;
-  color: #fff;
-  box-shadow: inset 5px 5px 8px #66d9ff, inset -5px -5px 8px #00ace6;
+  background: var(--top-btm-bg);
+  color: white;
+  box-shadow: inset 5px 5px 8px var(--top-btm-bg), inset -5px -5px 8px var(--top-btm-bg);
 }
 #eval:hover {
-    box-shadow: inset 5px 5px 8px #00ace6, inset -5px -5px 8px #00ace6;
+    box-shadow: inset 5px 5px 8px var(--top-btm-bg), inset -5px -5px 8px var(--top-btm-bg);
 }
 #ac {
   background: #33cc33;
-  color: #fff;
+  color: white;
 }
 #ac:hover {
     box-shadow: inset 5px 5px 8px #2eb82e, inset -5px -5px 8px #33cc33;
 }
 #ce {
   background: #ff3399;
-  color: #fff;
+  color: white;
 }
 #ce:hover {
   box-shadow: inset 5px 5px 8px #e60073, inset -5px -5px 8px #ff3399;

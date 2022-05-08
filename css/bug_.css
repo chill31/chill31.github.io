@@ -8,10 +8,6 @@ body {
   margin: 0;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
 h1 {
   color: var(--text-color);
   text-align: center;
@@ -55,7 +51,7 @@ div.text{
 }
 
 .feedback-input {
-  color: #3c3c3c;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 0;
@@ -96,24 +92,6 @@ div.text{
   fill: black;
 }
 
-.backtohome {
-  cursor: pointer;
-  position: fixed;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  height: 2rem;
-  width: 7rem;
-  background: var(--btn-bg);
-  color: var(--btn-txtclr);
-  border: none;
-  border-radius: 1rem;
-  transition: 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-.backtohome:hover {
-  background: #2293fa;
-}
-
 #feedback-page {
   text-align: center;
 }
@@ -137,14 +115,14 @@ div.text{
 .feedback-input:focus {
   background: #fff;
   box-shadow: 0;
-  border: 3px solid #3498db;
-  color: #3498db;
+  border: 3px solid var(--a-clr);
+  color: var(--a-clr);
   outline: none;
 }
 
 .focused {
-  color: #3498db;
-  border: #30aed6 solid 3px;
+  color: var(--a-clr);
+  border: var(--a-clr) solid 3px;
 }
 
 #comment {
@@ -158,8 +136,8 @@ div.text{
   width: 100%;
   border: #fbfbfb solid 4px;
   cursor: pointer;
-  background-color: #3498db;
-  color: white;
+  background-color: var(--a-clr);
+  color: var(--text-color);
   font-size: 24px;
   padding-top: 22px;
   padding-bottom: 22px;
@@ -170,7 +148,7 @@ div.text{
 }
 
 #button-blue:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: var(--form-btn-hover-clr);
 }
 

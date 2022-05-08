@@ -51,9 +51,6 @@ form .row textarea{
   padding: 8px 10px;
   border: 1px solid #999;
 }
-form .row textarea::-webkit-scrollbar{
-  width: 0px;
-}
 form .row .outer{
   height: 47px;
   display: flex;
@@ -67,20 +64,9 @@ form .row select{
   font-size: 14px;
   background: none;
 }
-form .row select::-webkit-scrollbar{
-  width: 8px;
-}
-form .row select::-webkit-scrollbar-track{
-  background: #fff;
-}
-form .row select::-webkit-scrollbar-thumb{
-  background: #888;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
-}
 form button{
   height: 52px;
-  color: #fff;
+  color: white;
   font-size: 17px;
   cursor: pointer;
   margin-top: 10px;

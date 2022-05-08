@@ -278,25 +278,25 @@ h4 {
 
 .pcr-app .pcr-interaction .pcr-result::-moz-selection {
   background: var(--a-clr);
-  color: #fff;
+  color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-type.active {
-  color: #fff;
+  color: white;
   background: var(--a-clr);
 }
 
 .pcr-app .pcr-interaction .pcr-save,
 .pcr-app .pcr-interaction .pcr-cancel,
 .pcr-app .pcr-interaction .pcr-clear {
-  color: #fff;
+  color: white;
   width: auto;
 }
 
 .pcr-app .pcr-interaction .pcr-save,
 .pcr-app .pcr-interaction .pcr-cancel,
 .pcr-app .pcr-interaction .pcr-clear {
-  color: #fff;
+  color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-save:hover,

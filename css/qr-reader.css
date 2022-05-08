@@ -52,12 +52,12 @@ form img {
 }
 
 form .content svg {
- color:#ffffff;
+ color:white;
  font-size:55px
 }
 
 form .content p {
- color:#ffffff;
+ color:white;
  margin-top:15px;
  font-size: 1.5rem;
 }
@@ -87,23 +87,6 @@ form .content p {
  left: 50%;
  transform: translate(-50%);
  border:1px solid rgb(0, 0, 0);
-}
-
-textarea::-webkit-scrollbar {
- width:0
-}
-
-textarea:hover::-webkit-scrollbar {
- width:5px
-}
-
-textarea:hover::-webkit-scrollbar-track {
- background:0 0
-}
-
-textarea:hover::-webkit-scrollbar-thumb {
- background:#fff;
- border-radius:8px
 }
 
 .details .buttons {

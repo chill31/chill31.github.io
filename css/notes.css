@@ -75,28 +75,6 @@ header,
     overflow-y: auto;
 }
 
-.note .details::-webkit-scrollbar,
-.popup textarea::-webkit-scrollbar {
-    width: 0;
-}
-
-.note .details:hover::-webkit-scrollbar,
-.popup textarea:hover::-webkit-scrollbar {
-    width: 5px;
-}
-
-.note .details:hover::-webkit-scrollbar-track,
-.popup textarea:hover::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 25px;
-}
-
-.note .details:hover::-webkit-scrollbar-thumb,
-.popup textarea:hover::-webkit-scrollbar-thumb {
-    background: #e6e6e6;
-    border-radius: 25px;
-}
-
 .note p {
     font-size: 22px;
     font-weight: 500;
@@ -104,7 +82,7 @@ header,
 
 .note span {
     display: block;
-    color: #575757;
+    color: var(--big-icon-fill);
     font-size: 16px;
     margin-top: 5px;
 }
@@ -115,7 +93,7 @@ header,
 }
 
 .bottom-content span {
-    color: #6D6D6D;
+    color: var(--big-icon-fill);
     font-size: 14px;
 }
 
@@ -124,7 +102,7 @@ header,
 }
 
 .bottom-content .settings i {
-    color: #6D6D6D;
+    color: var(--big-icon-fill);
     cursor: pointer;
     font-size: 15px;
 }
@@ -226,7 +204,7 @@ header,
 }
 
 .content header i {
-    color: #8b8989;
+    color: var(--big-icon-fill);
     cursor: pointer;
     font-size: 23px;
 }
@@ -268,7 +246,7 @@ form .row textarea {
 form button {
     width: 100%;
     height: 50px;
-    color: #fff;
+    color: white;
     outline: none;
     border: none;
     cursor: pointer;
@@ -295,7 +273,7 @@ form button {
 
 .delete-all{
  --def-size: 2px;
- --def-color: black;
+ --def-color: var(--text-color);
 
  padding: .5em 1em;
  position: fixed;
@@ -314,13 +292,13 @@ form button {
 
 .delete-all:hover, .delete-all:focus{
  background-color: white;
- color: black;
+ color: var(--text-color);
  outline-offset: -3em;
 }
 
 .show-details{
   --def-size: 2px;
-  --def-color: black;
+  --def-color: var(--text-color);
   
   padding: .5em 1em;
   cursor: pointer;
@@ -343,7 +321,7 @@ form button {
 .show-details:hover,
 .show-details:focus {
     background-color: white;
-    color: black;
+    color: var(--text-color);
     outline-offset: -3em;
 }
 
@@ -374,7 +352,7 @@ form button {
  border: solid 1px black;
  text-align: center;
  padding: 1rem;
- background-color: rgb(255, 255, 255);
+ background-color: #fff;
  position: relative;
 }
 
@@ -412,7 +390,7 @@ form button {
  left: 52.5%;
  transform: translate(-50%);
  height: 3rem;
- background-color: rgba(98, 91, 91, 0);
+ background-color: transparent;
  text-align: left !important;
 }
 

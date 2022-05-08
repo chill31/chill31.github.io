@@ -79,19 +79,6 @@ form .drop-list{
   margin: 0 -5px 0 5px;
 }
 
-.select-box select::-webkit-scrollbar{
-  width: 8px;
-}
-
-.select-box select::-webkit-scrollbar-track{
-  background: #fff;
-}
-
-.select-box select::-webkit-scrollbar-thumb{
-  background: #888;
-  border-radius: 8px;
-  border-right: 2px solid #ffffff;
-}
 
 .drop-list .icon{
   cursor: pointer;
@@ -106,7 +93,7 @@ form .exchange-rate{
 
 form button{
   height: 52px;
-  color: #fff;
+  color: white;
   font-size: 17px;
   cursor: pointer;
   background: var(--a-clr);
