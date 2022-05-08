@@ -112,6 +112,7 @@ observer.observe(secondSettings);
 const pickr = Pickr.create({
   el: '.color-picker', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
+  default: '#2293fa',
 
   swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
       'rgba(244, 67, 54, 1)', // orange.
@@ -148,54 +149,87 @@ const pickr = Pickr.create({
   },
 });
 
+const pickr2 = Pickr.create({
+  el: '.clr-picker',
+  theme: 'classic',
+  default: "#121417",
 
-const actualClrPickrToggle = document.querySelector(".pcr-button");
-
-actualClrPickrToggle.click();
-
-const copy_btn = document.querySelector(".pcr-copy");
-const save_btn = getElement(0, ".pcr-save");
-const resColor = getElement(0, ".pcr-result");
-const cancelBtn = document.querySelector(".pcr-cancel");
-
-cancelBtn.click();
-actualClrPickrToggle.click();
-
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach(btn => {
-  btn.classList.add("custom");
+  swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
+  'rgba(244, 67, 54, 1)', // orange.
+  'rgb(233, 30, 99)', // pinkish
+  'rgb(156, 39, 176)', // purple,
+  'rgb(103, 58, 183)', //  violet
+  'rgb(63, 81, 181)', // darkblue
+  'rgb(33, 150, 243)', // blue
+  'rgb(3, 169, 244)', // skyblue
+  'rgb(0, 188, 212)', // lightcyan
+  'rgb(0, 150, 136)', // darkgreen
+  'rgb(76, 175, 80)', // green
+  'rgb(139, 195, 74)', // lightgreen
+  'rgb(205, 220, 57)', // lime
+  'rgb(255, 235, 59)', // yellow
+  'rgb(255, 193, 7)', // darker yellow
+  'rgb(202, 151, 0,)' // darker+ yellow
+],
+components: { // what's included in the color picker.
+  preview: true, //  shows a preview of the chosen color.
+  opacity: true, // transparency slider.
+  hue: true, // default colors slider .
+  interaction: { // buttons and inputs
+      hex: true, // hex(a) color scheme.
+      rgba: true, // rgb(a) color scheme
+      hsla: true, // hsl(a) color scheme.
+      hsva: false, // hsv(a) color scheme.
+      cmyk: false, // cmyk color scheme.
+      input: true, // input where we can type in our own colors.
+      cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
+      clear: true, // clears the color and closes the palette.
+      save: true, // saves the color chosen and closes the palette.
+  }
+},
 });
 
-const clear_btn = document.querySelector(".pcr-clear");
-const save_copy = document.querySelector(".pcr-save-copy");
+const actualClrPickrToggles = document.querySelectorAll(".pcr-button");
 
-const hexBtn = document.querySelector(".type-hexa");
-const rgbBtn = document.querySelector(".type-rgba");
-const hslBtn = document.querySelector(".type-hsla");
-const hsvBtn = document.querySelector(".type-hsva");
-const cmyBtn = document.querySelector(".type-cmyk");
+actualClrPickrToggles[0].click();
+
+const copy_btns = document.querySelectorAll(".pcr-copy");
+const save_btns = document.querySelectorAll(".pcr-save");
+const resColors = document.querySelectorAll(".pcr-result");
+const cancelBtns = document.querySelectorAll(".pcr-cancel");
+
+cancelBtns[0].click();
+actualClrPickrToggles[0].click();
+
+const clear_btns = document.querySelectorAll(".pcr-clear");
+const save_copys = document.querySelectorAll(".pcr-save-copy");
+
+const hexBtns = document.querySelectorAll(".type-hexa");
+const rgbBtns = document.querySelectorAll(".type-rgba");
+const hslBtns = document.querySelectorAll(".type-hsla");
+const hsvBtns = document.querySelectorAll(".type-hsva");
+const cmyBtns = document.querySelectorAll(".type-cmyk");
 
 let clr = "#2293fa";
 let color_scheme;
 
-hexBtn.addEventListener("click", () => {
+hexBtns[0].addEventListener("click", () => {
   color_scheme = "hexa";
 });
 
-rgbBtn.addEventListener("click", () => {
+rgbBtns[0].addEventListener("click", () => {
   color_scheme = "rgba";
 });
 
-hsvBtn.addEventListener("click", () => {
+hsvBtns[0].addEventListener("click", () => {
   color_scheme = "hsva";
 });
 
-hslBtn.addEventListener("click", () => {
+hslBtns[0].addEventListener("click", () => {
   color_scheme = "hsla";
 });
 
-cmyBtn.addEventListener("click", () => {
+cmyBtns[0].addEventListener("click", () => {
   color_scheme = "cmyk";
 });
 
@@ -218,18 +252,18 @@ pickr.on("save", (...color) => {
   localStorage.setItem("accent-color", clr);
 });
 
-save_copy.addEventListener("click", () => {
-  save_btn.click();
+save_copys[0].addEventListener("click", () => {
+  save_btns[0].click();
   copyText(clr);
   notify("Copied the color to your clipboard!", "success");
 });
 
-save_btn.addEventListener("click", () => {
-  clr = resColor.value;
+save_btns[0].addEventListener("click", () => {
+  clr = resColors[0].value;
   notify(`Successfully saved the color with color scheme "${color_scheme}"`, "success");
 });
 
-clear_btn.addEventListener("click", () => {
+clear_btns[0].addEventListener("click", () => {
 
   notify("Cleared the color", "info")
 
@@ -239,7 +273,7 @@ pickr.on("cancel", () => {
   pickr.hide();
 });
 
-copy_btn.addEventListener("click", () => {
+copy_btns[0].addEventListener("click", () => {
   
   try {
       copyText(clr);
@@ -252,4 +286,89 @@ copy_btn.addEventListener("click", () => {
 
 });
 
-document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));
+pickr2.show();
+cancelBtns[1].click();
+pickr2.hide();
+cancelBtns[1].click();
+
+let clr2 = "#121417";
+let color_scheme2;
+
+hexBtns[1].addEventListener("click", () => {
+  color_scheme2 = "hexa";
+});
+
+rgbBtns[1].addEventListener("click", () => {
+  color_scheme2 = "rgba";
+});
+
+hsvBtns[1].addEventListener("click", () => {
+  color_scheme2 = "hsva";
+});
+
+hslBtns[1].addEventListener("click", () => {
+  color_scheme2 = "hsla";
+});
+
+cmyBtns[1].addEventListener("click", () => {
+  color_scheme2 = "cmyk";
+});
+
+pickr2.on("save", (...color) => {
+  pickr2.hide();
+
+  if(color_scheme2 == "hexa"){
+      clr2 = color[0].toHEXA().toString();
+  } else if(color_scheme2 == "rgba"){
+      clr2 = color[0].toRGBA().toString();
+  } else if(color_scheme2 == "hsva"){
+      clr2 = color[0].toHSVA().toString();
+  } else if(color_scheme2 == "hsla"){
+      clr2 = color[0].toHSLA().toString();
+  } else if(color_scheme2 == "cmyk"){
+      clr2 = color[0].toCMYK().toString();
+  }
+
+  document.body.style.setProperty("--a-clr-dark", clr2);
+  localStorage.setItem("accent-color-dark", clr2);
+});
+
+save_copys[1].addEventListener("click", () => {
+  save_btns[1].click();
+  copyText(clr2);
+  notify("Copied the color to your clipboard!", "success");
+});
+
+save_btns[1].addEventListener("click", () => {
+  clr2 = resColors[1].value;
+  notify(`Successfully saved the color with color scheme "${color_scheme2}"`, "success");
+});
+
+clear_btns[1].addEventListener("click", () => {
+
+  notify("Cleared the color", "info")
+
+})
+
+pickr2.on("cancel", () => {
+  pickr2.hide();
+});
+
+copy_btns[1].addEventListener("click", () => {
+  
+  try {
+      copyText(clr2);
+      notify("Successfully copied the color!", "success");
+  } catch(e){
+      notify("there was an error while copying the color!", "error");
+  }
+
+  pickr2.hide();
+
+});
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn => {
+  btn.classList.add("custom");
+});

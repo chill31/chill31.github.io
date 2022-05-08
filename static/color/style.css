@@ -305,6 +305,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  left: calc(21.7391% - 9px); top: calc(90.9804% - 9px);
 }
 
 .pcr-app .pcr-selection .pcr-color-palette,

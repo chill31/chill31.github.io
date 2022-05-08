@@ -394,7 +394,12 @@ if(!localStorage.getItem("accent-color")){
   localStorage.setItem("accent-color", "#2293fa");
 }
 
+if(!localStorage.getItem("accent-color-dark")){
+  localStorage.setItem("accent-color-dark", "#121417");
+}
+
 document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));
+document.body.style.setProperty("--a-clr-dark", localStorage.getItem("accent-color-dark"));
 
 if(!localStorage.getItem("confirmed__localStorage")) {
   localStorage.setItem("confirmed__localStorage", false);
