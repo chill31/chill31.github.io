@@ -424,6 +424,7 @@ h5,
 h6,
 header {
   font-family: var(--ff-primary-medium);
+  font-weight: 100;
 }
 
 div,
@@ -582,4 +583,19 @@ button:not(.custom) {
 
 button:focus {
   outline: rgb(0, 0, 0) solid 3px !important;
+}
+
+abbr:hover {
+  cursor: pointer;
+}
+
+abbr:hover::before {
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%);
+  width: max-content;
+  padding: .15em;
+  background-color: white;
 }

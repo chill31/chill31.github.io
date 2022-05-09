@@ -218,11 +218,7 @@ createdHamMenu.innerHTML = `
 
   <h1 class="menu-item item-projects item2">Projects</h1>
 
-  <h1 class="menu-item item-feedback item3">Feedback and Reviews</h1>
-
-  <h1 class="menu-item item-contact item4">Contact Me</h1>
-
-  <h1 class="menu-item item-settings item5">Settings</h1>
+  <h1 class="menu-item item-settings item3">Settings</h1>
 </div>
 
 `;
@@ -253,7 +249,6 @@ toggleHamMenu.addEventListener("click", () => {
 const hamMenuItems = {
   home: document.querySelector(".item-home"),
   projects: document.querySelector(".item-projects"),
-  reviews: document.querySelector(".item-feedback"),
   settings: document.querySelector(".item-settings")
 };
 
@@ -266,12 +261,6 @@ hamMenuItems.home.addEventListener("click", () => {
 hamMenuItems.projects.addEventListener("click", () => {
 
   redirect("/Projects.html")
-
-});
-
-hamMenuItems.reviews.addEventListener("click", () => {
-
-  redirect("/Write.html");
 
 });
 
@@ -361,18 +350,6 @@ shortCutContainer.innerHTML = `
 
   </a>
 
-  <a href="/Write.html" data-redirect="Reviews" class="shortcut short-reviews">
-
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z"/></svg>
-
-  </a>
-
-  <a href="/Contact.html" data-redirect="Contact" class="shortcut short-contact">
-
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M336 0h-288C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48v-416C384 21.49 362.5 0 336 0zM192 160c35.35 0 64 28.65 64 64s-28.65 64-64 64S128 259.3 128 224S156.7 160 192 160zM288 416H96c-8.836 0-16-7.164-16-16C80 355.8 115.8 320 160 320h64c44.18 0 80 35.82 80 80C304 408.8 296.8 416 288 416zM240 96h-96C135.2 96 128 88.84 128 80S135.2 64 144 64h96C248.8 64 256 71.16 256 80S248.8 96 240 96z"/></svg>
-
-  </a>
-
   <a href="/Settings.html" data-redirect="Settings" class="shortcut short-settings">
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"/></svg>
@@ -400,15 +377,3 @@ if(!localStorage.getItem("accent-color-dark")){
 
 document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));
 document.body.style.setProperty("--a-clr-dark", localStorage.getItem("accent-color-dark"));
-
-if(!localStorage.getItem("confirmed__localStorage")) {
-  localStorage.setItem("confirmed__localStorage", false);
-  redirect("/");
-}
-
-if(
-  localStorage.getItem("confirmed__localStorage") == "false" &&
-  document.head.querySelector("title").textContent.toLowerCase() != "home"
-) {
-  redirect("/");
-}
