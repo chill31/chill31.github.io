@@ -375,5 +375,15 @@ if(!localStorage.getItem("accent-color-dark")){
   localStorage.setItem("accent-color-dark", "#121417");
 }
 
+if(!localStorage.getItem("selection-color")){
+  localStorage.setItem("selection-color", "#00b6ff");
+}
+
+if(!localStorage.getItem("top-bottom-background")){
+  localStorage.setItem("top-bottom-background", "#54c0eb");
+}
+
 document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));
 document.body.style.setProperty("--a-clr-dark", localStorage.getItem("accent-color-dark"));
+document.body.style.setProperty("--selection-color", localStorage.getItem("selection-color"));
+document.body.style.setProperty("--top-btm-bg", localStorage.getItem("top-bottom-background"));

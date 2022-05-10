@@ -114,7 +114,7 @@ ul.settings-list:last-of-type {
 }
 
 .settings-list.color-settings li ul{
-  width: 50vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }

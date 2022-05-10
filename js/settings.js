@@ -193,6 +193,92 @@ components: { // what's included in the color picker.
 
 pickr2.show().hide();
 
+const pickr3 = Pickr.create({
+  el: '.sel-color-picker', // so I don't get confused, this is element where I want color picker to be.
+  theme: 'classic', // theme, classic is good.
+  default: '#00b6ff',
+
+  swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
+      'rgba(244, 67, 54, 1)', // orange.
+      'rgb(233, 30, 99)', // pinkish
+      'rgb(156, 39, 176)', // purple,
+      'rgb(103, 58, 183)', //  violet
+      'rgb(63, 81, 181)', // darkblue
+      'rgb(33, 150, 243)', // blue
+      'rgb(3, 169, 244)', // skyblue
+      'rgb(0, 188, 212)', // lightcyan
+      'rgb(0, 150, 136)', // darkgreen
+      'rgb(76, 175, 80)', // green
+      'rgb(139, 195, 74)', // lightgreen
+      'rgb(205, 220, 57)', // lime
+      'rgb(255, 235, 59)', // yellow
+      'rgb(255, 193, 7)', // darker yellow
+      'rgb(202, 151, 0,)' // darker+ yellow
+  ],
+  components: { // what's included in the color picker.
+      preview: true, //  shows a preview of the chosen color.
+      opacity: true, // transparency slider.
+      hue: true, // default colors slider .
+      interaction: { // buttons and inputs
+          hex: true, // hex(a) color scheme.
+          rgba: true, // rgb(a) color scheme
+          hsla: true, // hsl(a) color scheme.
+          hsva: false, // hsv(a) color scheme.
+          cmyk: false, // cmyk color scheme.
+          input: true, // input where we can type in our own colors.
+          cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
+          clear: true, // clears the color and closes the palette.
+          save: true, // saves the color chosen and closes the palette.
+      }
+  },
+
+});
+
+pickr3.show().hide();
+
+const pickr4 = Pickr.create({
+  el: '.topHead__colorPicker', // so I don't get confused, this is element where I want color picker to be.
+  theme: 'classic', // theme, classic is good.
+  default: '#54c0eb',
+
+  swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
+      'rgba(244, 67, 54, 1)', // orange.
+      'rgb(233, 30, 99)', // pinkish
+      'rgb(156, 39, 176)', // purple,
+      'rgb(103, 58, 183)', //  violet
+      'rgb(63, 81, 181)', // darkblue
+      'rgb(33, 150, 243)', // blue
+      'rgb(3, 169, 244)', // skyblue
+      'rgb(0, 188, 212)', // lightcyan
+      'rgb(0, 150, 136)', // darkgreen
+      'rgb(76, 175, 80)', // green
+      'rgb(139, 195, 74)', // lightgreen
+      'rgb(205, 220, 57)', // lime
+      'rgb(255, 235, 59)', // yellow
+      'rgb(255, 193, 7)', // darker yellow
+      'rgb(202, 151, 0,)' // darker+ yellow
+  ],
+  components: { // what's included in the color picker.
+      preview: true, //  shows a preview of the chosen color.
+      opacity: true, // transparency slider.
+      hue: true, // default colors slider .
+      interaction: { // buttons and inputs
+          hex: true, // hex(a) color scheme.
+          rgba: true, // rgb(a) color scheme
+          hsla: true, // hsl(a) color scheme.
+          hsva: false, // hsv(a) color scheme.
+          cmyk: false, // cmyk color scheme.
+          input: true, // input where we can type in our own colors.
+          cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
+          clear: true, // clears the color and closes the palette.
+          save: true, // saves the color chosen and closes the palette.
+      }
+  },
+
+});
+
+pickr4.show().hide();
+
 const actualClrPickrToggles = document.querySelectorAll(".pcr-button");
 
 const copy_btns = document.querySelectorAll(".pcr-copy");
@@ -359,6 +445,158 @@ copy_btns[1].addEventListener("click", () => {
   }
 
   pickr2.hide();
+
+});
+
+let clr3 = "#00b6ff";
+let color_scheme3;
+
+hexBtns[2].addEventListener("click", () => {
+  color_scheme3 = "hexa";
+});
+
+rgbBtns[2].addEventListener("click", () => {
+  color_scheme3 = "rgba";
+});
+
+hsvBtns[2].addEventListener("click", () => {
+  color_scheme3 = "hsva";
+});
+
+hslBtns[2].addEventListener("click", () => {
+  color_scheme3 = "hsla";
+});
+
+cmyBtns[2].addEventListener("click", () => {
+  color_scheme3 = "cmyk";
+});
+
+pickr3.on("save", (...color) => {
+  pickr3.hide();
+
+  if(color_scheme3 == "hexa"){
+      clr3 = color[0].toHEXA().toString();
+  } else if(color_scheme3 == "rgba"){
+      clr3 = color[0].toRGBA().toString();
+  } else if(color_scheme3 == "hsva"){
+      clr3 = color[0].toHSVA().toString();
+  } else if(color_scheme3 == "hsla"){
+      clr3 = color[0].toHSLA().toString();
+  } else if(color_scheme3 == "cmyk"){
+      clr3 = color[0].toCMYK().toString();
+  }
+
+  document.body.style.setProperty("--selection-color", clr3);
+  localStorage.setItem("selection-color", clr3);
+});
+
+save_copys[2].addEventListener("click", () => {
+  save_btns[2].click();
+  copyText(clr3);
+  notify("Copied the color to your clipboard!", "success");
+});
+
+save_btns[2].addEventListener("click", () => {
+  clr3 = resColors[2].value;
+  notify(`Successfully saved the color with color scheme "${color_scheme3}"`, "success");
+});
+
+clear_btns[2].addEventListener("click", () => {
+
+  notify("Cleared the color", "info")
+
+});
+
+pickr3.on("cancel", () => {
+  pickr3.hide();
+});
+
+copy_btns[2].addEventListener("click", () => {
+  
+  try {
+      copyText(clr3);
+      notify("Successfully copied the color!", "success");
+  } catch(e){
+      notify("there was an error while copying the color!", "error");
+  }
+
+  pickr3.hide();
+
+});
+
+let clr4 = "#54c0eb";
+let color_scheme4;
+
+hexBtns[3].addEventListener("click", () => {
+  color_scheme4 = "hexa";
+});
+
+rgbBtns[3].addEventListener("click", () => {
+  color_scheme4 = "rgba";
+});
+
+hsvBtns[3].addEventListener("click", () => {
+  color_scheme4 = "hsva";
+});
+
+hslBtns[3].addEventListener("click", () => {
+  color_scheme4 = "hsla";
+});
+
+cmyBtns[3].addEventListener("click", () => {
+  color_scheme4 = "cmyk";
+});
+
+pickr4.on("save", (...color) => {
+  pickr4.hide();
+
+  if(color_scheme4 == "hexa"){
+      clr4 = color[0].toHEXA().toString();
+  } else if(color_scheme4 == "rgba"){
+      clr4 = color[0].toRGBA().toString();
+  } else if(color_scheme4 == "hsva"){
+      clr4 = color[0].toHSVA().toString();
+  } else if(color_scheme4 == "hsla"){
+      clr4 = color[0].toHSLA().toString();
+  } else if(color_scheme4 == "cmyk"){
+      clr4 = color[0].toCMYK().toString();
+  }
+
+  document.body.style.setProperty("--top-btm-bg", clr4);
+  localStorage.setItem("top-bottom-background", clr4);
+});
+
+save_copys[3].addEventListener("click", () => {
+  save_btns[3].click();
+  copyText(clr4);
+  notify("Copied the color to your clipboard!", "success");
+});
+
+save_btns[3].addEventListener("click", () => {
+  clr4 = resColors[3].value;
+  notify(`Successfully saved the color with color scheme "${color_scheme4}"`, "success");
+});
+
+clear_btns[3].addEventListener("click", () => {
+
+  notify("Cleared the color", "info")
+
+})
+
+pickr4.on("cancel", () => {
+  pickr4.hide();
+});
+
+copy_btns[3].addEventListener("click", () => {
+  
+  try {
+      copyText(clr4);
+      notify("Successfully copied the color!", "success");
+  } catch(e){
+      notify("there was an error while copying the color!", "error");
+  }
+
+  pickr4.hide();
 
 });
 

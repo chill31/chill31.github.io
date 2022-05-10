@@ -347,7 +347,7 @@ abbr {
 }
 
 .contact-form .form__submit {
-  background-color: #121417;
+  background-color: var(--a-clr-dark);
   color: white;
   border: solid 2px white;
   padding: .75em 1.25em;
