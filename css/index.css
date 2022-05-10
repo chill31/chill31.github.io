@@ -427,7 +427,7 @@ abbr {
 
 .footer__footer {
   position: absolute;
-  top: 31vh;
+  top: calc(100% - 4vh);
   left: 50%;
   transform: translate(-50%);
 }
