@@ -551,11 +551,6 @@ code{
   }
 }
 
-.top-header-strip{
-  max-height: 5rem;
-  min-height: 4rem;
-}
-
 strikethrough{
   text-decoration: line-through;
 }
