@@ -112,3 +112,15 @@ interItems.forEach(e => observer.observe(e));
 
 const submitBtn = document.querySelector(".form__submit");
 submitBtn.style.setProperty("--initial-width", submitBtn.offsetWidth + "px");
+
+const downloadLogo = document.querySelector(".download-logo");
+downloadLogo.addEventListener("click", () => {
+
+  var a = document.createElement('a');
+  a.href = "/favicon.ico";
+  a.download = "/favicon.ico";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+});

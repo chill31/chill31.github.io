@@ -476,3 +476,18 @@ abbr {
 .big-click:hover * {
   text-decoration: underline 2px;
 }
+
+.download-logo{
+  height: 5rem;
+  width: 5rem;
+  border: solid 2px black;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: relative;
+  background-color: var(--a-clr-dark);
+}
+
+.download-logo path {
+  fill: var(--a-clr);
+}
