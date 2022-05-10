@@ -89,25 +89,18 @@ document.body.style.setProperty(
 
 document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
 
-const secondSettings = document.querySelector("ul.settings-list:last-of-type");
+const interItems = document.querySelectorAll(".item-inter");
 
-const options = {
-  threshold:  .5
- };
-
-const observer = new IntersectionObserver(function(entries) {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    
-    if(entry.isIntersecting){
-      secondSettings.classList.remove("hide");
-    } else {
-      secondSettings.classList.add("hide");
-    }
+
+   if (entry.isIntersecting) entry.target.classList.add("intersect");
+   else entry.target.classList.remove("intersect");
 
   });
-}, options);
+});
 
-observer.observe(secondSettings);
+interItems.forEach(item => observer.observe(item));
 
 const pickr = Pickr.create({
   el: '.color-picker', // so I don't get confused, this is element where I want color picker to be.
