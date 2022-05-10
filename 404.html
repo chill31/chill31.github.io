@@ -47,14 +47,6 @@ const checkLocation = window.location.href.toString().toLowerCase();
 
 let hintText = "";
 
-if(checkLocation.endsWith("review/") || checkLocation.endsWith("reviews/") || checkLocation.endsWith("reviews") || checkLocation.endsWith("review")){
-
-    hintText = `
-If you are looking for the reviews pages, then head over to the <a href="/Write.html">Reviews</a> page.
-`;
-
-}
-
 if(checkLocation.endsWith("projects/") || checkLocation.endsWith("project/") || checkLocation.endsWith("projects") || checkLocation.endsWith("project")){
  
     hintText = `
