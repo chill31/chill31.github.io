@@ -166,7 +166,7 @@ html {
 #notification-area .notification {
   position: relative;
   padding: 0.875rem 1.75rem;
-  background: #111;
+  background: var(--a-clr-dark);
   color: #f5f5f5;
   font-family: var(--ff-primary);
   font-size: 1rem;
@@ -176,6 +176,7 @@ html {
   left: 2rem;
   animation: showNotification 500ms forwards alternate;
 }
+
 .notification.contextMenu {
   width: 30ch;
   left: -4.25rem !important;
@@ -593,4 +594,34 @@ abbr:hover::before {
   width: max-content;
   padding: .15em;
   background-color: white;
+}
+
+.cross {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.cross span:first-of-type {
+  position: absolute;
+  top: .5rem;
+  right: 0;
+  height: .15rem;
+  width: 100%;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.cross span:last-of-type {
+  position: absolute;
+  top: .5rem;
+  right: 0;
+  height: .15rem;
+  width: 100%;
+  background-color: white;
+  transform: rotate(-45deg);
 }

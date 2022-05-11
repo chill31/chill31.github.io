@@ -89,7 +89,7 @@ function initTyping() {
     inpField.value = "";
 
     
-    notify(`Typing Test over:<br><br><br>Click "try again" button to restart this.<br>Your score  was: ${localStorage.getItem("wpm")} WPM<br>CPM was: ${localStorage.getItem("cpm")}<br>Mistakes: ${localStorage.getItem("mstk")}`,"success", "yehhs");
+    notify(`Finish!<br>Your Score is: ${localStorage.getItem("wpm")}WPM and ${localStorage.getItem("cpm")}CPM, you made ${localStorage.getItem("mstk")} mistakes<br><br>Click try again to try again.`,"success", "yehhs");
   }
 }
 

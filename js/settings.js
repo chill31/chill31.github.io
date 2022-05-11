@@ -1,5 +1,4 @@
 const save_settings_btn = document.getElementById("save-cog");
-
 const normalFontSelect = document.querySelector(".normal-font-select");
 const codeFontSelect = document.querySelector(".code-font-select");
 const normalFontLbl = document.querySelector(".normal-font-saved");
@@ -271,8 +270,6 @@ const pickr4 = Pickr.create({
 });
 
 pickr4.show().hide();
-
-const actualClrPickrToggles = document.querySelectorAll(".pcr-button");
 
 const copy_btns = document.querySelectorAll(".pcr-copy");
 const save_btns = document.querySelectorAll(".pcr-save");

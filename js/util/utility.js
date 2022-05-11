@@ -82,21 +82,6 @@ function advancedClassHandler(elem, fn, elemClass) {
 }
 
 /**
- * @param {HTMLElement} elem
- * @param {*} fn
- * @param {string} attr
- * @param {*} attrValue
- */
-
-function advancedAttrHandler(elem, fn, attr, attrValue) {
-  if (fn.toString().toLowerCase() == "add" || fn == 0) {
-    elem.setAttribute(attr, attrValue);
-  } else if (fn.toString().toLowerCase() == "remove" || fn == 1) {
-    elem.removeAttribute(attr);
-  }
-}
-
-/**
  * @fires window.location.href
  */
 
@@ -153,7 +138,7 @@ function notify(message, type, context) {
   } else {
     creat = document.getElementById("notification-area");
   }
-  (() => {
+
     let createdDiv = document.createElement("div");
     let id = Math.random().toString(36).substring(2, 10);
 
@@ -164,7 +149,13 @@ function notify(message, type, context) {
       createdDiv.classList.add("contextMenu");
     }
 
-    createdDiv.innerHTML = `${message}\n<span class="notif notif-timer"></span>`;
+    createdDiv.innerHTML = `
+<div class="cross">
+  <span class="cross__spans span1"></span>
+  <span class="cross__spans span2""></span>
+</div>
+${message}
+<span class="notif notif-timer"></span>`;
     document.getElementById("notification-area").prepend(createdDiv);
 
     setTimeout(() => {
@@ -178,9 +169,13 @@ function notify(message, type, context) {
         }
       }
     }, 5000);
-  })();
+    const notifCrosses = document.querySelectorAll(".notification .cross");
+    notifCrosses.forEach(e => {
+      e.addEventListener("click", () => {
+        e.parentElement.remove();
+      });
+    })
 }
-
 /**
  * @param {*} text
  */
