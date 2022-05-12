@@ -22,6 +22,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.section--section-big {
+  padding: 0 !important;
+}
+
+.section--section-big .section-content {
+  margin: 1rem;
+}
+
 .item-inter {
   opacity: 0;
   transform: translateX(-20%);
@@ -264,6 +272,8 @@ label[for]{
   gap: 2vw;
   position: absolute;
   top: 40%;
+  left: 50%;
+  transform: translate(-50%) !important;
 }
 
 .project__gridItem {
@@ -367,26 +377,32 @@ abbr {
 .footer {
   position: absolute;
   top: 400%;
-  height: 35vh;
+  height: 100%;
   width: 100%;
   background-color: var(--a-clr-dark);
   color: white;
 }
 
+.footer * {
+  font-size: 125%;
+}
+
 .footer__brand {
-  position: absolute;
+  position: relative;
   height: 5rem;
   width: 5rem;
-  cursor: pointer;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%) !important;
 }
 
 .footer h1 {
-  cursor: pointer;
   width: max-content;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%);
+  font-size: 200%;
 }
 
 .footer *, .footer a {
@@ -419,14 +435,21 @@ abbr {
   top: 25%;
 }
 
+.anchor__flex {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
 .footer__footer {
   position: absolute;
   top: calc(100% - 4vh);
   left: 50%;
   transform: translate(-50%);
+  font-size: 125%;
 }
 
-.scroll-indicator {
+/* .scroll-indicator {
   width: max-content;
   padding: .5rem;
   position: fixed;
@@ -456,7 +479,7 @@ abbr {
 
 .scroll__svg:hover path {
   fill: var(--selection-color);
-}
+} */
 
 .big-click {
   font-weight: 100;
@@ -635,4 +658,39 @@ svg.fa-angle-down path, svg.fa-angle-up path{
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+}
+
+.footer__pages {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer__pages a {
+  font-size: 1.5rem;
+  padding: .5rem;
+}
+
+.footer__pages a::before {
+  margin-right: .25rem;
+}
+
+.footer__pages a#home::before {
+  content: '\f015';
+  font-family: 'Fontawesome';
+}
+
+.footer__pages a#projects::before {
+  content: '\f07b';
+  font-family: 'Fontawesome';
+}
+
+.footer__pages a#settings::before {
+  content: '\f013';
+  font-family: 'Fontawesome';
 }
