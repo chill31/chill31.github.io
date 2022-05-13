@@ -23,6 +23,8 @@ You can always do a pull request or fork and update things you want, if theh cha
 <br>
 <br>
 
-| ----------- |
-| [Credits](https://chill31.github.io/CREDITS.txt) |
-| [Contact and Social Media](https://chill31.github.io/index.html#contact) |
+| Credits               |   |   |   |   |
+|-----------------------|---|---|---|---|
+| Social Media, Contact |   |   |   |   |
+|                       |   |   |   |   |
+|                       |   |   |   |   |
