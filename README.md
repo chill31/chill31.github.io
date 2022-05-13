@@ -7,7 +7,7 @@ well, **THIS** website provides it! From random number generators to language tr
 Has basic projects like Calculator and Clock and then advanced projects like weather and QR Code Generators and Readers.
 
 ### Issues:
-You can write out an issue or bug seen in the website here at the [e](https://github.com/chill31/chill31.github.io/issues) page github provides for repositories.
+You can write out an issue or bug seen in the website here at the [issues](https://github.com/chill31/chill31.github.io/issues) page github provides for repositories.
 
 ### Adding Content:
 You can always do a pull request or fork and update things you want, if theh change makes sense, it will be approved and you will then be a contributor!
