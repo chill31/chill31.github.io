@@ -19,3 +19,11 @@ You can write out an issue or bug seen in the website here at the [issues](https
 
 ## Adding Content:<br>
 You can always do a pull request or fork and update things you want, if theh change makes sense, it will be approved and you will then be a contributor!
+
+<br>
+<br>
+
+| Topic
+| -----------
+| Credits
+| Paragraph 
