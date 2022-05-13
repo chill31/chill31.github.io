@@ -113,13 +113,13 @@
   z-index: 100;
   border-radius: 0.1em;
   background: rgb(255, 255, 255);
-  transition: transform 500ms ease;
   box-shadow: 0 0.15em 0.15em 0 rgb(0, 0, 0), 0 0 1em 0 rgb(0, 0, 0);
 }
 
 .pcr-app.visible {
   transform: scale(1) translate(-50%, -50%);
   transform-origin: bottom right;
+  transition: transform 500ms ease;
 }
 
 .pcr-app .pcr-swatches {

@@ -115,3 +115,20 @@ label.small{
   flex-flow: column;
   gap: 4vh;
 }
+
+.colors__reset{
+  padding: .75em 1.5em;
+  position: absolute;
+  left: 60%;
+  transform: translate(-50%) !important;
+  bottom: -40%;
+  cursor: pointer;
+  border: none;
+  transition: background-color 500ms ease;
+  background-color: var(--a-clr);
+  border-radius: .25em;
+}
+ 
+.colors__reset:hover {
+   background-color: var(--top-btm-bg);
+}

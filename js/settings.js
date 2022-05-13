@@ -104,7 +104,7 @@ interItems.forEach(item => observer.observe(item));
 const pickr = Pickr.create({
   el: '.color-picker', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
-  default: '#2293fa',
+  default: localStorage.getItem("accent-color"),
 
   swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
       'rgba(244, 67, 54, 1)', // orange.
@@ -141,12 +141,15 @@ const pickr = Pickr.create({
   },
 });
 
-pickr.show().hide();
+pickr.show();
+setTimeout(() => {
+  pickr.hide();
+}, 100);
 
 const pickr2 = Pickr.create({
   el: '.clr-picker',
   theme: 'classic',
-  default: '#121417',
+  default: localStorage.getItem("accent-color-dark"),
 
   swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
   'rgba(244, 67, 54, 1)', // orange.
@@ -183,12 +186,15 @@ components: { // what's included in the color picker.
 },
 });
 
-pickr2.show().hide();
+pickr2.show();
+setTimeout(() => {
+  pickr2.hide();
+}, 100);
 
 const pickr3 = Pickr.create({
   el: '.sel-color-picker', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
-  default: '#00b6ff',
+  default: localStorage.getItem("selection-color"),
 
   swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
       'rgba(244, 67, 54, 1)', // orange.
@@ -226,12 +232,15 @@ const pickr3 = Pickr.create({
 
 });
 
-pickr3.show().hide();
+pickr3.show();
+setTimeout(() => {
+  pickr3.hide();
+}, 100);
 
 const pickr4 = Pickr.create({
   el: '.topHead__colorPicker', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
-  default: '#54c0eb',
+  default: localStorage.getItem("top-bottom-background"),
 
   swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
       'rgba(244, 67, 54, 1)', // orange.
@@ -269,7 +278,10 @@ const pickr4 = Pickr.create({
 
 });
 
-pickr4.show().hide();
+pickr4.show();
+setTimeout(() => {
+  pickr4.hide();
+}, 100);
 
 const copy_btns = document.querySelectorAll(".pcr-copy");
 const save_btns = document.querySelectorAll(".pcr-save");
@@ -587,6 +599,18 @@ copy_btns[3].addEventListener("click", () => {
   }
 
   pickr4.hide();
+
+});
+
+const resetClrsBtn = document.querySelector(".colors__reset");
+resetClrsBtn.addEventListener("click", () => {
+  
+  localStorage.setItem("accent-color", "#2293fa");
+  localStorage.setItem("accent-color-dark", "#121417");
+  localStorage.setItem("selection-color", "#00b6ff");
+  localStorage.setItem("top-bottom-background", "#54c0eb");
+
+  redirect(window.location.href);
 
 });
 
