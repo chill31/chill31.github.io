@@ -27,4 +27,3 @@ You can always do a pull request or fork and update things you want, if theh cha
 |-----------------------|
 | [Social Media, Contact](https://chill31.github.io/index.html#contact) |
 | [Credits](https://chill31.github.io/CREDITS.txt) |
-|                       |
