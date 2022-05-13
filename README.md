@@ -13,7 +13,6 @@ Provides total color customizations, from accent colors to selection colors! The
 
 <br>
 <br>
-<br>
 
 ## Issues:<br>
 You can write out an issue or bug seen in the website here at the [issues](https://github.com/chill31/chill31.github.io/issues) page github provides for repositories.
