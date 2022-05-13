@@ -18,7 +18,7 @@ Provides total color customizations, from accent colors to selection colors! The
 You can write out an issue or bug seen in the website here at the [issues](https://github.com/chill31/chill31.github.io/issues) page github provides for repositories.
 
 ## Adding Content:<br>
-You can always do a pull request or fork and update things you want, if the changes make sense, it will be approved and you will then be a contributor!
+You can always fork the repository and make changes, if those changes make sense, they will be added to the website and you will be a contributor!
 
 <br>
 <br>
