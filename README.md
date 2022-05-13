@@ -1,7 +1,7 @@
 # Chill31 
 ## [https:/chill31.github.io](https://chill31.github.io)
   
-Ever wanted a tool nowhere to be found?
+Ever wanted a tool nowhere to be found?<br>
 well, **THIS** website provides it! From random number generators to language translators, this is an overall utility website which can help in daily needs!
 
 Has basic projects like Calculator and Clock and then advanced projects like weather and QR Code Generators and Readers.
