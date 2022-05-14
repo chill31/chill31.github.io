@@ -31,7 +31,7 @@ You can write out an issue or bug seen in the website here at the [issues](https
 ## Adding Content:<br>
 You can always fork the repository and make changes, if those changes make sense, they will be added to the website and you will be a contributor!
 
-### Adding Content: Themes:<br>
+> Adding Content: Themes:<br>
 To add your preferred themes here to show other people, you will need to contact me with mail or either at discord ( private messages ) with your github username, a good resolution image of your theme in the [home page](https://chill31.github.io/index.html).
 
 <br>
