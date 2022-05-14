@@ -25,12 +25,13 @@ There are preset themes you can choose for better experience:
 <br>
 
 ## Above Theme Colors:
+<br>
 
-> Underworld:
-  > Top Header Color: #EB5454
-  > Accent Color: #ff3b3b
-  > Dark Accent Color: #171212
-  > Selection Color: #ff0000
+> Underworld: <br>
+  > Top Header Color: #EB5454 <br>
+  > Accent Color: #ff3b3b <br>
+  > Dark Accent Color: #171212 <br>
+  > Selection Color: #ff0000 <br>
   
 > Forest
 > Mist
