@@ -10,13 +10,16 @@ body {
 }
 
 :root{
---bg-color: white;
---text-color: black;
+--bg-color: #fff;
+--text-color: #000;
 --top-btm-bg: #54c0eb;
 --a-clr: #2293fa;
 --a-clr-dark: #121417;
 --big-icon-fill: #404756;
 --selection-color: #00b6ff;
+--clr-warning: #eb3d3d;
+--clr-success: #47d368;
+--clr-neutral: #fff;
 }
 
 body {
@@ -426,6 +429,7 @@ h6,
 header {
   font-family: var(--ff-primary-medium);
   font-weight: 100;
+  color: var(--text-color);
 }
 
 div,
@@ -593,7 +597,7 @@ abbr:hover::before {
   transform: translate(-50%);
   width: max-content;
   padding: .15em;
-  background-color: white;
+  background-color: var(--clr-neutral);
 }
 
 .cross {
@@ -612,7 +616,7 @@ abbr:hover::before {
   right: 0;
   height: .15rem;
   width: 100%;
-  background-color: white;
+  background-color: var(--clr-neutral);
   transform: rotate(45deg);
 }
 
@@ -622,6 +626,6 @@ abbr:hover::before {
   right: 0;
   height: .15rem;
   width: 100%;
-  background-color: white;
+  background-color: var(--clr-neutral);
   transform: rotate(-45deg);
 }

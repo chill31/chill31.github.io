@@ -278,25 +278,25 @@ h4 {
 
 .pcr-app .pcr-interaction .pcr-result::-moz-selection {
   background: var(--a-clr);
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .pcr-app .pcr-interaction .pcr-type.active {
-  color: white;
+  color: var(--clr-neutral);
   background: var(--a-clr);
 }
 
 .pcr-app .pcr-interaction .pcr-save,
 .pcr-app .pcr-interaction .pcr-cancel,
 .pcr-app .pcr-interaction .pcr-clear {
-  color: white;
+  color: var(--clr-neutral);
   width: auto;
 }
 
 .pcr-app .pcr-interaction .pcr-save,
 .pcr-app .pcr-interaction .pcr-cancel,
 .pcr-app .pcr-interaction .pcr-clear {
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .pcr-app .pcr-interaction .pcr-save:hover,
@@ -313,14 +313,14 @@ h4 {
   background: linear-gradient(
     to right,
     var(--a-clr),
-    rgb(90, 225, 135)
+    var(--clr-success)
   );
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .pcr-app .pcr-interaction .pcr-clear,
 .pcr-app .pcr-interaction .pcr-cancel {
-  background: #f44250;
+  background: var(--clr-warning);
 }
 
 .pcr-app .pcr-interaction .pcr-clear:focus,

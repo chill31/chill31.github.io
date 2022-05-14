@@ -14,7 +14,7 @@ body{
 }
  
  .wrapper{
-  background-color: #fff;
+  background-color: var(--clr-neutral);
   max-width: fit-content;
   width: 410px;
   border-radius: 1rem;
@@ -75,7 +75,7 @@ header p{
 }
 
 .form button{
- color: white;
+ color: var(--clr-neutral);
  cursor: pointer;
  margin-top: 1.3rem;
  font-size: 1rem;

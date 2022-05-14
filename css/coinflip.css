@@ -13,7 +13,7 @@ body{
   height: 50vh;
   padding: 30px;
   border-radius: 7px;
-  background: #fff;
+  background: var(--clr-neutral);
   display: grid;
 }
 
@@ -45,5 +45,5 @@ thing button{
 thing button:hover{
     background-color: var(--a-clr);
     border: solid 1px transparent;
-    color: white;
+    color: var(--clr-neutral);
 }

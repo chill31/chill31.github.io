@@ -20,7 +20,7 @@ p {
   transform: translate(-50%, -50%);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px white;
+  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px var(--clr-neutral);
 }
 
 .content {
@@ -41,11 +41,11 @@ p {
   margin: 5px;
   border-radius: 4px;
   transition: 100ms;
-  box-shadow: 5px 5px 8px #00000020, -5px -5px 8px white;
+  box-shadow: 5px 5px 8px #00000020, -5px -5px 8px var(--clr-neutral);
 }
 .row button:hover {
-  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),inset -5px -5px 8px white;
-  background: #fff;
+  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),inset -5px -5px 8px var(--clr-neutral);
+  background: var(--clr-neutral);
 }
 .display #screen {
   margin-bottom: .5em;
@@ -58,26 +58,26 @@ p {
   padding-right: .5em;
   background: #ecf0f3;
   border-radius: 6px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px white;
+  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px var(--clr-neutral);
 }
 #eval {
   background: var(--top-btm-bg);
-  color: white;
+  color: var(--clr-neutral);
   box-shadow: inset 5px 5px 8px var(--top-btm-bg), inset -5px -5px 8px var(--top-btm-bg);
 }
 #eval:hover {
     box-shadow: inset 5px 5px 8px var(--top-btm-bg), inset -5px -5px 8px var(--top-btm-bg);
 }
 #ac {
-  background: #33cc33;
-  color: white;
+  background: var(--clr-success);
+  color: var(--clr-neutral);
 }
 #ac:hover {
-    box-shadow: inset 5px 5px 8px #2eb82e, inset -5px -5px 8px #33cc33;
+    box-shadow: inset 5px 5px 8px var(--clr-success), inset -5px -5px 8px var(--clr-success);
 }
 #ce {
   background: #ff3399;
-  color: white;
+  color: var(--clr-success);
 }
 #ce:hover {
   box-shadow: inset 5px 5px 8px #e60073, inset -5px -5px 8px #ff3399;

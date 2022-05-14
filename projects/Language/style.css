@@ -17,7 +17,7 @@ body {
     max-width: 690px;
     width: 100%;
     padding: 30px;
-    background: #fff;
+    background: var(--clr-neutral);
     border-radius: 7px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
 }
@@ -103,7 +103,7 @@ li{
     padding: 14px;
     outline: none;
     border: none;
-    color: white;
+    color: var(--clr-neutral);
     cursor: pointer;
     margin-top: 20px;
     font-size: 17px;

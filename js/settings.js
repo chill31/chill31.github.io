@@ -283,6 +283,7 @@ setTimeout(() => {
   pickr4.hide();
 }, 100);
 
+
 const copy_btns = document.querySelectorAll(".pcr-copy");
 const save_btns = document.querySelectorAll(".pcr-save");
 const resColors = document.querySelectorAll(".pcr-result");

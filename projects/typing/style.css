@@ -14,7 +14,7 @@ body{
 .wrapper{
   width: 770px;
   padding: 35px;
-  background: #fff;
+  background: var(--clr-neutral);
   border-radius: 10px;
   box-shadow: 0 10px 15px rgba(0,0,0,0.05);
   overflow: scroll;
@@ -43,11 +43,10 @@ body{
   position: relative;
 }
 .typing-text p span.correct{
-  color: #56964f;
+  color: var(--clr-success);
 }
 .typing-text p span.incorrect{
-  color: #cb3439;
-  outline: 1px solid #fff;
+  color: var(--clr-warning);
   background: #ffc0cb75;
   border-radius: 4px;
 }
@@ -84,7 +83,7 @@ body{
   outline: none;
   border: none;
   width: 105px;
-  color: white;
+  color: var(--clr-neutral);
   padding: 8px 0;
   font-size: 16px;
   cursor: pointer;

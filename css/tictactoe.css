@@ -11,7 +11,7 @@ body{
 }
 
 .select-box{
-  background: #fff;
+  background: var(--clr-neutral);
   padding: 20px 25px 25px;
   border-radius: 5px;
   max-width: 400px;
@@ -49,7 +49,7 @@ body{
   border: none;
   background: var(--a-clr);
   border-radius: 5px;
-  color: white;
+  color: var(--clr-neutral);
   outline: none;
   cursor: pointer;
   transition: all 300ms ease;
@@ -99,7 +99,7 @@ body{
 .play-board .details{
   padding: 7px;
   border-radius: 5px;
-  background: #fff;
+  background: var(--clr-neutral);
 }
 
 .play-board .players{
@@ -123,7 +123,7 @@ body{
 }
 
 .players.active span:first-child{
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .players.active span:last-child{
@@ -131,7 +131,7 @@ body{
 }
 
 .players span:first-child{
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .players .slider{
@@ -154,7 +154,7 @@ body{
 }
 
 .players.active span:nth-child(2){
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .players.active .slider{
@@ -180,7 +180,7 @@ body{
   line-height: 80px;
   text-align: center;
   border-radius: 5px;
-  background: #fff;
+  background: var(--clr-neutral);
   position: relative;
 }
 
@@ -200,7 +200,7 @@ boxes svg{
   width: 100%;
   opacity: 0;
   text-align: center;
-  background: #fff;
+  background: var(--clr-neutral);
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
 }
@@ -237,7 +237,7 @@ boxes svg{
   border: none;
   background: var(--a-clr);
   border-radius: 5px;
-  color: white;
+  color: var(--clr-neutral);
   outline: none;
   cursor: pointer;
   transition: all 300ms ease;

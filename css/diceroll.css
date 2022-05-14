@@ -56,5 +56,5 @@ thing button{
 thing button:hover{
     background-color: var(--a-clr);
     border: solid 1px transparent;
-    color: white;
+    color: var(--clr-neutral);
 }

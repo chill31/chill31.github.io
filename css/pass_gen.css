@@ -34,7 +34,7 @@ button {
   font-size: 1.75rem;
   margin: 10px -5px;
   margin-bottom: 30px;
-  color: white;
+  color: var(--clr-neutral);
 }
 
 .result {
@@ -67,7 +67,7 @@ button {
   height: 100%;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  color: white;
+  color: var(--clr-neutral);
   text-align: center;
   line-height: 65px;
 }
@@ -134,7 +134,7 @@ button {
 .range__slider::before,
 .range__slider::after {
   position: absolute;
-  color: white;
+  color: var(--clr-neutral);
   font-size: 0.9rem;
   font-weight: bold;
 }
@@ -154,7 +154,7 @@ button {
   position: absolute;
   right: -16px;
   font-variant-numeric: tabular-nums;
-  color: white;
+  color: var(--clr-neutral);
 }
 
 #slider {
@@ -174,7 +174,7 @@ button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--clr-neutral);
   cursor: pointer;
   transition: background-color 150ms ease-in-out;
 }
@@ -189,7 +189,7 @@ button {
   height: 20px;
   border: 0;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--clr-neutral);
   cursor: pointer;
   transition: background-color 150ms ease-in-out;
 }
@@ -215,7 +215,7 @@ button {
   display: flex;
   align-items: center;
   padding: 10px 25px;
-  color: white;
+  color: var(--clr-neutral);
   margin-bottom: 8px;
 }
 
@@ -287,7 +287,7 @@ button {
   height: 50px;
   margin: 10px 0;
   border-radius: 8px;
-  color: white;
+  color: var(--clr-neutral);
   border: none;
   background: var(--a-clr);
   letter-spacing: 1px;

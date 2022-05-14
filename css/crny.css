@@ -12,7 +12,7 @@ body{
   width: 370px;
   padding: 30px;
   border-radius: 7px;
-  background: #fff;
+  background: var(--clr-neutral);
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -93,7 +93,7 @@ form .exchange-rate{
 
 form button{
   height: 52px;
-  color: white;
+  color: var(--clr-neutral);
   font-size: 17px;
   cursor: pointer;
   background: var(--a-clr);

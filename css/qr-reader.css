@@ -10,7 +10,7 @@ body {
  height:270px;
  width:420px;
  border-radius:7px;
- background:white;
+ background:var(--clr-neutral);
  padding:30px 30px 35px;
  transition:height 200ms ease;
  box-shadow:0 10px 20px rgba(0,0,0,.1)
@@ -52,12 +52,12 @@ form img {
 }
 
 form .content svg {
- color:white;
+ color:var(--clr-neutral);
  font-size:55px
 }
 
 form .content p {
- color:white;
+ color:var(--clr-neutral);
  margin-top:15px;
  font-size: 1.5rem;
 }
@@ -103,7 +103,7 @@ form .content p {
  font-weight:500;
  font-size:16px;
  cursor:pointer;
- color:white;
+ color:var(--clr-neutral);
  border-radius:5px;
  background:var(--a-clr);
  transition:transform 300ms ease;

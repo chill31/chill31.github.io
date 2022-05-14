@@ -18,7 +18,7 @@
     height: 60vh;
     padding: 30px;
     border-radius: 7px;
-    background: #fff;
+    background: var(--clr-neutral);
     display: grid;
 
     position: relative;
@@ -61,7 +61,7 @@
   thing button:hover{
     background-color: var(--a-clr);
     border: solid 1px rgba(0, 0, 0, 0);
-    color: white;
+    color: var(--clr-neutral);
   }
   
 .inputs {

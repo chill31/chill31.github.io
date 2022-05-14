@@ -175,49 +175,6 @@ ul {
   margin-bottom: 3rem;
 }
 
-/* newest div */
-
-.newest-project-div{
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  width: 20vw;
-  background-color: rgba(0, 255, 76, 0.5);
-  padding: .5rem;
-  height: 2.5rem;
-  position: absolute;
-  top: 22vh;
-  left: -19vw;
-  border-radius: .2rem;
-  transition: 500ms ease;
-  cursor: pointer;
-  z-index: 9;
-}
-
-.newest-project-div a{
-  color: var(--text-color) !important;
-  text-decoration: none;
-  border-bottom: solid .1rem black;
-}
-
-.newest-project-div a:hover{
-  border-bottom: solid .025rem black;
-}
-
-.newest-project-div.active{
-  left: .1rem;
-}
-
-.newest-project-div > *:first-child{
-  margin-right: 1rem;
-}
-
-.svg-attention{
-  height: 1.5rem;
-  aspect-ratio: 1;
-  fill: rgb(26, 141, 78);
-}
-
 .display-option-container{
   width: 12.5vw;
   position: absolute;
@@ -250,7 +207,7 @@ ul {
   transform: translate(-50%);
   font-size: 1rem;
   background-color: var(--a-clr);
-  color: white;
+  color: var(--clr-neutral);
   padding: .25em .75em;
   opacity: 0;
   pointer-events: none;
@@ -346,7 +303,7 @@ body.grid-view .grid-container{
 }
 
 .grid-card > a:hover{
-  color: white;
+  color: var(--clr-neutral);
   background-color: var(--a-clr);
 }
 
@@ -409,4 +366,9 @@ legend {
 
 .star.active path {
   fill: var(--a-clr);
+}
+
+.star__particle {
+  height: 1.5rem;
+  width: 1.5rem;
 }
