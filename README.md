@@ -14,11 +14,10 @@ Provides total color customizations, from accent colors to selection colors! The
 There are preset themes you can choose for better experience:
 Colons can be used to align columns.
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+||||
+| -------------- | -------------- | -------------- |
+| <img src="/assets/img/themes/git__underworld.png"> |
+
 
 Markdown | Less | Pretty
 --- | --- | ---
