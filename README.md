@@ -37,10 +37,10 @@ There are preset themes you can choose for better experience:
 
 
 > Forest: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #EB5454 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #ff3b3b <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #171212 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #ff0000 <br> 
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #2eea36 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #53d458 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #253525 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #77de7c <br> 
 
 <br>
 
