@@ -55,10 +55,10 @@ There are preset themes you can choose for better experience:
 
 
 > Dull Yellow: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #db0bff <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #c54bda <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: 1c171d <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #e967ff <br> 
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #ffbf00 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #eac75d <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #27251f <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #FFD862 <br> 
 
 <br>
 
