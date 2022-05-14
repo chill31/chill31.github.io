@@ -15,7 +15,7 @@ There are preset themes you can choose for better experience:
 
 ||||
 | -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__forest_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;">
+| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__forest_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__mist_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;">
 
 <br>
 <br>
