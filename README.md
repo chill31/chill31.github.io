@@ -19,7 +19,7 @@ There are preset themes you can choose for better experience:
 
 | Dull Yellow | Default | Make Your OWN! |
 | -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__dull_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__normal_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <a href="#theme_own" style="font-family: system-ui !important; font-size: 2rem;">Add your Own Theme</a> |
+| <img src="/assets/img/themes/git__dull_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__normal_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <a href="#theme_own">Add your Own Theme</a> |
 
 <br>
 <br>
