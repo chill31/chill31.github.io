@@ -24,16 +24,61 @@ There are preset themes you can choose for better experience:
 <br>
 <br>
 
+## Above Theme Colors:
+<br>
+
+> Underworld: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #EB5454 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #ff3b3b <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #171212 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #ff0000 <br>
+  
+<br>
+
+
+> Forest: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #2eea36 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #53d458 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #253525 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #77de7c <br> 
+
+<br>
+
+
+> Mist: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #db0bff <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #c54bda <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: 1c171d <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #e967ff <br> 
+
+<br>
+
+
+> Dull Yellow: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #ffbf00 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #eac75d <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #27251f <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #FFD862 <br> 
+
+<br>
+
+
+> Default: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Already present in the website <br> 
+
+<br>
+<br>
+
 
 <h2 id="theme_own">Issues:</h2>
-You can write out an issue or bug seen in the website here at the [issues](https://github.com/chill31/chill31.github.io/issues) page github provides for repositories.
+You can write out an issue or bug seen in the website here at the <a href="https://github.com/chill31/chill31.github.io/issues">Issues</a> page github provides for repositories.
 
 ## Adding Content:<br>
 You can always fork the repository and make changes, if those changes make sense, they will be added to the website and you will be a contributor!
 
 > Adding Content: Themes:<br>
 
-To add your preferred themes here to show other people, you will need to contact me with mail or either at discord ( private messages ) with your github username, a good resolution image of your theme in the [home page](https://chill31.github.io/index.html).
+To add your preferred themes here to show other people, you will need to contact me with mail or either at discord ( private messages ) with your github username, a good resolution image of your theme in the [home page](https://chill31.github.io/index.html) and the colors used.
 
 <br>
 <br>
