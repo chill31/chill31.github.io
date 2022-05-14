@@ -16,7 +16,7 @@ Colons can be used to align columns.
 
 ||||
 | -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__underworld_theme.png"> |
+| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> |
 
 
 Markdown | Less | Pretty
