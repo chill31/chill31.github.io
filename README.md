@@ -11,6 +11,13 @@ Has basic projects like Calculator and Clock and then advanced projects like wea
 <br>
 Provides total color customizations, from accent colors to selection colors! The default is comfy blue theme but you can customize them in the [Settings](https://chill31.github.io/Settings.html) page.
 
+There are preset themes you can choose for better experience:
+<img>
+<img>
+<img>
+<img>
+<img>
+
 <br>
 <br>
 
