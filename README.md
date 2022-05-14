@@ -15,11 +15,11 @@ There are preset themes you can choose for better experience:
 
 | Underworld | Forest | Mist |
 | -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__forest_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__mist_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> |
+| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__forest_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__mist_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> |
 
 | Dull Yellow | Default | ... |
 | -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__dull_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__normal_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;">
+| <img src="/assets/img/themes/git__dull_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__normal_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;">
 
 <br>
 <br>
