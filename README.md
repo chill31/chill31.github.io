@@ -24,7 +24,7 @@ There are preset themes you can choose for better experience:
 <br>
 <br>
 
-<div id="theme_own"></div>
+<div id="theme_own"></div><br>
 ## Issues:<br>
 You can write out an issue or bug seen in the website here at the [issues](https://github.com/chill31/chill31.github.io/issues) page github provides for repositories.
 
