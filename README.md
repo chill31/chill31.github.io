@@ -54,8 +54,17 @@ There are preset themes you can choose for better experience:
 <br>
 
 
-> Dull Yellow
-> Default
+> Dull Yellow: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #db0bff <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #c54bda <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: 1c171d <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #e967ff <br> 
+
+<br>
+
+
+> Default: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Already present in the website <br> 
 
 <br>
 <br>
