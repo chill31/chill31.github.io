@@ -12,11 +12,18 @@ Has basic projects like Calculator and Clock and then advanced projects like wea
 Provides total color customizations, from accent colors to selection colors! The default is comfy blue theme but you can customize them in the [Settings](https://chill31.github.io/Settings.html) page.
 
 There are preset themes you can choose for better experience:
-<img>
-<img>
-<img>
-<img>
-<img>
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
 <br>
 <br>
