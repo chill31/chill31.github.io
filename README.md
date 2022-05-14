@@ -12,17 +12,10 @@ Has basic projects like Calculator and Clock and then advanced projects like wea
 Provides total color customizations, from accent colors to selection colors! The default is comfy blue theme but you can customize them in the [Settings](https://chill31.github.io/Settings.html) page.
 
 There are preset themes you can choose for better experience:
-Colons can be used to align columns.
 
 ||||
 | -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> |
-
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;"> | <img src="/assets/img/themes/git__forest_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 20vw;">
 
 <br>
 <br>
