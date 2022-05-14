@@ -620,3 +620,42 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach(btn => {
   btn.classList.add("custom");
 });
+
+const RESETALL = document.querySelector(".danger__clearAllBtn");
+const thePopup = document.querySelector(".reset-confirm");
+
+const confirmYes = document.querySelector(".actualReset__confirm");
+const confirmCancel = document.querySelector(".actualReset__cancel");
+const closeSvg = document.querySelector(".cancel-confirm");
+RESETALL.addEventListener("click", () => {
+
+  thePopup.classList.add("active");
+
+});
+
+function hidePop() {
+  thePopup.classList.remove("active");
+}
+
+addEventListener("keyup", (e) => {
+  if(e.key == "Escape") hidePop();
+});
+
+closeSvg.addEventListener("click", () => hidePop());
+confirmCancel.addEventListener("click", () => hidePop());
+
+confirmYes.addEventListener("click", () => {
+
+  localStorage.setItem("shortcuts", "enabled");
+
+  localStorage.setItem("normalFont", "Quicksand");
+  localStorage.setItem("codeFont", "Jetbrains Mono");
+
+  localStorage.setItem("accent-color", "#2293fa");
+  localStorage.setItem("accent-color-dark", "#121417");
+  localStorage.setItem("selection-color", "#00b6ff");
+  localStorage.setItem("top-bottom-background", "#54c0eb");
+
+  redirect(window.location.href);
+
+});
