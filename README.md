@@ -45,7 +45,15 @@ There are preset themes you can choose for better experience:
 <br>
 
 
-> Mist
+> Mist: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #db0bff <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #c54bda <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: 1c171d <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #e967ff <br> 
+
+<br>
+
+
 > Dull Yellow
 > Default
 
