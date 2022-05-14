@@ -27,13 +27,24 @@ There are preset themes you can choose for better experience:
 ## Above Theme Colors:
 <br>
 
-> Underworld: <br><br>
+> Underworld: <br>
   >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #EB5454 <br>
   >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #ff3b3b <br>
   >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #171212 <br>
   >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #ff0000 <br>
   
-> Forest
+<br>
+
+
+> Forest: <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #EB5454 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #ff3b3b <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #171212 <br>
+  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #ff0000 <br> 
+
+<br>
+
+
 > Mist
 > Dull Yellow
 > Default
