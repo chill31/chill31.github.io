@@ -159,76 +159,64 @@ label.small{
   box-shadow: inset 0 100px 0 0 var(--a-clr);
 }
 
-.reset-confirm {
-  z-index: 1000;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: scale(0);
-  transition: transform 500ms ease;
-  background-color: #000000af;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.theme-image {
+  height: 35vh;
+  width: 40vw;
+  border: solid 2px black;
+  border-radius: .5rem;
+  cursor: pointer;
 }
 
-.reset-confirm.active {
+.img-info-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10%;
+}
+
+.img-info-flex p {
+  width: 40ch;
+}
+
+.open-preset-themes {
+  margin-top: 5%;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.open-preset-themes > summary {
+  cursor: pointer;
+}
+
+.open-preset-themes *:not(summary) {
+  transform: scale(0);
+  transition: transform 250ms ease;
+  transform-origin: top left;
+}
+
+.open-preset-themes[open] *:not(summary) {
   transform: scale(1);
 }
 
-.reset-confirm .reset__actualPopup {
-  height: 95%;
-  width: 50%;
-  border-radius: 1vw;
-  background-color: var(--clr-neutral);
-  padding: 1rem;
-  position: relative;
+.open-preset-themes > summary::marker {
+  content: '\e185';
+  font-family: 'Fontawesome';
 }
 
-.cancel-confirm {
-  height: 2rem;
-  width: 2rem;
-  border: solid 1px black;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
+.open-preset-themes[open] > summary::marker {
+  content: '\f07c';
+  font-family: 'Fontawesome';
 }
 
-.btns-flex {
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 10%;
-  width: fit-content;
-  gap: 1rem;
-  left: 50%;
-  transform: translate(-50%);
+.counter-ul {
+  counter-reset: theem;
 }
 
-.btns-flex button {
-  background-color: var(--a-clr-dark);
-  border: none;
-  padding: .75em 1.25em;
-  color: var(--clr-neutral);
-  cursor: pointer;
-  transition: box-shadow 250ms ease;
-  box-shadow: inset 0 0 0 0 var(--a-clr);
+.counter-ul li {
+  counter-increment: theem;
 }
 
-.btns-flex button:hover, .btns-flex button:focus {
-  box-shadow: inset 0 100px 0 0 var(--a-clr);
-}
-
-.confirm__svg {
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.confirm__svg path {
-  fill: var(--big-icon-fill);
+.theme-item::before {
+  content: "[" counter(theem) "]  ";
+  cursor: text;
 }

@@ -611,7 +611,7 @@ resetClrsBtn.addEventListener("click", () => {
   localStorage.setItem("selection-color", "#00b6ff");
   localStorage.setItem("top-bottom-background", "#54c0eb");
 
-  redirect(window.location.href);
+  refreshPage();
 
 });
 
@@ -622,29 +622,8 @@ buttons.forEach(btn => {
 });
 
 const RESETALL = document.querySelector(".danger__clearAllBtn");
-const thePopup = document.querySelector(".reset-confirm");
 
-const confirmYes = document.querySelector(".actualReset__confirm");
-const confirmCancel = document.querySelector(".actualReset__cancel");
-const closeSvg = document.querySelector(".cancel-confirm");
 RESETALL.addEventListener("click", () => {
-
-  thePopup.classList.add("active");
-
-});
-
-function hidePop() {
-  thePopup.classList.remove("active");
-}
-
-addEventListener("keyup", (e) => {
-  if(e.key == "Escape") hidePop();
-});
-
-closeSvg.addEventListener("click", () => hidePop());
-confirmCancel.addEventListener("click", () => hidePop());
-
-confirmYes.addEventListener("click", () => {
 
   localStorage.setItem("shortcuts", "enabled");
 
@@ -656,6 +635,60 @@ confirmYes.addEventListener("click", () => {
   localStorage.setItem("selection-color", "#00b6ff");
   localStorage.setItem("top-bottom-background", "#54c0eb");
 
-  redirect(window.location.href);
+  refreshPage();
+
+});
+
+const defThemeImage = document.querySelector(".theme-image.default");
+const forestThemeImage = document.querySelector(".theme-image.forest");
+const uWorldThemeImage = document.querySelector(".theme-image.underworld");
+const dullThemeImage = document.querySelector(".theme-image.dull");
+const mistThemeImage = document.querySelector(".theme-image.mist");
+
+defThemeImage.addEventListener("click", () => {
+
+  resetClrsBtn.click();
+  refreshPage();
+
+});
+
+forestThemeImage.addEventListener("click", () => {
+
+  localStorage.setItem("accent-color", "#53d458");
+  localStorage.setItem("accent-color-dark", "#253525");
+  localStorage.setItem("selection-color", "#77de7c");
+  localStorage.setItem("top-bottom-background", "#2eea36");
+  refreshPage();
+
+});
+
+uWorldThemeImage.addEventListener("click", () => {
+
+  localStorage.setItem("accent-color", "#ff3b3b");
+  localStorage.setItem("accent-color-dark", "#171212");
+  localStorage.setItem("selection-color", "#ff0000");
+  localStorage.setItem("top-bottom-background", "#EB5454");
+  refreshPage();
+
+});
+
+dullThemeImage.addEventListener("click", () => {
+
+
+  localStorage.setItem("accent-color", "#eac75d");
+  localStorage.setItem("accent-color-dark", "#27251f");
+  localStorage.setItem("selection-color", "#FFD862");
+  localStorage.setItem("top-bottom-background", "#ffbf00");
+  refreshPage();
+
+});
+
+mistThemeImage.addEventListener("click", () => {
+
+  localStorage.setItem("accent-color", "#c54bda");
+  localStorage.setItem("accent-color-dark", "#1c171d");
+  localStorage.setItem("selection-color", "#e967ff");
+  localStorage.setItem("top-bottom-background", "#db0bff");
+  refreshPage();
 
 });

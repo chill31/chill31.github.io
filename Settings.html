@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="css/util/utility.css">
 
   <link rel="stylesheet" href="/static/color/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -104,7 +108,7 @@
   <ul class="settings-list color-settings item-inter">
 
     <li>
-      Colors
+      Custom Colors
 
       <br>
       <br>
@@ -142,6 +146,69 @@
     <input type="button" value="Reset To Default Colors" class="colors__reset item-inter">
   </ul>
 
+  <details class="open-preset-themes">
+  <summary>Preset Themes (click to open/close)</summary>
+  <ul clas="settings-list theme-settings item-inter">
+
+    <li>
+      Preset Themes:
+
+      <br>
+      <br>
+
+      <ul class="counter-ul">
+
+        <li class="theme-item">Default
+          <br>
+
+          <div class="img-info-flex">
+          <img src="/assets/img/themes/git__normal_theme.png" class="theme-image default">
+          <p>A nice touch of blue and dark blue to make a good looking theme! Set as default as blue is preferred by most people.</p>
+          </div>
+        </li>
+
+        <li class="theme-item">Forest
+          <br>
+
+          <div class="img-info-flex">
+            <img src="/assets/img/themes/git__forest_theme.png" class="theme-image forest">
+            <p>A cool shady forest theme for green color lovers! Mixed together to blend as forest colors! Customize it as you like.</p>
+          </div>
+        </li>
+
+        <li class="theme-item">Mist
+          <br>
+
+          <div class="img-info-flex">
+            <img src="/assets/img/themes/git__mist_theme.png" class="theme-image mist">
+            <p>A purplish theme consisting of purple and a little dark blue to make it a misty color! You may like this theme if you like dark colors!</p>
+          </div>
+        </li>
+
+        <li class="theme-item">Dull Yellow
+          <br>
+
+          <div class="img-info-flex">
+            <img src="/assets/img/themes/git__dull_theme.png" class="theme-image dull">
+            <p>A dull theme consisting of not so bright or dark yellowish colors.</p>
+          </div>
+        </li>
+
+        <li class="theme-item">Underworld
+          <br>
+
+          <div class="img-info-flex">
+            <img src="/assets/img/themes/git__underworld_theme.png" class="theme-image underworld">
+            <p>Very red! Very bright colors consisting of hot red, dark red and more! If this doesn't hurt your eyes, then go try it!</p>
+          </div>
+        </li>
+
+      </ul>
+    </li>
+
+  </ul>
+  </details>
+
   <div class="danger-zone item-inter">
 
     <h2 class="danger__header">Danger Zone!</h2>
@@ -150,24 +217,6 @@
     <button class="danger__clearAllBtn">Reset All</button>
 
   </div>
-
-  </div>
-
-  <div class="reset-confirm">
-
-    <div class="reset__actualPopup">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="cancel-confirm"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
-
-      <h1 class="pop__header">Confirmation</h1>
-      <p class="_hint_">Are you sure you want to reset all settings you ever changed in this website?</p>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="confirm__svg"><path d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
-
-      <div class="btns-flex">
-        <button class="actualReset__confirm">Confirm</button>
-        <button class="actualReset__cancel">Cancel</button>
-      </div>
-    </div>
 
   </div>
 
