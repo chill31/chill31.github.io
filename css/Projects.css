@@ -189,14 +189,14 @@ ul {
   height: 4.5rem;
   width: 4.5rem;
   cursor: pointer;
-  border: solid 3px #5865f2;
+  border: solid 3px var(--selection-color);
   border-radius: .2rem;
   position: relative;
 }
 
 .display-btns.selected{
-  background-color: rgb(0, 119, 255);
-  border: solid 3px var(--a-clr);
+  background-color: var(--a-clr);
+  border: solid 3px var(--selection-color);
 }
 
 .display-btns::before {
