@@ -1,6 +1,7 @@
 const pickr = Pickr.create({
     el: '.color-picker', // so I don't get confused, this is element where I want color picker to be.
     theme: 'classic', // theme, classic is good.
+    default: localStorage.getItem("accent-color"),
 
     swatches: [ // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
         'rgba(244, 67, 54, 1)', // orange.

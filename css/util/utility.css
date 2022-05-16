@@ -222,11 +222,11 @@ html {
 }
 
 .notification:not(.notification.info)::selection {
-  background: #00acee;
+  background: var(--selection-color);
 }
 
 .notification.info::selection {
-  background: #006c97;
+  background: var(--a-clr);
 }
 
 /** FULL SCREEN MENU CODE */
