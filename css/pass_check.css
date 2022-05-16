@@ -1,0 +1,108 @@
+*::before, *::after, * {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: var(--a-clr);
+  text-align: center;
+}
+
+.wrapper {
+  height: 540px;
+  width: 450px;
+  padding: 30px;
+  background-color: var(--clr-neutral);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.wrapper > header {
+  color: var(--text-color);
+  font-size: 1.45rem;
+}
+
+.strength-meter {
+  position: relative;
+  height: 2rem;
+  width: 90%;
+  border: 3px solid var(--selection-color);
+  border-radius: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 3rem !important;
+}
+
+.strength-meter::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: calc(1% * var(--strength, 0));
+  background-color: var(--a-clr);
+  transition: width 200ms;
+}
+
+.password-input {
+  margin-top: 1rem;
+  width: 90%;
+  padding: .25rem .75rem;
+  background-color: var(--a-clr);
+  color: var(--clr-neutral);
+  padding: 10px 15px;
+  font-size: 1.3rem;
+  border: 1px solid var(--a-clr);
+  outline: none;
+  text-align: center;
+  border-radius: .3rem;
+}
+
+.password-input:focus {
+  border-color: var(--selection-color);
+}
+
+.weak__header {
+  margin-top: 15%;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+}
+
+.reasons > * {
+  color: black;
+  font-size: 1.1rem;
+}
+
+.reasons:empty::after {
+  content: 'No Weaknesses / Very Strong!';
+  font-size: 1.35rem;
+}
+
+.toggle-type {
+  height: fit-content;
+  width: fit-content;
+  padding: .3rem;
+  outline: none;
+  margin-top: .5rem;
+  cursor: pointer;
+}
+
+.toggle-type:focus {
+  outline: none !important;
+}
+
+.toggle-type svg {
+  height: 2.25rem;
+  width: 2.25rem;
+}

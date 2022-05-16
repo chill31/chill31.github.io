@@ -390,6 +390,8 @@ if(localStorage.getItem("shortcuts") == "enabled"){
   shortCutContainer.classList.add("disabled");
 }
 
+if(!localStorage.getItem("shortcuts")) localStorage.setItem("shortcuts", "enabled");
+
 if(!localStorage.getItem("accent-color")){
   localStorage.setItem("accent-color", "#2293fa");
 }

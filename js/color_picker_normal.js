@@ -37,6 +37,9 @@ const pickr = Pickr.create({
     },
 });
 
+pickr.show();
+pickr.hide();
+
 const copy_btn = document.querySelector(".pcr-copy");
 const save_btn = getElement(0, ".pcr-save");
 const resColor = getElement(0, ".pcr-result");

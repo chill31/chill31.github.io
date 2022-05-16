@@ -45,8 +45,8 @@
     {
       "title": "Password Generator",
       "description": "Helps you build a custom strong password!",
-      "location": "/projects/Password_Generator.html",
-      "webLocation": "https://chill31.github.io/projects/Password_Generator.html"
+      "location": "/projects/Passwords/Generator.html",
+      "webLocation": "https://chill31.github.io/projects/Passwords/Generator.html"
     },
     {
       "title": "Random Choice Picker",
@@ -159,7 +159,15 @@
       "title": "Live Character Counter",
       "description": "A live character count with included word and no-spaces character counter.",
       "location": "/projects/Character_Count.html",
-      "webLocation": "https://chill31.github.io/projects/Character_Count.html"
+      "webLocation": "https://chill31.github.io/projects/Character_Count.html",
+      "popular": "yes"
+    },
+    {
+      "title": "Password Strength Checker",
+      "description": "An advanced tool to check if your password is good to use or not",
+      "location": "/projects/Passwords/Checker.html",
+      "webLocation": "https://chill31.github.io/projects/Checker.html",
+      "newest": "true"
     }
   ]
 }

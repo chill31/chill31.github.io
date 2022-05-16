@@ -692,3 +692,31 @@ mistThemeImage.addEventListener("click", () => {
   refreshPage();
 
 });
+
+const toggleParticlesBtn = document.getElementById("toggle-particles-btn");
+
+if(!localStorage.getItem("particles")) localStorage.setItem("particles", "enabled");
+
+if(localStorage.getItem("particles") == "enabled"){
+
+  toggleParticlesBtn.textContent = "Disable Particles";
+
+} else if(localStorage.getItem("particles") == "disabled"){
+
+  toggleParticlesBtn.textContent = "Enable Particles";
+
+}
+
+toggleParticlesBtn.addEventListener("click", () => {
+
+  if(toggleParticlesBtn.textContent.toLowerCase() == "disable particles"){
+    toggleParticlesBtn.textContent = "Enable Particles";
+    localStorage.setItem("particles", "disabled");
+  } else if(toggleParticlesBtn.textContent.toLowerCase() == "enable particles"){
+    toggleParticlesBtn.textContent = "Disable Particles";
+    localStorage.setItem("particles", "enabled");
+  }
+
+  refreshPage();
+
+});
