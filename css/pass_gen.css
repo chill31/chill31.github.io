@@ -74,6 +74,8 @@ button {
 
 #result h4 {
   cursor: pointer;
+  color: var(--clr-neutral);
+  font-size: small;
 }
 
 .result #copy-btn {

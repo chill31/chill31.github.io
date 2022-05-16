@@ -58,6 +58,34 @@ function formatDate(n){
 
 /**
  * 
+ * @param {*} text 
+ * @returns toggle case text
+ */
+
+function toggleCase(str) {
+  return str.toUpperCase().split(' ').map(function(word) {
+    return (word.charAt(0).toLowerCase() + word.slice(1));
+  }).join(' ');
+}
+
+function oppositeCase(SOMESTR) {
+
+let updatedText;
+
+for(let i = 0; i < SOMESTR.length; i++) {
+  if(i % 2 == 0){
+    updatedText += SOMESTR[i].toUpperCase();
+  } else if(i % 2 != 0) {
+    updatedText += SOMESTR[i].toLowerCase();
+  }
+}
+
+  return updatedText.split("undefined")[1];
+
+}
+
+/**
+ * 
  * @returns {documentSelectedText}
  */
 

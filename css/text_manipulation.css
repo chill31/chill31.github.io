@@ -1,62 +1,101 @@
 body {
-  background: var(--bg-color);
+  background: var(--a-clr);
   margin: 0;
 }
 
-h1{
-  color: var(--text-color);
+.wrapper{
+  width: 370px;
+  height: 60vh;
+  padding: 30px;
+  border-radius: 7px;
+  background: var(--clr-neutral);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  overflow-y: scroll;
 }
 
-.label-and-check-container{
+.wrapper header, .after-choice header{
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.choice-btn{
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  background: var(--a-clr);
+  border-radius: 5px;
+  color: var(--clr-neutral);
+  outline: none;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.choice-btn:hover, .choice-btn:hover{
+  transform: scale(0.96);
+}
+
+.after-choice {
+  width: 370px;
+  height: 60vh;
+  padding: 30px;
+  border-radius: 7px;
+  background: var(--clr-neutral);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  transition: transform 250ms ease;
+  transform-origin: right;
+}
+
+.after-choice.active {
+  transform: translate(-50%, -50%) scaleX(1);
+  transform-origin: left;
+}
+
+.icon {
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  height: fit-content;
-  width: fit-content;
 }
 
-.text-counter-check{
-  height: 3rem;
+.icon > .svg-inline--fa.fa-arrow-left-long {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: .75rem;
   cursor: pointer;
 }
 
-.label-and-check-container label{
-  font-size: 1.14rem;
-  margin-right: 2rem;
-}
-
-.show-count-label{
-  font-size: 1.14rem;
-  margin-left: 1rem;
-  position: absolute;
-  top: 40vh;
-}
-
-.show-count-label.act{
-  margin-left: calc(1rem + 14rem);
-}
-
-.textareas{
-  width: 95%;
-  background: var(--input-bg);
+._text_ {
+  height: 30vh;
+  width: 100%;
   resize: none;
-  height: 40vh;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 1.05rem;
+  border-radius: .5rem;
   border: solid 1px black;
-  outline: none;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: 50vh; 
+  color: black;
+  margin-top: 15%;
 }
 
-.textareas:focus{
-  border: solid 2px var(--a-clr);
-}
-
-.ea{
-  color: var(--text-color);
+.generate {
+  color: white;
 }

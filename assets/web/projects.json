@@ -64,7 +64,7 @@
     {
       "title": "Text Manipulation",
       "description":
-        "This is a text tool, with some few things, like, converting to uppercase, or lowercase, character counting, etc.",
+        "This is a very useful tool for manipulating text cases to uppercase, lowercase, etc.",
       "location": "/projects/Text_manipulation.html",
       "webLocation": "https://chill31.github.io/projects/Text_manipulation.html"
     },
@@ -154,6 +154,12 @@
       "description": "this project generates a random number within the given range of minimum and maximum numbers.",
       "location": "/projects/Random-Number.html",
       "webLocation": "https://chill31.github.io/projects/Random-Number.html"
+    },
+    {
+      "title": "Live Character Counter",
+      "description": "A live character count with included word and no-spaces character counter.",
+      "location": "/projects/Character_Count.html",
+      "webLocation": "https://chill31.github.io/projects/Character_Count.html"
     }
   ]
 }

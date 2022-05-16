@@ -6,36 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects: Text Manipulation</title>
-  <link rel="stylesheet" href="../css/text_manipulation.css">
+  <link rel="stylesheet" href="/css/text_manipulation.css">
   <link rel="stylesheet" href="/css/util/utility.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
 
   <div class="loaded-content">
 
-  <h1 style="text-align: center; color: var(--text-color);">Text Counter</h1>
+    <div class="wrapper">
+      <header>Text Manipulation</header><br />
+      <thing>
 
-  <p style="text-align: center; color: var(--text-color);">Below is a text counter, you can also choose if you want to
-    count spaces or not.</p><br /><br />
+        <div class="container"> 
+          <button class="choice-btn custom btn__toOppositeCase">OpPoSiTe Case</button>
+          <button class="choice-btn custom btn__toToggleCase">tOGGLE Case</button>
+          <button class="choice-btn custom btn__toUpperCase">UPPER Case</button>
+          <button class="choice-btn custom btn__toLowerCase">lower Case</button>
+        </div>
 
-  <div class="label-and-check-container">
+      </thing>
+    </div>
 
-    <label style="color: var(--text-color);" class="checkbox-label">Count Spaces:</label>
+    <div class="after-choice">
 
-      <input type="checkbox" class="text-counter-check" checked>
+      <div class="icon">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </div>
+      <header>No Type Provided</header><br>
 
-  </div><br /><br /><br />
+      <div class="container">
+        
+        <textarea placeholder="Enter your text here" name="userText" class="_text_ input"></textarea>
 
-  <textarea class="textareas" id="text-counter-textarea" placeholder="Enter text here"></textarea><br /><br />
+        <button class="generate">GET RESULT</button>
 
-  <label class="show-count-label ea">Number of Characters: </label>
-  <label class="show-count-label act ea"></label><br /><br /><br />
+      </div>
+
+    </div>
 
   </div>
 
-  <script src="../js/util/utility.js"></script>
-  <script src="../js/Text_manipulation.js"></script>
+  <script src="/js/util/utility.js"></script>
+  <script src="/js/Text_manipulation.js"></script>
 </body>
 
 </html>

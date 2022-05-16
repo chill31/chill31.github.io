@@ -1,25 +1,56 @@
-const textarea1 = document.getElementById("text-counter-textarea");
+const oppositeCaseBtn = document.querySelector(".btn__toOppositeCase");
+const toggleCaseBtn = document.querySelector(".btn__toToggleCase");
+const upperCaseBtn = document.querySelector(".btn__toUpperCase");
+const lowerCaseBtn = document.querySelector(".btn__toLowerCase");
 
-const checkb1 = document.querySelector(".text-counter-check");
+const selectedChoiceDiv = document.querySelector(".after-choice");
+const closeIcon = document.querySelector(".icon");
+const afterHeader = document.querySelector(".after-choice header");
 
-let word_count_1;
+const inputText = document.querySelector(".input");
+const generateBtn = document.querySelector(".generate");
 
-const show_text_count_1 = document.querySelector(".act");
+const btns = [oppositeCaseBtn, toggleCaseBtn, upperCaseBtn, lowerCaseBtn];
 
+btns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        inputText.value = "";
+        selectedChoiceDiv.classList.add("active");
 
-function ref_time_1() {
-    setInterval("showCount_1()", 1500)
-}
+        if(e.target.classList.contains("btn__toOppositeCase")) {
 
-function showCount_1() {
+            afterHeader.textContent = "Opposite Case Convertor";
+            generateBtn.addEventListener("click", () => {
+                inputText.value = oppositeCase(inputText.value);
+            });
 
-    if (checkb1.checked) {
-        word_count_1 = textarea1.value.length;
-    } else if (!checkb1.checked) {
-        word_count_1 = textarea1.value.replace(/ /g, "").length;
-    }
-    show_text_count_1.innerText = word_count_1;
-    ref_time_1();
-}
+        } else if(e.target.classList.contains("btn__toToggleCase")) {
 
-showCount_1();
+            afterHeader.textContent = "Toggle Case Convertor";
+            generateBtn.addEventListener("click", () => {
+                inputText.value = toggleCase(inputText.value);
+            });
+            
+
+        } else if(e.target.classList.contains("btn__toUpperCase")) {
+
+            afterHeader.textContent = "Upper Case Convertor";
+            generateBtn.addEventListener("click", () => {
+                inputText.value = inputText.value.toUpperCase();
+            });
+
+        } else if(e.target.classList.contains("btn__toLowerCase")) {
+
+            afterHeader.textContent = "Lower Case Convertor";
+            generateBtn.addEventListener("click", () => {
+                inputText.value = inputText.value.toLowerCase();
+            });
+
+        }
+    });
+});
+
+closeIcon.addEventListener("click", () => {
+    selectedChoiceDiv.classList.remove("active");
+    inputText.value = "";
+});
