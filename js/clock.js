@@ -421,7 +421,7 @@ let my_timezones = [
 function disp_TZ() {
     tz = f1.tz.options[f1.tz.options.selectedIndex].value;
     str = new Date().toLocaleString("en-NZ", { timeZone: tz, timeZoneName: "short" })
-    getElement(1, "display_time_label").innerText = str + " , " + tz;
+    document.getElementById("display_time_label").innerText = str + " , " + tz;
     refresh_time();
 }
 

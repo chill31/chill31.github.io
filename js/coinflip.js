@@ -1,5 +1,5 @@
-const resLabel = getElement(1, "result");
-const btn = getElement(1, "flip");
+const resLabel = document.getElementById("result");
+const btn = document.getElementById("flip");
 
 resLabel.textContent += "Not flipped yet";
 

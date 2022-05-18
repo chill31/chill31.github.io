@@ -1,7 +1,7 @@
 /**
  * 
  * @param {*} m 
- * @returns {fixedMonth}
+ * @returns fixed month
  */
 
 function fixMonth(m){
@@ -15,7 +15,7 @@ function fixMonth(m){
 /**
  * 
  * @param {*} d 
- * @returns {fixedDay}
+ * @returns fixed day
  */
 
 function fixDay(d){
@@ -28,7 +28,7 @@ function fixDay(d){
 /**
  * 
  * @param {*} n 
- * @returns {formattedDate}
+ * @returns formatted date
  */
 
 function formatDate(n){
@@ -68,6 +68,12 @@ function toggleCase(str) {
   }).join(' ');
 }
 
+/**
+ * 
+ * @param {*} SOMESTR 
+ * @returns opposite case text
+ */
+
 function oppositeCase(SOMESTR) {
 
 let updatedText;
@@ -85,7 +91,7 @@ for(let i = 0; i < SOMESTR.length; i++) {
 }
 
 /**
- * 
+ * @fires document.getSelection
  * @returns {documentSelectedText}
  */
 
@@ -96,21 +102,8 @@ function getSelectionText(){
 }
 
 /**
- * @param {HTMLElement} elem
- * @param {string} fn
- * @param {string} elemClass
- */
-
-function advancedClassHandler(elem, fn, elemClass) {
-  if (fn.toLowerCase() == "add") {
-    elem.classList.add(elemClass);
-  } else if (fn.toLowerCase() == "remove") {
-    elem.classList.remove(elemClass);
-  }
-}
-
-/**
  * @fires window.location.href
+ * @returns undefined
  */
 
 function refreshPage(){
@@ -119,6 +112,7 @@ function refreshPage(){
 
 /**
  * @param {URL} redirectLocation
+ * @returns undefined
  */
 
 function redirect(redirectLocation) {
@@ -128,25 +122,14 @@ function redirect(redirectLocation) {
 }
 
 /**
- * @param {URL} redirectLocation 
+ * @param {URL} redirectLocation
+ * @returns undefined
  */
 
 function openNewPage(redirectLocation){
   parent.open(redirectLocation);
 }
 
-/**
- * @param {string} process
- * @param {*} element
- */
-
-function getElement(process, element) {
-  if (process.toString().toLowerCase() == "query" || process == 0) {
-    return document.querySelector(element);
-  } else if (process.toString().toLowerCase() == "id" || process == 1) {
-    return document.getElementById(element);
-  }
-}
 
 /**
  * @param {string} message

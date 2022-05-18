@@ -1,11 +1,11 @@
-const wrapper = getElement(0, ".wrapper");
-const inputPart = getElement(0, ".input-part");
-const infoTxt = getElement(0, ".input-part .info-txt");
-const inputField =  getElement(0, ".input-part input");
-const locationBtn = getElement(0, ".input-part button");
-const weatherPart = getElement(0, ".wrapper .weather-part");
-const wIcon = getElement(0, ".wrapper .weather-part img");
-const arrowBack = getElement(0, ".wrapper header i");
+const wrapper = document.querySelector(".wrapper");
+const inputPart = document.querySelector(".input-part");
+const infoTxt = document.querySelector(".input-part .info-txt");
+const inputField =  document.querySelector(".input-part input");
+const locationBtn = document.querySelector(".input-part button");
+const weatherPart = document.querySelector(".wrapper .weather-part");
+const wIcon = document.querySelector(".wrapper .weather-part img");
+const arrowBack = document.querySelector(".wrapper header i");
 let api;
 inputField.addEventListener("keyup", (e) => {
   if (e.key == "Enter" && inputField.value != "") {
@@ -29,7 +29,7 @@ function onSuccess(position) {
 }
 function onError(error) {
   infoTxt.innerText = error.message;
-  advancedClassHandler(infoTxt, "add", "error");
+  infoTxt.classList.add("error");
 }
 function fetchData() {
   infoTxt.innerText = "Getting weather details...";
@@ -79,11 +79,11 @@ function weatherDetails(info) {
 
     }
 
-    getElement(0, ".wrapper .weather-part .temp .numb").innerText = Math.floor(temp);
-    getElement(0, ".wrapper .weather-part .weather").innerText = description;
-    getElement(0, ".wrapper .weather-part .location span").innerText = `${city}, ${country}`;
-    getElement(0, ".wrapper .weather-part .temp .numb-2").innerText = Math.floor(feels_like);
-    getElement(0, ".wrapper .weather-part .humidity span").innerText = `${humidity}%`;
+    document.querySelector( ".wrapper .weather-part .temp .numb").innerText = Math.floor(temp);
+    document.querySelector( ".wrapper .weather-part .weather").innerText = description;
+    document.querySelector( ".wrapper .weather-part .location span").innerText = `${city}, ${country}`;
+    document.querySelector( ".wrapper .weather-part .temp .numb-2").innerText = Math.floor(feels_like);
+    document.querySelector( ".wrapper .weather-part .humidity span").innerText = `${humidity}%`;
     infoTxt.classList.remove("pending", "error");
     infoTxt.innerText = "";
     inputField.value = "";

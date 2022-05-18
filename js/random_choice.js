@@ -1,6 +1,6 @@
-const chooseBtn = getElement(0, ".wrapper thing button");
-const input = getElement(0, ".wrapper thing textarea");
-const label = getElement(0, ".wrapper thing div .result");
+const chooseBtn = document.querySelector(".wrapper thing button");
+const input = document.querySelector(".wrapper thing textarea");
+const label = document.querySelector(".wrapper thing div .result");
 
 chooseBtn.addEventListener("click", () => {
 

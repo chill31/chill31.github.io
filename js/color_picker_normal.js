@@ -42,8 +42,8 @@ pickr.show();
 pickr.hide();
 
 const copy_btn = document.querySelector(".pcr-copy");
-const save_btn = getElement(0, ".pcr-save");
-const resColor = getElement(0, ".pcr-result");
+const save_btn = document.querySelector(".pcr-save");
+const resColor = document.querySelector(".pcr-result");
 
 const buttons = document.querySelectorAll("button");
 
