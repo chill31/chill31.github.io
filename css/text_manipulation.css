@@ -61,6 +61,9 @@ body {
   transform: translate(-50%, -50%) scaleX(0);
   transition: transform 250ms ease;
   transform-origin: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .after-choice.active {
@@ -96,6 +99,6 @@ body {
   margin-top: 15%;
 }
 
-.generate {
+button {
   color: white;
 }

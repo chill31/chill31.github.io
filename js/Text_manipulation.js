@@ -2,6 +2,7 @@ const oppositeCaseBtn = document.querySelector(".btn__toOppositeCase");
 const toggleCaseBtn = document.querySelector(".btn__toToggleCase");
 const upperCaseBtn = document.querySelector(".btn__toUpperCase");
 const lowerCaseBtn = document.querySelector(".btn__toLowerCase");
+const reverseTextBtn = document.querySelector(".btn__reverseText");
 
 const selectedChoiceDiv = document.querySelector(".after-choice");
 const closeIcon = document.querySelector(".icon");
@@ -10,7 +11,7 @@ const afterHeader = document.querySelector(".after-choice header");
 const inputText = document.querySelector(".input");
 const generateBtn = document.querySelector(".generate");
 
-const btns = [oppositeCaseBtn, toggleCaseBtn, upperCaseBtn, lowerCaseBtn];
+const btns = [oppositeCaseBtn, toggleCaseBtn, upperCaseBtn, lowerCaseBtn, reverseTextBtn];
 
 btns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -46,6 +47,13 @@ btns.forEach(btn => {
                 inputText.value = inputText.value.toLowerCase();
             });
 
+        } else if(e.target.classList.contains("btn__reverseText")) {
+
+            afterHeader.textContent = "Reverse Text Generator";
+            generateBtn.addEventListener("click", () => {
+                inputText.value = reverse(inputText.value)
+            });
+
         }
     });
 });
@@ -53,4 +61,9 @@ btns.forEach(btn => {
 closeIcon.addEventListener("click", () => {
     selectedChoiceDiv.classList.remove("active");
     inputText.value = "";
+});
+
+document.querySelector(".copy-text").addEventListener("click", () => {
+    copyText(inputText.value);
+    notify("Copied the text of the Text Box.", "info");
 });

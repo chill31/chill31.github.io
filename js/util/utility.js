@@ -1,3 +1,9 @@
+function reverse(text) {
+  const newString = text.split("");
+  newString.reverse();
+  return newString.join("");
+}
+
 /**
  * 
  * @param {*} m 
