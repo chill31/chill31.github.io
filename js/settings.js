@@ -1,8 +1,6 @@
 const save_settings_btn = document.getElementById("save-cog");
 const normalFontSelect = document.querySelector(".normal-font-select");
 const codeFontSelect = document.querySelector(".code-font-select");
-const normalFontLbl = document.querySelector(".normal-font-saved");
-const codeFontLbl = document.querySelector(".code-font-saved");
 
 const toggleShortcutsBtn = document.getElementById("toggle-shortcuts-btn");
 
@@ -27,18 +25,6 @@ toggleShortcutsBtn.addEventListener("click", () => {
   refreshPage();
 
 });
-
-
-if(!localStorage.getItem("normalFont")){
-    normalFontLbl.textContent = "Quicksand";
-}
-
-if(!localStorage.getItem("codeFont")){
-    codeFontLbl.textContent = "Jetbrains Mono";
-}
-
-normalFontLbl.textContent = localStorage.getItem("normalFont");
-codeFontLbl.textContent = localStorage.getItem("codeFont");
 
 save_settings_btn.addEventListener("click", () => {
 
@@ -97,6 +83,8 @@ const observer = new IntersectionObserver(entries => {
    else entry.target.classList.remove("intersect");
 
   });
+}, {
+  threshold: .5
 });
 
 interItems.forEach(item => observer.observe(item));

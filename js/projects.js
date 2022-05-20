@@ -219,15 +219,15 @@ setTimeout(() => {
     const _stars_ = document.querySelectorAll(".star");
     _stars_.forEach(star => {
       star.addEventListener("click", (a) => {
-        pop(a);
+        pop(a, star.classList[1]);
       });
     })
   }
   
-  function pop (e) {
+  function pop (e, _class_) {
     // Quick check if user clicked the button using a keyboard
     if (e.clientX === 0 && e.clientY === 0) {
-      const bbox = document.querySelector('#button').getBoundingClientRect();
+      const bbox = document.querySelector(`.${_class_}`).getBoundingClientRect();
       const x = bbox.left + bbox.width / 2;
       const y = bbox.top + bbox.height / 2;
       for (let i = 0; i < 30; i++) {
@@ -254,7 +254,7 @@ setTimeout(() => {
     particle.style.height = `${size}px`;
     // Generate a random color in a blue/purple palette
 //    particle.style.background = `hsl(${Math.random() * 90 + 180}, 70%, 60%)`;
-    particle.style.background = "url('/assets/img/star.svg')"
+    particle.style.backgroundImage = "url('/assets/img/star.svg')"
     
     // Generate a random x & y destination within a distance of 75px from the mouse
     const destinationX = x + (Math.random() - 0.5) * 2 * 75;
