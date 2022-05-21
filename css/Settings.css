@@ -273,3 +273,20 @@ details * {
   text-align: center;
   margin-bottom: 10%;
 }
+
+.end__infoText {
+  text-align: center;
+  font-size: 125%;
+  margin-top: 5%;
+}
+
+.end__infoText a {
+  color: var(--a-clr);
+  padding: .5rem;
+  transition: box-shadow 250ms ease;
+}
+
+.end__infoText a:hover, .end__infoText a:focus {
+  box-shadow: 0 0 .25rem var(--a-clr);
+  outline: none !important;
+}

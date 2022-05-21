@@ -368,6 +368,13 @@ legend {
   fill: var(--a-clr);
 }
 
+.projectCard__cardNumber {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 particle {
   position: fixed;
   left: 0;
