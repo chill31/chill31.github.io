@@ -108,3 +108,10 @@ toggleTypeBtn.addEventListener("click", () => {
     }
 
 });
+
+const copyTextBtn = document.querySelector(".copy-text");
+
+copyTextBtn.addEventListener("click", () => {
+  copyText(passwordInput.value);
+  notify("Copied the entered password", "info");
+});

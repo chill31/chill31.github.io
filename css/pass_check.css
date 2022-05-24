@@ -89,20 +89,113 @@ body {
   font-size: 1.35rem;
 }
 
-.toggle-type {
+.btns {
   height: fit-content;
   width: fit-content;
   padding: .3rem;
   outline: none;
   margin-top: .5rem;
   cursor: pointer;
+  background-color: var(--a-clr);
+  border-radius: .5rem;
+  border: none;
+  transition: outline 100ms ease;
+  position: relative;
 }
 
-.toggle-type:focus {
-  outline: none !important;
-}
-
-.toggle-type svg {
+.btns svg {
   height: 2.25rem;
   width: 2.25rem;
+}
+
+.btns svg > path {
+  fill: white;
+}
+
+.weaknesses__toggle {
+  font-size: 1.4rem;
+  margin-top: 15%;
+}
+
+.weaknesses__toggle > summary {
+  cursor: pointer;
+}
+
+.copy-text::after {
+  content: 'Copy Password';
+  position: absolute;
+  top: 115%;
+  font-size: 1.2rem;
+  transform: scaleX(0) translate(-50%);
+  background-color: var(--a-clr);
+  transition: opacity 250ms ease;
+  width: 15ch;
+  opacity: 0;
+  padding: .25rem .5rem;
+  left: 50%;
+}
+
+.copy-text::before {
+  --zs: 15px;
+  content: '';
+  height: 0;
+  width: 0;
+  border-right: solid var(--zs) transparent;
+  border-left: solid var(--zs) transparent;
+  border-bottom: solid var(--zs) var(--a-clr);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%) scaleX(0);
+  opacity: 0;
+}
+
+.copy-text:hover::after{
+  transform: scaleX(1) translate(-50%);
+  opacity: 1;
+}
+
+.copy-text:hover::before {
+  transform: scaleX(1) translate(-50%);
+  opacity: 1;
+}
+
+
+.btns:first-of-type::after {
+  content: 'Toggle Show/Hide';
+  position: absolute;
+  top: 115%;
+  font-size: 1.2rem;
+  transform: scaleX(0) translate(-50%);
+  background-color: var(--a-clr);
+  transition: opacity 250ms ease;
+  width: 20ch;
+  opacity: 0;
+  padding: .25rem .5rem;
+  left: 50%;
+}
+
+.btns:first-of-type::before {
+  --zs: 15px;
+  content: '';
+  height: 0;
+  width: 0;
+  border-right: solid var(--zs) transparent;
+  border-left: solid var(--zs) transparent;
+  border-bottom: solid var(--zs) var(--a-clr);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%) scaleX(0);
+  opacity: 0;
+}
+
+.btns:first-of-type:hover::after{
+  transform: scaleX(1) translate(-50%);
+  opacity: 1;
+}
+
+.btns:first-of-type:hover::before {
+  transform: scaleX(1) translate(-50%);
+  opacity: 1;
 }

@@ -669,7 +669,7 @@
                   "btn:clear"
                 )}" type="button" ${l(e.interaction.clear)} aria-label="${c(
                   "aria:btn:clear"
-                )}">\n <input type="button" value="Copy" class="pcr-copy">\n            <input :ref="save-copy" class="pcr-save-copy" value="Save & Copy" type="button" aria-label="Save & Copy">\n       </div>\n        </div>\n      </div>\n    `
+                )}">\n <input type="button" value="Copy" class="pcr-copy">\n            <input :ref="save-copy" class="pcr-save-copy" value="Save & Copy" type="button" aria-label="Save & Copy">\n        <input :ref="reset-default" class="pcr-default" value="Reset To Default" type="button" aria-label="Reset to Default">\n       </div>\n        </div>\n      </div>\n    `
               ),
               u = p.interaction;
             return (

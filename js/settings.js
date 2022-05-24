@@ -276,6 +276,7 @@ const copy_btns = document.querySelectorAll(".pcr-copy");
 const save_btns = document.querySelectorAll(".pcr-save");
 const resColors = document.querySelectorAll(".pcr-result");
 const cancelBtns = document.querySelectorAll(".pcr-cancel");
+const resetToDefBtns = document.querySelectorAll(".pcr-default");
 
 const clear_btns = document.querySelectorAll(".pcr-clear");
 const save_copys = document.querySelectorAll(".pcr-save-copy");
@@ -362,6 +363,11 @@ copy_btns[0].addEventListener("click", () => {
 
 });
 
+resetToDefBtns[0].addEventListener("click", () => {
+  pickr.setColor("#2293fa");
+  notify("Reset the Accent Color back to default", "info");
+});
+
 
 let clr2 = "#121417";
 let color_scheme2;
@@ -437,6 +443,11 @@ copy_btns[1].addEventListener("click", () => {
 
   pickr2.hide();
 
+});
+
+resetToDefBtns[1].addEventListener("click", () => {
+  pickr2.setColor("#121417");
+  notify("Reset the Dark Accent Color back to default", "info");
 });
 
 let clr3 = "#00b6ff";
@@ -515,6 +526,11 @@ copy_btns[2].addEventListener("click", () => {
 
 });
 
+resetToDefBtns[2].addEventListener("click", () => {
+  pickr3.setColor("#00b6ff");
+  notify("Reset the Selection Color back to default", "info");
+});
+
 let clr4 = "#54c0eb";
 let color_scheme4;
 
@@ -591,6 +607,11 @@ copy_btns[3].addEventListener("click", () => {
 
 });
 
+resetToDefBtns[3].addEventListener("click", () => {
+  pickr4.setColor("#54c0eb");
+  notify("Reset the Top Header Color back to default", "info");
+});
+
 const resetClrsBtn = document.querySelector(".colors__reset");
 resetClrsBtn.addEventListener("click", () => {
   
@@ -613,15 +634,7 @@ const RESETALL = document.querySelector(".danger__clearAllBtn");
 
 RESETALL.addEventListener("click", () => {
 
-  localStorage.setItem("shortcuts", "enabled");
-
-  localStorage.setItem("normalFont", "Quicksand");
-  localStorage.setItem("codeFont", "Jetbrains Mono");
-
-  localStorage.setItem("accent-color", "#2293fa");
-  localStorage.setItem("accent-color-dark", "#121417");
-  localStorage.setItem("selection-color", "#00b6ff");
-  localStorage.setItem("top-bottom-background", "#54c0eb");
+  localStorage.clear();
 
   refreshPage();
 

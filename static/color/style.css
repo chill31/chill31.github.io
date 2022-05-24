@@ -202,8 +202,8 @@
 }
 
 .pcr-copy{
-  color: rgb(0, 0, 0) !important;
-  background-color: rgb(86, 216, 130) !important;
+  color: #000 !important;
+  background: var(--clr-success) !important;
 }
 
 .pcr-app .pcr-interaction input {
@@ -243,7 +243,7 @@
 }
 
 .pcr-app .pcr-interaction .pcr-result::-moz-selection {
-  background: var(--pcr-color);
+  background: var(--selection-color);
   color: white;
 }
 
@@ -279,20 +279,22 @@
   background: linear-gradient(
     to right,
     var(--a-clr),
-    rgb(90, 225, 135)
+    var(--clr-success)
   );
   color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-clear,
-.pcr-app .pcr-interaction .pcr-cancel {
-  background: #f44250;
+.pcr-app .pcr-interaction .pcr-cancel,
+.pcr-app .pcr-interaction .pcr-default {
+  background: var(--clr-warning);
+  color: white;
 }
 
 .pcr-app .pcr-interaction .pcr-clear:focus,
 .pcr-app .pcr-interaction .pcr-cancel:focus {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85),
-    0 0 0 3px rgba(244, 66, 80, 0.75);
+    0 0 0 3px  var(--clr-warning);
 }
 
 .pcr-app .pcr-selection .pcr-picker {
