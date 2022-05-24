@@ -63,10 +63,6 @@ body::-webkit-scrollbar {
   transition: transform 250ms ease;
 }
 
-.gear-icon:hover {
-  transform: rotate(90deg);
-}
-
 h1 {
   text-transform: uppercase;
   text-align: center;
@@ -620,7 +616,7 @@ svg.fa-angle-down path, svg.fa-angle-up path{
 }
 
 .animated.hinge {
-  animation: zoomIn 2s ease-in-out infinite forwards;
+  animation: zoomIn 1500ms ease-in-out infinite forwards;
 }
 
 @-webkit-keyframes zoomIn {
