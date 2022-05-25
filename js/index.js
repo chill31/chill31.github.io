@@ -124,3 +124,8 @@ downloadLogo.addEventListener("click", () => {
   document.body.removeChild(a);
 
 });
+
+const ag9 = document.querySelector(".mercity-website-box");
+ag9.addEventListener("click", () => {
+  redirect("https://site.mercitysmp.cf/");
+})

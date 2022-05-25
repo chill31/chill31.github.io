@@ -126,7 +126,7 @@ a {
 
 .experience-and-things{
   position: absolute;
-  top: 99%;
+  top: 100%;
   padding: 5rem;
   width: 100%;
   height: 87vh;
@@ -231,8 +231,8 @@ label[for]{
 
 .projects-small {
   position: absolute;
-  top: 200%;
-  padding-top: 5rem !important;
+  top: 190%;
+  padding-top: 1rem !important;
   padding: 2rem;
   width: 100%;
   height: 100%;
@@ -261,40 +261,34 @@ label[for]{
   outline: none;
 }
 
-.project__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 45vw);
-  grid-template-rows: repeat(2, auto-fit);
-  gap: 2vw;
+.mercity-website-box {
+  height: 75vh;
+  aspect-ratio: 1;
+  background-color: var(--a-clr-dark);
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%) !important;
-}
-
-.project__gridItem {
-  border: solid 1px black;
-  min-height: 20vw !important;
-  text-align: center;
-  background-color: var(--top-btm-bg);
-  position: relative;
-}
-
-.project__gridItem p {
-  margin-top: 3rem;
-}
-
-.project__redirectAnchor {
-  padding: .5em 1em;
-  border: solid 1px black;
-  color: var(--text-color);
-  background-color: var(--clr-neutral);
-  border-radius: .5em;
-  margin-top: 5vw;
-  position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow:
+    0 0 0 4px var(--a-clr),
+    0 0 0 7px white;
+  transition: 100ms ease;
+  transition-property: filter, box-shadow;
+  cursor: pointer;
+}
+
+.mercity-website-box:hover {
+  box-shadow:
+  0 0 0 2px var(--a-clr),
+  0 0 0 5px white;
+  filter: brightness(1.2);
+}
+
+.mercity-website-box h2 {
+  font-size: 2rem;
+  color: white;
 }
 
 abbr {
