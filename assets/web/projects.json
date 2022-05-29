@@ -2,43 +2,37 @@
   "projects": [
     {
       "title": "Calculator",
-      "description":
-        "The calculator just like in phones, with advanced maths functions like SIN, COS, TAN, etc.",
+      "description": "The calculator just like in phones, with advanced maths functions like SIN, COS, TAN, etc.",
       "location": "/projects/Calculator.html",
       "webLocation": "https://chill31.github.io/projects/Calculator.html"
     },
     {
       "title": "Clock",
-      "description":
-        "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
+      "description": "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
       "location": "/projects/Clock.html",
       "webLocation": "https://chill31.github.io/projects/Clock.html"
     },
     {
       "title": "CoinFlip",
-      "description":
-        "This provides a fair way to choose between heads and tails when you don't have a coin!",
+      "description": "This provides a fair way to choose between heads and tails when you don't have a coin!",
       "location": "/projects/CoinFlip.html",
       "webLocation": "https://chill31.github.io/projects/CoinFlip.html"
     },
     {
       "title": "Color Picker",
-      "description":
-        "The Color Picker, customised, lets you pick your colors, or some basic default colors if you are having some trouble choosing...",
+      "description": "The Color Picker, customised, lets you pick your colors, or some basic default colors if you are having some trouble choosing...",
       "location": "/projects/Color_picker.html",
       "webLocation": "https://chill31.github.io/projects/Color_picker.html"
     },
     {
       "title": "Currency Convertor",
-      "description":
-        "This currency tool helps you in converting currencies to another, because its a lot of trouble doing that yourself, most of the currencies are supported",
+      "description": "This currency tool helps you in converting currencies to another, because its a lot of trouble doing that yourself, most of the currencies are supported",
       "location": "/projects/Currency.html",
       "webLocation": "https://chill31.github.io/projects/Currency.html"
     },
     {
       "title": "Dice Roll",
-      "description":
-        "This simple tool rolls two die with random numbers from 1 - 6",
+      "description": "This simple tool rolls two die with random numbers from 1 - 6",
       "location": "/projects/Diceroll.html",
       "webLocation": "https://chill31.github.io/projects/Diceroll.html"
     },
@@ -56,36 +50,31 @@
     },
     {
       "title": "Temperature Convertor",
-      "description":
-        "This basic tool helps you in converting celsius to fahrenheit or the vise-versa.",
+      "description": "This basic tool helps you in converting celsius to fahrenheit or the vise-versa.",
       "location": "/projects/Temperature.html",
       "webLocation": "https://chill31.github.io/projects/Temperature.html"
     },
     {
       "title": "Text Manipulation",
-      "description":
-        "This is a very useful tool for manipulating text cases to uppercase, lowercase, etc.",
+      "description": "This is a very useful tool for manipulating text cases to uppercase, lowercase, etc.",
       "location": "/projects/Text_manipulation.html",
       "webLocation": "https://chill31.github.io/projects/Text_manipulation.html"
     },
     {
       "title": "TicTacToe",
-      "description":
-        "Not a tool, this is a game played by many, it takes skill, go on, play!",
+      "description": "Not a tool, this is a game played by many, it takes skill, go on, play!",
       "location": "/projects/TicTacToe.html",
       "webLocation": "https://chill31.github.io/projects/TicTacToe.html"
     },
     {
       "title": "Weather Reporter",
-      "description":
-        "Advanced weather reported for cities, type in the name of a city, press get weather, and there you go!",
+      "description": "Advanced weather reported for cities, type in the name of a city, press get weather, and there you go!",
       "location": "/projects/weather/index.html",
       "webLocation": "https://chill31.github.io/projects/weather/index.html"
     },
     {
       "title": "Typing Test",
-      "description":
-        "A simple 1 minute typing test with over 50+ random paragraphs and sentences, test your speed!",
+      "description": "A simple 1 minute typing test with over 50+ random paragraphs and sentences, test your speed!",
       "location": "/projects/typing/index.html",
       "webLocation": "https://chill31.github.io/projects/typing/html"
     },
@@ -159,15 +148,19 @@
       "title": "Live Character Counter",
       "description": "A live character count with included word and no-spaces character counter.",
       "location": "/projects/Character_Count.html",
-      "webLocation": "https://chill31.github.io/projects/Character_Count.html",
-      "popular": "yes"
+      "webLocation": "https://chill31.github.io/projects/Character_Count.html"
     },
     {
       "title": "Password Strength Checker",
       "description": "An advanced tool to check if your password is good to use or not",
       "location": "/projects/Passwords/Checker.html",
-      "webLocation": "https://chill31.github.io/projects/Checker.html",
-      "newest": "true"
+      "webLocation": "https://chill31.github.io/projects/Checker.html"
+    },
+    {
+      "title": "Weight Convertor",
+      "description": "A tool which helps convert kilograms, pounds and ounces to the other units, enter in one, and get all the units values",
+      "location": "/projects/Weight.html",
+      "webLocation": "https://chill31.github.io/Weight.html"
     }
   ]
 }

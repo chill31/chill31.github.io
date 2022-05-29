@@ -274,20 +274,30 @@ label[for]{
   box-shadow:
     0 0 0 4px var(--a-clr),
     0 0 0 7px white;
-  transition: 100ms ease;
-  transition-property: filter, box-shadow;
-  cursor: pointer;
-}
-
-.mercity-website-box:hover {
-  box-shadow:
-  0 0 0 2px var(--a-clr),
-  0 0 0 5px white;
-  filter: brightness(1.2);
 }
 
 .mercity-website-box h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  color: white;
+}
+
+.mercity-website-box p {
+  font-size: clamp(1rem, 2.5vw, 1.35rem); 
+}
+
+.mercity-redirect {
+  padding: .5em 1em;
+  color: black;
+  background-color: white;
+  border-radius: .25em;
+  border: none;
+  transition: 250ms ease;
+  border: solid 1px white;
+  transition-property: color, background-color;
+}
+
+.mercity-redirect:hover, .mercity-redirect:focus {
+  background-color: transparent;
   color: white;
 }
 
