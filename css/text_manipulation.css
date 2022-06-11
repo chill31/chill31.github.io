@@ -42,10 +42,10 @@ body {
   color: var(--clr-neutral);
   outline: none;
   cursor: pointer;
-  transition: transform 300ms ease;
+  transition: transform 300ms ease !important;
 }
 
-.choice-btn:hover, .choice-btn:hover{
+.choice-btn:hover{
   transform: scale(0.96);
 }
 
