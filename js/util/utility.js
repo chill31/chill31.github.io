@@ -1,3 +1,8 @@
+/**
+ * @param {*} text
+ * @returns reversed text
+*/
+
 function reverse(text) {
   const newString = text.split("");
   newString.reverse();
@@ -379,7 +384,10 @@ if(localStorage.getItem("shortcuts") == "enabled"){
   shortCutContainer.classList.add("disabled");
 }
 
-if(!localStorage.getItem("shortcuts")) localStorage.setItem("shortcuts", "enabled");
+if(!localStorage.getItem("particles")) localStorage.setItem("particles", "enabled");
+
+if(!localStorage.getItem("theme")) localStorage.setItem("theme", "Default");
+
 
 if(!localStorage.getItem("accent-color")){
   localStorage.setItem("accent-color", "#2293fa");
