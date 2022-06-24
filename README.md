@@ -78,7 +78,7 @@ You can always fork the repository and make changes, if those changes make sense
 
 > Adding Content: Themes:<br>
 
-To add your preferred themes here to show other people, you will need to contact me with mail or either at discord ( private messages ) with your github username, a good resolution image of your theme in the [home page](https://chill31.github.io/index.html) and the colors used.
+To add your preferred themes here to show other people, you will need to contact me with mail or either at discord ( private messages ) with your github username, a good resolution image of your theme taken in the [home page](https://chill31.github.io/index.html) of the website and list the colors used. [ accent , dark accent, selection, top header ]
 
 <br>
 <br>
