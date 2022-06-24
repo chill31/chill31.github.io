@@ -433,6 +433,7 @@ header {
   color: var(--text-color);
 }
 
+*,
 div,
 div > *,
 a,
