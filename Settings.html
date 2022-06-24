@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Settings</title>
+  <link rel="stylesheet" href="/css/util/utility.css" />
+  <link rel="stylesheet" href="/static/color/style.css" />
+  <link rel="stylesheet" href="/css/Settings.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+</head>
+
+<body>
+  <h1 class="mainHeader">Settings</h1>
+  <p class="brief">Customize this website as you like through this page. You can see all the things able to be changed below.</p>
+  
+  
+  <note>All Settings take place after a page refresh or opening a new page</note>
+  <div class="nav">
+  
+    <button class="navigateTo" id="fonts">
+      <div class="navToContent">
+      <i class="fa-solid fa-font"></i>
+      Fonts
+      </div>
+    </button>
+    
+    <button class="navigateTo" id="shortcuts">
+      <div class="navToContent">
+        <i class="fa-solid fa-list-ul"></i>
+        Shortcuts
+      </div>
+    </button>
+    
+    <button class="navigateTo" id="particles">
+      <div class="navToContent">
+        <i class="fa-solid fa-splotch"></i>
+        Particles
+      </div>
+    </button>
+  
+    <button class="navigateTo" id="customColor">
+      <div class="navToContent">
+        <i class="fa-solid fa-palette"></i>
+        Custom Colors
+      </div>
+    </button>
+      
+    <button class="navigateTo" id="theme">
+      <div class="navToContent">
+        <i class="fa-solid fa-brush"></i>
+        Preset Themes
+      </div>
+    </button>
+    
+    <button class="navigateTo" id="danger">
+      <div class="navToContent">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Danger Zone
+      </div>
+    </button>
+  
+  </div>
+  
+  <div class="gotoPage" id="fontPage">
+    <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+    
+    <h1 class="subHeader">Font Settings</h1>
+    <p class="brief">Change fonts to your liking here</p>
+    
+    <h2 class="font-type-header" data-font="normal">Normal Font</h2>
+    
+    <div class="choose-font-div choose-normal">
+      <span class="font-choose font-normal" id="quicksand" data-chosen>Quicksand</span>
+      <span class="font-choose font-normal" id="raleway">Raleway</span>
+      <span class="font-choose font-normal" id="poppins">Poppins</span>
+      <span class="font-choose font-normal" id="system">System-UI</span>
+    </div>
+    
+    <span class="division"></span>
+    
+    <h2 class="font-type-header" data-font="code">Code Font</h2>
+    <div class="choose-font-div choose-code">
+      <span class="font-choose font-code" id="jetbrains" data-chosen>Jetbrains Mono</span>
+      <span class="font-choose font-code" id="fira">FiraCode</span>
+      <span class="font-choose font-code" id="consolas">Consolas</span>
+    </div>
+    
+  </div>
+  
+  
+  <div class="gotoPage" id="shortcutPage">
+    <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+    
+    <h1 class="subHeader">Shortcut Settings</h1>
+    <p class="brief">Enable or Disable shortcuts. These appear on the top left after the menu. Not available on small devices</p>
+    
+    <label class="switch">
+      <input type="checkbox" class="toggle shortcut-toggle">
+      <span class="slider round"></span>
+    </label>
+    
+  </div>
+  
+  
+  <div class="gotoPage" id="particlePage">
+    <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+    
+    <h1 class="subHeader">Particle Settings</h1>
+    <p class="brief">Toggle particles which sometimes appear on button clicks or certain things.</p>
+    
+    <label class="switch">
+      <input type="checkbox" class="toggle particles-toggle">
+      <span class="slider round"></span>
+    </label>
+    
+  </div>
+  
+  
+  <div class="gotoPage" id="colorPage">
+    <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+    
+    <h1 class="subHeader">Color Settings</h1>
+    <p class="brief">Don't like the preset themes? Customise the colors to your liking here</p>
+    
+    <div class="picker-grid">
+      
+      <div class="grid-item">
+        
+        <span class="picker-header">Accent Color</span>
+        <div class="picker-div p1">
+          
+        </div>
+        
+      </div>
+      
+      
+      <div class="grid-item">
+        
+        <span class="picker-header">Dark Accent Color</span>
+        <div class="picker-div p2">
+          
+        </div>
+        
+      </div>
+      
+      
+      <div class="grid-item">
+        
+        <span class="picker-header">Selection Color</span>
+        <div class="picker-div p3">
+          
+        </div>
+        
+      </div>
+      
+      
+      <div class="grid-item">
+        
+        <span class="picker-header">Top Header Color</span>
+        <div class="picker-div p4">
+          
+        </div>
+        
+      </div>
+      
+    </div>
+      
+    </div>
+    
+  </div>
+  
+  
+  <div class="gotoPage" id="themePage">
+    <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+    
+    <h1 class="subHeader">Theme Settings</h1>
+    <p class="brief">Custom colors are a hassle right? We have picked up a specific group of colors to match your likings of themes</p>
+    
+    <div class="choose-theme-div">
+      
+      <div class="theme-choose theme-default" data-chosen>Default</div>
+      <div class="theme-choose theme-mist">Mist</div>
+      <div class="theme-choose theme-forest">Forest</div>
+      <div class="theme-choose theme-dull">Dull Yellow</div>
+      <div class="theme-choose theme-underworld">Underworld</div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="gotoPage" id="dangerPage">
+    <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
+    
+    <h1 class="subHeader">Danger Zone</h1>
+    <p class="brief">Are you sure you want to delete all settings you ever changed?</p>
+    
+    <button class="deleteAllBtn">Yes, Delete All</button>
+    
+  </div>  
+  
+  <script src="/js/util/utility.js"></script>
+  <script src="/static/color/script.js"></script>
+  <script src="/js/settings.js"></script>
+</body>
+</html>
