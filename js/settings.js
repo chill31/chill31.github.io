@@ -1,3 +1,5 @@
+const mainPage = document.querySelector(".mainPage");
+
 const fontNav = document.querySelector("#fonts");
 const shortcutNav = document.querySelector("#shortcuts");
 const particleNav = document.querySelector("#particles");
@@ -29,15 +31,18 @@ deletAllBtn.addEventListener("click", () => {
 backHomeIcons.forEach(icon => {
   icon.addEventListener("click", () => {
     allPages.forEach(p => p.classList.remove("active"));
+    mainPage.classList.remove("hide");
   });
 });
 
 const delay = 130;
 
 function makeActive(e) {
+  
   setTimeout(() => {
     e.classList.add("active");
-  }, delay)
+    mainPage.classList.add("hide");
+  }, delay);
 }
 
 fontNav.addEventListener("click", () => {
