@@ -14,10 +14,11 @@
 
 .pickr .pcr-button {
   position: relative;
-  top: +2rem;
   height: 2.375rem;
   width: 2.375rem;
   cursor: pointer;
+  margin-left: 20vw;
+  margin-top: 6rem;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
    no-repeat center;
@@ -130,6 +131,12 @@
 
 .pcr-app .pcr-swatches.pcr-last {
   margin: 0;
+}
+
+.pcr-app .pcr-swatches {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, 1.75em);
 }
 
 @supports (display: grid) {

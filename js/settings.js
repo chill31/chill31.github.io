@@ -1,96 +1,292 @@
-const save_settings_btn = document.getElementById("save-cog");
-const normalFontSelect = document.querySelector(".normal-font-select");
-const codeFontSelect = document.querySelector(".code-font-select");
+const fontNav = document.querySelector("#fonts");
+const shortcutNav = document.querySelector("#shortcuts");
+const particleNav = document.querySelector("#particles");
+const colorNav = document.querySelector("#customColor");
+const themeNav = document.querySelector("#theme");
+const dangerNav = document.querySelector("#danger");
 
-const toggleShortcutsBtn = document.getElementById("toggle-shortcuts-btn");
+const allPages = document.querySelectorAll(".gotoPage");
 
-if(!localStorage.getItem("shortcuts")) localStorage.setItem("shortcuts", "enabled");
+const fontPage = document.querySelector("#fontPage");
+const shortcutPage = document.querySelector("#shortcutPage");
+const particlePage = document.querySelector("#particlePage");
+const colorPage = document.querySelector("#colorPage");
+const themePage = document.querySelector("#themePage");
+const dangerPage = document.querySelector("#dangerPage");
 
-if(localStorage.getItem("shortcuts") == "enabled"){
-  toggleShortcutsBtn.textContent = "Disable Shortcuts";
-} else if(localStorage.getItem("shortcuts") == "disabled"){
-  toggleShortcutsBtn.textContent = "Enable Shortcuts";
+const backHomeIcons = document.querySelectorAll(".back-home-svg");
+
+function removeChosen(allElem) {
+  allElem.forEach(e => e.removeAttribute("data-chosen"));
 }
 
-toggleShortcutsBtn.addEventListener("click", () => {
-
-  if(toggleShortcutsBtn.textContent.toLowerCase() == "disable shortcuts"){
-    toggleShortcutsBtn.textContent = "Enable Shortcuts";
-    localStorage.setItem("shortcuts", "disabled");
-  } else if(toggleShortcutsBtn.textContent.toLowerCase() == "enable shortcuts"){
-    toggleShortcutsBtn.textContent = "Disable Shortcuts";
-    localStorage.setItem("shortcuts", "enabled");
-  }
-
-  refreshPage();
-
+const deletAllBtn = document.querySelector(".deleteAllBtn");
+deletAllBtn.addEventListener("click", () => {
+  localStorage.clear();
+  notify("Reset all Settings back to default. Refresh or visit another page to see the changes.", "info");
 });
 
-save_settings_btn.addEventListener("click", () => {
-
-    notify("Saved the changes", "info");
-
-    const normalSelected = normalFontSelect.selectedOptions[0].value;
-    const codeSelected = codeFontSelect.selectedOptions[0].value;
-
-    localStorage.setItem("normalFont", normalFontSelect.selectedOptions[0].value);
-    localStorage.setItem("codeFont", codeFontSelect.selectedOptions[0].value);
-
-    document.body.style.setProperty("--ff-primary", normalSelected);
-    document.body.style.setProperty("--ff-primary-light", `${normalSelected} Light`);
-    document.body.style.setProperty("--ff-primary-normal", `${normalSelected} normal`);
-    document.body.style.setProperty("--ff-primary-medium", `${normalSelected} Medium`);
-    document.body.style.setProperty("--ff-primary-semibold", `${normalSelected} Semibold`);
-    document.body.style.setProperty("--ff-primary-bold", `${normalSelected} Bold`);
-
-    document.body.style.setProperty("--ff-code", codeSelected);
-
-    normalFontLbl.textContent = localStorage.getItem("normalFont");
-    codeFontLbl.textContent = localStorage.getItem("codeFont");
-
-});
-
-document.body.style.setProperty("--ff-primary", localStorage.getItem("normalFont"));
-document.body.style.setProperty(
-  "--ff-primary-light",
-  `${localStorage.getItem("normalFont")} Light`
-);
-document.body.style.setProperty(
-  "--ff-primary-normal",
-  `${localStorage.getItem("normalFont")} normal`
-);
-document.body.style.setProperty(
-  "--ff-primary-medium",
-  `${localStorage.getItem("normalFont")} Medium`
-);
-document.body.style.setProperty(
-  "--ff-primary-semibold",
-  `${localStorage.getItem("normalFont")} Semibold`
-);
-document.body.style.setProperty(
-  "--ff-primary-bold",
-  `${localStorage.getItem("normalFont")} Bold`
-);
-
-document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
-
-const interItems = document.querySelectorAll(".item-inter");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-
-   if (entry.isIntersecting) entry.target.classList.add("intersect");
-   else entry.target.classList.remove("intersect");
-
+backHomeIcons.forEach(icon => {
+  icon.addEventListener("click", () => {
+    allPages.forEach(p => p.classList.remove("active"));
   });
-}, {
-  threshold: .5
 });
 
-interItems.forEach(item => observer.observe(item));
+const delay = 130;
+
+function makeActive(e) {
+  setTimeout(() => {
+    e.classList.add("active");
+  }, delay)
+}
+
+fontNav.addEventListener("click", () => {
+  makeActive(fontPage);
+});
+
+shortcutNav.addEventListener("click", () => {
+  makeActive(shortcutPage);
+});
+
+particleNav.addEventListener("click", () => {
+  makeActive(particlePage);
+});
+
+colorNav.addEventListener("click", () => {
+  makeActive(colorPage);
+});
+
+themeNav.addEventListener("click", () => {
+  makeActive(themePage);
+});
+
+dangerNav.addEventListener("click", () => {
+  makeActive(dangerPage);
+});
+
+const allNormalFonts = document.querySelectorAll(".font-normal");
+const allCodeFonts = document.querySelectorAll(".font-code");
+
+const quicksandFont = document.querySelector("#quicksand");
+const ralewayFont = document.querySelector("#raleway");
+const poppinsFont = document.querySelector("#poppins");
+const systemFont = document.querySelector("#system");
+
+const normalFont = localStorage.getItem("normalFont");
+
+switch(normalFont) {
+
+  case "Quicksand":
+    removeChosen(allNormalFonts);
+    quicksandFont.setAttribute("data-chosen", "");
+    break;
+  case "Raleway":
+    removeChosen(allNormalFonts);
+    ralewayFont.setAttribute("data-chosen", "");
+    break;
+  case "Poppins":
+    removeChosen(allNormalFonts);
+    poppinsFont.setAttribute("data-chosen", "");
+    break;
+  case "System-UI":
+    removeChosen(allNormalFonts);
+    systemFont.setAttribute("data-chosen", "");
+    break;
+
+}
+
+for (let i = 0; i < allNormalFonts.length; i++) {
+  allNormalFonts[i].addEventListener("click", (e) => {
+    removeChosen(allNormalFonts);
+    allNormalFonts[i].setAttribute("data-chosen", "");
+    
+    localStorage.setItem("normalFont", e.target.textContent);
+    
+  });
+};
+
+const jetbrainsFont = document.querySelector("#jetbrains");
+const firaFont = document.querySelector("#fira");
+const consolasFont = document.querySelector("#consolas");
+
+const codeFont = localStorage.getItem("codeFont");
+
+switch (codeFont) {
+  
+  case "Jetbrains Mono":
+    removeChosen(allCodeFonts);
+    jetbrainsFont.setAttribute("data-chosen", "");
+    break;
+    
+  case "FiraCode":
+    removeChosen(allCodeFonts);
+    firaFont.setAttribute("data-chosen", "");
+    break;
+    
+  case "Consolas":
+    removeChosen(allCodeFonts);
+    consolasFont.setAttribute("data-chosen", "");
+    break;
+}
+
+for (let i = 0; i < allCodeFonts.length; i++) {
+  allCodeFonts[i].addEventListener("click", (e) => {
+    removeChosen(allCodeFonts);
+    allCodeFonts[i].setAttribute("data-chosen", "");
+    
+    localStorage.setItem("codeFont", e.target.textContent);
+  });
+}
+
+const shortcutToggle = document.querySelector(".shortcut-toggle");
+const particleToggle = document.querySelector(".particles-toggle");
+
+if (localStorage.getItem("shortcuts") == "enabled") {
+  shortcutToggle.checked = true;
+} else if (localStorage.getItem("shortcuts") == "disabled") {
+  shortcutToggle.checked = false;
+}
+
+shortcutToggle.addEventListener("input", (e) => {
+  
+  if(e.target.checked) localStorage.setItem("shortcuts", "enabled");
+  else localStorage.setItem("shortcuts", "disabled");
+  
+});
+
+if(localStorage.getItem("particles") == "enabled") {
+  particleToggle.checked = true;
+} else if(localStorage.getItem("particles") == "disabled") {
+  particleToggle.checked = false;
+}
+
+particleToggle.addEventListener("input", (e) => {
+
+  if (e.target.checked) localStorage.setItem("particles", "enabled");
+  else localStorage.setItem("particles", "disabled");
+
+});
+
+const allThemes = document.querySelectorAll(".theme-choose");
+
+const themeDefault = document.querySelector(".theme-default");
+const themeForest = document.querySelector(".theme-forest");
+const themeDull = document.querySelector(".theme-dull");
+const themeMist = document.querySelector(".theme-mist");
+const themeUnderworld = document.querySelector(".theme-underworld");
+
+const currentTheme = localStorage.getItem("theme");
+console.log(currentTheme);
+
+/*
+
+switch (currentTheme) {
+  
+  case themeDefault.textContent:
+    removeChosen(allThemes);
+    themeDefault.setAttribute("data-chosen", "");
+    break;
+  case themeForest.textContent:
+    removeChosen(allThemes);
+    themeForest.setAttribute("data-chosen", "");
+    break;
+  case themeDull.textContent:
+    removeChosen(allThemes);
+    themeDull.setAttribute("data-chosen", "");
+    break;
+  case themeDull.textContent:
+    removeChosen(allThemes);
+    themeUnderworld.setAttribute("data-chosen", "");
+    break;
+  case themeMist.textContent:
+    removeChosen(allThemes);
+    themeMist.setAttribute("data-chosen", "");
+    break;
+  
+}
+
+*/
+
+allThemes.forEach(theme => {
+  if(theme.textContent == currentTheme) {
+    removeChosen(allThemes);
+    theme.setAttribute("data-chosen", "");
+  }
+})
+
+themeDefault.addEventListener("click", (e) => {
+  
+  localStorage.setItem("accent-color", "#2293fa");
+  localStorage.setItem("accent-color-dark", "#121417");
+  localStorage.setItem("selection-color", "#00b6ff");
+  localStorage.setItem("top-bottom-background", "#54c0eb");
+  
+  removeChosen(allThemes);
+  e.target.setAttribute("data-chosen", "");
+  
+  localStorage.setItem("theme", e.target.textContent);
+  
+});
+
+themeForest.addEventListener("click", (e) => {
+  
+  localStorage.setItem("accent-color", "#53d458");
+  localStorage.setItem("accent-color-dark", "#253525");
+  localStorage.setItem("selection-color", "#77de7c");
+  localStorage.setItem("top-bottom-background", "#2eea36");
+  
+  removeChosen(allThemes);
+  e.target.setAttribute("data-chosen", "");
+  
+  localStorage.setItem("theme", e.target.textContent);
+  
+})
+
+themeDull.addEventListener("click", (e) => {
+  
+  localStorage.setItem("accent-color", "#eac75d");
+  localStorage.setItem("accent-color-dark", "#27251f");
+  localStorage.setItem("selection-color", "#FFD862");
+  localStorage.setItem("top-bottom-background", "#ffbf00");
+  
+  removeChosen(allThemes);
+  e.target.setAttribute("data-chosen", "");
+  
+  localStorage.setItem("theme", e.target.textContent);
+  
+});
+
+themeMist.addEventListener("click", (e) => {
+  
+  localStorage.setItem("accent-color", "#c54bda");
+  localStorage.setItem("accent-color-dark", "#1c171d");
+  localStorage.setItem("selection-color", "#e967ff");
+  localStorage.setItem("top-bottom-background", "#db0bff");
+  
+  removeChosen(allThemes);
+  e.target.setAttribute("data-chosen", "");
+  
+  localStorage.setItem("theme", e.target.textContent);
+  
+})
+
+themeUnderworld.addEventListener("click", (e) => {
+  
+  localStorage.setItem("accent-color", "#ff3b3b");
+  localStorage.setItem("accent-color-dark", "#171212");
+  localStorage.setItem("selection-color", "#ff0000");
+  localStorage.setItem("top-bottom-background", "#EB5454");
+  
+  removeChosen(allThemes);
+  e.target.setAttribute("data-chosen", "");
+  
+  localStorage.setItem("theme", e.target.textContent);
+  
+});
+// color picker code starts now.
 
 const pickr = Pickr.create({
-  el: '.color-picker', // so I don't get confused, this is element where I want color picker to be.
+  el: '.p1', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
   default: localStorage.getItem("accent-color"),
 
@@ -135,7 +331,7 @@ setTimeout(() => {
 }, 100);
 
 const pickr2 = Pickr.create({
-  el: '.clr-picker',
+  el: '.p2',
   theme: 'classic',
   default: localStorage.getItem("accent-color-dark"),
 
@@ -180,7 +376,7 @@ setTimeout(() => {
 }, 100);
 
 const pickr3 = Pickr.create({
-  el: '.sel-color-picker', // so I don't get confused, this is element where I want color picker to be.
+  el: '.p3', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
   default: localStorage.getItem("selection-color"),
 
@@ -226,7 +422,7 @@ setTimeout(() => {
 }, 100);
 
 const pickr4 = Pickr.create({
-  el: '.topHead__colorPicker', // so I don't get confused, this is element where I want color picker to be.
+  el: '.p4', // so I don't get confused, this is element where I want color picker to be.
   theme: 'classic', // theme, classic is good.
   default: localStorage.getItem("top-bottom-background"),
 
@@ -287,7 +483,7 @@ const hslBtns = document.querySelectorAll(".type-hsla");
 const hsvBtns = document.querySelectorAll(".type-hsva");
 const cmyBtns = document.querySelectorAll(".type-cmyk");
 
-let clr = "#2293fa";
+let clr = localStorage.getItem("accent-color") ?? "#2293fa";
 let color_scheme;
 
 hexBtns[0].addEventListener("click", () => {
@@ -369,7 +565,7 @@ resetToDefBtns[0].addEventListener("click", () => {
 });
 
 
-let clr2 = "#121417";
+let clr2 = localStorage.getItem("accent-color-dark") ?? "#121417";
 let color_scheme2;
 
 hexBtns[1].addEventListener("click", () => {
@@ -450,7 +646,7 @@ resetToDefBtns[1].addEventListener("click", () => {
   notify("Reset the Dark Accent Color back to default", "info");
 });
 
-let clr3 = "#00b6ff";
+let clr3 = localStorage.getItem("selection-color") ?? "#00b6ff";
 let color_scheme3;
 
 hexBtns[2].addEventListener("click", () => {
@@ -531,7 +727,7 @@ resetToDefBtns[2].addEventListener("click", () => {
   notify("Reset the Selection Color back to default", "info");
 });
 
-let clr4 = "#54c0eb";
+let clr4 = localStorage.getItem("top-bottom-background") ?? "#54c0eb";
 let color_scheme4;
 
 hexBtns[3].addEventListener("click", () => {
@@ -612,112 +808,4 @@ resetToDefBtns[3].addEventListener("click", () => {
   notify("Reset the Top Header Color back to default", "info");
 });
 
-const resetClrsBtn = document.querySelector(".colors__reset");
-resetClrsBtn.addEventListener("click", () => {
-  
-  localStorage.setItem("accent-color", "#2293fa");
-  localStorage.setItem("accent-color-dark", "#121417");
-  localStorage.setItem("selection-color", "#00b6ff");
-  localStorage.setItem("top-bottom-background", "#54c0eb");
-
-  refreshPage();
-
-});
-
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach(btn => {
-  btn.classList.add("custom");
-});
-
-const RESETALL = document.querySelector(".danger__clearAllBtn");
-
-RESETALL.addEventListener("click", () => {
-
-  localStorage.clear();
-
-  refreshPage();
-
-});
-
-const defThemeImage = document.querySelector(".theme-image.default");
-const forestThemeImage = document.querySelector(".theme-image.forest");
-const uWorldThemeImage = document.querySelector(".theme-image.underworld");
-const dullThemeImage = document.querySelector(".theme-image.dull");
-const mistThemeImage = document.querySelector(".theme-image.mist");
-
-defThemeImage.addEventListener("click", () => {
-
-  resetClrsBtn.click();
-  refreshPage();
-
-});
-
-forestThemeImage.addEventListener("click", () => {
-
-  localStorage.setItem("accent-color", "#53d458");
-  localStorage.setItem("accent-color-dark", "#253525");
-  localStorage.setItem("selection-color", "#77de7c");
-  localStorage.setItem("top-bottom-background", "#2eea36");
-  refreshPage();
-
-});
-
-uWorldThemeImage.addEventListener("click", () => {
-
-  localStorage.setItem("accent-color", "#ff3b3b");
-  localStorage.setItem("accent-color-dark", "#171212");
-  localStorage.setItem("selection-color", "#ff0000");
-  localStorage.setItem("top-bottom-background", "#EB5454");
-  refreshPage();
-
-});
-
-dullThemeImage.addEventListener("click", () => {
-
-
-  localStorage.setItem("accent-color", "#eac75d");
-  localStorage.setItem("accent-color-dark", "#27251f");
-  localStorage.setItem("selection-color", "#FFD862");
-  localStorage.setItem("top-bottom-background", "#ffbf00");
-  refreshPage();
-
-});
-
-mistThemeImage.addEventListener("click", () => {
-
-  localStorage.setItem("accent-color", "#c54bda");
-  localStorage.setItem("accent-color-dark", "#1c171d");
-  localStorage.setItem("selection-color", "#e967ff");
-  localStorage.setItem("top-bottom-background", "#db0bff");
-  refreshPage();
-
-});
-
-const toggleParticlesBtn = document.getElementById("toggle-particles-btn");
-
-if(!localStorage.getItem("particles")) localStorage.setItem("particles", "enabled");
-
-if(localStorage.getItem("particles") == "enabled"){
-
-  toggleParticlesBtn.textContent = "Disable Particles";
-
-} else if(localStorage.getItem("particles") == "disabled"){
-
-  toggleParticlesBtn.textContent = "Enable Particles";
-
-}
-
-toggleParticlesBtn.addEventListener("click", () => {
-
-  if(toggleParticlesBtn.textContent.toLowerCase() == "disable particles"){
-    toggleParticlesBtn.textContent = "Enable Particles";
-    localStorage.setItem("particles", "disabled");
-  } else if(toggleParticlesBtn.textContent.toLowerCase() == "enable particles"){
-    toggleParticlesBtn.textContent = "Disable Particles";
-    localStorage.setItem("particles", "enabled");
-  }
-
-  refreshPage();
-
-});
+document.querySelectorAll("button").forEach(btn => btn.classList.add("custom"));
