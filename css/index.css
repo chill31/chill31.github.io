@@ -216,9 +216,10 @@
  
  /** WORK SECTION STYLES */
  
- .mercity-website-box {
-   height: 75%;
+.mercity-website-box {
+   height: 85%;
    aspect-ratio: 1;
+   max-width: 50vw;
    background-color: var(--a-clr-dark);
    position: relative;
    top: 2rem;
