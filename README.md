@@ -4,6 +4,17 @@
 Originally the portfolio for ( you guessed it, or not, I don't know ) [Chill31](https://discord.gg/xSvc2kQezt), it is still a portfolio, but mainly a Utility website. <br>
 This website contains projects ( for you guys ) inspired from youtube channels ( small and big ) for things you will search hard for. From random number generators to language translators and weather reporters, this contains everything you ever needed for your daily life.
 
+<br>
+
+By the way, this website provides **total** customization over most things, from fonts to custom colors, anything you don't like, you change it. <br>
+There are 5 preset themes and infinite amounts of custom colors you can make. Fonts are of two types, Normal and Code. Normal is pretty much present everywhere on the website, while Code Font is present on textboxes, sometimes buttons, and some more things.
+
+<br>
+
+There are particle and shortcut settings, which you can disable or enable, whichever you like.
+<br>
+*New Features coming soon!*
+
 
 <br>
 <br>
