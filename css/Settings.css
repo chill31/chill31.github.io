@@ -33,6 +33,7 @@ body {
   font-size: 1.32rem;
   text-align: center;
   color: var(--main-color);
+  margin-inline: 1rem;
 }
 
 .nav {
@@ -381,4 +382,36 @@ note::before {
   position: absolute;
   left: 50%;
   transform: translate(-50%)
+}
+
+
+.choose-display-div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem !important;
+  gap: 1rem;
+  position: relative;
+  left: 5.5rem;
+  top: 5rem;
+}
+
+.display-choose {
+  background-color: var(--second-color);
+  width: 60%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .25em .5em;
+  border-radius: .25rem;
+  transition: filter var(--transition) ease;
+}
+  
+.display-choose[data-chosen] {
+  filter: brightness(calc(var(--filter-brightness) + .1));
+}
+  
+.display-choose[data-chosen]::after {
+  content: '\f00c';
+  font-family: 'fontawesome';
 }

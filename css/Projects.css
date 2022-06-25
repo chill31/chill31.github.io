@@ -24,15 +24,6 @@ body.grid-view{
   transition: height 500ms ease;
 }
 
-.gear-icon {
-  position: fixed;
-  top: .5rem;
-  right: .5rem;
-  height: 3rem;
-  width: 3rem;
-  cursor: pointer;
-  transition: transform 250ms ease;
-}
 
 h1 {
   text-align: center;

@@ -323,23 +323,6 @@ document.body.style.setProperty(
 
 document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
 
-
-const settingsCogIcon = document.querySelector(".gear-icon");
-
-if(!settingsCogIcon){
-
-  console.warn("[DEV] No settings icon found, terminating click process.\n\nYou do not need to pay attention to this.")
-
-} else {
-
-settingsCogIcon.addEventListener("click", () => {
-
-  redirect("/Settings.html");
-
-});
-
-}
-
 /** || inserting favicons || */
 
 document.head.innerHTML += `
@@ -388,6 +371,7 @@ if(!localStorage.getItem("particles")) localStorage.setItem("particles", "enable
 
 if(!localStorage.getItem("theme")) localStorage.setItem("theme", "Default");
 
+if(!localStorage.getItem("project-display")) localStorage.setItem("project-display", "Slider");
 
 if(!localStorage.getItem("accent-color")){
   localStorage.setItem("accent-color", "#2293fa");

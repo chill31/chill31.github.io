@@ -1,6 +1,7 @@
 fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
   
-
+    const displayOptionSetting = localStorage.getItem("project-display");
+  
     const sliderOptionBtn = document.querySelector(".display-btns.display-slider");
     const gridOptionBtn = document.querySelector(".display-btns.display-grid");
 
@@ -14,8 +15,6 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
     });
 
     gridOptionBtn.addEventListener("click", () => {
-
-      grid_once = true;
 
       sliderOptionBtn.classList.remove("selected");
       gridOptionBtn.classList.add("selected");
@@ -207,6 +206,50 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
         localStorage.setItem("favourite_projects", JSON.stringify(fav_projects));
       });
 
+    }
+  /*  
+    switch (displayOptionSetting.trim()) {
+      
+      case "Slider":
+        sliderOptionBtn.classList.add("selected");
+        gridOptionBtn.classList.remove("selected");
+        
+        document.body.classList.remove("grid-view");
+        break;
+      case "Grid":
+        sliderOptionBtn.classList.remove("selected");
+        gridOptionBtn.classList.add("selected");
+
+        document.body.classList.add("grid-view");
+
+        const cards = document.querySelectorAll(".grid-card");
+        console.log(cards);
+
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add("show");
+            else if(!entry.isIntersecting) entry.target.classList.remove("show");
+          });
+        }, {
+          threshold: .5
+        }
+        );
+
+        cards.forEach(card => {
+         observer.observe(card);
+        });
+      
+    } */
+    
+    switch (displayOptionSetting.trim()) {
+      
+      case "Grid":
+        gridOptionBtn.click();
+        break;
+      case "Slider":
+        sliderOptionBtn.click();
+        break;
+      
     }
 
 });

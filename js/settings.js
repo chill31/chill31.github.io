@@ -5,6 +5,7 @@ const shortcutNav = document.querySelector("#shortcuts");
 const particleNav = document.querySelector("#particles");
 const colorNav = document.querySelector("#customColor");
 const themeNav = document.querySelector("#theme");
+const projectDisplayNav = document.querySelector("#project-default-display");
 const dangerNav = document.querySelector("#danger");
 
 const allPages = document.querySelectorAll(".gotoPage");
@@ -14,6 +15,7 @@ const shortcutPage = document.querySelector("#shortcutPage");
 const particlePage = document.querySelector("#particlePage");
 const colorPage = document.querySelector("#colorPage");
 const themePage = document.querySelector("#themePage");
+const projectDisplayPage = document.querySelector("#projectDisplayPage")
 const dangerPage = document.querySelector("#dangerPage");
 
 const backHomeIcons = document.querySelectorAll(".back-home-svg");
@@ -35,7 +37,7 @@ backHomeIcons.forEach(icon => {
   });
 });
 
-const delay = 130;
+const delay = 75;
 
 function makeActive(e) {
   
@@ -55,6 +57,10 @@ shortcutNav.addEventListener("click", () => {
 
 particleNav.addEventListener("click", () => {
   makeActive(particlePage);
+});
+
+projectDisplayNav.addEventListener("click", () => {
+  makeActive(projectDisplayPage);
 });
 
 colorNav.addEventListener("click", () => {
@@ -181,36 +187,6 @@ const themeMist = document.querySelector(".theme-mist");
 const themeUnderworld = document.querySelector(".theme-underworld");
 
 const currentTheme = localStorage.getItem("theme");
-console.log(currentTheme);
-
-/*
-
-switch (currentTheme) {
-  
-  case themeDefault.textContent:
-    removeChosen(allThemes);
-    themeDefault.setAttribute("data-chosen", "");
-    break;
-  case themeForest.textContent:
-    removeChosen(allThemes);
-    themeForest.setAttribute("data-chosen", "");
-    break;
-  case themeDull.textContent:
-    removeChosen(allThemes);
-    themeDull.setAttribute("data-chosen", "");
-    break;
-  case themeDull.textContent:
-    removeChosen(allThemes);
-    themeUnderworld.setAttribute("data-chosen", "");
-    break;
-  case themeMist.textContent:
-    removeChosen(allThemes);
-    themeMist.setAttribute("data-chosen", "");
-    break;
-  
-}
-
-*/
 
 allThemes.forEach(theme => {
   if(theme.textContent == currentTheme) {
@@ -812,5 +788,29 @@ resetToDefBtns[3].addEventListener("click", () => {
   pickr4.setColor("#54c0eb");
   notify("Reset the Top Header Color back to default", "info");
 });
+
+
+const allDisplayOptions = document.querySelectorAll(".display-choose");
+
+const displaySlider = document.querySelector("#slider");
+const displayGrid = document.querySelector("#grid");
+
+const currentDisplay = localStorage.getItem("project-display");
+
+allDisplayOptions.forEach(displayOption => {
+  if (displayOption.textContent == currentDisplay) {
+    removeChosen(allDisplayOptions);
+    displayOption.setAttribute("data-chosen", "");
+  }
+});
+
+for (let i = 0; i < allDisplayOptions.length; i++) {
+  allDisplayOptions[i].addEventListener("click", (e) => {
+    removeChosen(allDisplayOptions);
+    allDisplayOptions[i].setAttribute("data-chosen", "");
+
+    localStorage.setItem("project-display", e.target.textContent);
+  });
+}
 
 document.querySelectorAll("button").forEach(btn => btn.classList.add("custom"));
