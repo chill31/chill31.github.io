@@ -19,7 +19,6 @@ There are particle and shortcut settings, which you can disable or enable, which
 <br>
 <br>
 <br>
-<br>
 
 ## Suggestions
 You can always leave suggestions on our discord, just click on the link above and write out your suggestions. <br>
