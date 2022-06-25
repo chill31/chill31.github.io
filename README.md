@@ -31,4 +31,4 @@ I can then see your changes and if I like them, They will be merged, and boom, Y
 <br>
 
 ## Contact
-You can contact me through the discord above or through the [website contact page](https://chill31.github.io/#contact) ( mail)
+You can contact me through the discord above or through the [website contact page](https://chill31.github.io/#contact) ( mail )
