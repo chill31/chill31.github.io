@@ -16,12 +16,10 @@ If you know how to code and can write out that program for us, it would be bette
 Check [Forking and Pull Requests](#forks-and-prs).
 
 <br>
-<br>
 
 ## Bugs / Glitches
 Github has a page for bugs and glitches where you can report anything you find which is a (probable) bug. This helps me a lot because then I won't have to debug and search the whole website for some glitches.
 
-<br>
 <br>
 
 ## Forking and PR's
@@ -30,7 +28,6 @@ You can fork the repo by a fork button which github provides on the top right ( 
 You can then create a pull request by going to [Pull Requests](https://github.com/chill31/chill31.github.io/pulls) and providing your repo in there.
 I can then see your changes and if I like them, They will be merged, and boom, You're a contributor!
 
-<br>
 <br>
 
 ## Contact
