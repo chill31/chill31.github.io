@@ -183,6 +183,14 @@ body {
   transition: filter var(--transition) ease;
 }
 
+.font-code#browser::before {
+  content: "(Browser Font)";
+  color: #ccc;
+  font-size: 1rem;
+  position: absolute;
+  left: 8.5rem;
+}
+
 .font-choose[data-chosen] {
   filter: brightness(calc(var(--filter-brightness) + .1));
 }

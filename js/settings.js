@@ -118,7 +118,8 @@ for (let i = 0; i < allNormalFonts.length; i++) {
 
 const jetbrainsFont = document.querySelector("#jetbrains");
 const firaFont = document.querySelector("#fira");
-const consolasFont = document.querySelector("#consolas");
+const robotoMonoFont = document.querySelector("#robotoMono");
+const browserFont = document.querySelector("#browser");
 
 const codeFont = localStorage.getItem("codeFont");
 
@@ -134,10 +135,14 @@ switch (codeFont) {
     firaFont.setAttribute("data-chosen", "");
     break;
     
-  case "Consolas":
+  case "Roboto Mono":
     removeChosen(allCodeFonts);
-    consolasFont.setAttribute("data-chosen", "");
+    robotoMonoFont.setAttribute("data-chosen", "");
+    
     break;
+  case "Monospace":
+    removeChosen(allCodeFonts);
+    browserFont.setAttribute("data-chosen", "");
 }
 
 for (let i = 0; i < allCodeFonts.length; i++) {

@@ -45,6 +45,11 @@ html {
   src: url(/assets/fonts/CODE-FONTS/FiraCode.otf);
 }
 
+@font-face {
+  font-family: "Roboto Mono";
+  src: url(/assets/fonts/CODE-FONTS/RobotoMono-Regular.ttf);
+}
+
 /**
 
   FONT-FACE {QUICKSAND} - MULTIPLE.
