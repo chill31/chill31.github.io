@@ -1,89 +1,44 @@
-# Chill31 
-## [https:/chill31.github.io](https://chill31.github.io)
+# [CHILL31](https://chill31.github.io)
+<span>The Perfect Utility Website</span>
 
-<br>
-<br>
-  
-Ever wanted a tool nowhere to be found?<br>
-well, **THIS** website provides it! From random number generators to language translators, this is an overall utility website which can help in daily needs!
-
-Has basic projects like Calculator and Clock and then advanced projects like weather and QR Code Generators and Readers.
-<br>
-Provides total color customizations, from accent colors to selection colors! The default is comfy blue theme but you can customize them in the [Settings](https://chill31.github.io/Settings.html) page.
-
-There are preset themes you can choose for better experience:
-
-| Underworld | Forest | Mist |
-| -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__underworld_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__forest_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__mist_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> |
-
-| Dull Yellow | Default | Make Your OWN! |
-| -------------- | -------------- | -------------- |
-| <img src="/assets/img/themes/git__dull_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <img src="/assets/img/themes/git__normal_theme.png" style="border: solid 2px #efefef; height: 30vh; width: 30vw;"> | <a href="#theme_own">Add your Own Theme</a> |
-
-<br>
-<br>
-
-## Above Theme Colors:
-<br>
-
-> Underworld: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #EB5454 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #ff3b3b <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #171212 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #ff0000 <br>
-  
-<br>
-
-
-> Forest: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #2eea36 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #53d458 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #253525 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #77de7c <br> 
+Originally the portfolio for ( you guessed it, or not, I don't know ) [Chill31](https://discord.gg/xSvc2kQezt), it is still a portfolio, but mainly a Utility website. <br>
+This website contains projects ( for you guys ) inspired from youtube channels ( small and big ) for things you will search hard for. From random number generators to language translators and weather reporters, this contains everything you ever needed for your daily life.
 
 <br>
 
-
-> Mist: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #db0bff <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #c54bda <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: 1c171d <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #e967ff <br> 
+By the way, this website provides **total** customization over most things, from fonts to custom colors, anything you don't like, you change it. <br>
+There are 5 preset themes and infinite amounts of custom colors you can make. Fonts are of two types, Normal and Code. Normal is pretty much present everywhere on the website, while Code Font is present on textboxes, sometimes buttons, and some more things.
 
 <br>
 
-
-> Dull Yellow: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Top Header Color: #ffbf00 <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Accent Color: #eac75d <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Dark Accent Color: #27251f <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Selection Color: #FFD862 <br> 
-
+There are particle and shortcut settings, which you can disable or enable, whichever you like.
 <br>
+*New Features coming soon!*
 
-
-> Default: <br>
-  >&nbsp;&nbsp;&nbsp;&nbsp;Already present in the website <br> 
 
 <br>
 <br>
-
-
-<h2 id="theme_own">Issues:</h2>
-You can write out an issue or bug seen in the website here at the <a href="https://github.com/chill31/chill31.github.io/issues">Issues</a> page github provides for repositories.
-
-## Adding Content:<br>
-You can always fork the repository and make changes, if those changes make sense, they will be added to the website and you will be a contributor!
-
-> Adding Content: Themes:<br>
-
-To add your preferred themes here to show other people, you will need to contact me with mail or either at discord ( private messages ) with your github username, a good resolution image of your theme taken in the [home page](https://chill31.github.io/index.html) of the website and list the colors used. [ accent , dark accent, selection, top header ]
-
-<br>
 <br>
 
-| More: |
-|-----------------------|
-| [Social Media, Contact](https://chill31.github.io/index.html#contact) |
-| [Credits](https://chill31.github.io/CREDITS.txt) |
+## Suggestions
+You can always leave suggestions on our discord, just click on the link above and write out your suggestions. <br>
+If you know how to code and can write out that program for us, it would be better, so I can analyze and merge it if it's good.
+Check [Forking and Pull Requests](#forks-and-prs).
+
+<br>
+
+## Bugs / Glitches
+Github has a page for bugs and glitches where you can report anything you find which is a (probable) bug. This helps me a lot because then I won't have to debug and search the whole website for some glitches.
+
+<br>
+
+## Forking and PR's
+Forking the repository and Pull Requests. A topic for developers. <br>
+You can fork the repo by a fork button which github provides on the top right ( more or less ) on the home page of the repository.
+You can then create a pull request by going to [Pull Requests](https://github.com/chill31/chill31.github.io/pulls) and providing your repo in there.
+I can then see your changes and if I like them, They will be merged, and boom, You're a contributor!
+
+<br>
+
+## Contact
+You can contact me through the discord above or through the [website contact page](https://chill31.github.io/#contact) ( mail )
