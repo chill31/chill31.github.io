@@ -79,18 +79,6 @@
       "webLocation": "https://chill31.github.io/projects/typing/html"
     },
     {
-      "title": "Click The Box!",
-      "description": "A simple game where you have to click on the randomly spawning box which appears randomly in the screen everytime you click, score as much as you can in 60 seconds.",
-      "location": "/projects/ClickBox.html",
-      "webLocation": "https://chill31.github.io/projects/ClickBox.html"
-    },
-    {
-      "title": "2048 Game",
-      "description": "A simple game which is meant to clone the original <a href=\"https://2048daily.com\">2048daily</a> game, hope you enjoy!",
-      "location": "/projects/2048_game/index.html",
-      "webLocation": "https://chill31.github.io/projects/2048_game/.html"
-    },
-    {
       "title": "English Dictionary",
       "description": "A simple dictionary ( english ) which gives the meaning and an example of the given word.",
       "location": "/projects/Dictionary.html",
