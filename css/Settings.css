@@ -259,7 +259,7 @@ body {
 
 note {
   position: absolute;
-  top: 10rem;
+  top: 5rem;
   left: 50%;
   transform: translate(-50%);
   width: max-content;
