@@ -124,12 +124,21 @@
     <svg class="back-home-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/></svg>
     
     <h1 class="subHeader">Particle Settings</h1>
-    <p class="brief">Toggle particles which sometimes appear on button clicks or certain things.</p>
+    <p class="brief">Change particle options to your liking.</p>
     
-    <label class="switch">
-      <input type="checkbox" class="toggle particles-toggle">
-      <span class="slider round"></span>
-    </label>
+    <div class="particle-option option-toggle">
+      
+      <label class="switch switch-particle">
+        <input type="checkbox" class="toggle particles-toggle">
+        <span class="slider round"></span>
+      </label>
+      
+      <label for="particle-amount-slider" class="particle-amount-label">Particles Amount: </label>
+      <input value="20" min="20" max="100" type="range" step="5" class="particle-range" id="particle-amount-slider">
+      
+      <label class="particle-amount-show">20</label>
+      
+    </div>
     
   </div>
   

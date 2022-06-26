@@ -818,4 +818,20 @@ for (let i = 0; i < allDisplayOptions.length; i++) {
   });
 }
 
+const particleAmtRange = document.querySelector(".particle-range");
+const showParticleLabel = document.querySelector(".particle-amount-show");
+
+const currentParticleAmt = Number(localStorage.getItem("particle-amount"));
+
+particleAmtRange.value = currentParticleAmt;
+showParticleLabel.textContent = currentParticleAmt;
+
+particleAmtRange.addEventListener("input", (e) => {
+  showParticleLabel.textContent = e.target.valueAsNumber;
+});
+
+particleAmtRange.addEventListener("change", (e) => {
+  localStorage.setItem("particle-amount", e.target.valueAsNumber);
+});
+
 document.querySelectorAll("button").forEach(btn => btn.classList.add("custom"));

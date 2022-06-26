@@ -256,6 +256,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
 
 if(localStorage.getItem("particles") == "disabled"){}
 else {
+const particleAmount = Number(localStorage.getItem("particle-amount"));
 setTimeout(() => {
   if (document.body.animate) {
     const _stars_ = document.querySelectorAll(".star");
@@ -278,7 +279,7 @@ setTimeout(() => {
         createParticle(x, y);
       }
     } else {
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < particleAmount; i++) {
         // We call the function createParticle 30 times
         // As we need the coordinates of the mouse, we pass them as arguments
         createParticle(e.clientX, e.clientY);
