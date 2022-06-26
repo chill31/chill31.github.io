@@ -1,7 +1,8 @@
 # [CHILL31](https://chill31.github.io) 
+<img src="/assets/favicons/android-chrome-512x512.png" style="height: 6rem; width: 6rem; margin-left: 3rem; margin-top: 1rem;"/>
+
 <span>The Perfect Utility Website</span>
 
-<img src="/assets/favicons/android-chrome-512x512.png" style="height: 6rem; width: 6rem; margin-left: 3rem; margin-top: 1rem;"/>
 
 Originally the portfolio for ( you guessed it, or not, I don't know ) [Chill31](https://discord.gg/xSvc2kQezt), it is still a portfolio, but mainly a Utility website. <br>
 This website contains projects ( for you guys ) inspired from youtube channels ( small and big ) for things you will search hard for. From random number generators to language translators and weather reporters, this contains everything you ever needed for your daily life.
