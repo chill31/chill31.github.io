@@ -1,4 +1,4 @@
-# [CHILL31](https://chill31.github.io) <img src="/assets/favicons/android-chrome-512x512.png" />
+# [CHILL31](https://chill31.github.io) <img src="/assets/favicons/android-chrome-512x512.png" style="height: 4rem; width: 4rem;"/>
 <span>The Perfect Utility Website</span>
 
 Originally the portfolio for ( you guessed it, or not, I don't know ) [Chill31](https://discord.gg/xSvc2kQezt), it is still a portfolio, but mainly a Utility website. <br>
