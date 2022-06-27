@@ -207,39 +207,6 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
       });
 
     }
-  /*  
-    switch (displayOptionSetting.trim()) {
-      
-      case "Slider":
-        sliderOptionBtn.classList.add("selected");
-        gridOptionBtn.classList.remove("selected");
-        
-        document.body.classList.remove("grid-view");
-        break;
-      case "Grid":
-        sliderOptionBtn.classList.remove("selected");
-        gridOptionBtn.classList.add("selected");
-
-        document.body.classList.add("grid-view");
-
-        const cards = document.querySelectorAll(".grid-card");
-        console.log(cards);
-
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if(entry.isIntersecting) entry.target.classList.add("show");
-            else if(!entry.isIntersecting) entry.target.classList.remove("show");
-          });
-        }, {
-          threshold: .5
-        }
-        );
-
-        cards.forEach(card => {
-         observer.observe(card);
-        });
-      
-    } */
     
     switch (displayOptionSetting.trim()) {
       
@@ -251,6 +218,33 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
         break;
       
     }
+
+    const showFavBtn = document.querySelector(".toggle-fav");
+
+    toggleFav = false;
+
+    showFavBtn.addEventListener("click", (e) => {
+
+      const allGridCards = document.querySelectorAll(".grid-card");
+
+      if(!toggleFav) {
+        toggleFav = true;
+        e.target.textContent = "Show All";
+        const favouriteList = JSON.parse(localStorage.getItem("favourite_projects"));
+
+        for(let i = 0; i < allGridCards.length; i++) {
+
+          if(favouriteList[i] == false) allGridCards[i].style.display = "none";
+          else if(favouriteList[i] == true) allGridCards[i].style.display = "inherit";
+
+        }
+      } else if(toggleFav) {
+        toggleFav = false;
+        e.target.textContent = "Show Favourites";
+        allGridCards.forEach(card => card.style.display = "inherit");
+      }
+
+    });
 
 });
 

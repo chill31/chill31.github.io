@@ -155,7 +155,7 @@ ul {
 .display-option-container{
   width: 12.5vw;
   position: absolute;
-  right: 1rem;
+  right: 3rem;
   top: 6rem;
   display: flex;
   justify-content: space-around;
@@ -236,7 +236,6 @@ body.grid-view .grid-container{
 }
 
 .grid-container{
-  margin-top: 2rem;
   position: absolute;
   top: 30vh;
   left: 50%;
@@ -245,6 +244,7 @@ body.grid-view .grid-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -359,4 +359,33 @@ particle {
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
+}
+
+.toggle-fav {
+  --def-size: 2px;
+  --def-color: var(--text-color);
+  
+  padding: .5em 1em;
+  cursor: pointer;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background-color: var(--a-clr);
+  outline: var(--def-size) solid var(--def-color);
+  border: var(--def-size) solid var(--def-color);
+  outline-offset: -2px;
+  color: var(--clr-neutral);
+  transition: 500ms ease;
+  transition-property: background-color,
+  color,
+  outline-offset,
+  outline-width;
+  min-width: max-content;
+}
+
+.toggle-fav:hover {
+    background-color: var(--clr-neutral);
+    color: var(--text-color);
+    outline-offset: -3em;
 }

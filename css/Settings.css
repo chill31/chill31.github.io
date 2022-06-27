@@ -118,6 +118,7 @@ body {
   top: 1rem;
   left: 1rem;
   display: inline-block;
+  cursor: pointer;
 }
 
 .back-home-svg path {
@@ -180,6 +181,7 @@ body {
   justify-content: space-between;
   padding: .25em .5em;
   border-radius: .25rem;
+  cursor: pointer;
   transition: filter var(--transition) ease;
 }
 
@@ -221,6 +223,7 @@ body {
   justify-content: space-between;
   padding: .25em .5em;
   border-radius: .25rem;
+  cursor: pointer;
   transition: filter var(--transition) ease;
   position: relative;
 }
@@ -399,7 +402,6 @@ note::before {
   transform: translate(-50%)
 }
 
-
 .choose-display-div {
   display: flex;
   flex-direction: column;
@@ -419,9 +421,10 @@ note::before {
   justify-content: space-between;
   padding: .25em .5em;
   border-radius: .25rem;
+  cursor: pointer;
   transition: filter var(--transition) ease;
 }
-  
+
 .display-choose[data-chosen] {
   filter: brightness(calc(var(--filter-brightness) + .1));
 }
