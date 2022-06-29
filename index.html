@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="/css/util/utility.css">
+  <link rel="stylesheet" href="/static/slider/style.css">
   <title>Home</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -60,26 +61,40 @@
 
     </section>
 
-    <section class="section section__projects" id="projects">
+    <section class="section section__projects" id="explore">
 
-        <h1 class="section__header">My Projects</h1>
-        <p class="section__info">I make a lot of projects for my programming practice, and they are all open to use for anyone! They are available at the <a class="projects-redirect" href="/Projects.html">projects</a> page <br></p>
+        <h1 class="section__header">Explore</h1>
 
-        <br>
-        <br>
+        <div class="swiper"> <!-- actual container for everything to work. -->
+          <div class="swiper-wrapper"> <!-- required, every child element inside is a slide -->
+            <div class="swiper-slide">
+              <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M447.1 96h-172.1L226.7 50.75C214.7 38.74 198.5 32 181.5 32H63.1c-35.35 0-64 28.66-64 64v320c0 35.34 28.65 64 64 64h384c35.35 0 64-28.66 64-64V160C511.1 124.7 483.3 96 447.1 96zM463.1 416c0 8.824-7.178 16-16 16h-384c-8.822 0-16-7.176-16-16V96c0-8.824 7.178-16 16-16h117.5c4.273 0 8.293 1.664 11.31 4.688L255.1 144h192c8.822 0 16 7.176 16 16V416z"/></svg>
+              <h1 class="slide-header">Projects</h1>
+              <p class="slide-description">Explore the projects I have made till now which help in daily needs like weather reporter, language translator, currency convertor, etc.</p>
 
-        <p class="section__info special">Some of the most popular and used ones are:
+              <button class="explore-btn custom" data-redirect="/Projects.html">Explore</button>
+            </div>
 
-        <br>
-        <br>
+            <div class="swiper-slide">
+              <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M373.1 24.97C401.2-3.147 446.8-3.147 474.9 24.97L487 37.09C515.1 65.21 515.1 110.8 487 138.9L289.8 336.2C281.1 344.8 270.4 351.1 258.6 354.5L158.6 383.1C150.2 385.5 141.2 383.1 135 376.1C128.9 370.8 126.5 361.8 128.9 353.4L157.5 253.4C160.9 241.6 167.2 230.9 175.8 222.2L373.1 24.97zM440.1 58.91C431.6 49.54 416.4 49.54 407 58.91L377.9 88L424 134.1L453.1 104.1C462.5 95.6 462.5 80.4 453.1 71.03L440.1 58.91zM203.7 266.6L186.9 325.1L245.4 308.3C249.4 307.2 252.9 305.1 255.8 302.2L390.1 168L344 121.9L209.8 256.2C206.9 259.1 204.8 262.6 203.7 266.6zM200 64C213.3 64 224 74.75 224 88C224 101.3 213.3 112 200 112H88C65.91 112 48 129.9 48 152V424C48 446.1 65.91 464 88 464H360C382.1 464 400 446.1 400 424V312C400 298.7 410.7 288 424 288C437.3 288 448 298.7 448 312V424C448 472.6 408.6 512 360 512H88C39.4 512 0 472.6 0 424V152C0 103.4 39.4 64 88 64H200z"/></svg>
+              <h1 class="slide-header">Settings</h1>
+              <p class="slide-description">Customize this website fully according to what you like: Colors, themes, toggle on/off things, and more</p>
 
-        <ul class="popular-projects-list">
-            <li class="project-list-item">Calculator</li>
-            <li class="project-list-item">Character Counter</li>
-            <li class="project-list-item">QR Code Generator</li>
-            <li class="project-list-item">Language Translator</li>
-        </ul>
-        </p>
+              <button class="explore-btn custom" data-redirect="/Settings.html">Explore</button>
+            </div>
+
+            <div class="swiper-slide">
+              <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 336c0 8.844-7.156 16-16 16h-96C199.2 352 192 344.8 192 336V288H0v144C0 457.6 22.41 480 48 480h416c25.59 0 48-22.41 48-48V288h-192V336zM464 96H384V48C384 22.41 361.6 0 336 0h-160C150.4 0 128 22.41 128 48V96H48C22.41 96 0 118.4 0 144V256h512V144C512 118.4 489.6 96 464 96zM336 96h-160V48h160V96z"/></svg>
+              <h1 class="slide-header">My Work</h1>
+              <p class="slide-description">Check out what I work I have done for other companies and servers.</p>
+              
+              <button class="explore-btn custom" data-redirect="#work">Explore</button>
+            </div>
+          </div>
+        
+          <div class="swiper-button-prev"></div> <!-- nav button, go to previous -->
+          <div class="swiper-button-next"></div> <!-- nav button, go to next -->
+        </div>
 
     </section>
 
@@ -143,7 +158,7 @@
   </div>
 
   <script src="js/util/utility.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/static/slider/script.js" type="module"></script>
+  <script src="js/index.js" type="module"></script>
 </body>
-
 </html>

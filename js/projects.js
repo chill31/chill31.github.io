@@ -219,6 +219,8 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
       
     }
 
+    /* new code starts now */
+
     const showFavBtn = document.querySelector(".toggle-fav");
 
     toggleFav = false;
@@ -226,7 +228,7 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
     showFavBtn.addEventListener("click", (e) => {
 
       const allGridCards = document.querySelectorAll(".grid-card");
-
+      
       if(!toggleFav) {
         toggleFav = true;
         e.target.textContent = "Show All";
@@ -245,6 +247,8 @@ fetch("/assets/web/projects.json").then((res) => res.json()).then((data) => {
       }
 
     });
+
+    /* ends here */
 
 });
 

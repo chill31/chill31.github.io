@@ -1,3 +1,5 @@
+import Swiper from "../static/slider/script.js";
+
 const headers = document.querySelectorAll(".section__header");
 headers.forEach(header => {
 
@@ -19,9 +21,6 @@ introSection.addEventListener("click", (e) => {
 const interItems = document.querySelectorAll(".item-inter");
 
 const progressBars = document.querySelectorAll(".actual-progress");
-
-let btnContent = "Show Skills";
-let shown;
 
 const Skillobserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -48,4 +47,48 @@ const Skillobserver = new IntersectionObserver(entries => {
 
 progressBars.forEach(bar => {
     Skillobserver.observe(bar);
+});
+
+const bestEffects = {
+  coverflow: 'coverflow',
+  cards: 'cards',
+  custom: 'creative'
+}
+
+new Swiper('.swiper', {
+  effect: bestEffects.custom,
+  creativeEffect: {
+    prev: {
+      // will set `translateZ(-400px)` on previous slides
+      translate: [0, 0, -400],
+      scale: .5,
+      origin: 'right bottom'
+    },
+    next: {
+      // will set `translateX(100%)` on next slides
+      translate: ['100%', 0, 0],
+      scale: .5,
+      origin: 'left top'
+    },
+  },
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const exploreBtns = document.querySelectorAll(".explore-btn");
+
+exploreBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    redirect(btn.getAttribute("data-redirect"));
+  });
 });
