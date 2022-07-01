@@ -1,57 +1,57 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: var(--a-clr);
 }
-.wrapper{
+.wrapper {
   width: 370px;
   padding: 25px 30px;
   border-radius: 7px;
   background: var(--clr-neutral);
-  box-shadow: 7px 7px 20px rgba(0,0,0,0.05);
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
 }
-.wrapper header{
+.wrapper header {
   font-size: 28px;
   font-weight: 500;
   text-align: center;
 }
-.wrapper form{
+.wrapper form {
   margin: 35px 0 20px;
 }
-form .row{
+form .row {
   display: flex;
   margin-bottom: 20px;
   flex-direction: column;
 }
-form .row label{
+form .row label {
   font-size: 18px;
   margin-bottom: 5px;
 }
-form .row:nth-child(2) label{
+form .row:nth-child(2) label {
   font-size: 17px;
 }
-form :where(textarea, select, button){
+form :where(textarea, select, button) {
   outline: none;
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 5px;
 }
-form .row textarea{
+form .row textarea {
   resize: none;
   height: 110px;
   font-size: 15px;
   padding: 8px 10px;
   border: 1px solid #999;
 }
-form .row .outer{
+form .row .outer {
   height: 47px;
   display: flex;
   padding: 0 10px;
@@ -60,11 +60,11 @@ form .row .outer{
   justify-content: center;
   border: 1px solid #999;
 }
-form .row select{
+form .row select {
   font-size: 14px;
   background: none;
 }
-form button{
+form button {
   height: 52px;
   color: var(--clr-neutral);
   font-size: 17px;
@@ -73,11 +73,11 @@ form button{
   background: var(--a-clr);
   transition: 300ms ease;
 }
-form button:hover{
+form button:hover {
   filter: contrast(3);
 }
-@media(max-width: 400px){
-  .wrapper{
+@media (max-width: 400px) {
+  .wrapper {
     max-width: 345px;
     width: 100%;
   }

@@ -11,59 +11,54 @@ const afterHeader = document.querySelector(".after-choice header");
 const inputText = document.querySelector(".input");
 const generateBtn = document.querySelector(".generate");
 
-const btns = [oppositeCaseBtn, toggleCaseBtn, upperCaseBtn, lowerCaseBtn, reverseTextBtn];
+const btns = [
+  oppositeCaseBtn,
+  toggleCaseBtn,
+  upperCaseBtn,
+  lowerCaseBtn,
+  reverseTextBtn,
+];
 
-btns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-        inputText.value = "";
-        selectedChoiceDiv.classList.add("active");
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    inputText.value = "";
+    selectedChoiceDiv.classList.add("active");
 
-        if(e.target.classList.contains("btn__toOppositeCase")) {
-
-            afterHeader.textContent = "Opposite Case Convertor";
-            generateBtn.addEventListener("click", () => {
-                inputText.value = oppositeCase(inputText.value);
-            });
-
-        } else if(e.target.classList.contains("btn__toToggleCase")) {
-
-            afterHeader.textContent = "Toggle Case Convertor";
-            generateBtn.addEventListener("click", () => {
-                inputText.value = toggleCase(inputText.value);
-            });
-            
-
-        } else if(e.target.classList.contains("btn__toUpperCase")) {
-
-            afterHeader.textContent = "Upper Case Convertor";
-            generateBtn.addEventListener("click", () => {
-                inputText.value = inputText.value.toUpperCase();
-            });
-
-        } else if(e.target.classList.contains("btn__toLowerCase")) {
-
-            afterHeader.textContent = "Lower Case Convertor";
-            generateBtn.addEventListener("click", () => {
-                inputText.value = inputText.value.toLowerCase();
-            });
-
-        } else if(e.target.classList.contains("btn__reverseText")) {
-
-            afterHeader.textContent = "Reverse Text Generator";
-            generateBtn.addEventListener("click", () => {
-                inputText.value = reverse(inputText.value)
-            });
-
-        }
-    });
+    if (e.target.classList.contains("btn__toOppositeCase")) {
+      afterHeader.textContent = "Opposite Case Convertor";
+      generateBtn.addEventListener("click", () => {
+        inputText.value = oppositeCase(inputText.value);
+      });
+    } else if (e.target.classList.contains("btn__toToggleCase")) {
+      afterHeader.textContent = "Toggle Case Convertor";
+      generateBtn.addEventListener("click", () => {
+        inputText.value = toggleCase(inputText.value);
+      });
+    } else if (e.target.classList.contains("btn__toUpperCase")) {
+      afterHeader.textContent = "Upper Case Convertor";
+      generateBtn.addEventListener("click", () => {
+        inputText.value = inputText.value.toUpperCase();
+      });
+    } else if (e.target.classList.contains("btn__toLowerCase")) {
+      afterHeader.textContent = "Lower Case Convertor";
+      generateBtn.addEventListener("click", () => {
+        inputText.value = inputText.value.toLowerCase();
+      });
+    } else if (e.target.classList.contains("btn__reverseText")) {
+      afterHeader.textContent = "Reverse Text Generator";
+      generateBtn.addEventListener("click", () => {
+        inputText.value = reverse(inputText.value);
+      });
+    }
+  });
 });
 
 closeIcon.addEventListener("click", () => {
-    selectedChoiceDiv.classList.remove("active");
-    inputText.value = "";
+  selectedChoiceDiv.classList.remove("active");
+  inputText.value = "";
 });
 
 document.querySelector(".copy-text").addEventListener("click", () => {
-    copyText(inputText.value);
-    notify("Copied the text of the Text Box.", "info");
+  copyText(inputText.value);
+  notify("Copied the text of the Text Box.", "info");
 });

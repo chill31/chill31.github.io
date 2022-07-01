@@ -1,11 +1,11 @@
-.card{
+.card {
   background-color: #dbf1d7;
-  width:400px;
-  padding:20px;
+  width: 400px;
+  padding: 20px;
   position: absolute;
-  top:  50%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   box-shadow: 0 3px 10px rgb(0 0 0);
 }
 
@@ -15,10 +15,10 @@
   text-align: center;
 }
 
-.message{
+.message {
   text-align: center;
   font-weight: bold;
-  color:  var(--big-icon-fill);
+  color: var(--big-icon-fill);
   font-size: 4.5vh;
   line-height: 6vh;
   min-height: 6vh;

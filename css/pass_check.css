@@ -1,5 +1,7 @@
-*::before, *::after, * {
-    box-sizing: border-box;
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -37,7 +39,7 @@ body {
 }
 
 .strength-meter::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   height: 100%;
@@ -49,7 +51,7 @@ body {
 .password-input {
   margin-top: 1rem;
   width: 90%;
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   background-color: var(--a-clr);
   color: var(--clr-neutral);
   padding: 10px 15px;
@@ -57,7 +59,7 @@ body {
   border: 1px solid var(--a-clr);
   outline: none;
   text-align: center;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
 .password-input:focus {
@@ -85,19 +87,19 @@ body {
 }
 
 .reasons:empty::after {
-  content: 'No Weaknesses / Very Strong!';
+  content: "No Weaknesses / Very Strong!";
   font-size: 1.35rem;
 }
 
 .btns {
   height: fit-content;
   width: fit-content;
-  padding: .3rem;
+  padding: 0.3rem;
   outline: none;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   background-color: var(--a-clr);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   transition: outline 100ms ease;
   position: relative;
@@ -122,7 +124,7 @@ body {
 }
 
 .copy-text::after {
-  content: 'Copy Password';
+  content: "Copy Password";
   position: absolute;
   top: 115%;
   font-size: 1.2rem;
@@ -131,13 +133,13 @@ body {
   transition: opacity 250ms ease;
   width: 15ch;
   opacity: 0;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   left: 50%;
 }
 
 .copy-text::before {
   --zs: 15px;
-  content: '';
+  content: "";
   height: 0;
   width: 0;
   border-right: solid var(--zs) transparent;
@@ -150,7 +152,7 @@ body {
   opacity: 0;
 }
 
-.copy-text:hover::after{
+.copy-text:hover::after {
   transform: scaleX(1) translate(-50%);
   opacity: 1;
 }
@@ -160,9 +162,8 @@ body {
   opacity: 1;
 }
 
-
 .btns:first-of-type::after {
-  content: 'Toggle Show/Hide';
+  content: "Toggle Show/Hide";
   position: absolute;
   top: 115%;
   font-size: 1.2rem;
@@ -171,13 +172,13 @@ body {
   transition: opacity 250ms ease;
   width: 20ch;
   opacity: 0;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   left: 50%;
 }
 
 .btns:first-of-type::before {
   --zs: 15px;
-  content: '';
+  content: "";
   height: 0;
   width: 0;
   border-right: solid var(--zs) transparent;
@@ -190,7 +191,7 @@ body {
   opacity: 0;
 }
 
-.btns:first-of-type:hover::after{
+.btns:first-of-type:hover::after {
   transform: scaleX(1) translate(-50%);
   opacity: 1;
 }

@@ -3,7 +3,7 @@ var btn = document.querySelectorAll(".btn");
 
 const allBtns = document.querySelectorAll("button");
 
-allBtns.forEach(btn => {
+allBtns.forEach((btn) => {
   btn.classList.add("custom");
 });
 
@@ -22,52 +22,52 @@ const POW = document.getElementById("pow");
 const calc = document.getElementById("eval");
 
 CE.addEventListener("click", () => {
-    backspc();
+  backspc();
 });
 
 factor.addEventListener("click", () => {
-    fact();
+  fact();
 });
 
 AC.addEventListener("click", () => {
-    empty();
+  empty();
 });
 
 SIN.addEventListener("click", () => {
-    sin();
+  sin();
 });
 
 PI.addEventListener("click", () => {
-    pi();
+  pi();
 });
 
 COS.addEventListener("click", () => {
-    cos();
+  cos();
 });
 
 LOG.addEventListener("click", () => {
-    log();
+  log();
 });
 
 TAN.addEventListener("click", () => {
-    tan();
+  tan();
 });
 
 SQRT.addEventListener("click", () => {
-    sqrt();
+  sqrt();
 });
 
 _e_.addEventListener("click", () => {
-    e();
+  e();
 });
 
 POW.addEventListener("click", () => {
-    pow();
+  pow();
 });
 
 calc.addEventListener("click", () => {
-    screen.value = eval(screen.value);
-})
+  screen.value = eval(screen.value);
+});
 
 for (item of btn) {
   item.addEventListener("click", (e) => {
@@ -84,8 +84,8 @@ for (item of btn) {
   });
 }
 
-function empty(){
-    screen.value = "";
+function empty() {
+  screen.value = "";
 }
 
 function sin() {

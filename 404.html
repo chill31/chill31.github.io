@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 Not Found!</title>
 
-    <link rel="stylesheet" href="/css/util/utility.css">
-    <link rel="stylesheet" href="/css/404_custom.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="/css/util/utility.css" />
+    <link rel="stylesheet" href="/css/404_custom.css" />
+  </head>
+  <body>
     <div class="top-header-strip">
-
-        <h1>Error</h1>
-
+      <h1>Error</h1>
     </div>
 
     <div class="mid-container">
+      <h3 class="about-me about-me-heading">Page Not Found!</h3>
 
-        <h3 class="about-me about-me-heading">Page Not Found!</h3>
-        
-        <p class="a">Hi, the page <entered-page></entered-page> you are looking for does not exist, if you think this is not supposed to happen, please report a bug on the bugs/issues page present on this website's github repository</p>
+      <p class="a">
+        Hi, the page <entered-page></entered-page> you are looking for does not
+        exist, if you think this is not supposed to happen, please report a bug
+        on the bugs/issues page present on this website's github repository
+      </p>
 
-        <div class="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="big-icon-show">
-                <path
-                    d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z" />
-            </svg>
-        </div>
-
+      <div class="svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="big-icon-show"
+        >
+          <path
+            d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"
+          />
+        </svg>
+      </div>
     </div>
-    
 
     <script src="/js/util/utility.js"></script>
 
     <script>
+      const mid_container = document.querySelector(".mid-container");
+      const element = document.querySelector("entered-page");
 
+      element.textContent = window.location.href;
 
-const mid_container = document.querySelector(".mid-container");
-const element = document.querySelector("entered-page");
+      const checkLocation = window.location.href.toString().toLowerCase();
 
-element.textContent = window.location.href;
+      let hintText = "";
 
-const checkLocation = window.location.href.toString().toLowerCase();
-
-let hintText = "";
-
-if(checkLocation.endsWith("projects/") || checkLocation.endsWith("project/") || checkLocation.endsWith("projects") || checkLocation.endsWith("project")){
- 
-    hintText = `
+      if (
+        checkLocation.endsWith("projects/") ||
+        checkLocation.endsWith("project/") ||
+        checkLocation.endsWith("projects") ||
+        checkLocation.endsWith("project")
+      ) {
+        hintText = `
 If you are looking for this website's utilities/projects, then head over to the <a href="/Projects.html">Projects</a> page.
-`
+`;
+      }
 
-}
+      const p = document.createElement("p");
+      p.innerHTML = hintText;
 
-
-const p = document.createElement("p");
-p.innerHTML = hintText;
-
-mid_container.append(p);
-
+      mid_container.append(p);
     </script>
-</body>
+  </body>
 </html>

@@ -10,127 +10,111 @@ function err(e) {
   }
 }
 
-function showSettingsMenu(param){
+function showSettingsMenu(param) {
+  param.parentElement.classList.add("show");
 
-    param.parentElement.classList.add("show");
+  document.body.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") {
+      param.parentElement.classList.remove("show");
+    }
+  });
 
-    document.body.addEventListener("keyup", (e) => {
-        if(e.key === "Escape"){
-            param.parentElement.classList.remove("show");
-        }
-    });
-
-    document.addEventListener("click", (e) => {
-
-        if(e.target.tagName != "I" || e.target != param) {
-            param.parentElement.classList.remove("show");
-        }
-
-    })
-
+  document.addEventListener("click", (e) => {
+    if (e.target.tagName != "I" || e.target != param) {
+      param.parentElement.classList.remove("show");
+    }
+  });
 }
 
 function deleteNote(noteCount) {
+  notes.splice(noteCount, 1);
+  localStorage.setItem("notes", JSON.stringify(notes));
 
-    notes.splice(noteCount, 1);
-    localStorage.setItem("notes", JSON.stringify(notes));
-
-    window.location.href = window.location.href;
-
+  window.location.href = window.location.href;
 }
 
-function updateNote(index, title, desc){
+function updateNote(index, title, desc) {
+  isUpdate = true;
+  updateId = index;
 
-    isUpdate = true;
-    updateId = index;
+  addBox.click();
 
-    addBox.click();
+  titleTag.value = title;
+  descTag.value = desc;
 
-    titleTag.value = title;
-    descTag.value = desc;
+  addBtn.addEventListener("click", () => {
+    const dateNow = new Date();
+    const dateYear = dateNow.getFullYear();
+    const dateMonth = dateNow.getMonth();
+    const dateDay = dateNow.getDay();
+    const dateDate = dateNow.getDate();
+    const dateHour = dateNow.getHours();
+    const dateMinute = dateNow.getMinutes();
+    const dateSeconds = dateNow.getSeconds();
 
-    addBtn.addEventListener("click", () => {
+    const formattedDate = `${fixMonth(dateMonth)} ${formatDate(
+      dateDate
+    )} (${fixDay(
+      dateDay
+    )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
 
-        const dateNow = new Date();
-        const dateYear = dateNow.getFullYear();
-        const dateMonth = dateNow.getMonth();
-        const dateDay = dateNow.getDay();
-        const dateDate = dateNow.getDate();
-        const dateHour = dateNow.getHours();
-        const dateMinute = dateNow.getMinutes();
-        const dateSeconds = dateNow.getSeconds();
-
-        const formattedDate = `${fixMonth(dateMonth)} ${formatDate(
-          dateDate
-        )} (${fixDay(
-          dateDay
-        )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
-
-        const stored = [];
-        JSON.parse(localStorage.getItem("notes")).forEach((note) => {
-          stored.push(note);
-        });
-
-        stored[index].edited = true;
-        stored[index].edit_date = formattedDate;
-
-        localStorage.setItem("notes", JSON.stringify(stored));
-
+    const stored = [];
+    JSON.parse(localStorage.getItem("notes")).forEach((note) => {
+      stored.push(note);
     });
 
+    stored[index].edited = true;
+    stored[index].edit_date = formattedDate;
+
+    localStorage.setItem("notes", JSON.stringify(stored));
+  });
 }
 
-function showDetails(count){
+function showDetails(count) {
+  const detailPopup = document.querySelector(".detail-popup");
+  const actualPopup = detailPopup.querySelector(".actual-popup");
 
-    const detailPopup = document.querySelector(".detail-popup");
-    const actualPopup = detailPopup.querySelector(".actual-popup");
+  const popHead = actualPopup.querySelector("h1");
+  const popDate = actualPopup.querySelector("span.popup-date");
+  const popDesc = actualPopup.querySelector("p");
+  const popEditSpan = actualPopup.querySelector(".edited");
 
-    const popHead = actualPopup.querySelector("h1");
-    const popDate = actualPopup.querySelector("span.popup-date");
-    const popDesc = actualPopup.querySelector("p");
-    const popEditSpan = actualPopup.querySelector(".edited");
+  detailPopup.classList.add("shown");
 
-    detailPopup.classList.add("shown");
+  const title = JSON.parse(localStorage.getItem("notes"))[count].title;
+  const description = JSON.parse(localStorage.getItem("notes"))[count]
+    .description;
+  const date = JSON.parse(localStorage.getItem("notes"))[count].date;
 
-    const title = JSON.parse(localStorage.getItem("notes"))[count].title;
-    const description = JSON.parse(localStorage.getItem("notes"))[count].description;
-    const date = JSON.parse(localStorage.getItem("notes"))[count].date;
+  const edited = JSON.parse(localStorage.getItem("notes"))[count].edited;
 
-    const edited = JSON.parse(localStorage.getItem("notes"))[count].edited;
-    
+  const close = actualPopup.querySelector("i");
 
-    const close = actualPopup.querySelector("i");
+  close.addEventListener("click", () => {
+    detailPopup.classList.remove("shown");
+  });
 
-    close.addEventListener("click", () => {
+  document.body.addEventListener("keyup", (e) => {
+    if (e.key == "Escape") detailPopup.classList.remove("shown");
+  });
 
-        detailPopup.classList.remove("shown");
+  let e_text = edited
+    ? JSON.parse(localStorage.getItem("notes"))[count].edit_date
+    : "Not Edited";
 
-    });
+  popHead.textContent = title;
 
-    document.body.addEventListener("keyup", (e) => {
+  popDate.textContent = "Created At: " + date;
+  popDesc.textContent = description;
 
-        if(e.key == "Escape") detailPopup.classList.remove("shown");
-
-    });
-
-    let e_text = edited ? JSON.parse(localStorage.getItem("notes"))[count].edit_date : "Not Edited";
-
-    popHead.textContent = title;
-
-    popDate.textContent = "Created At: " + date;
-    popDesc.textContent = description;
-
-    popEditSpan.textContent = `Last Edited At: ${e_text}`;
-
+  popEditSpan.textContent = `Last Edited At: ${e_text}`;
 }
 
-function showNotes(){
+function showNotes() {
+  if (notes.length == 0) return;
 
-    if(notes.length == 0) return;
-
-    notes.forEach((note, index) => {
-
-        let liTag = `
+  notes.forEach((note, index) => {
+    let liTag = `
 <li class="note">
     <div class="details">
         <p>${note.title}</p>
@@ -159,17 +143,15 @@ function showNotes(){
         </div>
     </div>
 </li>
-`
+`;
 
-        addBox.insertAdjacentHTML("afterend", liTag);
+    addBox.insertAdjacentHTML("afterend", liTag);
+  });
+}
 
-    });
-
-};
-
-function deletAllNotes(){
- localStorage.removeItem("notes");
- window.location.href = window.location.href;
+function deletAllNotes() {
+  localStorage.removeItem("notes");
+  window.location.href = window.location.href;
 }
 
 showNotes();

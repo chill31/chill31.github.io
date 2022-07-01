@@ -3,13 +3,13 @@ body {
   margin: 0;
 }
 
-h1{
- text-align: center;
+h1 {
+  text-align: center;
 }
 
-.intro{
- font-size: 1.25rem;
- text-align: center;
+.intro {
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .color-picker {
@@ -39,7 +39,7 @@ h4 {
   transform: translateY(0);
 }
 
-.pickr *{
+.pickr * {
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -55,7 +55,7 @@ h4 {
   cursor: pointer;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
-   no-repeat center;
+    no-repeat center;
   background-size: 0;
   transition: all 300ms;
 }
@@ -235,7 +235,7 @@ h4 {
   margin: 0 0.2em;
 }
 
-.pcr-copy{
+.pcr-copy {
   color: rgb(0, 0, 0) !important;
   background-color: rgb(86, 216, 130) !important;
 }
@@ -310,11 +310,7 @@ h4 {
 }
 
 .pcr-app .pcr-interaction .pcr-save-copy {
-  background: linear-gradient(
-    to right,
-    var(--a-clr),
-    var(--clr-success)
-  );
+  background: linear-gradient(to right, var(--a-clr), var(--clr-success));
   color: var(--clr-neutral);
 }
 

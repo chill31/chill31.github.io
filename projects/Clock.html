@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects: Clock</title>
+    <link rel="stylesheet" href="../css/clock.css" />
+    <link rel="stylesheet" href="../css/util/utility.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects: Clock</title>
-  <link rel="stylesheet" href="../css/clock.css">
-  <link rel="stylesheet" href="../css/util/utility.css">
-</head>
+  <body>
+    <div class="loaded-content">
+      <h1>Clock</h1>
+      <p>
+        Select a place of which you want to see the time from the list and there
+        you go...
+      </p>
+      <br /><br /><br /><br /><br />
 
-<body>
+      <div class="ct">
+        <label id="display_time_label"></label>
 
-  <div class="loaded-content">
+        <form name="f1" id="select_dropdown">
+          <select name="tz" onChange="disp_TZ()" id="select_elm"></select>
+        </form>
+      </div>
+    </div>
 
-  <h1>Clock</h1>
-  <p>Select a place of which you want to see the time from the list and there you go...</p>
-  <br /><br /><br /><br /><br />
-
-  <div class="ct">
-
-    <label id="display_time_label"></label>
-
-    <form name="f1" id="select_dropdown">
-      <select name=tz onChange="disp_TZ()" id="select_elm"></select>
-    </form>
-
-  </div>
-
-  </div>
-
-  <script src="../js/util/utility.js"></script>
-  <script src="../js/clock.js"></script>
-</body>
-
+    <script src="../js/util/utility.js"></script>
+    <script src="../js/clock.js"></script>
+  </body>
 </html>

@@ -1,10 +1,10 @@
-.wrapper *{
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+.wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@ body{
   overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
   width: 420px;
   border-radius: 7px;
   background: #fff;
@@ -22,18 +22,18 @@ body{
   max-height: 62.5vh;
 }
 
-.wrapper header{
+.wrapper header {
   font-size: 28px;
   font-weight: 500;
   text-align: center;
 }
 
-.wrapper .search{
+.wrapper .search {
   position: relative;
   margin: 35px 0 18px;
 }
 
-.search input{
+.search input {
   height: 53px;
   width: 100%;
   outline: none;
@@ -43,78 +43,77 @@ body{
   border: 1px solid #999;
 }
 
-.search input:focus{
+.search input:focus {
   padding: 0 41px;
   border: 2px solid var(--a-clr);
 }
 
-.search input::placeholder{
+.search input::placeholder {
   color: var(--big-icon-fill);
 }
 
-.search span{
+.search span {
   position: absolute;
   top: 50%;
   color: var(--big-icon-fill);
   transform: translateY(-100%);
 }
 
-.wrapper svg{
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- left: .3rem;
- height: 1.25rem !important;
+.wrapper svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.3rem;
+  height: 1.25rem !important;
 }
 
-.search svg{
+.search svg {
   pointer-events: none;
   font-size: 16px;
 }
 
-.search input:focus ~ i{
+.search input:focus ~ i {
   color: var(--a-clr);
 }
 
-.search span{
+.search span {
   right: 15px;
   cursor: pointer;
   font-size: 18px;
   display: none;
 }
 
-.search input:valid ~ span{
+.search input:valid ~ span {
   display: block;
 }
 
-.wrapper .info-text{
+.wrapper .info-text {
   font-size: 13px;
   color: var(--big-icon-fill);
   margin: -3px 0 -10px;
 }
 
-.wrapper.active .info-text{
+.wrapper.active .info-text {
   display: none;
 }
 
-.info-text span{
+.info-text span {
   font-weight: 500;
 }
 
-
-.wrapper ul{
+.wrapper ul {
   height: 0;
   opacity: 0;
   padding-right: 1px;
   transition: all 200ms ease;
 }
 
-.wrapper.active ul{
+.wrapper.active ul {
   opacity: 1;
   height: 303px;
 }
 
-.wrapper ul li{
+.wrapper ul li {
   display: flex;
   list-style: none;
   margin-bottom: 14px;
@@ -124,61 +123,60 @@ body{
   justify-content: space-between;
 }
 
-ul li:last-child{
+ul li:last-child {
   margin-bottom: 0;
   border-bottom: 0;
   padding-bottom: 0;
 }
 
-ul .word p{
+ul .word p {
   font-size: 22px;
   font-weight: 500;
 }
 
-ul .word span{
+ul .word span {
   font-size: 12px;
   color: var(--big-icon-fill);
 }
 
-ul .word svg{
+ul .word svg {
   color: var(--big-icon-fill);
   font-size: 15px;
   cursor: pointer;
 }
 
-ul .content{
+ul .content {
   max-height: 215px;
 }
 
-.content li .details{
+.content li .details {
   padding-left: 10px;
   border-radius: 4px 0 0 4px;
   border-left: 3px solid var(--a-clr);
 }
 
-.content li p{
+.content li p {
   font-size: 17px;
   font-weight: 500;
 }
 
-.wrapper .content li span{
+.wrapper .content li span {
   font-size: 15px;
   color: var(--big-icon-fill);
 }
 
-.content .synonyms .list{
+.content .synonyms .list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.content .synonyms span{
+.content .synonyms span {
   cursor: pointer;
   margin-right: 5px;
   text-decoration: underline;
 }
 
-
-.search svg{
-    height: 1rem;
-    aspect-ratio: 1;
+.search svg {
+  height: 1rem;
+  aspect-ratio: 1;
 }

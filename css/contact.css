@@ -33,21 +33,17 @@
 }
 
 .item.item-empty {
-  background: linear-gradient(
-    to right,
-    var(--a-clr),
-    var(--selection-color)
-  );
+  background: linear-gradient(to right, var(--a-clr), var(--selection-color));
 }
 
 .contact-anchor {
   font-size: 1.3rem;
   position: relative;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   padding-right: 5em;
   background-color: var(--clr-neutral);
   transition: background-color 250ms ease;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 
 .contact-anchor:hover {
@@ -56,7 +52,7 @@
 }
 
 .contact-anchor::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 75%;
   top: 50%;
@@ -77,7 +73,7 @@
 }
 
 .contact-anchor::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 72%;
@@ -95,6 +91,6 @@
 }
 
 .contact-anchor.contact-mail {
-    position: relative;
-    top: 10px;
+  position: relative;
+  top: 10px;
 }

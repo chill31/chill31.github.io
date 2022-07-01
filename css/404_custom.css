@@ -1,110 +1,110 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    overflow: hidden !important;
+  margin: 0;
+  overflow: hidden !important;
 }
 
 .top-header-strip {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 13vh;
-    background: var(--top-btm-bg);
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 13vh;
+  background: var(--top-btm-bg);
+  z-index: 10;
 }
 
 h1 {
-    text-transform: uppercase;
-    text-align: center;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 p,
 ul,
 .projects-a {
-    font-size: 1.25rem;
-    color: var(--text-color);
-    font-weight: 250;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 250;
 }
 
 a,
 .projects-a {
-    color: var(--a-clr);
-    text-decoration: none;
+  color: var(--a-clr);
+  text-decoration: none;
 }
 
-.mid-container{
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-      to bottom right,
-      var(--a-clr) 47.5%,
-      var(--a-clr-dark) 5%
-    );
-    position: absolute;
-    top: 12vh;
-    padding: 1rem;
-    padding-top: 4rem;
+.mid-container {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom right,
+    var(--a-clr) 47.5%,
+    var(--a-clr-dark) 5%
+  );
+  position: absolute;
+  top: 12vh;
+  padding: 1rem;
+  padding-top: 4rem;
 }
 
 .mid-container h3 {
-    font-weight: 100;
-    font-size: larger;
-    color: var(--text-color);
+  font-weight: 100;
+  font-size: larger;
+  color: var(--text-color);
 }
 
 .mid-container p {
-    width: 50ch;
-    color: var(--text-color);
+  width: 50ch;
+  color: var(--text-color);
 }
 
 .mid-container a {
- color: var(--text-color);
- text-decoration: underline 2px;
- text-decoration-skip-ink: none;
+  color: var(--text-color);
+  text-decoration: underline 2px;
+  text-decoration-skip-ink: none;
 }
 
 .mid-container a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .mid-container .about-me-heading {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .big-icon-show {
-    height: 50vh;
-    aspect-ratio: 1;
-    transform: rotateZ(-45deg);
-    position: absolute;
-    bottom: 35vh;
-    right: 20vh;
+  height: 50vh;
+  aspect-ratio: 1;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  bottom: 35vh;
+  right: 20vh;
 }
 
 .big-icon-show path {
-    fill: var(--big-icon-fill);
+  fill: var(--big-icon-fill);
 }
 
-entered-page{
- color: var(--big-icon-fill);
- text-decoration: underline;
+entered-page {
+  color: var(--big-icon-fill);
+  text-decoration: underline;
 }
 
-entered-page::before{
- content: open-quote;
+entered-page::before {
+  content: open-quote;
 }
 
-entered-page::after{
- content: close-quote;
+entered-page::after {
+  content: close-quote;
 }
 
-.mid-container p:not(.a) a{
- color: var(--text-color);
- text-decoration: underline 2px;
+.mid-container p:not(.a) a {
+  color: var(--text-color);
+  text-decoration: underline 2px;
 }

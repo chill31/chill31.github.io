@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Projects: Currency Converter</title>
-    <link rel="stylesheet" href="../css/crny.css">
-    <link rel="stylesheet" href="/css/util/utility.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/crny.css" />
+    <link rel="stylesheet" href="/css/util/utility.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
 
-<body>
-
+  <body>
     <div class="loaded-content">
-
-    <div class="wrapper">
+      <div class="wrapper">
         <header>Currency Converter</header>
         <form action="#">
-            <div class="amount">
-                <p>Enter Amount</p>
-                <input type="text" value="1">
+          <div class="amount">
+            <p>Enter Amount</p>
+            <input type="text" value="1" />
+          </div>
+          <div class="drop-list">
+            <div class="from">
+              <p>From</p>
+              <div class="select-box">
+                <img src="https://flagcdn.com/48x36/us.png" alt="flag" />
+                <select></select>
+              </div>
             </div>
-            <div class="drop-list">
-                <div class="from">
-                    <p>From</p>
-                    <div class="select-box">
-                        <img src="https://flagcdn.com/48x36/us.png" alt="flag">
-                        <select>
-                            
-                        </select>
-                    </div>
-                </div>
-                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
-                <div class="to">
-                    <p>To</p>
-                    <div class="select-box">
-                        <img src="https://flagcdn.com/48x36/in.png" alt="flag">
-                        <select>
-                            
-                        </select>
-                    </div>
-                </div>
+            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+            <div class="to">
+              <p>To</p>
+              <div class="select-box">
+                <img src="https://flagcdn.com/48x36/in.png" alt="flag" />
+                <select></select>
+              </div>
             </div>
-            <div class="exchange-rate">Getting exchange rate...</div>
-            <button class="custom">Get Exchange Rate</button>
+          </div>
+          <div class="exchange-rate">Getting exchange rate...</div>
+          <button class="custom">Get Exchange Rate</button>
         </form>
-    </div>
-
+      </div>
     </div>
 
     <script src="../js/util/utility.js"></script>
     <script src="../js/currency/country-list.js"></script>
     <script src="../js/currency/currency.js"></script>
-</body>
-
+  </body>
 </html>

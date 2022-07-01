@@ -9,21 +9,21 @@ body {
   --ff-code: "Jetbrains Mono", monospace;
 }
 
-:root{
---bg-color: #fff;
---text-color: #000;
---top-btm-bg: #54c0eb;
---a-clr: #2293fa;
---a-clr-dark: #121417;
---big-icon-fill: #404756;
---selection-color: #00b6ff;
---clr-warning: #eb3d3d;
---clr-success: #47d368;
---clr-neutral: #fff;
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --top-btm-bg: #54c0eb;
+  --a-clr: #2293fa;
+  --a-clr-dark: #121417;
+  --big-icon-fill: #404756;
+  --selection-color: #00b6ff;
+  --clr-warning: #eb3d3d;
+  --clr-success: #47d368;
+  --clr-neutral: #fff;
 }
 
 body {
-  margin:0;
+  margin: 0;
 }
 
 html {
@@ -178,7 +178,7 @@ html {
   color: #f5f5f5;
   font-family: var(--ff-primary);
   font-size: 1rem;
-  border-radius: 0.5rem 0.5rem .5rem 0;
+  border-radius: 0.5rem 0.5rem 0.5rem 0;
   margin: 0.5rem 0;
   opacity: 0;
   left: 2rem;
@@ -195,11 +195,11 @@ html {
 .notif.notif-timer {
   position: absolute;
   bottom: 0;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, 0.25);
 
   animation: notf-timer 5000ms ease-in-out forwards;
 }
@@ -285,7 +285,7 @@ html {
 
 .span-c.active .span:first-of-type {
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
 
 .span-c.active .span:not(:is(:last-of-type, :first-of-type)) {
@@ -314,11 +314,11 @@ html {
   transform-origin: bottom right;
 }
 
-#menu .items-container{
+#menu .items-container {
   height: 0;
 }
 
-#menu.active .items-container{
+#menu.active .items-container {
   height: fit-content;
 }
 
@@ -393,24 +393,28 @@ html {
   transform: translate(-50%);
 }
 
-#menu .menu-item::after{
- --bg-clr-neutral: linear-gradient(45deg, var(--a-clr) 50%, var(--a-clr-dark) 5%);
+#menu .menu-item::after {
+  --bg-clr-neutral: linear-gradient(
+    45deg,
+    var(--a-clr) 50%,
+    var(--a-clr-dark) 5%
+  );
 
- content: '';
- width: 100%;
- height: 3px;
- background: var(--bg-clr-neutral);
- position: absolute;
- top: 100%;
- left: 50%;
- transform: translate(-50%) scale(0);
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--bg-clr-neutral);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%) scale(0);
 
- transition: transform 500ms ease;
- transform-origin: right;
+  transition: transform 500ms ease;
+  transform-origin: right;
 }
 
-#menu .menu-item:hover::after{
-  content: '';
+#menu .menu-item:hover::after {
+  content: "";
   background: var(--bg-clr-neutral);
   transform-origin: left;
   transform: translate(-50%) scale(1);
@@ -423,7 +427,7 @@ html {
 **/
 
 a {
- text-decoration: none;
+  text-decoration: none;
 }
 
 h1,
@@ -464,16 +468,15 @@ article,
 section,
 table,
 th,
-td
-{
+td {
   font-family: var(--ff-primary) !important;
 }
 
-code{
+code {
   font-family: var(--ff-code), monospace !important;
 }
 
-.shortcut-menu{
+.shortcut-menu {
   position: fixed;
   top: 1rem;
   left: 7vw;
@@ -482,55 +485,57 @@ code{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(1, 1, 1, .15);
+  background-color: rgba(1, 1, 1, 0.15);
   z-index: 100;
-  padding: .2rem;
-  gap: .75rem;
+  padding: 0.2rem;
+  gap: 0.75rem;
   transition: 500ms ease;
   transition-property: opacity;
 }
 
-.shortcut-menu.disabled{
+.shortcut-menu.disabled {
   opacity: 0;
   pointer-events: none;
 }
 
-.shortcut-menu svg{
- height: 1.5rem;
- cursor: pointer;
+.shortcut-menu svg {
+  height: 1.5rem;
+  cursor: pointer;
 }
 
-.shortcut-menu svg path{
- fill: #efefef;
- transition: fill 250ms ease;
+.shortcut-menu svg path {
+  fill: #efefef;
+  transition: fill 250ms ease;
 }
 
-.shortcut-menu svg:hover path{
- fill: var(--a-clr);
+.shortcut-menu svg:hover path {
+  fill: var(--a-clr);
 }
 
 .shortcut-menu a {
   position: relative;
 }
 
-.shortcut-menu a::before, .shortcut-menu a::after {
+.shortcut-menu a::before,
+.shortcut-menu a::after {
   transition: opacity 250ms ease;
 }
 
-.shortcut-menu a:hover::before, .shortcut-menu a:hover::after {
+.shortcut-menu a:hover::before,
+.shortcut-menu a:hover::after {
   opacity: 1;
 }
 
 .shortcut-menu a::before {
   --size: 10px;
 
-  content: '';
+  content: "";
   position: absolute;
   top: 95%;
   left: 50%;
   transform: translate(-50%);
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-bottom: var(--size) solid var(--a-clr-dark);
@@ -545,33 +550,34 @@ code{
   left: 50%;
   transform: translate(-50%);
   background-color: var(--a-clr-dark);
-  padding: .25em .75em;
+  padding: 0.25em 0.75em;
   opacity: 0;
   pointer-events: none;
 }
 
-@media (max-width: 1080px){
-  .shortcut-menu{
+@media (max-width: 1080px) {
+  .shortcut-menu {
     opacity: 0;
     pointer-events: none;
   }
 }
 
-@media (max-width: 959px){
-  .big-icon-show, .s{
+@media (max-width: 959px) {
+  .big-icon-show,
+  .s {
     display: none;
   }
 }
 
-strikethrough{
+strikethrough {
   text-decoration: line-through;
 }
 
-italic{
+italic {
   font-style: italic;
 }
 
-bold{
+bold {
   font-style: bold;
 }
 
@@ -581,9 +587,9 @@ underline {
 
 button:not(.custom) {
   background-color: var(--a-clr);
-  padding: .75em 1em;
+  padding: 0.75em 1em;
   border: none;
-  border-radius: .5em;
+  border-radius: 0.5em;
   transition: outline 100ms;
   cursor: pointer;
 }
@@ -603,14 +609,14 @@ abbr:hover::before {
   left: 50%;
   transform: translate(-50%);
   width: max-content;
-  padding: .15em;
+  padding: 0.15em;
   background-color: var(--clr-neutral);
 }
 
 .cross {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   height: 1rem;
   width: 1rem;
   background-color: rgba(0, 0, 0, 0);
@@ -619,9 +625,9 @@ abbr:hover::before {
 
 .cross span:first-of-type {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 0;
-  height: .15rem;
+  height: 0.15rem;
   width: 100%;
   background-color: var(--clr-neutral);
   transform: rotate(45deg);
@@ -629,9 +635,9 @@ abbr:hover::before {
 
 .cross span:last-of-type {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 0;
-  height: .15rem;
+  height: 0.15rem;
   width: 100%;
   background-color: var(--clr-neutral);
   transform: rotate(-45deg);

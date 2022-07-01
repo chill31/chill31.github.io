@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects: Password Generator</title>
-    <link rel="stylesheet" href="/css/pass_gen.css">
-    <link rel="stylesheet" href="/css/util/utility.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="/css/pass_gen.css" />
+    <link rel="stylesheet" href="/css/util/utility.css" />
+  </head>
+  <body>
     <div class="loaded-content">
-
-    <div class="container" style="margin-bottom: 3.75rem;">
-        <h2 class="title" style="text-align: center;">Password Generator</h2>
+      <div class="container" style="margin-bottom: 3.75rem">
+        <h2 class="title" style="text-align: center">Password Generator</h2>
         <div class="result">
-            <div class="result__title field-title">GENERATE PASSWORD</div>
-            <div class="result__info right">click to copy</div>
-            <div class="result__info left">copied</div>
-            <div class="result__viewbox" id="result">
-                <h4>CLICK GENERATE</h4>
-            </div>
+          <div class="result__title field-title">GENERATE PASSWORD</div>
+          <div class="result__info right">click to copy</div>
+          <div class="result__info left">copied</div>
+          <div class="result__viewbox" id="result">
+            <h4>CLICK GENERATE</h4>
+          </div>
         </div>
         <div class="length range__slider" data-min="4" data-max="32">
-            <div class="length__title field-title" data-length='0'>length:</div>
-            <input id="slider" type="range" min="4" max="32" value="16" />
+          <div class="length__title field-title" data-length="0">length:</div>
+          <input id="slider" type="range" min="4" max="32" value="16" />
         </div>
-    
-        <div class="settings">
-            <span class="settings__title field-title">settings</span>
-            <div class="setting">
-                <input type="checkbox" id="uppercase" checked />
-                <label for="uppercase">Include Uppercase</label>
-            </div>
-            <div class="setting">
-                <input type="checkbox" id="lowercase" checked />
-                <label for="lowercase">Include Lowercase</label>
-            </div>
-            <div class="setting">
-                <input type="checkbox" id="number" checked />
-                <label for="number">Include Numbers</label>
-            </div>
-            <div class="setting">
-                <input type="checkbox" id="symbol" />
-                <label for="symbol">Include Symbols</label>
-            </div>
-        </div>
-    
-        <button class="btn generate custom" id="generate">Generate Password</button>
-    </div>
 
+        <div class="settings">
+          <span class="settings__title field-title">settings</span>
+          <div class="setting">
+            <input type="checkbox" id="uppercase" checked />
+            <label for="uppercase">Include Uppercase</label>
+          </div>
+          <div class="setting">
+            <input type="checkbox" id="lowercase" checked />
+            <label for="lowercase">Include Lowercase</label>
+          </div>
+          <div class="setting">
+            <input type="checkbox" id="number" checked />
+            <label for="number">Include Numbers</label>
+          </div>
+          <div class="setting">
+            <input type="checkbox" id="symbol" />
+            <label for="symbol">Include Symbols</label>
+          </div>
+        </div>
+
+        <button class="btn generate custom" id="generate">
+          Generate Password
+        </button>
+      </div>
     </div>
 
     <script src="/js/util/utility.js"></script>
-    <script src="/js/pass_gen.js"></script>   
-</body>
+    <script src="/js/pass_gen.js"></script>
+  </body>
 </html>

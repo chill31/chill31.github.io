@@ -1,30 +1,30 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
- background-color: var(--a-clr);
+  background-color: var(--a-clr);
 }
 
 .container {
- background-color: var(--clr-neutral);
- width: 80vw;
- max-width: 37.5em;
- padding: 3em 2.5em;
- position: absolute;
- transform: translate(-50%, -50%);
- top: 50%;
- left: 50%;
- border-radius: 0.62em;
- box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25); 
- transition: 500ms ease;
+  background-color: var(--clr-neutral);
+  width: 80vw;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.62em;
+  box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+  transition: 500ms ease;
 }
 
-.container .instruction{
- color: var(--text-color);
- margin-left: 26.75%;
+.container .instruction {
+  color: var(--text-color);
+  margin-left: 26.75%;
 }
 
 .search-wrapper {
@@ -58,14 +58,14 @@ body {
   transition: 500ms ease;
 }
 
-.container #img-div{
- width: 45%;
- min-width: 7.5em;
- margin-left: 50%;
- border: solid 1px black;
- height: 162.5px;
- transform: translate(-50%);
- cursor: pointer;
+.container #img-div {
+  width: 45%;
+  min-width: 7.5em;
+  margin-left: 50%;
+  border: solid 1px black;
+  height: 162.5px;
+  transform: translate(-50%);
+  cursor: pointer;
 }
 
 .container .flag-img {
@@ -75,7 +75,7 @@ body {
   transition: transform 500ms ease;
 }
 
-.container .flag-img.f{
+.container .flag-img.f {
   position: absolute;
   margin-top: 50%;
   margin-left: 50%;
@@ -107,8 +107,8 @@ body {
 }
 
 .container h3 {
-   text-align: center;
-   font-size: 1.2em;
-   font-weight: 400;
-   color: var(--clr-warning);
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--clr-warning);
 }

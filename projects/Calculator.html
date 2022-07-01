@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects: Calculator</title>
-    <link rel="stylesheet" href="../css/calculator.css">
-    <link rel="stylesheet" href="/css/util/utility.css">
-</head>
+    <link rel="stylesheet" href="../css/calculator.css" />
+    <link rel="stylesheet" href="/css/util/utility.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="loaded-content">
+      <h1>Calculator</h1>
 
-    <h1>Calculator</h1>
+      <p
+        style="color: var(--text-color); font-size: 1.25rem; text-align: center"
+      >
+        Advanced calculator which supports complex maths functions like SIN,
+        COS, TAN, PI, etc.
+      </p>
 
-    <p style="color: var(--text-color); font-size: 1.25rem; text-align: center;">Advanced calculator which supports complex maths functions like SIN, COS, TAN, PI, etc.</p>
-
-    <div class="container">
+      <div class="container">
         <div class="display">
-            <input id="screen" type="text" placeholder="0">
+          <input id="screen" type="text" placeholder="0" />
         </div>
-    
-        <div class="btns">
-            <div class="row">
-                <button id="ce">CE</button>
-                <button id="fact_">x!</button>
-                <button class="btn">(</button>
-                <button class="btn">)</button>
-                <button class="btn">%</button>
-                <button id="ac">AC</button>
-            </div>
-    
-            <div class="row">
-                <button id="sin">sin</button>
-                <button id="pi">π</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">÷</button>
-            </div>
-    
-            <div class="row">
-                <button id="cos">cos</button>
-                <button id="log">log</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">×</button>
-            </div>
-    
-            <div class="row">
-                <button id="tan">tan</button>
-                <button id="sqrt">√</button>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">-</button>
-            </div>
-    
-            <div class="row">
-                <button id="e">e</button>
-                <button id="pow">x <span style="position: relative; bottom: .4em; right: .1em;">y</span>
-                </button>
-                <button class="btn">0</button>
-                <button class="btn">.</button>
-                <button id="eval">=</button>
-                <button class="btn">+</button>
-            </div>
-        </div>
-    </div>
 
+        <div class="btns">
+          <div class="row">
+            <button id="ce">CE</button>
+            <button id="fact_">x!</button>
+            <button class="btn">(</button>
+            <button class="btn">)</button>
+            <button class="btn">%</button>
+            <button id="ac">AC</button>
+          </div>
+
+          <div class="row">
+            <button id="sin">sin</button>
+            <button id="pi">π</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">÷</button>
+          </div>
+
+          <div class="row">
+            <button id="cos">cos</button>
+            <button id="log">log</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">×</button>
+          </div>
+
+          <div class="row">
+            <button id="tan">tan</button>
+            <button id="sqrt">√</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">-</button>
+          </div>
+
+          <div class="row">
+            <button id="e">e</button>
+            <button id="pow">
+              x
+              <span style="position: relative; bottom: 0.4em; right: 0.1em"
+                >y</span
+              >
+            </button>
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button id="eval">=</button>
+            <button class="btn">+</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="../js/util/utility.js"></script>
     <script src="../js/calculator.js"></script>
-</body>
-
+  </body>
 </html>

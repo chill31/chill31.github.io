@@ -49,20 +49,18 @@ searchBtn.addEventListener("click", () => {
         </div>
       `;
 
-       const img = document.querySelector(".flag-img");
+      const img = document.querySelector(".flag-img");
 
-       img.addEventListener("click", () => {
-
+      img.addEventListener("click", () => {
         img.classList.toggle("f");
-
-       })
+      });
     })
     .catch(() => {
       if (countryName.length == 0) {
         result.innerHTML = `<h3>The input field cannot be empty</h3>`;
       } else {
         result.innerHTML = `<h3>Please enter a valid country name.</h3>`;
-        notify(`${countryName} is not a valid name.`, "error")
+        notify(`${countryName} is not a valid name.`, "error");
       }
     });
 });

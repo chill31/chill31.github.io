@@ -25,7 +25,7 @@ function loadParagraph() {
   });
 
   paragraphs[ranIndex2].split("").forEach((char) => {
-    let span = `<span>${char}</span>`
+    let span = `<span>${char}</span>`;
     typingText.innerHTML += span;
   });
 
@@ -38,7 +38,7 @@ function loadParagraph() {
     let span = `<span>${char}</span>`;
     typingText.innerHTML += span;
   });
-  
+
   typingText.querySelectorAll("span")[0].classList.add("active");
   document.addEventListener("keydown", () => inpField.focus());
   typingText.addEventListener("click", () => inpField.focus());
@@ -88,8 +88,17 @@ function initTyping() {
     clearInterval(timer);
     inpField.value = "";
 
-    
-    notify(`Finish!<br>Your Score is: ${localStorage.getItem("wpm")}WPM and ${localStorage.getItem("cpm")}CPM, you made ${localStorage.getItem("mstk")} mistakes<br><br>Click try again to try again.`,"success", "yehhs");
+    notify(
+      `Finish!<br>Your Score is: ${localStorage.getItem(
+        "wpm"
+      )}WPM and ${localStorage.getItem(
+        "cpm"
+      )}CPM, you made ${localStorage.getItem(
+        "mstk"
+      )} mistakes<br><br>Click try again to try again.`,
+      "success",
+      "yehhs"
+    );
   }
 }
 
@@ -116,7 +125,6 @@ function resetGame() {
   wpmTag.innerText = 0;
   mistakeTag.innerText = 0;
   cpmTag.innerText = 0;
-
 }
 
 loadParagraph();

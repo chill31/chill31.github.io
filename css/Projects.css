@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -8,9 +8,9 @@ body {
   overflow: hidden !important;
 }
 
-body.grid-view{
- overflow-y: auto !important;
- overflow-x: hidden;
+body.grid-view {
+  overflow-y: auto !important;
+  overflow-x: hidden;
 }
 
 .top-header-strip {
@@ -23,7 +23,6 @@ body.grid-view{
 
   transition: height 500ms ease;
 }
-
 
 h1 {
   text-align: center;
@@ -47,8 +46,7 @@ ul {
   font-weight: 250;
 }
 
-
-.container{
+.container {
   text-align: center;
   position: relative;
   left: 50%;
@@ -60,19 +58,19 @@ ul {
   padding: 1rem;
 }
 
-.controls-arrows-container{
+.controls-arrows-container {
   display: flex;
   justify-content: space-between;
   position: absolute;
   width: 95%;
-  bottom: .2rem;
+  bottom: 0.2rem;
 }
 
-.controls-arrows-container label{
+.controls-arrows-container label {
   font-size: 1.3rem;
 }
 
-.controls{
+.controls {
   height: 2rem;
   aspect-ratio: 1;
   cursor: pointer;
@@ -82,24 +80,24 @@ ul {
   border: solid 1px transparent;
 }
 
-.controls.focused{
-  border: solid 1px rgb(0, 0, 0, .9);
+.controls.focused {
+  border: solid 1px rgb(0, 0, 0, 0.9);
   background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 .35rem rgba(0, 0, 0, .75);
+  box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.75);
   transition: 100ms ease;
   transition-property: box-shadow, background-color;
 }
 
-.project-a_s{
+.project-a_s {
   font-size: 1.4rem;
   color: var(--a-clr);
 }
 
-.project-a_s:hover{
+.project-a_s:hover {
   text-decoration: underline;
 }
 
-.text-container{
+.text-container {
   --card-height: 80%;
 
   border: solid 1px black;
@@ -109,13 +107,13 @@ ul {
   overflow: hidden;
 }
 
-.text-container > p{
- text-align: center;
- position: absolute;
- top: 40%;
- font-size: 1.15rem;
- left: 50%;
- transform: translate(-50%);
+.text-container > p {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  font-size: 1.15rem;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .text-container > a {
@@ -126,10 +124,10 @@ ul {
   text-decoration: none !important;
 }
 
-.text-container > a::after{
+.text-container > a::after {
   --bg-clr-neutral: var(--a-clr);
 
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background: var(--bg-clr-neutral);
@@ -141,18 +139,18 @@ ul {
   transform-origin: right;
 }
 
-.text-container > a:hover::after{
-  content: '';
+.text-container > a:hover::after {
+  content: "";
   background: var(--bg-clr-neutral);
   transform-origin: left;
   transform: translate(-50%) scale(1);
 }
 
-.text-container:last-child{
+.text-container:last-child {
   margin-bottom: 3rem;
 }
 
-.display-option-container{
+.display-option-container {
   width: 12.5vw;
   position: absolute;
   right: 3rem;
@@ -162,16 +160,16 @@ ul {
   transition: width 500ms ease;
 }
 
-.display-btns{
+.display-btns {
   height: 4.5rem;
   width: 4.5rem;
   cursor: pointer;
   border: solid 3px var(--selection-color);
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   position: relative;
 }
 
-.display-btns.selected{
+.display-btns.selected {
   background-color: var(--a-clr);
   border: solid 3px var(--selection-color);
 }
@@ -185,7 +183,7 @@ ul {
   font-size: 1rem;
   background-color: var(--a-clr);
   color: var(--clr-neutral);
-  padding: .25em .75em;
+  padding: 0.25em 0.75em;
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms ease;
@@ -194,9 +192,9 @@ ul {
 .display-btns::after {
   --size: 10px;
 
-  content: '';
-  width: 0; 
-  height: 0; 
+  content: "";
+  width: 0;
+  height: 0;
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid var(--a-clr);
@@ -217,25 +215,25 @@ ul {
   opacity: 1;
 }
 
-body:not(.grid-view) .grid-container{
+body:not(.grid-view) .grid-container {
   visibility: hidden;
   height: 0;
   width: 0;
 }
 
-body.grid-view .container{
+body.grid-view .container {
   visibility: hidden;
   height: 0;
   width: 0;
 }
 
-body.grid-view .grid-container{
+body.grid-view .grid-container {
   visibility: visible;
   height: inherit;
   width: inherit;
 }
 
-.grid-container{
+.grid-container {
   position: absolute;
   top: 30vh;
   left: 50%;
@@ -248,7 +246,7 @@ body.grid-view .grid-container{
   margin-bottom: 1rem;
 }
 
-.grid-card{
+.grid-card {
   padding: 1rem;
   height: 50vh;
   width: 20vw;
@@ -262,15 +260,15 @@ body.grid-view .grid-container{
   transform: translateX(-15%);
 }
 
-.grid-card > p{
+.grid-card > p {
   font-size: 1.15rem;
 }
 
-.grid-card > a{
+.grid-card > a {
   padding: 1vh 1vh;
   border: solid 1px black;
   color: var(--text-color);
-  border-radius: .35rem;
+  border-radius: 0.35rem;
   position: absolute;
   top: 82.5%;
   left: 50%;
@@ -279,7 +277,7 @@ body.grid-view .grid-container{
   transition-property: background-color, color;
 }
 
-.grid-card > a:hover{
+.grid-card > a:hover {
   color: var(--clr-neutral);
   background-color: var(--a-clr);
 }
@@ -290,7 +288,6 @@ body.grid-view .grid-container{
 }
 
 @media (max-width: 1140px) {
-
   .grid-container {
     grid-template-columns: repeat(1, 3fr);
     width: 65% !important;
@@ -299,11 +296,9 @@ body.grid-view .grid-container{
   .grid-card {
     width: 100% !important;
   }
-
 }
 
 @media (max-width: 640px) {
-
   .grid-container {
     grid-template-columns: repeat(1, 3fr);
     width: 80% !important;
@@ -312,26 +307,25 @@ body.grid-view .grid-container{
   .grid-card {
     width: 100% !important;
   }
-
 }
 
 fieldset {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: .25rem;
+  gap: 0.25rem;
   padding: 1rem;
 }
 
 legend {
   border: solid 1px black;
-  border-radius: .1rem;
+  border-radius: 0.1rem;
 }
 
 .star {
   position: absolute;
-  top: .75rem;
-  right: .75rem;
+  top: 0.75rem;
+  right: 0.75rem;
   height: 1.5rem;
   width: 1.5rem;
   cursor: pointer;
@@ -364,8 +358,8 @@ particle {
 .toggle-fav {
   --def-size: 2px;
   --def-color: var(--text-color);
-  
-  padding: .5em 1em;
+
+  padding: 0.5em 1em;
   cursor: pointer;
   position: absolute;
   top: -2rem;
@@ -377,15 +371,12 @@ particle {
   outline-offset: -2px;
   color: var(--clr-neutral);
   transition: 500ms ease;
-  transition-property: background-color,
-  color,
-  outline-offset,
-  outline-width;
+  transition-property: background-color, color, outline-offset, outline-width;
   min-width: max-content;
 }
 
 .toggle-fav:hover {
-    background-color: var(--clr-neutral);
-    color: var(--text-color);
-    outline-offset: -3em;
+  background-color: var(--clr-neutral);
+  color: var(--text-color);
+  outline-offset: -3em;
 }

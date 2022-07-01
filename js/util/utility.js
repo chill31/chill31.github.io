@@ -1,7 +1,7 @@
 /**
  * @param {*} text
  * @returns reversed text
-*/
+ */
 
 function reverse(text) {
   const newString = text.split("");
@@ -10,95 +10,112 @@ function reverse(text) {
 }
 
 /**
- * 
- * @param {*} m 
+ *
+ * @param {*} m
  * @returns fixed month
  */
 
-function fixMonth(m){
-
-  const fixMonthsMonths = [0, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+function fixMonth(m) {
+  const fixMonthsMonths = [
+    0,
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   return fixMonthsMonths[m];
-
 }
 
 /**
- * 
- * @param {*} d 
+ *
+ * @param {*} d
  * @returns fixed day
  */
 
-function fixDay(d){
-
-  const fixDayDays = [0, "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",  "Sunday"];
+function fixDay(d) {
+  const fixDayDays = [
+    0,
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   return fixDayDays[d];
-
 }
 
 /**
- * 
- * @param {*} n 
+ *
+ * @param {*} n
  * @returns formatted date
  */
 
-function formatDate(n){
-  
-  switch(n){
-
-      case 1:
-          return "1st";
-      case 2:
-          return "2nd";
-      case 3:
-          return "3rd";
-      case 21:
-          return "21st";
-      case 22:
-          return "22nd";
-      case 23:
-          return "23rd";
-      case 31:
-          return "31st";
-      default:
-          return `${n}th`;
-
+function formatDate(n) {
+  switch (n) {
+    case 1:
+      return "1st";
+    case 2:
+      return "2nd";
+    case 3:
+      return "3rd";
+    case 21:
+      return "21st";
+    case 22:
+      return "22nd";
+    case 23:
+      return "23rd";
+    case 31:
+      return "31st";
+    default:
+      return `${n}th`;
   }
-
 }
 
 /**
- * 
- * @param {*} text 
+ *
+ * @param {*} text
  * @returns toggle case text
  */
 
 function toggleCase(str) {
-  return str.toUpperCase().split(' ').map(function(word) {
-    return (word.charAt(0).toLowerCase() + word.slice(1));
-  }).join(' ');
+  return str
+    .toUpperCase()
+    .split(" ")
+    .map(function (word) {
+      return word.charAt(0).toLowerCase() + word.slice(1);
+    })
+    .join(" ");
 }
 
 /**
- * 
- * @param {*} SOMESTR 
+ *
+ * @param {*} SOMESTR
  * @returns opposite case text
  */
 
 function oppositeCase(SOMESTR) {
+  let updatedText;
 
-let updatedText;
-
-for(let i = 0; i < SOMESTR.length; i++) {
-  if(i % 2 == 0){
-    updatedText += SOMESTR[i].toUpperCase();
-  } else if(i % 2 != 0) {
-    updatedText += SOMESTR[i].toLowerCase();
+  for (let i = 0; i < SOMESTR.length; i++) {
+    if (i % 2 == 0) {
+      updatedText += SOMESTR[i].toUpperCase();
+    } else if (i % 2 != 0) {
+      updatedText += SOMESTR[i].toLowerCase();
+    }
   }
-}
 
   return updatedText.split("undefined")[1];
-
 }
 
 /**
@@ -106,10 +123,8 @@ for(let i = 0; i < SOMESTR.length; i++) {
  * @returns {documentSelectedText}
  */
 
-function getSelectionText(){
-
-  if (document.getSelection) return document.getSelection().toString(); 
-  
+function getSelectionText() {
+  if (document.getSelection) return document.getSelection().toString();
 }
 
 /**
@@ -117,7 +132,7 @@ function getSelectionText(){
  * @returns undefined
  */
 
-function refreshPage(){
+function refreshPage() {
   redirect(window.location.href);
 }
 
@@ -127,9 +142,7 @@ function refreshPage(){
  */
 
 function redirect(redirectLocation) {
-
   window.location.href = redirectLocation;
-
 }
 
 /**
@@ -137,10 +150,9 @@ function redirect(redirectLocation) {
  * @returns undefined
  */
 
-function openNewPage(redirectLocation){
+function openNewPage(redirectLocation) {
   parent.open(redirectLocation);
 }
-
 
 /**
  * @param {string} message
@@ -161,42 +173,42 @@ function notify(message, type, context) {
     creat = document.getElementById("notification-area");
   }
 
-    let createdDiv = document.createElement("div");
-    let id = Math.random().toString(36).substring(2, 10);
+  let createdDiv = document.createElement("div");
+  let id = Math.random().toString(36).substring(2, 10);
 
-    createdDiv.setAttribute("id", id);
-    createdDiv.classList.add("notification", type);
+  createdDiv.setAttribute("id", id);
+  createdDiv.classList.add("notification", type);
 
-    if (context) {
-      createdDiv.classList.add("contextMenu");
-    }
+  if (context) {
+    createdDiv.classList.add("contextMenu");
+  }
 
-    createdDiv.innerHTML = `
+  createdDiv.innerHTML = `
 <div class="cross">
   <span class="cross__spans span1"></span>
   <span class="cross__spans span2""></span>
 </div>
 ${message}
 <span class="notif notif-timer"></span>`;
-    document.getElementById("notification-area").prepend(createdDiv);
+  document.getElementById("notification-area").prepend(createdDiv);
 
-    setTimeout(() => {
-      var notifications = document
-        .getElementById("notification-area")
-        .getElementsByClassName("notification");
-      for (let i = 0; i < notifications.length; i++) {
-        if (notifications[i].getAttribute("id") == id) {
-          notifications[i].remove();
-          break;
-        }
+  setTimeout(() => {
+    var notifications = document
+      .getElementById("notification-area")
+      .getElementsByClassName("notification");
+    for (let i = 0; i < notifications.length; i++) {
+      if (notifications[i].getAttribute("id") == id) {
+        notifications[i].remove();
+        break;
       }
-    }, 5000);
-    const notifCrosses = document.querySelectorAll(".notification .cross");
-    notifCrosses.forEach(e => {
-      e.addEventListener("click", () => {
-        e.parentElement.remove();
-      });
-    })
+    }
+  }, 5000);
+  const notifCrosses = document.querySelectorAll(".notification .cross");
+  notifCrosses.forEach((e) => {
+    e.addEventListener("click", () => {
+      e.parentElement.remove();
+    });
+  });
 }
 /**
  * @param {*} text
@@ -207,7 +219,6 @@ function copyText(text) {
 }
 
 /** CREATING FULL SCREEN MENU */
-
 
 const createdHamMenu = document.createElement("div");
 createdHamMenu.classList.add("ham-menu");
@@ -244,55 +255,42 @@ const spanContainer_nope = document.querySelector(".span-c");
 let _menuActive_ = false;
 
 toggleHamMenu.addEventListener("click", () => {
-
-  if(_menuActive_ === false){
-
+  if (_menuActive_ === false) {
     createdHamMenu.classList.add("active");
     _menuActive_ = true;
 
     spanContainer_nope.classList.add("active");
-
-  } else if(_menuActive_){
-
+  } else if (_menuActive_) {
     createdHamMenu.classList.remove("active");
     _menuActive_ = false;
 
     spanContainer_nope.classList.remove("active");
-
   }
-
 });
 
 const hamMenuItems = {
   home: document.querySelector(".item-home"),
   projects: document.querySelector(".item-projects"),
-  settings: document.querySelector(".item-settings")
+  settings: document.querySelector(".item-settings"),
 };
 
 hamMenuItems.home.addEventListener("click", () => {
-
   redirect("/");
-
 });
 
 hamMenuItems.projects.addEventListener("click", () => {
-
-  redirect("/Projects.html")
-
+  redirect("/Projects.html");
 });
 
 hamMenuItems.settings.addEventListener("click", () => {
-
   redirect("/Settings.html");
-  
-
 });
 
-if(!localStorage.getItem("normalFont")){
+if (!localStorage.getItem("normalFont")) {
   localStorage.setItem("normalFont", "Quicksand");
 }
 
-if(!localStorage.getItem("codeFont")){
+if (!localStorage.getItem("codeFont")) {
   localStorage.setItem("codeFont", "Jetbrains Mono");
 }
 
@@ -355,42 +353,58 @@ shortCutContainer.innerHTML = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"/></svg>
 
   </a>
-`
+`;
 
 document.body.prepend(shortCutContainer);
 
-if(!localStorage.getItem("shortcuts")) localStorage.setItem("shortcuts", "enabled");
+if (!localStorage.getItem("shortcuts"))
+  localStorage.setItem("shortcuts", "enabled");
 
-if(localStorage.getItem("shortcuts") == "enabled"){
+if (localStorage.getItem("shortcuts") == "enabled") {
   shortCutContainer.classList.remove("disabled");
-} else if(localStorage.getItem("shortcuts") == "disabled"){
+} else if (localStorage.getItem("shortcuts") == "disabled") {
   shortCutContainer.classList.add("disabled");
 }
 
-if(!localStorage.getItem("particles")) localStorage.setItem("particles", "enabled");
-if(!localStorage.getItem("particle-amount")) localStorage.setItem("particle-amount", 20);
+if (!localStorage.getItem("particles"))
+  localStorage.setItem("particles", "enabled");
+if (!localStorage.getItem("particle-amount"))
+  localStorage.setItem("particle-amount", 20);
 
-if(!localStorage.getItem("theme")) localStorage.setItem("theme", "Default");
+if (!localStorage.getItem("theme")) localStorage.setItem("theme", "Default");
 
-if(!localStorage.getItem("project-display")) localStorage.setItem("project-display", "Slider");
+if (!localStorage.getItem("project-display"))
+  localStorage.setItem("project-display", "Slider");
 
-if(!localStorage.getItem("accent-color")){
+if (!localStorage.getItem("accent-color")) {
   localStorage.setItem("accent-color", "#2293fa");
 }
 
-if(!localStorage.getItem("accent-color-dark")){
+if (!localStorage.getItem("accent-color-dark")) {
   localStorage.setItem("accent-color-dark", "#121417");
 }
 
-if(!localStorage.getItem("selection-color")){
+if (!localStorage.getItem("selection-color")) {
   localStorage.setItem("selection-color", "#00b6ff");
 }
 
-if(!localStorage.getItem("top-bottom-background")){
+if (!localStorage.getItem("top-bottom-background")) {
   localStorage.setItem("top-bottom-background", "#54c0eb");
 }
 
-document.body.style.setProperty("--a-clr", localStorage.getItem("accent-color"));
-document.body.style.setProperty("--a-clr-dark", localStorage.getItem("accent-color-dark"));
-document.body.style.setProperty("--selection-color", localStorage.getItem("selection-color"));
-document.body.style.setProperty("--top-btm-bg", localStorage.getItem("top-bottom-background"));
+document.body.style.setProperty(
+  "--a-clr",
+  localStorage.getItem("accent-color")
+);
+document.body.style.setProperty(
+  "--a-clr-dark",
+  localStorage.getItem("accent-color-dark")
+);
+document.body.style.setProperty(
+  "--selection-color",
+  localStorage.getItem("selection-color")
+);
+document.body.style.setProperty(
+  "--top-btm-bg",
+  localStorage.getItem("top-bottom-background")
+);

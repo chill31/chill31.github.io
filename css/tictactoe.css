@@ -1,8 +1,10 @@
-body{
-  background:var(--a-clr);
+body {
+  background: var(--a-clr);
 }
 
-.select-box, .play-board, .result-box{
+.select-box,
+.play-board,
+.result-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10,7 +12,7 @@ body{
   transition: all 300ms ease;
 }
 
-.select-box{
+.select-box {
   background: var(--clr-neutral);
   padding: 20px 25px 25px;
   border-radius: 5px;
@@ -18,30 +20,30 @@ body{
   width: 100%;
 }
 
-.select-box.hide{
+.select-box.hide {
   opacity: 0;
   pointer-events: none;
 }
 
-.select-box header{
+.select-box header {
   font-size: 30px;
   font-weight: 600;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgrey;
 }
 
-.select-box .title{
+.select-box .title {
   font-size: 22px;
   font-weight: 500;
   margin: 20px 0;
 }
 
-.select-box .options{
+.select-box .options {
   display: flex;
   width: 100%;
 }
 
-.options button{
+.options button {
   width: 100%;
   font-size: 20px;
   font-weight: 500;
@@ -56,60 +58,60 @@ body{
 }
 
 .options button:hover,
-.btn button:hover{
+.btn button:hover {
   transform: scale(0.96);
 }
 
-.options button.playerX{
+.options button.playerX {
   margin-right: 5px;
 }
 
-.options button.playerO{
+.options button.playerO {
   margin-left: 5px;
 }
 
-.select-box .credit{
+.select-box .credit {
   text-align: center;
   margin-top: 20px;
   font-size: 18px;
   font-weight: 500;
 }
 
-.select-box .credit a{
+.select-box .credit a {
   color: var(--a-clr);
   text-decoration: none;
 }
 
-.select-box .credit a:hover{
+.select-box .credit a:hover {
   text-decoration: underline;
 }
 
-.play-board{
+.play-board {
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-.play-board.show{
+.play-board.show {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.play-board .details{
+.play-board .details {
   padding: 7px;
   border-radius: 5px;
   background: var(--clr-neutral);
 }
 
-.play-board .players{
+.play-board .players {
   width: 100%;
   display: flex;
   position: relative;
   justify-content: space-between;
 }
 
-.players span{
+.players span {
   position: relative;
   z-index: 2;
   color: var(--a-clr);
@@ -122,19 +124,19 @@ body{
   transition: all 300ms ease;
 }
 
-.players.active span:first-child{
+.players.active span:first-child {
   color: var(--clr-neutral);
 }
 
-.players.active span:last-child{
+.players.active span:last-child {
   color: var(--a-clr);
 }
 
-.players span:first-child{
+.players span:first-child {
   color: var(--clr-neutral);
 }
 
-.players .slider{
+.players .slider {
   position: absolute;
   top: 0;
   left: 0;
@@ -145,32 +147,32 @@ body{
   transition: all 300ms ease;
 }
 
-.players.active .slider{
+.players.active .slider {
   left: 50%;
 }
 
-.players.active span:first-child{
+.players.active span:first-child {
   color: var(--a-clr);
 }
 
-.players.active span:nth-child(2){
+.players.active span:nth-child(2) {
   color: var(--clr-neutral);
 }
 
-.players.active .slider{
+.players.active .slider {
   left: 50%;
 }
 
-.play-area{
+.play-area {
   margin-top: 20px;
 }
 
-.play-area section{
+.play-area section {
   display: flex;
   margin-bottom: 1px;
 }
 
-.play-area section boxes{
+.play-area section boxes {
   display: block;
   height: 90px;
   width: 90px;
@@ -184,7 +186,7 @@ body{
   position: relative;
 }
 
-boxes svg{
+boxes svg {
   height: 75%;
   width: 75%;
   position: absolute;
@@ -193,7 +195,7 @@ boxes svg{
   transform: translate(-50%, -50%);
 }
 
-.result-box{
+.result-box {
   padding: 25px 20px;
   border-radius: 5px;
   max-width: 400px;
@@ -205,32 +207,32 @@ boxes svg{
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-.result-box.show{
+.result-box.show {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.result-box .won-text{
+.result-box .won-text {
   font-size: 30px;
   font-weight: 500;
   display: flex;
   justify-content: center;
 }
 
-.result-box .won-text p{
+.result-box .won-text p {
   font-weight: 600;
   margin: 0 5px;
 }
 
-.result-box .btn{
+.result-box .btn {
   width: 100%;
   margin-top: 25px;
   display: flex;
   justify-content: center;
 }
 
-.btn button{
+.btn button {
   font-size: 18px;
   font-weight: 500;
   padding: 8px 20px;

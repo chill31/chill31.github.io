@@ -6409,12 +6409,10 @@ function effectInit(e) {
 }
 function effectTarget(e, t) {
   return e.transformEl
-    ? t
-        .find(e.transformEl)
-        .css({
-          "backface-visibility": "hidden",
-          "-webkit-backface-visibility": "hidden",
-        })
+    ? t.find(e.transformEl).css({
+        "backface-visibility": "hidden",
+        "-webkit-backface-visibility": "hidden",
+      })
     : t;
 }
 function effectVirtualTransitionEnd(e) {

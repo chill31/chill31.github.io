@@ -1136,7 +1136,7 @@
         inline: !1,
         sliders: null,
         default: "#2293fa",
-        position: 'top-middle',
+        position: "top-middle",
         defaultRepresentation: null,
         adjustableNumbers: !0,
         showAlways: !1,

@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects: English Dictionary</title>
-    <link rel="stylesheet" href="/css/dict.css">
-    <link rel="stylesheet" href="/css/util/utility.css">
+    <link rel="stylesheet" href="/css/dict.css" />
+    <link rel="stylesheet" href="/css/util/utility.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
     <div class="loaded-content">
-
-        <div class="wrapper">
-            <header>English Dictionary</header>
-            <div class="search">
-                <input type="text" placeholder="Search a word" required spellcheck="false">
-                <i class="fas fa-search"></i>
-                <span class="material-icons">close</span>
-            </div>
-            <p class="info-text">Type any existing word and press enter to get the meaning and example.</p>
-            <ul>
-                <li class="word">
-                    <div class="details">
-                        <p>__</p>
-                        <span>_ _</span>
-                    </div>
-                </li>
-                <div class="content">
-                    <li class="meaning">
-                        <div class="details">
-                            <p>Meaning</p>
-                            <span>___</span>
-                        </div>
-                    </li>
-                    <li class="example">
-                        <div class="details">
-                            <p>Example</p>
-                            <span>___</span>
-                        </div>
-                    </li>
-                </div>
-            </ul>
+      <div class="wrapper">
+        <header>English Dictionary</header>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Search a word"
+            required
+            spellcheck="false"
+          />
+          <i class="fas fa-search"></i>
+          <span class="material-icons">close</span>
         </div>
-
+        <p class="info-text">
+          Type any existing word and press enter to get the meaning and example.
+        </p>
+        <ul>
+          <li class="word">
+            <div class="details">
+              <p>__</p>
+              <span>_ _</span>
+            </div>
+          </li>
+          <div class="content">
+            <li class="meaning">
+              <div class="details">
+                <p>Meaning</p>
+                <span>___</span>
+              </div>
+            </li>
+            <li class="example">
+              <div class="details">
+                <p>Example</p>
+                <span>___</span>
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
     </div>
 
     <script src="/js/dict.js"></script>
     <script src="/js/util/utility.js"></script>
-</body>
+  </body>
 </html>

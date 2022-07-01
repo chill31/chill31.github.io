@@ -44,18 +44,19 @@ p {
   box-shadow: 5px 5px 8px #00000020, -5px -5px 8px var(--clr-neutral);
 }
 .row button:hover {
-  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),inset -5px -5px 8px var(--clr-neutral);
+  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, 0.1),
+    inset -5px -5px 8px var(--clr-neutral);
   background: var(--clr-neutral);
 }
 .display #screen {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   width: auto;
   height: 70px;
   font-size: 35px;
   outline: none;
   border: none;
   text-align: right;
-  padding-right: .5em;
+  padding-right: 0.5em;
   background: #ecf0f3;
   border-radius: 6px;
   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px var(--clr-neutral);
@@ -63,17 +64,20 @@ p {
 #eval {
   background: var(--top-btm-bg);
   color: var(--clr-neutral);
-  box-shadow: inset 5px 5px 8px var(--top-btm-bg), inset -5px -5px 8px var(--top-btm-bg);
+  box-shadow: inset 5px 5px 8px var(--top-btm-bg),
+    inset -5px -5px 8px var(--top-btm-bg);
 }
 #eval:hover {
-    box-shadow: inset 5px 5px 8px var(--top-btm-bg), inset -5px -5px 8px var(--top-btm-bg);
+  box-shadow: inset 5px 5px 8px var(--top-btm-bg),
+    inset -5px -5px 8px var(--top-btm-bg);
 }
 #ac {
   background: var(--clr-success);
   color: var(--clr-neutral);
 }
 #ac:hover {
-    box-shadow: inset 5px 5px 8px var(--clr-success), inset -5px -5px 8px var(--clr-success);
+  box-shadow: inset 5px 5px 8px var(--clr-success),
+    inset -5px -5px 8px var(--clr-success);
 }
 #ce {
   background: #ff3399;

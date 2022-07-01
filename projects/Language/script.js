@@ -55,22 +55,18 @@ translateBtn.addEventListener("click", () => {
     });
 });
 
-icons.forEach(icon => {
-  
-  if(!icon.classList) return;
+icons.forEach((icon) => {
+  if (!icon.classList) return;
 
   icon.addEventListener("click", () => {
-
-    if(icon.classList.contains("from")){
+    if (icon.classList.contains("from")) {
       navigator.clipboard.writeText(fromText.value);
       notify("Copied value of your entered text", "success");
     }
 
-    if(icon.classList.contains("to")){
+    if (icon.classList.contains("to")) {
       navigator.clipboard.writeText(toText.value);
-      notify("Copied value of the translated text", "success")
+      notify("Copied value of the translated text", "success");
     }
-
   });
-
 });

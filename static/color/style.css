@@ -4,7 +4,7 @@
   transform: translateY(0);
 }
 
-.pickr *{
+.pickr * {
   box-sizing: border-box;
   outline: none;
   border: none;
@@ -21,7 +21,7 @@
   margin-top: 6rem;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
-   no-repeat center;
+    no-repeat center;
   background-size: 0;
   transition: 100ms;
   border: solid 1px black;
@@ -208,7 +208,7 @@
   margin: 0 0.2em;
 }
 
-.pcr-copy{
+.pcr-copy {
   color: #000 !important;
   background: var(--clr-success) !important;
 }
@@ -283,11 +283,7 @@
 }
 
 .pcr-app .pcr-interaction .pcr-save-copy {
-  background: linear-gradient(
-    to right,
-    var(--a-clr),
-    var(--clr-success)
-  );
+  background: linear-gradient(to right, var(--a-clr), var(--clr-success));
   color: white;
 }
 
@@ -300,8 +296,7 @@
 
 .pcr-app .pcr-interaction .pcr-clear:focus,
 .pcr-app .pcr-interaction .pcr-cancel:focus {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85),
-    0 0 0 3px  var(--clr-warning);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.85), 0 0 0 3px var(--clr-warning);
 }
 
 .pcr-app .pcr-selection .pcr-picker {
