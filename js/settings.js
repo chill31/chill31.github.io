@@ -83,7 +83,7 @@ const allCodeFonts = document.querySelectorAll(".font-code");
 const quicksandFont = document.querySelector("#quicksand");
 const ralewayFont = document.querySelector("#raleway");
 const poppinsFont = document.querySelector("#poppins");
-const dosisFont = document.querySelector("#dosis");
+const montserratFont = document.querySelector("#montserrat");
 const systemFont = document.querySelector("#system");
 
 const normalFont = localStorage.getItem("normalFont");
@@ -105,9 +105,9 @@ switch (normalFont) {
     removeChosen(allNormalFonts);
     systemFont.setAttribute("data-chosen", "");
     break;
-  case "Dosis":
+  case "Montserrat":
     removeChosen(allNormalFonts);
-    dosisFont.setAttribute("data-chosen", "");
+    montserratFont.setAttribute("data-chosen", "");
     break;
 }
 
