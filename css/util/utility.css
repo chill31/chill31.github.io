@@ -1,7 +1,6 @@
 body {
   --ff-primary: "Quicksand", sans-serif;
   --ff-primary-light: "Quicksand Light", sans-serif;
-  --ff-primary-normal: "Quicksand normal", sans-serif;
   --ff-primary-medium: "Quicksand Medium", sans-serif;
   --ff-primary-semibold: "Quicksand Semibold", sans-serif;
   --ff-primary-bold: "Quicksand Bold", sans-serif;
@@ -50,6 +49,11 @@ html {
   src: url(/assets/fonts/CODE-FONTS/RobotoMono-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Cascadia Code";
+  src: url(/assets/fonts/CODE-FONTS/Cascadia-Code.ttf);
+}
+
 /**
 
   FONT-FACE {QUICKSAND} - MULTIPLE.
@@ -59,11 +63,6 @@ html {
 @font-face {
   font-family: "Quicksand Light";
   src: url(/assets/fonts/quicksand/Quicksand-Light.ttf);
-}
-
-@font-face {
-  font-family: "Quicksand normal";
-  src: url(/assets/fonts/quicksand/Quicksand-Regular.ttf);
 }
 
 @font-face {
@@ -98,11 +97,6 @@ html {
 }
 
 @font-face {
-  font-family: "Raleway normal";
-  src: url(/assets/fonts/raleway/Raleway-Regular.ttf);
-}
-
-@font-face {
   font-family: "Raleway";
   src: url(/assets/fonts/raleway/Raleway-Regular.ttf);
 }
@@ -134,11 +128,6 @@ html {
 }
 
 @font-face {
-  font-family: "Poppins normal";
-  src: url(/assets/fonts/poppins/Poppins-Regular.otf);
-}
-
-@font-face {
   font-family: "Poppins";
   src: url(/assets/fonts/poppins/Poppins-Regular.otf);
 }
@@ -156,6 +145,37 @@ html {
 @font-face {
   font-family: "Poppins Bold";
   src: url(/assets/fonts/poppins/Poppins-Bold.otf);
+}
+
+/**
+
+  FONT-FACE {DOSIS} - MULTIPLE.
+
+**/
+
+@font-face {
+  font-family: "Dosis Light";
+  src: url(/assets/fonts/dosis/Dosis-Light.otf);
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url(/assets/fonts/dosis/Dosis-Regular.otf);
+}
+
+@font-face {
+  font-family: "Dosis Medium";
+  src: url(/assets/fonts/dosis/Dosis-Medium.otf);
+}
+
+@font-face {
+  font-family: "Dosis Semibold";
+  src: url(/assets/fonts/dosis/Dosis-SemiBold.otf);
+}
+
+@font-face {
+  font-family: "Dosis Bold";
+  src: url(/assets/fonts/Dosis/Dosis-Bold.otf);
 }
 
 /** NOTIFICATION CODE */

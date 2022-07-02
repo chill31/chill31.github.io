@@ -83,6 +83,7 @@ const allCodeFonts = document.querySelectorAll(".font-code");
 const quicksandFont = document.querySelector("#quicksand");
 const ralewayFont = document.querySelector("#raleway");
 const poppinsFont = document.querySelector("#poppins");
+const dosisFont = document.querySelector("#dosis");
 const systemFont = document.querySelector("#system");
 
 const normalFont = localStorage.getItem("normalFont");
@@ -104,6 +105,10 @@ switch (normalFont) {
     removeChosen(allNormalFonts);
     systemFont.setAttribute("data-chosen", "");
     break;
+  case "Dosis":
+    removeChosen(allNormalFonts);
+    dosisFont.setAttribute("data-chosen", "");
+    break;
 }
 
 for (let i = 0; i < allNormalFonts.length; i++) {
@@ -118,6 +123,7 @@ for (let i = 0; i < allNormalFonts.length; i++) {
 const jetbrainsFont = document.querySelector("#jetbrains");
 const firaFont = document.querySelector("#fira");
 const robotoMonoFont = document.querySelector("#robotoMono");
+const cascadiaCodeFont = document.querySelector("#cascadiaCode");
 const browserFont = document.querySelector("#browser");
 
 const codeFont = localStorage.getItem("codeFont");
@@ -136,6 +142,11 @@ switch (codeFont) {
   case "Roboto Mono":
     removeChosen(allCodeFonts);
     robotoMonoFont.setAttribute("data-chosen", "");
+
+    break;
+  case "Cascadia Code":
+    removeChosen(allCodeFonts);
+    cascadiaCodeFont.setAttribute("data-chosen", "");
 
     break;
   case "Monospace":

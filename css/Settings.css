@@ -148,11 +148,16 @@ body {
   color: var(--main-color);
 }
 
+.font-space > summary {
+  cursor: pointer;
+}
+
 .font-type-header {
   font-weight: 350;
   position: absolute;
   left: 5rem;
   color: var(--main-color);
+  font-size: x-large;
 }
 
 .font-type-header[data-font="code"] {
@@ -187,6 +192,10 @@ body {
   border-radius: 0.25rem;
   cursor: pointer;
   transition: filter var(--transition) ease;
+}
+
+.font-choose:hover {
+  filter: brightness(1.1);
 }
 
 .font-code#browser::before {
@@ -230,6 +239,10 @@ body {
   cursor: pointer;
   transition: filter var(--transition) ease;
   position: relative;
+}
+
+.theme-choose:hover {
+  filter: brightness(1.1);
 }
 
 .theme-default {
