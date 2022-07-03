@@ -149,33 +149,33 @@ html {
 
 /**
 
-  FONT-FACE {DOSIS} - MULTIPLE.
+  FONT-FACE {MONTSERRAT} - MULTIPLE.
 
 **/
 
 @font-face {
-  font-family: "Dosis Light";
-  src: url(/assets/fonts/dosis/Dosis-Light.otf);
+  font-family: "Montserrat Light";
+  src: url(/assets/fonts/montserrat/Montserrat-Light.otf);
 }
 
 @font-face {
-  font-family: "Dosis";
-  src: url(/assets/fonts/dosis/Dosis-Regular.otf);
+  font-family: "Montserrat";
+  src: url(/assets/fonts/montserrat/Montserrat-Regular.otf);
 }
 
 @font-face {
-  font-family: "Dosis Medium";
-  src: url(/assets/fonts/dosis/Dosis-Medium.otf);
+  font-family: "Montserrat Medium";
+  src: url(/assets/fonts/montserrat/Montserrat-Medium.otf);
 }
 
 @font-face {
-  font-family: "Dosis Semibold";
-  src: url(/assets/fonts/dosis/Dosis-SemiBold.otf);
+  font-family: "Montserrat Semibold";
+  src: url(/assets/fonts/montserrat/Montserrat-SemiBold.otf);
 }
 
 @font-face {
-  font-family: "Dosis Bold";
-  src: url(/assets/fonts/Dosis/Dosis-Bold.otf);
+  font-family: "Montserrat Bold";
+  src: url(/assets/fonts/montserrat/Montserrat-Bold.otf);
 }
 
 /** NOTIFICATION CODE */
@@ -511,10 +511,6 @@ table,
 th,
 td {
   font-family: var(--ff-primary) !important;
-}
-
-code, input, textarea {
-  font-family: var(--ff-code), monospace !important;
 }
 
 .shortcut-menu {
