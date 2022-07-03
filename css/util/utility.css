@@ -270,6 +270,19 @@ html {
   overflow: hidden;
 }
 
+body.menu-right #toggle-menu {
+  height: 1.5rem;
+  width: 2.5rem;
+  position: fixed;
+  top: 1rem;
+  left: calc(100vw - calc(1.5rem + (1rem * 2) + 1rem));
+  cursor: pointer;
+  z-index: 9999999999999999999;
+  background-color: rgba(35, 39, 44, 0.288);
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
 #toggle-menu,
 #toggle-menu > *,
 .span,
@@ -314,6 +327,14 @@ html {
 
 .span-c.active .span:last-of-type {
   transform: translate(-50%, -225%) rotate(-45deg);
+}
+
+body.menu-right #menu {
+  transform-origin: bottom left;
+}
+
+body.menu-right #menu.active {
+  transform-origin: top right;
 }
 
 #menu {
@@ -492,7 +513,7 @@ td {
   font-family: var(--ff-primary) !important;
 }
 
-code {
+code, input, textarea {
   font-family: var(--ff-code), monospace !important;
 }
 
@@ -511,6 +532,10 @@ code {
   gap: 0.75rem;
   transition: 500ms ease;
   transition-property: opacity;
+}
+
+body.menu-right .shortcut-menu {
+  left: calc(100vw - calc(1.5rem + (1rem * 2) + 9rem));
 }
 
 .shortcut-menu.disabled {
