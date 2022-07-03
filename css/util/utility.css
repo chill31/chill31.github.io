@@ -513,6 +513,10 @@ td {
   font-family: var(--ff-primary) !important;
 }
 
+code, textarea, input {
+ font-family: var(--ff-code) !important;
+}
+
 .shortcut-menu {
   position: fixed;
   top: 1rem;
