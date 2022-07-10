@@ -513,7 +513,7 @@ td {
   font-family: var(--ff-primary) !important;
 }
 
-code, textarea, input {
+code, textarea, input:not([type="submit"]) {
  font-family: var(--ff-code) !important;
 }
 
