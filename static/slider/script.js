@@ -7020,7 +7020,5 @@ const modules = [
   EffectCards,
 ];
 Swiper.use(modules);
-// export { Swiper, Swiper as default };
-console.log(Swiper);
 export default Swiper;
 //# sourceMappingURL=swiper-bundle.esm.browser.min.js.map

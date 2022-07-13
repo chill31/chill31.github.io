@@ -1,4 +1,3 @@
-console.clear();
 const sliderProps = {
   fill: "var(--a-clr)",
   background: "var(--a-clr-dark)",

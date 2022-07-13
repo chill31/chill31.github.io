@@ -39,7 +39,6 @@ function fetchData() {
     .then((result) => weatherDetails(result))
     .catch((e) => {
       infoTxt.innerText = "Something went wrong";
-      console.error(e);
       infoTxt.classList.replace("pending", "error");
     });
 }
