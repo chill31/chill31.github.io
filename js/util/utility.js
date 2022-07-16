@@ -1,3 +1,11 @@
+document.head.innerHTML += `
+ <meta content="Chill31" property="og:title" />
+  <meta content="The Perfect Utility Website" property="og:description" />
+  <meta content="https://chill31.github.io" property="og:url" />
+  <meta content="https://chill31.github.io/assets/favicons/android-chrome-512x512.png" property="og:image" />
+  <meta content="#2293FA" data-react-helmet="true" name="theme-color" />
+`;
+
 /**
  * @param {*} text
  * @returns reversed text
