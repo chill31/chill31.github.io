@@ -1,81 +1,181 @@
-const mainPage = document.querySelector(".mainPage");
+function makePickr(elem, defaultClr) {
 
-const fontNav = document.querySelector("#fonts");
-const shortcutNav = document.querySelector("#shortcuts");
-const particleNav = document.querySelector("#particles");
-const colorNav = document.querySelector("#customColor");
-const themeNav = document.querySelector("#theme");
-const projectDisplayNav = document.querySelector("#project-default-display");
-const dangerNav = document.querySelector("#danger");
+  return Pickr.create({
+    el: elem, // so I don't get confused, this is element where I want color picker to be.
+    theme: "classic", // theme, classic is good.
+    default: defaultClr,
+  
+    swatches: [
+      // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
+      "rgba(244, 67, 54, 1)", // orange.
+      "rgb(233, 30, 99)", // pinkish
+      "rgb(156, 39, 176)", // purple,
+      "rgb(103, 58, 183)", //  violet
+      "rgb(63, 81, 181)", // darkblue
+      "rgb(33, 150, 243)", // blue
+      "rgb(3, 169, 244)", // skyblue
+      "rgb(0, 188, 212)", // lightcyan
+      "rgb(0, 150, 136)", // darkgreen
+      "rgb(76, 175, 80)", // green
+      "rgb(139, 195, 74)", // lightgreen
+      "rgb(205, 220, 57)", // lime
+      "rgb(255, 235, 59)", // yellow
+      "rgb(255, 193, 7)", // darker yellow
+      "rgb(202, 151, 0,)", // darker+ yellow
+    ],
+    components: {
+      // what's included in the color picker.
+      preview: true, //  shows a preview of the chosen color.
+      opacity: true, // transparency slider.
+      hue: true, // default colors slider .
+      interaction: {
+        // buttons and inputs
+        hex: true, // hex(a) color scheme.
+        rgba: true, // rgb(a) color scheme
+        hsla: true, // hsl(a) color scheme.
+        hsva: false, // hsv(a) color scheme.
+        cmyk: false, // cmyk color scheme.
+        input: true, // input where we can type in our own colors.
+        cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
+        clear: true, // clears the color and closes the palette.
+        save: true, // saves the color chosen and closes the palette.
+      },
+    },
+  });
 
-const allPages = document.querySelectorAll(".gotoPage");
-
-const fontPage = document.querySelector("#fontPage");
-const shortcutPage = document.querySelector("#shortcutPage");
-const particlePage = document.querySelector("#particlePage");
-const colorPage = document.querySelector("#colorPage");
-const themePage = document.querySelector("#themePage");
-const projectDisplayPage = document.querySelector("#projectDisplayPage");
-const dangerPage = document.querySelector("#dangerPage");
-
-const backHomeIcons = document.querySelectorAll(".back-home-svg");
-
-function removeChosen(allElem) {
-  allElem.forEach((e) => e.removeAttribute("data-chosen"));
 }
 
-const deletAllBtn = document.querySelector(".deleteAllBtn");
-deletAllBtn.addEventListener("click", () => {
-  localStorage.clear();
-  notify(
-    "Reset all Settings back to default. Refresh or visit another page to see the changes.",
-    "info"
-  );
-});
+function makeChosen(element, allElements) {
+  allElements.forEach((el) => el.removeAttribute("data-chosen"));
+  element.setAttribute("data-chosen", "");
+}
 
-backHomeIcons.forEach((icon) => {
-  icon.addEventListener("click", () => {
-    allPages.forEach((p) => p.classList.remove("active"));
-    mainPage.classList.remove("hide");
+function removeChosen(allElements) {
+  allElements.forEach((el) => el.removeAttribute("data-chosen"));
+}
+
+function makeActive(element, allElements) {
+  allElements.forEach((el) => el.classList.remove("active"));
+  element.classList.add("active");
+
+  previousPage.removeAttribute("disabled");
+}
+
+function removeActive(allElements) {
+  allElements.forEach((el) => el.classList.remove("active"));
+}
+
+const sideBarButtons = document.querySelectorAll(".sidebar-button");
+sideBarButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selector = document.querySelector(
+      `#${btn.getAttribute("data-redirect")}`
+    );
+
+    makeActive(selector, newPages);
+    removeActive(subPages);
   });
 });
 
-const delay = 75;
+const navigateToNew = document.querySelectorAll(".navigateTo.navNew");
+const navigateToSub = document.querySelectorAll(".navigateTo.navSub");
 
-function makeActive(e) {
-  setTimeout(() => {
-    e.classList.add("active");
-    mainPage.classList.add("hide");
-  }, delay);
-}
+navigateToNew.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selector = document.querySelector(
+      `#${btn.getAttribute("data-redirect")}`
+    );
 
-fontNav.addEventListener("click", () => {
-  makeActive(fontPage);
+    makeActive(selector, newPages);
+  });
 });
 
-shortcutNav.addEventListener("click", () => {
-  makeActive(shortcutPage);
+navigateToSub.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const selector = document.querySelector(
+      `#${btn.getAttribute("data-redirect")}`
+    );
+
+    makeActive(selector, subPages);
+  });
 });
 
-particleNav.addEventListener("click", () => {
-  makeActive(particlePage);
+const newPages = document.querySelectorAll(".newPage");
+
+const subPages = document.querySelectorAll(".subPage");
+
+const previousPage = document.querySelector(".previous-page");
+
+previousPage.addEventListener("click", () => {
+  let newActive = false;
+  let subActive = false;
+
+  newPages.forEach((page) => {
+    if (page.classList.contains("active")) newActive = true;
+    else if (!page.classList.contains("active")) return;
+  });
+
+  subPages.forEach((page) => {
+    if (page.classList.contains("active")) subActive = true;
+    else if (!page.classList.contains("active")) return;
+  });
+
+  if (newActive === true && subActive === false) {
+    removeActive(newPages);
+  }
+
+  if (subActive === true) {
+    removeActive(subPages)
+  }
 });
 
-projectDisplayNav.addEventListener("click", () => {
-  makeActive(projectDisplayPage);
+const allMainNav = document.querySelectorAll(".goMain");
+const allSubNav = document.querySelectorAll(".goSub");
+
+allMainNav.forEach((nav) => {
+  nav.addEventListener("click", () => {
+    removeActive(subPages);
+    removeActive(newPages);
+  });
 });
 
-colorNav.addEventListener("click", () => {
-  makeActive(colorPage);
+allSubNav.forEach((nav) => {
+  nav.addEventListener("click", () => {
+    removeActive(subPages);
+  });
 });
 
-themeNav.addEventListener("click", () => {
-  makeActive(themePage);
+const deleteAllBtn = document.querySelector(".deleteAll");
+deleteAllBtn.addEventListener("click", () => {
+  localStorage.clear();
+  notify("Successfully cleared all data present on this website", "success");
 });
 
-dangerNav.addEventListener("click", () => {
-  makeActive(dangerPage);
+/** Menu Placement Code */
+
+const menuPlacementBtns = document.querySelectorAll(".menu-choose");
+const leftMenuPlacement = document.querySelector("#choose-menu-left");
+const rightMenuPlacement = document.querySelector("#choose-menu-right");
+
+const currentMenuPlacement = localStorage.getItem("menu-placement");
+
+switch (currentMenuPlacement) {
+  case "right":
+    makeChosen(rightMenuPlacement, menuPlacementBtns);
+    break;
+  case "left":
+    makeChosen(leftMenuPlacement, menuPlacementBtns);
+    break;
+  }
+
+menuPlacementBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    makeChosen(btn, menuPlacementBtns);
+    localStorage.setItem("menu-placement", btn.textContent.toLowerCase());
+  });
 });
+
+/** Fonts code (normal & code fonts) */
 
 const allNormalFonts = document.querySelectorAll(".font-normal");
 const allCodeFonts = document.querySelectorAll(".font-code");
@@ -163,295 +263,55 @@ for (let i = 0; i < allCodeFonts.length; i++) {
   });
 }
 
-const shortcutToggle = document.querySelector(".shortcut-toggle");
-const particleToggle = document.querySelector(".particles-toggle");
+/** Projects Default Display Code  */
 
-if (localStorage.getItem("shortcuts") == "enabled") {
-  shortcutToggle.checked = true;
-} else if (localStorage.getItem("shortcuts") == "disabled") {
-  shortcutToggle.checked = false;
-}
+const allDisplayOptions = document.querySelectorAll(".display-choose");
 
-shortcutToggle.addEventListener("input", (e) => {
-  if (e.target.checked) localStorage.setItem("shortcuts", "enabled");
-  else localStorage.setItem("shortcuts", "disabled");
-});
+const displaySlider = document.querySelector("#slider");
+const displayGrid = document.querySelector("#grid");
 
-if (localStorage.getItem("particles") == "enabled") {
-  particleToggle.checked = true;
-} else if (localStorage.getItem("particles") == "disabled") {
-  particleToggle.checked = false;
-}
+const currentDisplay = localStorage.getItem("project-display");
 
-particleToggle.addEventListener("input", (e) => {
-  if (e.target.checked) localStorage.setItem("particles", "enabled");
-  else localStorage.setItem("particles", "disabled");
-});
-
-const allThemes = document.querySelectorAll(".theme-choose");
-
-const themeDefault = document.querySelector(".theme-default");
-const themeForest = document.querySelector(".theme-forest");
-const themeDull = document.querySelector(".theme-dull");
-const themeMist = document.querySelector(".theme-mist");
-const themeUnderworld = document.querySelector(".theme-underworld");
-
-const currentTheme = localStorage.getItem("theme");
-
-allThemes.forEach((theme) => {
-  if (theme.textContent == currentTheme) {
-    removeChosen(allThemes);
-    theme.setAttribute("data-chosen", "");
+allDisplayOptions.forEach((displayOption) => {
+  if (displayOption.textContent == currentDisplay) {
+    removeChosen(allDisplayOptions);
+    displayOption.setAttribute("data-chosen", "");
   }
 });
 
-themeDefault.addEventListener("click", (e) => {
-  localStorage.setItem("accent-color", "#2293fa");
-  localStorage.setItem("accent-color-dark", "#121417");
-  localStorage.setItem("selection-color", "#00b6ff");
-  localStorage.setItem("top-bottom-background", "#54c0eb");
+for (let i = 0; i < allDisplayOptions.length; i++) {
+  allDisplayOptions[i].addEventListener("click", (e) => {
+    removeChosen(allDisplayOptions);
+    allDisplayOptions[i].setAttribute("data-chosen", "");
 
-  removeChosen(allThemes);
-  e.target.setAttribute("data-chosen", "");
+    localStorage.setItem("project-display", e.target.textContent);
+  });
+}
 
-  localStorage.setItem("theme", e.target.textContent);
-});
+/** Custom Colors code now */
 
-themeForest.addEventListener("click", (e) => {
-  localStorage.setItem("accent-color", "#53d458");
-  localStorage.setItem("accent-color-dark", "#253525");
-  localStorage.setItem("selection-color", "#77de7c");
-  localStorage.setItem("top-bottom-background", "#2eea36");
-
-  removeChosen(allThemes);
-  e.target.setAttribute("data-chosen", "");
-
-  localStorage.setItem("theme", e.target.textContent);
-});
-
-themeDull.addEventListener("click", (e) => {
-  localStorage.setItem("accent-color", "#eac75d");
-  localStorage.setItem("accent-color-dark", "#27251f");
-  localStorage.setItem("selection-color", "#FFD862");
-  localStorage.setItem("top-bottom-background", "#ffbf00");
-
-  removeChosen(allThemes);
-  e.target.setAttribute("data-chosen", "");
-
-  localStorage.setItem("theme", e.target.textContent);
-});
-
-themeMist.addEventListener("click", (e) => {
-  localStorage.setItem("accent-color", "#c54bda");
-  localStorage.setItem("accent-color-dark", "#1c171d");
-  localStorage.setItem("selection-color", "#e967ff");
-  localStorage.setItem("top-bottom-background", "#db0bff");
-
-  removeChosen(allThemes);
-  e.target.setAttribute("data-chosen", "");
-
-  localStorage.setItem("theme", e.target.textContent);
-});
-
-themeUnderworld.addEventListener("click", (e) => {
-  localStorage.setItem("accent-color", "#ff3b3b");
-  localStorage.setItem("accent-color-dark", "#171212");
-  localStorage.setItem("selection-color", "#ff0000");
-  localStorage.setItem("top-bottom-background", "#EB5454");
-
-  removeChosen(allThemes);
-  e.target.setAttribute("data-chosen", "");
-
-  localStorage.setItem("theme", e.target.textContent);
-});
-// color picker code starts now.
-
-const pickr = Pickr.create({
-  el: ".p1", // so I don't get confused, this is element where I want color picker to be.
-  theme: "classic", // theme, classic is good.
-  default: localStorage.getItem("accent-color"),
-
-  swatches: [
-    // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
-    "rgba(244, 67, 54, 1)", // orange.
-    "rgb(233, 30, 99)", // pinkish
-    "rgb(156, 39, 176)", // purple,
-    "rgb(103, 58, 183)", //  violet
-    "rgb(63, 81, 181)", // darkblue
-    "rgb(33, 150, 243)", // blue
-    "rgb(3, 169, 244)", // skyblue
-    "rgb(0, 188, 212)", // lightcyan
-    "rgb(0, 150, 136)", // darkgreen
-    "rgb(76, 175, 80)", // green
-    "rgb(139, 195, 74)", // lightgreen
-    "rgb(205, 220, 57)", // lime
-    "rgb(255, 235, 59)", // yellow
-    "rgb(255, 193, 7)", // darker yellow
-    "rgb(202, 151, 0,)", // darker+ yellow
-  ],
-  components: {
-    // what's included in the color picker.
-    preview: true, //  shows a preview of the chosen color.
-    opacity: true, // transparency slider.
-    hue: true, // default colors slider .
-    interaction: {
-      // buttons and inputs
-      hex: true, // hex(a) color scheme.
-      rgba: true, // rgb(a) color scheme
-      hsla: true, // hsl(a) color scheme.
-      hsva: false, // hsv(a) color scheme.
-      cmyk: false, // cmyk color scheme.
-      input: true, // input where we can type in our own colors.
-      cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
-      clear: true, // clears the color and closes the palette.
-      save: true, // saves the color chosen and closes the palette.
-    },
-  },
-});
+const pickr = makePickr(".p1", localStorage.getItem("accent-color"));
 
 pickr.show();
 setTimeout(() => {
   pickr.hide();
 }, 100);
 
-const pickr2 = Pickr.create({
-  el: ".p2",
-  theme: "classic",
-  default: localStorage.getItem("accent-color-dark"),
-
-  swatches: [
-    // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
-    "rgba(244, 67, 54, 1)", // orange.
-    "rgb(233, 30, 99)", // pinkish
-    "rgb(156, 39, 176)", // purple,
-    "rgb(103, 58, 183)", //  violet
-    "rgb(63, 81, 181)", // darkblue
-    "rgb(33, 150, 243)", // blue
-    "rgb(3, 169, 244)", // skyblue
-    "rgb(0, 188, 212)", // lightcyan
-    "rgb(0, 150, 136)", // darkgreen
-    "rgb(76, 175, 80)", // green
-    "rgb(139, 195, 74)", // lightgreen
-    "rgb(205, 220, 57)", // lime
-    "rgb(255, 235, 59)", // yellow
-    "rgb(255, 193, 7)", // darker yellow
-    "rgb(202, 151, 0,)", // darker+ yellow
-  ],
-  components: {
-    // what's included in the color picker.
-    preview: true, //  shows a preview of the chosen color.
-    opacity: true, // transparency slider.
-    hue: true, // default colors slider .
-    interaction: {
-      // buttons and inputs
-      hex: true, // hex(a) color scheme.
-      rgba: true, // rgb(a) color scheme
-      hsla: true, // hsl(a) color scheme.
-      hsva: false, // hsv(a) color scheme.
-      cmyk: false, // cmyk color scheme.
-      input: true, // input where we can type in our own colors.
-      cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
-      clear: true, // clears the color and closes the palette.
-      save: true, // saves the color chosen and closes the palette.
-    },
-  },
-});
+const pickr2 = makePickr(".p2", localStorage.getItem("accent-color-dark"));
 
 pickr2.show();
 setTimeout(() => {
   pickr2.hide();
 }, 100);
 
-const pickr3 = Pickr.create({
-  el: ".p3", // so I don't get confused, this is element where I want color picker to be.
-  theme: "classic", // theme, classic is good.
-  default: localStorage.getItem("selection-color"),
-
-  swatches: [
-    // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
-    "rgba(244, 67, 54, 1)", // orange.
-    "rgb(233, 30, 99)", // pinkish
-    "rgb(156, 39, 176)", // purple,
-    "rgb(103, 58, 183)", //  violet
-    "rgb(63, 81, 181)", // darkblue
-    "rgb(33, 150, 243)", // blue
-    "rgb(3, 169, 244)", // skyblue
-    "rgb(0, 188, 212)", // lightcyan
-    "rgb(0, 150, 136)", // darkgreen
-    "rgb(76, 175, 80)", // green
-    "rgb(139, 195, 74)", // lightgreen
-    "rgb(205, 220, 57)", // lime
-    "rgb(255, 235, 59)", // yellow
-    "rgb(255, 193, 7)", // darker yellow
-    "rgb(202, 151, 0,)", // darker+ yellow
-  ],
-  components: {
-    // what's included in the color picker.
-    preview: true, //  shows a preview of the chosen color.
-    opacity: true, // transparency slider.
-    hue: true, // default colors slider .
-    interaction: {
-      // buttons and inputs
-      hex: true, // hex(a) color scheme.
-      rgba: true, // rgb(a) color scheme
-      hsla: true, // hsl(a) color scheme.
-      hsva: false, // hsv(a) color scheme.
-      cmyk: false, // cmyk color scheme.
-      input: true, // input where we can type in our own colors.
-      cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
-      clear: true, // clears the color and closes the palette.
-      save: true, // saves the color chosen and closes the palette.
-    },
-  },
-});
+const pickr3 = makePickr(".p3", localStorage.getItem("selection-color"));
 
 pickr3.show();
 setTimeout(() => {
   pickr3.hide();
 }, 100);
 
-const pickr4 = Pickr.create({
-  el: ".p4", // so I don't get confused, this is element where I want color picker to be.
-  theme: "classic", // theme, classic is good.
-  default: localStorage.getItem("top-bottom-background"),
-
-  swatches: [
-    // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
-    "rgba(244, 67, 54, 1)", // orange.
-    "rgb(233, 30, 99)", // pinkish
-    "rgb(156, 39, 176)", // purple,
-    "rgb(103, 58, 183)", //  violet
-    "rgb(63, 81, 181)", // darkblue
-    "rgb(33, 150, 243)", // blue
-    "rgb(3, 169, 244)", // skyblue
-    "rgb(0, 188, 212)", // lightcyan
-    "rgb(0, 150, 136)", // darkgreen
-    "rgb(76, 175, 80)", // green
-    "rgb(139, 195, 74)", // lightgreen
-    "rgb(205, 220, 57)", // lime
-    "rgb(255, 235, 59)", // yellow
-    "rgb(255, 193, 7)", // darker yellow
-    "rgb(202, 151, 0,)", // darker+ yellow
-  ],
-  components: {
-    // what's included in the color picker.
-    preview: true, //  shows a preview of the chosen color.
-    opacity: true, // transparency slider.
-    hue: true, // default colors slider .
-    interaction: {
-      // buttons and inputs
-      hex: true, // hex(a) color scheme.
-      rgba: true, // rgb(a) color scheme
-      hsla: true, // hsl(a) color scheme.
-      hsva: false, // hsv(a) color scheme.
-      cmyk: false, // cmyk color scheme.
-      input: true, // input where we can type in our own colors.
-      cancel: true, // cancel button, cancels the color chosen and moves back to previous one and closes the palette.
-      clear: true, // clears the color and closes the palette.
-      save: true, // saves the color chosen and closes the palette.
-    },
-  },
-});
+const pickr4 = makePickr(".p4", localStorage.getItem("top-bottom-background"));
 
 pickr4.show();
 setTimeout(() => {
@@ -793,28 +653,101 @@ resetToDefBtns[3].addEventListener("click", () => {
   notify("Reset the Top Header Color back to default", "info");
 });
 
-const allDisplayOptions = document.querySelectorAll(".display-choose");
+const allThemes = document.querySelectorAll(".theme-choose");
 
-const displaySlider = document.querySelector("#slider");
-const displayGrid = document.querySelector("#grid");
+const themeDefault = document.querySelector(".theme-default");
+const themeForest = document.querySelector(".theme-forest");
+const themeDull = document.querySelector(".theme-dull");
+const themeMist = document.querySelector(".theme-mist");
+const themeUnderworld = document.querySelector(".theme-underworld");
 
-const currentDisplay = localStorage.getItem("project-display");
+const currentTheme = localStorage.getItem("theme");
 
-allDisplayOptions.forEach((displayOption) => {
-  if (displayOption.textContent == currentDisplay) {
-    removeChosen(allDisplayOptions);
-    displayOption.setAttribute("data-chosen", "");
+allThemes.forEach((theme) => {
+  if (theme.textContent == currentTheme) {
+    makeChosen(theme, allThemes);
   }
 });
 
-for (let i = 0; i < allDisplayOptions.length; i++) {
-  allDisplayOptions[i].addEventListener("click", (e) => {
-    removeChosen(allDisplayOptions);
-    allDisplayOptions[i].setAttribute("data-chosen", "");
+themeDefault.addEventListener("click", (e) => {
+  localStorage.setItem("accent-color", "#2293fa");
+  localStorage.setItem("accent-color-dark", "#121417");
+  localStorage.setItem("selection-color", "#00b6ff");
+  localStorage.setItem("top-bottom-background", "#54c0eb");
 
-    localStorage.setItem("project-display", e.target.textContent);
-  });
+  makeChosen(themeDefault, allThemes);
+
+  localStorage.setItem("theme", e.target.textContent);
+});
+
+themeForest.addEventListener("click", (e) => {
+  localStorage.setItem("accent-color", "#53d458");
+  localStorage.setItem("accent-color-dark", "#253525");
+  localStorage.setItem("selection-color", "#77de7c");
+  localStorage.setItem("top-bottom-background", "#2eea36");
+
+  makeChosen(themeForest, allThemes);
+
+  localStorage.setItem("theme", e.target.textContent);
+});
+
+themeDull.addEventListener("click", (e) => {
+  localStorage.setItem("accent-color", "#eac75d");
+  localStorage.setItem("accent-color-dark", "#27251f");
+  localStorage.setItem("selection-color", "#FFD862");
+  localStorage.setItem("top-bottom-background", "#ffbf00");
+
+  makeChosen(themeDull, allThemes);
+
+  localStorage.setItem("theme", e.target.textContent);
+});
+
+themeMist.addEventListener("click", (e) => {
+  localStorage.setItem("accent-color", "#c54bda");
+  localStorage.setItem("accent-color-dark", "#1c171d");
+  localStorage.setItem("selection-color", "#e967ff");
+  localStorage.setItem("top-bottom-background", "#db0bff");
+
+  makeChosen(themeMist, allThemes);
+
+  localStorage.setItem("theme", e.target.textContent);
+});
+
+themeUnderworld.addEventListener("click", (e) => {
+  localStorage.setItem("accent-color", "#ff3b3b");
+  localStorage.setItem("accent-color-dark", "#171212");
+  localStorage.setItem("selection-color", "#ff0000");
+  localStorage.setItem("top-bottom-background", "#EB5454");
+
+  makeChosen(themeUnderworld, allThemes);
+
+  localStorage.setItem("theme", e.target.textContent);
+});
+
+const shortcutToggle = document.querySelector(".shortcut-toggle");
+const particleToggle = document.querySelector(".particles-toggle");
+
+if (localStorage.getItem("shortcuts") == "enabled") {
+  shortcutToggle.checked = true;
+} else if (localStorage.getItem("shortcuts") == "disabled") {
+  shortcutToggle.checked = false;
 }
+
+shortcutToggle.addEventListener("input", (e) => {
+  if (e.target.checked) localStorage.setItem("shortcuts", "enabled");
+  else localStorage.setItem("shortcuts", "disabled");
+});
+
+if (localStorage.getItem("particles") == "enabled") {
+  particleToggle.checked = true;
+} else if (localStorage.getItem("particles") == "disabled") {
+  particleToggle.checked = false;
+}
+
+particleToggle.addEventListener("input", (e) => {
+  if (e.target.checked) localStorage.setItem("particles", "enabled");
+  else localStorage.setItem("particles", "disabled");
+});
 
 const particleAmtRange = document.querySelector(".particle-range");
 const showParticleLabel = document.querySelector(".particle-amount-show");
@@ -830,6 +763,24 @@ particleAmtRange.addEventListener("input", (e) => {
 
 particleAmtRange.addEventListener("change", (e) => {
   localStorage.setItem("particle-amount", e.target.valueAsNumber);
+});
+
+const notifToggle = document.querySelector(".notif-toggle");
+const currentNotifSetting = localStorage.getItem("notifications");
+
+switch (currentNotifSetting) {
+
+  case "enabled":
+    notifToggle.checked = true;
+    break;
+  case "disabled":
+    notifToggle.checked = false;
+    break;
+
+}
+
+notifToggle.addEventListener("input", (e) => {
+  e.target.checked ? localStorage.setItem("notifications", "enabled") : localStorage.setItem("notifications", "disabled");
 });
 
 document

@@ -173,42 +173,48 @@ function notify(message, type, context) {
     creat = document.getElementById("notification-area");
   }
 
-  let createdDiv = document.createElement("div");
-  let id = Math.random().toString(36).substring(2, 10);
+  const preference = localStorage.getItem("notifications");
 
-  createdDiv.setAttribute("id", id);
-  createdDiv.classList.add("notification", type);
+  if (preference == "enabled") {
+    let createdDiv = document.createElement("div");
+    let id = Math.random().toString(36).substring(2, 10);
 
-  if (context) {
-    createdDiv.classList.add("contextMenu");
-  }
+    createdDiv.setAttribute("id", id);
+    createdDiv.classList.add("notification", type);
 
-  createdDiv.innerHTML = `
+    if (context) {
+      createdDiv.classList.add("contextMenu");
+    }
+
+    createdDiv.innerHTML = `
 <div class="cross">
   <span class="cross__spans span1"></span>
   <span class="cross__spans span2""></span>
 </div>
 ${message}
 <span class="notif notif-timer"></span>`;
-  document.getElementById("notification-area").prepend(createdDiv);
+    document.getElementById("notification-area").prepend(createdDiv);
 
-  setTimeout(() => {
-    var notifications = document
-      .getElementById("notification-area")
-      .getElementsByClassName("notification");
-    for (let i = 0; i < notifications.length; i++) {
-      if (notifications[i].getAttribute("id") == id) {
-        notifications[i].remove();
-        break;
+    setTimeout(() => {
+      var notifications = document
+        .getElementById("notification-area")
+        .getElementsByClassName("notification");
+      for (let i = 0; i < notifications.length; i++) {
+        if (notifications[i].getAttribute("id") == id) {
+          notifications[i].remove();
+          break;
+        }
       }
-    }
-  }, 5000);
-  const notifCrosses = document.querySelectorAll(".notification .cross");
-  notifCrosses.forEach((e) => {
-    e.addEventListener("click", () => {
-      e.parentElement.remove();
+    }, 5000);
+    const notifCrosses = document.querySelectorAll(".notification .cross");
+    notifCrosses.forEach((e) => {
+      e.addEventListener("click", () => {
+        e.parentElement.remove();
+      });
     });
-  });
+  } else {
+    return;
+  }
 }
 /**
  * @param {*} text
@@ -392,6 +398,14 @@ if (!localStorage.getItem("top-bottom-background")) {
   localStorage.setItem("top-bottom-background", "#54c0eb");
 }
 
+if (!localStorage.getItem("menu-placement")) {
+  localStorage.setItem("menu-placement", "left");
+}
+
+if (!localStorage.getItem("notifications")) {
+  localStorage.setItem("notifications", "enabled");
+}
+
 document.body.style.setProperty(
   "--a-clr",
   localStorage.getItem("accent-color")
@@ -408,3 +422,5 @@ document.body.style.setProperty(
   "--top-btm-bg",
   localStorage.getItem("top-bottom-background")
 );
+
+document.body.classList.add(`menu-${localStorage.getItem("menu-placement")}`);

@@ -189,6 +189,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
+}
+
+#notification-area.disabled {
+  transform: scale(0);
 }
 
 #notification-area .notification {
