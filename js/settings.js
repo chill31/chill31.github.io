@@ -145,12 +145,6 @@ allSubNav.forEach((nav) => {
   });
 });
 
-const deleteAllBtn = document.querySelector(".deleteAll");
-deleteAllBtn.addEventListener("click", () => {
-  localStorage.clear();
-  notify("Successfully cleared all data present on this website", "success");
-});
-
 /** Menu Placement Code */
 
 const menuPlacementBtns = document.querySelectorAll(".menu-choose");
@@ -781,6 +775,12 @@ switch (currentNotifSetting) {
 
 notifToggle.addEventListener("input", (e) => {
   e.target.checked ? localStorage.setItem("notifications", "enabled") : localStorage.setItem("notifications", "disabled");
+});
+
+const deleteAllBtn = document.querySelector(".deleteAll");
+deleteAllBtn.addEventListener("click", () => {
+  notify("Successfully cleared all data present on this website", "success");
+  localStorage.clear();
 });
 
 document

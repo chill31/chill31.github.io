@@ -198,7 +198,7 @@ html {
 #notification-area .notification {
   position: relative;
   padding: 0.875rem 1.75rem;
-  background: var(--a-clr-dark);
+  background: linear-gradient(to right, var(--a-clr), var(--selection-color), var(--selection-color));
   color: #f5f5f5;
   font-family: var(--ff-primary);
   font-size: 1rem;
@@ -485,6 +485,7 @@ header {
   font-family: var(--ff-primary-medium);
   font-weight: 100;
   color: var(--text-color);
+  text-align: center;
 }
 
 *,
@@ -519,6 +520,10 @@ td {
 
 code, textarea, input:not(:where([type="button"], [type="submit"])) {
  font-family: var(--ff-code) !important;
+}
+
+button {
+ min-width: max-content !important;
 }
 
 .shortcut-menu {
