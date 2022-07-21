@@ -434,7 +434,7 @@
    font-size: 1.3rem;
    position: absolute;
    top: 45%;
-   left: calc(clamp(5rem, 7.5%, 8rem) + 2rem);
+   left: calc(clamp(5rem, 7.5%, 8rem) + 1rem);
  }
  
  .particle-range {
@@ -537,3 +537,44 @@
    color: white;
  }
  
+/* extras */
+
+#quicksand {
+  font-family: "Quicksand" !important;
+}
+
+#raleway {
+  font-family: "Raleway" !important;
+}
+
+#poppins {
+  font-family: "Poppins" !important;
+}
+
+#montserrat {
+  font-family: "Montserrat" !important;
+}
+
+#system {
+  font-family: system-ui !important;
+}
+
+#jetbrains {
+  font-family: "Jetbrains Mono" !important;
+}
+
+#fira {
+  font-family: "FiraCode" !important;
+}
+
+#robotoMono {
+  font-family: "Roboto Mono" !important;
+}
+
+#cascadiaCode {
+  font-family: "Cascadia Code" !important;
+}
+
+#browser {
+  font-family: monospace !important;
+}
