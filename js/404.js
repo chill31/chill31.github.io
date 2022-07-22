@@ -1,24 +1,13 @@
-const mid_container = document.querySelector(".mid-container");
-const element = document.querySelector("entered-page");
+document.querySelector(".location404").textContent = window.location.href;
+document.querySelector(".location404").addEventListener("click", () => {
+  copyText(window.location.href);
+  notify("Copied current location", "info");
+});
 
-element.textContent = window.location.href;
+document.querySelector(".back-home").addEventListener("click", () => {
+  redirect("/");
+});
 
-const checkLocation = window.location.href.toString().toLowerCase();
-
-let hintText = "";
-
-if (
-  checkLocation.endsWith("projects/") ||
-  checkLocation.endsWith("project/") ||
-  checkLocation.endsWith("projects") ||
-  checkLocation.endsWith("project")
-) {
-  hintText = `
-If you are looking for this website's utilities/projects, then head over to the <a href="/Projects.html">Projects</a> page.
-`;
-}
-
-const p = document.createElement("p");
-p.innerHTML = hintText;
-
-mid_container.append(p);
+document.querySelector(".report-problem").addEventListener("click", () => {
+  redirect("https://github.com/chill31/chill31.github.io/issues");
+});
