@@ -22,11 +22,50 @@ _New Features coming soon!_
 <br>
 <br>
 
+## Using the Site:
+
+### Basic:
+To navigate throughout the main pages, use the menu or the shortcut menu with the icons on it, the shortcuts may not be visible on smaller screens, because of their size not fitting in smaller screens.
+
+If you have a small screen and the icons are not visible, then click on the 3 lines and it will open up a menu with all the main navigation pages.
+
+*Ham Menu & Shortcut Menu*
+![84339F05-A7D6-496E-8C5B-9F8A5BCBC30C](https://user-images.githubusercontent.com/89910163/180656675-452bb8ae-995f-46bd-bb01-f6d0739dd15f.jpeg)
+
+
+### Home Page:
+Basically the portfolio, tells a little about Chill31 ( me ) and then provides links in the end for you to navigate to.
+
+*Home Page [Default]*
+![B275D6BE-15BD-46FB-839C-738F7E388326](https://user-images.githubusercontent.com/89910163/180656787-04b0b3ff-81b0-4b55-8477-6856612fed22.jpeg)
+
+
+### Projects Page:
+Here you can check out the utilities mentioned above, You can select a display mode of slider or grid, slider shows one project at a time, and grid shows all of them *(scroll)*
+
+
+*Projects Page [default]*
+![FCB2BD9A-E3AD-42AA-B4DB-687039B3C881](https://user-images.githubusercontent.com/89910163/180656880-847eac88-31f7-4e0c-9c30-985af7bd14b4.jpeg)
+
+
+### Settings Page:
+Customize everything here, you can disable the shortcuts, enable/disable notifications which appear after certain actions, or reset everything back to default. Explore the settings page divided into 3 sections.
+
+*Settings Page [default]*
+![4212E4B9-0D9D-46E1-8D43-01F7321636B8](https://user-images.githubusercontent.com/89910163/180657029-b5677f02-8e02-4d09-b6b5-93386264792e.jpeg)
+
+
 ## Suggestions
 
 You can always leave suggestions on our discord, just click on the link above and write out your suggestions. <br>
 If you know how to code and can write out that program for us, it would be better, so I can analyze and merge it if it's good.
 Check [Forking and Pull Requests](#forks-and-prs).
+
+### fonts:
+If you want to have a font in the website which you think suits the overall look of the site, the  don't just give a font name and expect it to be there. Explain why it should be there, provide a google fonts or any font provider link to the font you want, and send some screenshots of the font in usage.
+
+### feature requests:
+If you want new features or new options in the website, then you can just mail or send me a message at the discord given below, and a good reason why it should be there, this option is also available on github in the issues page, if you want to directly send it here.
 
 <br>
 
