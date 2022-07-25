@@ -45,7 +45,9 @@ Here you can check out the utilities mentioned above, You can select a display m
 
 
 *Projects Page [default]*
-<img width="958" alt="projects-page" src="https://user-images.githubusercontent.com/89910163/180838372-dc0caee8-51f3-4a16-9a5f-fc75420812a3.png">
+<img width="960" alt="projects-page" src="https://user-images.githubusercontent.com/89910163/180844152-47279840-012e-454d-80f0-a196c95be08c.png">
+
+In here, there's a button after the main header, with the table like icon, when you click on it, it toggles between grid mode and slider mode, the grid mode is to explore all the slides at once, and the slider for one at a time with a clean animation.
 
 
 ### Settings Page:
