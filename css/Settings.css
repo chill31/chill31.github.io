@@ -295,6 +295,46 @@
    font-family: 'fontawesome';
  }
  
+ .choose-theme-div {
+  display: grid;
+  grid-template-columns: repeat(3, 27%); 
+  grid-template-rows: repeat(3, 225px);
+  grid-gap: 5rem;
+   gap: 4rem;
+   position: absolute;
+   top: 25%;
+   left: calc(1.5rem + clamp(5rem, 7.5%, 8rem));
+ }
+ 
+ .theme-choose, .custom-theme {
+   color: white;
+   font-size: 1.2rem;
+   text-align: center;
+   padding: 1rem 2rem;
+   background-color: #191D1E;
+   border-radius: 1rem;
+   border: solid 4px transparent;
+ }
+ 
+ 
+ svg.theme-image path {
+   fill: white;
+ }
+ .theme-choose * {
+   pointer-events: none;
+ }
+ 
+ .theme-choose[data-chosen] {
+   border: solid 4px #8BCBFF;
+ }
+ 
+ .theme-image {
+   height: 85%;
+   width: 100%;
+   border-radius: 1rem;
+ }
+ 
+ 
  .font-choose-flex {
    display: flex;
    justify-content: center;

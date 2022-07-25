@@ -649,6 +649,10 @@ resetToDefBtns[3].addEventListener("click", () => {
 
 const allThemes = document.querySelectorAll(".theme-choose");
 
+function getThemeName(elem) {
+  return elem.querySelector(".theme-name").textContent;
+}
+
 const themeDefault = document.querySelector(".theme-default");
 const themeForest = document.querySelector(".theme-forest");
 const themeDull = document.querySelector(".theme-dull");
@@ -657,8 +661,14 @@ const themeUnderworld = document.querySelector(".theme-underworld");
 
 const currentTheme = localStorage.getItem("theme");
 
+const makeYourOwnTheme = document.querySelector(".custom-theme");
+makeYourOwnTheme.addEventListener("click", () => {
+  makeActive(document.querySelector(".newPage#appearance"), newPages);
+  makeActive(document.querySelector(".subPage#colors"), subPages);
+});
+
 allThemes.forEach((theme) => {
-  if (theme.textContent == currentTheme) {
+  if (getThemeName(theme) == currentTheme) {
     makeChosen(theme, allThemes);
   }
 });
@@ -671,7 +681,7 @@ themeDefault.addEventListener("click", (e) => {
 
   makeChosen(themeDefault, allThemes);
 
-  localStorage.setItem("theme", e.target.textContent);
+  localStorage.setItem("theme", getThemeName(e.target));
 });
 
 themeForest.addEventListener("click", (e) => {
@@ -682,7 +692,7 @@ themeForest.addEventListener("click", (e) => {
 
   makeChosen(themeForest, allThemes);
 
-  localStorage.setItem("theme", e.target.textContent);
+  localStorage.setItem("theme", getThemeName(e.target));
 });
 
 themeDull.addEventListener("click", (e) => {
@@ -693,7 +703,7 @@ themeDull.addEventListener("click", (e) => {
 
   makeChosen(themeDull, allThemes);
 
-  localStorage.setItem("theme", e.target.textContent);
+  localStorage.setItem("theme", getThemeName(e.target));
 });
 
 themeMist.addEventListener("click", (e) => {
@@ -704,7 +714,7 @@ themeMist.addEventListener("click", (e) => {
 
   makeChosen(themeMist, allThemes);
 
-  localStorage.setItem("theme", e.target.textContent);
+  localStorage.setItem("theme", getThemeName(e.target));
 });
 
 themeUnderworld.addEventListener("click", (e) => {
@@ -715,7 +725,7 @@ themeUnderworld.addEventListener("click", (e) => {
 
   makeChosen(themeUnderworld, allThemes);
 
-  localStorage.setItem("theme", e.target.textContent);
+  localStorage.setItem("theme", getThemeName(e.target));
 });
 
 const shortcutToggle = document.querySelector(".shortcut-toggle");
