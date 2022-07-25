@@ -28,7 +28,7 @@ body {
   text-align: center;
 }
 
-thing div {
+.content div {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -23,7 +23,7 @@ body {
   text-align: center;
 }
 
-thing .container {
+.content .container {
   display: grid;
   place-items: center;
 }
@@ -33,7 +33,7 @@ thing .container {
   font-size: 1.2rem;
 }
 
-thing button {
+.content button {
   padding: 0.5rem;
   cursor: pointer;
   border: solid 1px black;
@@ -42,7 +42,7 @@ thing button {
   transition-property: background-color, border, color;
 }
 
-thing button:hover {
+.content button:hover {
   background-color: var(--a-clr);
   border: solid 1px transparent;
   color: var(--clr-neutral);
