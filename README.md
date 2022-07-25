@@ -37,7 +37,10 @@ If you have a small screen and the icons are not visible, then click on the 3 li
 Basically the portfolio, tells a little about Chill31 ( me ) and then provides links in the end for you to navigate to.
 
 *Home Page [Default]*
-![B275D6BE-15BD-46FB-839C-738F7E388326](https://user-images.githubusercontent.com/89910163/180656787-04b0b3ff-81b0-4b55-8477-6856612fed22.jpeg)
+<img width="960" alt="home-page" src="https://user-images.githubusercontent.com/89910163/180845689-aa69ba06-2ce2-4825-9198-49377b5dcf5a.png">
+
+
+there are about 5 sections, excluding the last links sections, and each of the headings in them is clickable, so if you are to click on them, it will scroll to the section the header was present in.
 
 
 ### Projects Page:
@@ -49,6 +52,10 @@ Here you can check out the utilities mentioned above, You can select a display m
 
 In here, there's a button after the main header, with the table like icon, when you click on it, it toggles between grid mode and slider mode, the grid mode is to explore all the slides at once, and the slider for one at a time with a clean animation.
 
+You can select a default display mode through settings to always have it open to that display mode instead of changing it everytime you enter:
+
+Settings -> Display -> Projects Default Display -> *your display mode*.
+
 
 ### Settings Page:
 Customize everything here, you can disable the shortcuts, enable/disable notifications which appear after certain actions, or reset everything back to default. Explore the settings page divided into 3 sections.
@@ -56,6 +63,32 @@ Customize everything here, you can disable the shortcuts, enable/disable notific
 *Settings Page [default]*
 ![4212E4B9-0D9D-46E1-8D43-01F7321636B8](https://user-images.githubusercontent.com/89910163/180657029-b5677f02-8e02-4d09-b6b5-93386264792e.jpeg)
 
+There are sub pages, like display, appearance, and preferences, which direct you to more options, like if you click on the display option, it shows you fonts, menu placement and more.
+The Basic Structure is:
+
+<ul>
+  
+  <li>Display</li>
+    <ul>
+      <li>Menu Placement</li>
+      <li>Fonts</li>
+      <li>Projects Default Display</li>
+    </ul>
+  
+  <li>Appearance</li>
+    <ul>
+      <li>Preset Themes</li>
+      <li>Custom Colors</li>
+    </ul>
+  
+  <li>Preferences</li>
+    <ul>
+      <li>Shortcuts</li>
+      <li>Particles</li>
+      <li>Notifications</li>
+    </ul>
+  
+</ul>
 
 ## Suggestions
 
