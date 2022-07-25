@@ -45,7 +45,7 @@ Here you can check out the utilities mentioned above, You can select a display m
 
 
 *Projects Page [default]*
-![FCB2BD9A-E3AD-42AA-B4DB-687039B3C881](https://user-images.githubusercontent.com/89910163/180656880-847eac88-31f7-4e0c-9c30-985af7bd14b4.jpeg)
+<img width="958" alt="projects-page" src="https://user-images.githubusercontent.com/89910163/180838372-dc0caee8-51f3-4a16-9a5f-fc75420812a3.png">
 
 
 ### Settings Page:
