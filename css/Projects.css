@@ -148,8 +148,8 @@ body.grid .grid-view {
 }
 
 .grid-card {
-  height: 60vh;
-  width: 40vw;
+  height: clamp(25rem, 60vh, 35rem);
+  width: clamp(40rem, 45vw, 50rem);
   text-align: center;
   background-color: #fff;
   border-radius: 1rem;
@@ -168,6 +168,10 @@ body.grid .grid-view {
  background-color: var(--a-clr);
  color: white;
  border-radius: .25rem;
+ position: absolute;
+ bottom: 4rem;
+ left: 50%;
+ transform: translate(-50%);
 }
 
 particle {
