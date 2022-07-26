@@ -49,58 +49,55 @@ body {
 
 .section__intro {
   text-align: center;
-  cursor: pointer;
 }
 
 .favicon {
   border: solid 1px white;
   border-radius: 50%;
   margin-top: 1rem;
+  height: 65%;
+  aspect-ratio: 1;
 }
 
-@media (max-width: 530px) {
-  .favicon {
-    width: 80%;
-  }
-}
-
-.svg-inline--fa {
-  --dir: forwards;
-  --dur: 1750ms;
-  --type: ease-in-out;
-
-  height: 35%;
-  width: 25vw;
+.button-group {
   position: absolute;
-  top: 20%;
-  animation: fa-fade var(--dur) var(--type) 0ms infinite var(--dir),
-    fa-down var(--dur) var(--type) 0ms infinite var(--dir);
+  top: calc(calc(65% + 5rem) + 1rem);
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-.svg-inline--fa path {
-  fill: white;
+.primary-btns {
+  padding: .5em 2em;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1.1rem;
+  background-color: rgb(145, 209, 255);
+  border: solid 1px black;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 250ms ease;
+  transition-property: background-color, color, transform;
+  outline: none !important;
 }
 
-.svg-inline--fa:first-of-type {
-  left: 1rem;
+.primary-btns#nav-star-github:where(:hover, :focus) path {
+  fill: rgb(212, 186, 41);
 }
 
-.svg-inline--fa:last-of-type {
-  right: 1rem;
+.primary-btns#nav-projects:where(:hover, :focus) path {
+  fill: rgb(145, 209, 255);
 }
 
-@keyframes fa-down {
-  100% {
-    top: 40%;
-    opacity: 0;
-  }
-}
-
-@media (max-width: 1000px) {
-  .svg-inline--fa {
-    transform: scale(0);
-    animation: none;
-  }
+.primary-btns:where(:hover, :focus) {
+  background-color: var(--a-clr-dark);
+  color: white;
+  border: solid 1px white;
+  transform: scale(1.05);
+  outline: none !important;
 }
 
 /** SKILLS SECTION STYLES  */

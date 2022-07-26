@@ -83,3 +83,15 @@ exploreBtns.forEach((btn) => {
     redirect(btn.getAttribute("data-redirect"));
   });
 });
+
+const primaryNavBtns = document.querySelectorAll(".primary-btns");
+
+primaryNavBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    redirect(btn.getAttribute("data-redirect"));
+  })
+})
+
+document.querySelectorAll("button").forEach(btn => {
+  btn.classList.add('custom');
+})
