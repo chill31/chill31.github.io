@@ -4,6 +4,7 @@ const gridBtn = document.querySelector("#grid");
 const gridCardContainer = document.querySelector(".grid-view > .card-container");
 
 const cardsContainer = document.querySelector(".swiper-wrapper");
+const gridSearchInput = document.querySelector("#search-projects-input");
 
 gridBtn.addEventListener("click", () => {
   document.body.classList.toggle("grid");
@@ -86,6 +87,18 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
         break;
     }
 
+  });
+
+  const allGridCardsHeader = document.querySelectorAll(".grid-card-header");
+
+  gridSearchInput.addEventListener("input", (e) => {
+    for(let i = 0; i < allGridCardsHeader.length; i++) {
+      if(allGridCardsHeader[i].textContent.toLowerCase().match(e.target.value)) {
+        allGridCardsHeader[i].parentElement.classList.remove("no-search");
+      } else {
+        allGridCardsHeader[i].parentElement.classList.add("no-search");
+      }
+    }
   });
 
 });
