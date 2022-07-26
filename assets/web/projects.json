@@ -9,8 +9,8 @@
     {
       "title": "Clock",
       "description": "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
-      "location": "/projects/Clock.html",
-      "webLocation": "https://chill31.github.io/projects/Clock.html"
+      "location": "/projects/Clock/",
+      "webLocation": "https://chill31.github.io/projects/Clock/"
     },
     {
       "title": "CoinFlip",

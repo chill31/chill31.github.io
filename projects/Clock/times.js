@@ -417,29 +417,3 @@ let my_timezones = [
   "Pacific/Wake",
   "Pacific/Wallis",
 ];
-
-function disp_TZ() {
-  tz = f1.tz.options[f1.tz.options.selectedIndex].value;
-  str = new Date().toLocaleString("en-NZ", {
-    timeZone: tz,
-    timeZoneName: "short",
-  });
-  document.getElementById("display_time_label").innerText = str + " , " + tz;
-  refresh_time();
-}
-
-function refresh_time() {
-  refresh = 1000;
-  mytime = setTimeout("disp_TZ()", refresh);
-}
-
-function addOption(selectbox, text, value) {
-  let optn = document.createElement("OPTION");
-  optn.text = text;
-  optn.value = value;
-  selectbox.options.add(optn);
-}
-
-for (i = 0; i < my_timezones.length; i++) {
-  addOption(document.f1.tz, my_timezones[i], my_timezones[i]);
-}

@@ -1,0 +1,33 @@
+body {
+  background-color: var(--a-clr);
+}
+
+.wrapper {
+  height: 420px;
+  width: clamp(30rem, 30vw, 50rem);
+  background-color: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content {
+  margin-top: 3rem;
+}
+
+.main-label {
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+
+.input {
+  margin-bottom: 3rem;
+  font-size: 1.05rem;
+}
+
+.result-time {
+  font-size: 1.2rem;
+}
