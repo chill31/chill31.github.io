@@ -1,15 +1,12 @@
 body {
-  background: var(--bg-color);
+  background: #8dbeec;
   margin: 0;
 }
 
-h1 {
-  color: var(--text-color);
-  text-align: center;
-}
-
 p {
-  font-weight: 200;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  text-align: center
 }
 
 .container {
@@ -20,7 +17,7 @@ p {
   transform: translate(-50%, -50%);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px var(--clr-neutral);
+  box-shadow: 0 0 .5rem white;
 }
 
 .content {
@@ -41,13 +38,18 @@ p {
   margin: 5px;
   border-radius: 4px;
   transition: 100ms;
-  box-shadow: 5px 5px 8px #00000020, -5px -5px 8px var(--clr-neutral);
+  cursor: pointer;
+  background-color: #ddd;
+  transition: 250ms ease;
+  transition-property: color, filter, background-color;
+  outline: none !important;
 }
+
 .row button:hover {
-  box-shadow: inset 5px 5px 8px rgba(16, 16, 16, 0.1),
-    inset -5px -5px 8px var(--clr-neutral);
-  background: var(--clr-neutral);
+  filter: brightness(1.1);
+  background-color: #fff;
 }
+
 .display #screen {
   margin-bottom: 0.5em;
   width: auto;
@@ -59,30 +61,19 @@ p {
   padding-right: 0.5em;
   background: #ecf0f3;
   border-radius: 6px;
-  box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px var(--clr-neutral);
 }
+
 #eval {
-  background: var(--top-btm-bg);
+  background: var(--a-clr);
   color: var(--clr-neutral);
-  box-shadow: inset 5px 5px 8px var(--top-btm-bg),
-    inset -5px -5px 8px var(--top-btm-bg);
 }
-#eval:hover {
-  box-shadow: inset 5px 5px 8px var(--top-btm-bg),
-    inset -5px -5px 8px var(--top-btm-bg);
-}
+
 #ac {
   background: var(--clr-success);
   color: var(--clr-neutral);
 }
-#ac:hover {
-  box-shadow: inset 5px 5px 8px var(--clr-success),
-    inset -5px -5px 8px var(--clr-success);
-}
+
 #ce {
-  background: #ff3399;
-  color: var(--clr-success);
-}
-#ce:hover {
-  box-shadow: inset 5px 5px 8px #e60073, inset -5px -5px 8px #ff3399;
+  background: var(--clr-warning);
+  color: white;
 }
