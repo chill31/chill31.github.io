@@ -93,7 +93,7 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
 
   gridSearchInput.addEventListener("input", (e) => {
     for(let i = 0; i < allGridCardsHeader.length; i++) {
-      if(allGridCardsHeader[i].textContent.toLowerCase().match(e.target.value.toLowerCase())) {
+      if(allGridCardsHeader[i].textContent.toLowerCase().includes(e.target.value.toLowerCase())) {
         allGridCardsHeader[i].parentElement.classList.remove("no-search");
       } else {
         allGridCardsHeader[i].parentElement.classList.add("no-search");
