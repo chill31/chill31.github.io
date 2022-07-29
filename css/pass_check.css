@@ -36,6 +36,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   margin-top: 3rem !important;
+  margin-bottom: 3rem;
 }
 
 .strength-meter::before {
@@ -60,6 +61,7 @@ body {
   outline: none;
   text-align: center;
   border-radius: 0.3rem;
+  margin-bottom: 3rem;
 }
 
 .password-input:focus {
@@ -68,14 +70,15 @@ body {
 
 .weak__header {
   margin-top: 15%;
+  
 }
 
 .reasons {
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
-  position: absolute;
-  top: 75%;
+  position: relative;
+  top: 1.5rem;
   left: 50%;
   transform: translate(-50%);
   width: 100%;
@@ -98,7 +101,7 @@ body {
   outline: none;
   margin-top: 0.5rem;
   cursor: pointer;
-  background-color: var(--a-clr);
+  background-color: var(--selection-color);
   border-radius: 0.5rem;
   border: none;
   transition: outline 100ms ease;
@@ -106,12 +109,12 @@ body {
 }
 
 .btns svg {
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .btns svg > path {
-  fill: white;
+  fill: black;
 }
 
 .weaknesses__toggle {
