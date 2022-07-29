@@ -247,6 +247,14 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  transition: 250ms ease;
+  transition-property: filter, transform;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1);
 }
 
 .swiper-button-next.swiper-button-disabled,
@@ -365,18 +373,18 @@
 }
 
 .swiper-pagination-bullet {
-  width: var(
-    --swiper-pagination-bullet-width,
-    var(--swiper-pagination-bullet-size, 8px)
-  );
-  height: var(
-    --swiper-pagination-bullet-height,
-    var(--swiper-pagination-bullet-size, 8px)
-  );
+  width: .55rem;
+  aspect-ratio: 1;
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  background-color: #aaa;
+  transition: 250ms ease;
+  transition-property: filter, transform;
+}
+
+.swiper-pagination-bullet:hover, .swiper-pagination-bullet:focus {
+  filter: brightness(1.2);
+  transform: scale(1.35);
 }
 
 button.swiper-pagination-bullet {
