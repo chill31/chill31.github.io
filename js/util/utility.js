@@ -439,4 +439,8 @@ document.body.style.setProperty(
   localStorage.getItem("top-bottom-background")
 );
 
+if(!localStorage.getItem("clr-picker-color")) {
+  localStorage.setItem("clr-picker-color", "white");
+}
+
 document.body.classList.add(`menu-${localStorage.getItem("menu-placement")}`);

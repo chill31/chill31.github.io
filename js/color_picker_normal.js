@@ -1,7 +1,7 @@
 const pickr = Pickr.create({
   el: ".color-picker", // so I don't get confused, this is element where I want color picker to be.
   theme: "classic", // theme, classic is good.
-  default: localStorage.getItem("accent-color"),
+  default: localStorage.getItem("clr-picker-color"),
 
   swatches: [
     // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
@@ -42,7 +42,9 @@ const pickr = Pickr.create({
 });
 
 pickr.show();
-pickr.hide();
+setTimeout(() => {
+  pickr.hide();
+}, 100);
 
 const copy_btn = document.querySelector(".pcr-copy");
 const save_btn = document.querySelector(".pcr-save");
@@ -100,6 +102,8 @@ pickr.on("save", (...color) => {
   } else if (color_scheme == "cmyk") {
     clr = color[0].toCMYK().toString();
   }
+
+  localStorage.setItem("clr-picker-color", clr);
 });
 
 save_copy.addEventListener("click", () => {
@@ -134,3 +138,7 @@ copy_btn.addEventListener("click", () => {
 
   pickr.hide();
 });
+
+document.querySelectorAll("button").forEach(btn => {
+  btn.classList.add("custom");
+})

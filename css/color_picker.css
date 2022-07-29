@@ -1,36 +1,24 @@
 body {
-  background: var(--bg-color);
-  margin: 0;
-}
-
-h1 {
-  text-align: center;
-}
-
-.intro {
-  font-size: 1.25rem;
-  text-align: center;
-}
-
-.color-picker {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  height: 70%;
   background-color: var(--a-clr);
 }
 
-h4 {
+.wrapper {
+  height: 420px;
+  width: clamp(30rem, 30vw, 50rem);
+  background-color: #fff;
+  border-radius: 1rem;
   position: absolute;
-  top: 65%;
-  color: var(--text-color);
-  font-weight: 300;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .clr-div {
   position: absolute;
-  left: 47.5%;
-  top: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pickr {
@@ -55,9 +43,11 @@ h4 {
   cursor: pointer;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
-    no-repeat center;
+  no-repeat center;
   background-size: 0;
-  transition: all 300ms;
+  transition: 300ms;
+  outline: none !important;
+  border: solid 2px black;
 }
 
 .pickr .pcr-button::before {
