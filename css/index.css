@@ -8,6 +8,7 @@
 
 :root {
   --section-height: 670px;
+  --icon-size: 50%;
 }
 
 body {
@@ -55,13 +56,13 @@ body {
   border: solid 1px white;
   border-radius: 50%;
   margin-top: 1rem;
-  height: 65%;
+  height: var(--icon-size);
   aspect-ratio: 1;
 }
 
 .button-group {
   position: absolute;
-  top: calc(calc(65% + 5rem) + 1rem);
+  top: calc(calc(var(--icon-size) + 5rem) + 1rem);
   left: 50%;
   transform: translate(-50%);
   display: flex;
@@ -69,35 +70,74 @@ body {
   gap: 1.5rem;
 }
 
+.latest-commit {
+  position: absolute;
+  top: calc(calc(var(--icon-size) + 15rem) + 1rem);
+  font-size: 1.2rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.latest-commit .write-commit {
+  color: black;
+  text-decoration: underline 1px;
+  text-decoration-skip-ink: none;
+}
+
+.write-commit:hover {
+  text-decoration: none;
+}
+
+.write-commit:active {
+  background-color: black;
+  color: white;
+}
+
 .primary-btns {
+  background-color: rgb(31, 35, 40);
+  color: white;
   padding: .5em 2em;
+  position: relative;
+  outline: none !important;
+  border-radius: 4px;
+  border: solid 1px white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 250ms ease;
   display: flex;
   justify-content: center;
   gap: .5rem;
-  font-size: 1.1rem;
-  background-color: rgb(145, 209, 255);
-  border: solid 1px black;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: 250ms ease;
-  transition-property: background-color, color, transform;
-  outline: none !important;
+  align-items: center;
 }
 
-.primary-btns#nav-star-github:where(:hover, :focus) path {
-  fill: rgb(212, 186, 41);
+.primary-btns path {
+  fill: gold;
 }
 
-.primary-btns#nav-projects:where(:hover, :focus) path {
-  fill: rgb(145, 209, 255);
+#nav-star-github::before {
+  content: attr(data-stars);
+  position: absolute;
+  border: solid 1px white;
+  background-color: rgb(31, 35, 40);
+  padding: .5em 0;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: calc(-100% - 1px);
+  border-radius: 4px;
+  transition: background-color 250ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .primary-btns:where(:hover, :focus) {
-  background-color: var(--a-clr-dark);
-  color: white;
-  border: solid 1px white;
-  transform: scale(1.05);
   outline: none !important;
+  background-color: rgb(62, 68, 75);
+}
+
+.primary-btns:where(:hover, :focus, :active)::before {
+  background-color: rgb(62, 68, 75) !important;
 }
 
 /** SKILLS SECTION STYLES  */
