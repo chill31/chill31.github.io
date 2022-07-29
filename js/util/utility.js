@@ -196,7 +196,7 @@ ${message}
     document.getElementById("notification-area").prepend(createdDiv);
 
     setTimeout(() => {
-      var notifications = document
+      let notifications = document
         .getElementById("notification-area")
         .getElementsByClassName("notification");
       for (let i = 0; i < notifications.length; i++) {

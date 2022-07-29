@@ -3,11 +3,11 @@ if (window.addEventListener) {
 } else if (window.attachEvent) {
   window.attachEvent("onload", InitiateSpeedDetection);
 }
-var imageAddr =
+const imageAddr =
   "https://4k-uhd.nl/wp-content/uploads/2018/08/4K-3840x2160-Wallpaper-Uitzicht-5.jpg";
-var downloadSize = 5739426; //bytes
+const downloadSize = 5739426; //bytes
 function ShowProgressMessage(msg) {
-  var oProgress = document.getElementById("progress");
+  const oProgress = document.getElementById("progress");
   if (oProgress) {
     oProgress.innerHTML = msg;
   }
@@ -21,8 +21,8 @@ function InitiateSpeedDetection() {
   window.setTimeout(MeasureConnectionSpeed, 1);
 }
 function MeasureConnectionSpeed() {
-  var startTime, endTime;
-  var download = new Image();
+  let startTime, endTime;
+  const download = new Image();
   download.onload = function () {
     endTime = new Date().getTime();
     showResults();
@@ -33,15 +33,15 @@ function MeasureConnectionSpeed() {
   };
 
   startTime = new Date().getTime();
-  var cacheBuster = "?nnn=" + startTime;
+  const cacheBuster = "?nnn=" + startTime;
   download.src = imageAddr + cacheBuster;
 
   function showResults() {
-    var duration = (endTime - startTime) / 1000;
-    var bitsLoaded = downloadSize * 8;
-    var speedBps = (bitsLoaded / duration).toFixed(2);
-    var speedKbps = (speedBps / 1024).toFixed(2);
-    var speedMbps = (speedKbps / 1024).toFixed(2);
+    const duration = (endTime - startTime) / 1000;
+    const bitsLoaded = downloadSize * 8;
+    const speedBps = (bitsLoaded / duration).toFixed(2);
+    const speedKbps = (speedBps / 1024).toFixed(2);
+    const speedMbps = (speedKbps / 1024).toFixed(2);
     showResultMessage(speedMbps + " Mbps");
   }
 }

@@ -72,7 +72,7 @@ function initTyping() {
     characters.forEach((span) => span.classList.remove("active"));
     characters[charIndex].classList.add("active");
 
-    var wpm = Math.round(
+    let wpm = Math.round(
       ((charIndex - mistakes) / 5 / (maxTime - timeLeft)) * 60
     );
     wpm = wpm < 0 || !wpm || wpm === Infinity ? 0 : wpm;
