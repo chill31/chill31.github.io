@@ -79,12 +79,28 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
 
     switch (e.key) {
       case "ArrowLeft":
-        swiper.slidePrev();
+        if(!document.body.classList.contains("grid")) {
+          swiper.slidePrev();
+        }
         break;
       
       case "ArrowRight":
-        swiper.slideNext();
+        if(!document.body.classList.contains("grid")) {
+          swiper.slideNext();
+        }
         break;
+    
+      case "ArrowDown":
+        if(document.body.classList.contains("grid")) {
+          window.scrollBy(0, 500);
+        }
+      
+        break;
+      
+      case "ArrowUp":
+        if(document.body.classList.contains("grid")) {
+          window.scrollBy(0, -500)
+        }
     }
 
   });
