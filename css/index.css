@@ -76,6 +76,9 @@ body {
   font-size: 1.2rem;
   left: 50%;
   transform: translate(-50%);
+  min-width: max-content;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .latest-commit .write-commit {
