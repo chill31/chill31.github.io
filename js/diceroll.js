@@ -3,7 +3,7 @@ const resultLabel = document.querySelector(".result-lbl");
 const img = document.querySelector(".dice-img");
 const img2 = document.querySelector(".dice-img2");
 
-let base = "../assets/img/die/";
+let base = "/assets/img/die/";
 let empty_url = "not-rolled.png";
 
 img.src = base + empty_url;
