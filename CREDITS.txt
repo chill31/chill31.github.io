@@ -3,7 +3,7 @@ REST Countries: Country Information; (https://restcountries.com/)
 Random Paragraphs: Typing Test; (https://randomwordgenerator.com/paragraph.php/)
 Open Weather Map: Weather Report App; (https://openweathermap.org);
 @simonwep/pickr: Color Picker; (https://github.com/Simonwep/pickr);
-Swiper.js: Projects slider and home page explore section; (https://swiperjs.com)
+Swiper.js: Projects slider and home page explore slider; (https://swiperjs.com)
 Currencies:
     •  flagcdn : flags small png. (https://flagcdn.com/)
     •  exchangerate-api : all the currencies; (https://www.exchangerate-api.com/);
