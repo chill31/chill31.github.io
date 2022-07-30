@@ -48,13 +48,13 @@ body {
   border-radius: 4px;
   transition: 100ms;
   cursor: pointer;
-  background-color: #fff;
+  background-color: rgb(235, 235, 235);
   transition: 250ms ease;
   transition-property: color, filter, background-color;
   outline: none !important;
 }
 
-.row button:hover {
+.row button:hover, .row button:focus {
   filter: brightness(1.1);
   background-color: #fff;
 }
