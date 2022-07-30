@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="/css/calculator.css" />
-    <link rel="stylesheet" href="/css/util/utility.css" />
-  </head>
 
-  <body>
-    <div class="loaded-content">
-      <h1>Calculator</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="/css/calculator.css" />
+  <link rel="stylesheet" href="/css/util/utility.css" />
+</head>
 
-      <p>
-        Advanced calculator which supports complex maths functions like SIN,
-        COS, TAN, PI, etc.
-      </p>
+<body>
+  <div class="loaded-content">
+
+    <div class="wrapper">
+
+      <h1 class="main-header">Calculator</h1>
 
       <div class="container">
         <div class="display">
@@ -64,9 +63,7 @@
             <button id="e">e</button>
             <button id="pow">
               x
-              <span style="position: relative; bottom: 0.4em; right: 0.1em"
-                >y</span
-              >
+              <span style="position: relative; bottom: 0.4em; right: 0.1em">y</span>
             </button>
             <button class="btn">0</button>
             <button class="btn">.</button>
@@ -75,9 +72,13 @@
           </div>
         </div>
       </div>
+
     </div>
 
-    <script src="/js/util/utility.js"></script>
-    <script src="/js/calculator.js"></script>
-  </body>
+  </div>
+
+  <script src="/js/util/utility.js"></script>
+  <script src="/js/calculator.js"></script>
+</body>
+
 </html>

@@ -1,23 +1,32 @@
 body {
-  background: #8dbeec;
+  background: var(--a-clr);
   margin: 0;
+
+  --wrapper-padding: 1rem;
 }
 
-p {
-  color: var(--text-color);
-  font-size: 1.25rem;
-  text-align: center
-}
-
-.container {
-  margin-top: 1rem;
+.wrapper {
+  height: 500px;
+  width: clamp(40rem, 40vw, 60rem);
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: var(--wrapper-padding);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 .5rem white;
+  background-color: #ddd;
+  height: 400px;
 }
 
 .content {
@@ -32,14 +41,14 @@ p {
 .row button {
   width: 60px;
   height: 30px;
-  font-size: 16px;
+  font-size: 1.1rem;
   border: none;
   outline: none;
   margin: 5px;
   border-radius: 4px;
   transition: 100ms;
   cursor: pointer;
-  background-color: #ddd;
+  background-color: #fff;
   transition: 250ms ease;
   transition-property: color, filter, background-color;
   outline: none !important;
@@ -51,7 +60,7 @@ p {
 }
 
 .display #screen {
-  margin-bottom: 0.5em;
+  margin-bottom: 3rem;
   width: auto;
   height: 70px;
   font-size: 35px;
