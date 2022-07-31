@@ -167,6 +167,13 @@
             Notifications
           </div>
         </button>
+
+        <button class="navigateTo navSub" id="goExternalFetch" data-redirect="externalData" data-nav="External Data">
+          <div class="navToContent">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            External API's
+          </div>
+        </button>
       </div>
     </div>
 
@@ -186,7 +193,8 @@
     </div>
 
     <div class="subPage" id="menuPlacement">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
@@ -200,7 +208,8 @@
     </div>
 
     <div class="subPage" id="fonts">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
@@ -228,7 +237,8 @@
     </div>
 
     <div class="subPage" id="projectDisplay">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
@@ -236,15 +246,16 @@
       </span>
 
       <div class="choose-div choose-display-div">
-      
+
         <div class="choose display-choose" id="slider" data-chosen>Slider</div>
         <div class="choose display-choose" id="grid">Grid</div>
-        
+
       </div>
     </div>
 
     <div class="subPage" id="colors">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
@@ -252,94 +263,99 @@
       </span>
 
       <div class="picker-grid">
-      
+
         <div class="grid-item">
-          
+
           <span class="picker-header">Accent Color</span>
           <div class="picker-div p1">
-            
+
           </div>
-          
+
         </div>
-        
-        
+
+
         <div class="grid-item">
-          
+
           <span class="picker-header">Dark Accent Color</span>
           <div class="picker-div p2">
-            
+
           </div>
-          
+
         </div>
-        
-        
+
+
         <div class="grid-item">
-          
+
           <span class="picker-header">Selection Color</span>
           <div class="picker-div p3">
-            
+
           </div>
-          
+
         </div>
-        
-        
+
+
         <div class="grid-item">
-          
+
           <span class="picker-header">Top Header Color</span>
           <div class="picker-div p4">
-            
+
           </div>
-          
+
         </div>
-        
-      </div>          
+
+      </div>
     </div>
 
     <div class="subPage" id="themes">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="currentPage">Preset Themes</span>
       </span>
 
-        <div class="choose-theme-div">
-      
-          <div class="theme-choose theme-default">
-            <span class="theme-name">Default</span>
-            <img class="theme-image" src="/assets/theme-images/theme-default.jpg">
-          </div>
-          
-          <div class="theme-choose theme-mist">
-            <span class="theme-name">Mist</span>
-            <img class="theme-image" src="/assets/theme-images/theme-mist.jpg">
-          </div>
-          
-          <div class="theme-choose theme-forest">
-            <span class="theme-name">Forest</span>
-            <img class="theme-image" src="/assets/theme-images/theme-forest.jpg">
-          </div>
-          
-          <div class="theme-choose theme-dull">
-            <span class="theme-name">Dull Yellow</span>
-            <img class="theme-image" src="/assets/theme-images/theme-dull.jpg">
-          </div>
-          
-          <div class="theme-choose theme-underworld">
-            <span class="theme-name">Underworld</span>
-            <img class="theme-image" src="/assets/theme-images/theme-underworld.jpg">
-          </div>
-          
-          <div class="custom-theme theme-custom">
-            <span class="theme-name">Make your Own</span>
-            <svg class="theme-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg>
-          </div>
-          
+      <div class="choose-theme-div">
+
+        <div class="theme-choose theme-default">
+          <span class="theme-name">Default</span>
+          <img class="theme-image" src="/assets/theme-images/theme-default.jpg">
         </div>
+
+        <div class="theme-choose theme-mist">
+          <span class="theme-name">Mist</span>
+          <img class="theme-image" src="/assets/theme-images/theme-mist.jpg">
+        </div>
+
+        <div class="theme-choose theme-forest">
+          <span class="theme-name">Forest</span>
+          <img class="theme-image" src="/assets/theme-images/theme-forest.jpg">
+        </div>
+
+        <div class="theme-choose theme-dull">
+          <span class="theme-name">Dull Yellow</span>
+          <img class="theme-image" src="/assets/theme-images/theme-dull.jpg">
+        </div>
+
+        <div class="theme-choose theme-underworld">
+          <span class="theme-name">Underworld</span>
+          <img class="theme-image" src="/assets/theme-images/theme-underworld.jpg">
+        </div>
+
+        <div class="custom-theme theme-custom">
+          <span class="theme-name">Make your Own</span>
+          <svg class="theme-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
+          </svg>
+        </div>
+
+      </div>
     </div>
 
     <div class="subPage" id="shortcuts">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
@@ -353,7 +369,8 @@
     </div>
 
     <div class="subPage" id="particles">
-      <span class="currentLocation"><span class="goMain">Settings</span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span class="goSub">...</span>
         <i class="fa-solid fa-chevron-right"></i>
@@ -367,24 +384,40 @@
 
       <label for="particle-amount-slider" class="particle-amount-label">Particles Amount: </label>
       <input value="20" min="20" max="100" type="range" step="5" class="particle-range" id="particle-amount-slider">
-      
+
       <label class="particle-amount-show">20</label>
 
     </div>
 
     <div class="subPage" id="notifications">
-      <span class="currentLocation"><span class="goMain">Settings</span>
-      <i class="fa-solid fa-chevron-right"></i>
-      <span class="goSub">...</span>
-      <i class="fa-solid fa-chevron-right"></i>
-      <span class="currentPage">Notifications</span>
-    </span>
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="goSub">...</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="currentPage">Notifications</span>
+      </span>
 
-    <label class="switch">
-      <input type="checkbox" class="toggle notif-toggle">
-      <span class="slider round"></span>
-    </label>
+      <label class="switch">
+        <input type="checkbox" class="toggle notif-toggle">
+        <span class="slider round"></span>
+      </label>
 
+    </div>
+
+    <div class="subPage" id="externalData">
+      <span class="currentLocation">
+        <span class="goMain">Settings</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="goSub">...</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="currentPage">External API's</span>
+      </span>
+
+      <label class="switch">
+        <input type="checkbox" class="toggle external-toggle">
+        <span class="slider round"></span>
+      </label>
     </div>
   </main>
 

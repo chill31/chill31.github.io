@@ -81,6 +81,10 @@ body {
   margin-right: 1rem;
 }
 
+.latest-commit.fetch-disabled {
+  display: none;
+}
+
 .latest-commit .write-commit {
   color: black;
   text-decoration: underline 1px;

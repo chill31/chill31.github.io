@@ -1,10 +1,9 @@
 function makePickr(elem, defaultClr) {
-
   return Pickr.create({
     el: elem, // so I don't get confused, this is element where I want color picker to be.
     theme: "classic", // theme, classic is good.
     default: defaultClr,
-  
+
     swatches: [
       // some random colors given in the bottom so users can choose them instead of going over to the palette and choosing thousands of different combinations there.
       "rgba(244, 67, 54, 1)", // orange.
@@ -42,7 +41,6 @@ function makePickr(elem, defaultClr) {
       },
     },
   });
-
 }
 
 function makeChosen(element, allElements) {
@@ -125,7 +123,7 @@ previousPage.addEventListener("click", () => {
   }
 
   if (subActive === true) {
-    removeActive(subPages)
+    removeActive(subPages);
   }
 });
 
@@ -160,9 +158,9 @@ switch (currentMenuPlacement) {
   case "left":
     makeChosen(leftMenuPlacement, menuPlacementBtns);
     break;
-  }
+}
 
-menuPlacementBtns.forEach(btn => {
+menuPlacementBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     makeChosen(btn, menuPlacementBtns);
     localStorage.setItem("menu-placement", btn.textContent.toLowerCase());
@@ -773,18 +771,34 @@ const notifToggle = document.querySelector(".notif-toggle");
 const currentNotifSetting = localStorage.getItem("notifications");
 
 switch (currentNotifSetting) {
-
   case "enabled":
     notifToggle.checked = true;
     break;
   case "disabled":
     notifToggle.checked = false;
     break;
-
 }
 
 notifToggle.addEventListener("input", (e) => {
-  e.target.checked ? localStorage.setItem("notifications", "enabled") : localStorage.setItem("notifications", "disabled");
+  e.target.checked
+    ? localStorage.setItem("notifications", "enabled")
+    : localStorage.setItem("notifications", "disabled");
+});
+
+const externalToggle = document.querySelector(".external-toggle");
+const currentExternalSetting = localStorage.getItem("external-data");
+
+switch (currentExternalSetting) {
+  case "enabled":
+    externalToggle.checked = true;
+    break;
+  case "disabled":
+    externalToggle.checked = false;
+    break;
+}
+
+externalToggle.addEventListener("input", (e) => {
+  e.target.checked ? localStorage.setItem("external-data", "enabled") : localStorage.setItem("external-data", "disabled");
 });
 
 const deleteAllBtn = document.querySelector(".deleteAll");

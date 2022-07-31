@@ -3,65 +3,16 @@ body {
   text-align: center;
 }
 
+body.external-disabled div.external-enabled {
+  display: none;
+} 
+
+body.external-enabled div.external-disabled {
+  display: none;
+}
+
 .main-header {
   padding: .75em 3em;
-}
-
-.form__group {
-  position: relative;
-  padding: 15px 0 0;
-  margin-top: 10px;
-  width: 50%;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-.form__field {
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid rgb(41, 41, 41);
-  outline: 0;
-  font-size: 1.3rem;
-  color: black;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 350ms;
-}
-.form__field::placeholder {
-  color: transparent;
-}
-.form__field:placeholder-shown ~ .form__label {
-  font-size: 1.3rem;
-  cursor: text;
-  top: 20px;
-}
-
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 350ms;
-  font-size: 1rem;
-  color: rgb(41, 41, 41);
-}
-
-.form__field:focus {
-  padding-bottom: 6px;
-  border-bottom-width: 3px;
-  border-image: linear-gradient(to right, var(--a-clr), var(--a-clr-dark));
-  border-image-slice: 1;
-}
-.form__field:focus ~ .form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: black;
-}
-
-.form__field:required, .form__field:invalid {
-  box-shadow: none;
 }
 
 .flex {
@@ -126,4 +77,14 @@ body {
 
 .commit-date {
   color: #555;
+}
+
+@media (max-width: 930px) {
+  
+  .commit {
+    height: 175px;
+    width: 65vw;
+    flex-direction: column;
+  }
+
 }
