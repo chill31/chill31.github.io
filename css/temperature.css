@@ -44,15 +44,8 @@ body {
   height: 2.675rem;
   width: 90%;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 6px;
   caret-color: var(--a-clr);
-}
-
-.temp-inputs:first-child::after {
-  content: "";
-  height: 10rem;
-  width: 10rem;
-  background-color: red;
 }
 
 .temp-inputs:focus {

@@ -139,6 +139,12 @@ copy_btn.addEventListener("click", () => {
   pickr.hide();
 });
 
+const showPickrBtn = document.querySelector(".open-picker");
+
+showPickrBtn.addEventListener("click", () => {
+  pickr.show();
+});
+
 document.querySelectorAll("button").forEach(btn => {
   btn.classList.add("custom");
 })

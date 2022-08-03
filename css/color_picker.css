@@ -21,6 +21,25 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.open-picker {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  border: none;
+  outline: none !important;
+  background-color: var(--a-clr);
+  cursor: pointer;
+  padding: .5em 2em;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  transition: filter 250ms ease;
+}
+
+.open-picker:focus, .open-picker:hover {
+  filter: brightness(1.1);
+}
+
 .pickr {
   position: absolute;
   overflow: visible;
@@ -36,10 +55,13 @@ body {
 }
 
 .pickr .pcr-button {
-  position: relative;
-  top: +2rem;
-  height: 2.375rem;
-  width: 2.375rem;
+  --size: 2.5rem;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%) !important;
+  height: var(--size);
+  width: var(--size);
   cursor: pointer;
   border-radius: 0.15em;
   background: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" stroke="%2342445A" stroke-width="5px" stroke-linecap="round"><path d="M45,45L5,5"></path><path d="M45,5L5,45"></path></svg>')
@@ -130,8 +152,8 @@ body {
 
 .pcr-app {
   position: absolute;
-  top: 60% !important;
-  left: 50%;
+  top: 50% !important;
+  left: 50% !important;
   transform: scale(0) translate(-50%, -50%);
   transform-origin: top left;
   z-index: 100;
