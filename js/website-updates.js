@@ -25,6 +25,7 @@ function formatGitDate(inputDate, format) {
 
 const flexContainer = document.querySelector(".flex");
 
+
 if (localStorage.getItem("external-data") == "enabled") {
   document.body.classList.add("external-enabled");
   fetch("https://api.github.com/repos/chill31/chill31.github.io/commits")
@@ -32,7 +33,10 @@ if (localStorage.getItem("external-data") == "enabled") {
     .then((mainData) => {
       const commits = mainData;
 
-      commits.forEach((commit) => {
+      for (let i = 0; i < commits.length; i++) {
+
+        const commit = commits[i];
+
         const createdCard = document.createElement("div");
         createdCard.classList.add("commit");
 
@@ -52,18 +56,18 @@ if (localStorage.getItem("external-data") == "enabled") {
 `;
         }
 
-        fetch(commit.commit.url)
-          .then((res) => res.json())
-          .then((url) => {
+        
             createdCard.innerHTML = `
           <div class="commit-info">
             <img src="${
               commit.author.avatar_url
             }" alt="Author" class="author-pic">
-            <a class="author-name" href="https://github.com/users${commit.commit.author.name}">${commit.commit.author.name}</a>
+            <a class="author-name" href="https://github.com/users/${
+              commit.commit.author.name
+            }">${commit.commit.author.name}</a>
           </div>
-          <a class="commit-message" href="${url.html_url}">${
-              commit.commit.message
+          <a class="commit-message" href="${commit.html_url}">${
+              commit.commit.message.substring(0, 50) + "..."
             }</a>
           <div class="commit-extra-info">
             ${verifiedContent}
@@ -75,9 +79,7 @@ if (localStorage.getItem("external-data") == "enabled") {
         `;
 
             flexContainer.append(createdCard);
-          });
-      });
-
+      }
     });
 } else {
   document.body.classList.add("external-disabled");
