@@ -1,3 +1,15 @@
+const sidebar = document.querySelector(".sidebar");
+
+const searchIcon = document.querySelector(".input__icon");
+searchIcon.addEventListener("click", () => {
+  sidebar.classList.add("extend");
+});
+
+const closeSidebarBtn = document.querySelector(".close-sidebar");
+closeSidebarBtn.addEventListener("click", () => {
+  sidebar.classList.remove("extend");
+})
+
 function makePickr(elem, defaultClr) {
   return Pickr.create({
     el: elem, // so I don't get confused, this is element where I want color picker to be.
@@ -806,6 +818,53 @@ deleteAllBtn.addEventListener("click", () => {
   notify("Successfully cleared all data present on this website", "success");
   localStorage.clear();
 });
+
+const subPageGrid = document.querySelector(".subPages__grid");
+const allSubPagesName = document.querySelectorAll(".subPage .currentLocation .currentPage");
+
+for(let i = 0; i < allSubPagesName.length; i++) {
+
+  const createdCard = document.createElement("div");
+  createdCard.classList.add("subPageCard");
+  createdCard.setAttribute("data-page", allSubPagesName[i].parentElement.parentElement.id);
+
+  createdCard.innerHTML = `
+    <span class="subPageCard__name">${allSubPagesName[i].textContent}</span>  
+  `;
+
+  subPageGrid.append(createdCard);
+
+}
+
+const subPagesSearchInput = document.querySelector(".input__searchSettings");
+const allSubPagesCardNames = document.querySelectorAll(".subPageCard__name");
+
+subPagesSearchInput.addEventListener("input", () => {
+  for(let i = 0; i < allSubPagesCardNames.length; i++) {
+
+    if(allSubPagesCardNames[i].textContent.toLowerCase().match(subPagesSearchInput.value.toLowerCase())) {
+      allSubPagesCardNames[i].parentElement.classList.remove("no-search");
+    } else {
+      allSubPagesCardNames[i].parentElement.classList.add("no-search");
+    }
+
+  }
+});
+
+const allSubPagesCards = document.querySelectorAll(".subPageCard");
+for(let i = 0; i < allSubPagesCards.length; i++) {
+  allSubPagesCards[i].addEventListener("click", () => {
+
+    sidebar.classList.remove("extend");
+
+    const subPageNew = document.querySelector(`#${allSubPagesCards[i].getAttribute("data-page")}`);
+    const mainPageNew = document.querySelector(`#${subPageNew.getAttribute("data-main")}`);
+
+    makeActive(subPageNew, subPages);
+    makeActive(mainPageNew, newPages);
+
+  });
+}
 
 document
   .querySelectorAll("button")
