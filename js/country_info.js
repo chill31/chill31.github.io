@@ -10,7 +10,6 @@ searchBtn.addEventListener("click", () => {
         <div id="img-div">
             <img src="${data[0].flags.svg}" class="flag-img">
         </div>
-        <span class="instruction">Click on the image to maximize it</span>
         <h2>${data[0].name.common}</h2>
         <div class="wrapper">
             <div class="data-wrapper">
