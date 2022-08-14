@@ -22,11 +22,6 @@ body {
   transition: 500ms ease;
 }
 
-.container .instruction {
-  color: var(--text-color);
-  margin-left: 26.75%;
-}
-
 .search-wrapper {
   display: grid;
   grid-template-columns: 9fr 3fr;
@@ -40,7 +35,6 @@ body {
   padding: 0.8em 0;
   border: none;
   border-radius: 1.5em;
-
   cursor: pointer;
 }
 
@@ -71,7 +65,6 @@ body {
 .container .flag-img {
   height: 100%;
   width: 100%;
-  cursor: pointer;
   transition: transform 500ms ease;
 }
 
