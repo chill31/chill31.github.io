@@ -48,12 +48,6 @@ searchBtn.addEventListener("click", () => {
             </div>
         </div>
       `;
-
-      const img = document.querySelector(".flag-img");
-
-      img.addEventListener("click", () => {
-        img.classList.toggle("f");
-      });
     })
     .catch(() => {
       if (countryName.length == 0) {
