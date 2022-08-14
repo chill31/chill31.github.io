@@ -59,7 +59,6 @@ body {
   border: solid 1px black;
   height: 162.5px;
   transform: translate(-50%);
-  cursor: pointer;
 }
 
 .container .flag-img {
