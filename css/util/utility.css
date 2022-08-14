@@ -26,6 +26,11 @@ body {
   min-height: 650px;
 }
 
+body.no-motion, body.no-motion *, body.no-motion *:where(::before, ::after){
+  transition: none !important;
+  animation: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }

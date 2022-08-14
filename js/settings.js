@@ -801,6 +801,24 @@ externalToggle.addEventListener("input", (e) => {
   e.target.checked ? localStorage.setItem("external-data", "enabled") : localStorage.setItem("external-data", "disabled");
 });
 
+const motionToggle = document.querySelector(".motion-toggle");
+const currentMotionSetting = localStorage.getItem("reduced-motion");
+
+switch (currentMotionSetting) {
+
+  case "enabled":
+    motionToggle.checked = true;
+    break;
+  case "disabled":
+    motionToggle.checked = false;
+    break;
+
+}
+
+motionToggle.addEventListener("input", (e) => {
+  e.target.checked ? localStorage.setItem("reduced-motion", "enabled") : localStorage.setItem("reduced-motion", "disabled");
+});
+
 const deleteAllBtn = document.querySelector(".deleteAll");
 deleteAllBtn.addEventListener("click", () => {
   notify("Successfully cleared all data present on this website", "success");

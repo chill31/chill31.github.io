@@ -423,8 +423,18 @@ document.body.style.setProperty(
   localStorage.getItem("top-bottom-background")
 );
 
+if(!localStorage.getItem("reduced-motion")) {
+  localStorage.setItem("reduced-motion", "enabled");
+}
+
 if(!localStorage.getItem("clr-picker-color")) {
   localStorage.setItem("clr-picker-color", "white");
+}
+
+if(localStorage.getItem("reduced-motion") == "enabled") {
+  document.body.classList.remove("no-motion");
+} else {
+  document.body.classList.add("no-motion");
 }
 
 document.body.classList.add(`menu-${localStorage.getItem("menu-placement")}`);
