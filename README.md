@@ -79,6 +79,7 @@ The Basic Structure is:
     <ul>
       <li>Preset Themes</li>
       <li>Custom Colors</li>
+      <li>Reduced Motion</li>
     </ul>
   
   <li>Preferences</li>
