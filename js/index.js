@@ -76,48 +76,6 @@ new Swiper(".swiper", {
   },
 });
 
-const exploreBtns = document.querySelectorAll(".explore-btn");
-
-exploreBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    redirect(btn.getAttribute("data-redirect"));
-  });
-});
-
-const starRepoBtn = document.querySelector("#nav-star-github");
-
-starRepoBtn.addEventListener("click", () => {
-  redirect(starRepoBtn.getAttribute("data-redirect"));
-});
-
-if (localStorage.getItem("external-data") == "enabled") {
-
-  document.querySelector(".latest-commit").classList.remove("fetch-disabled");
-
-  fetch("https://api.github.com/repos/chill31/chill31.github.io")
-    .then((res) => res.json())
-    .then((data) => {
-      const starAmount = data.stargazers_count;
-      starRepoBtn.setAttribute("data-stars", starAmount);
-    });
-
-  fetch("https://api.github.com/repos/chill31/chill31.github.io/commits")
-    .then((res) => res.json())
-    .then((mainData) => {
-      const latestCommit = mainData[0].commit;
-      fetch(latestCommit.url)
-        .then((res) => res.json())
-        .then((data) => {
-          const latestCommitSpan = document.querySelector(".write-commit");
-          latestCommitSpan.textContent = mainData[0].commit.message;
-          latestCommitSpan.setAttribute("href", data.html_url);
-        });
-    });
-
-} else {
-  document.querySelector(".latest-commit").classList.add("fetch-disabled");
-}
-
 document.querySelectorAll("button").forEach((btn) => {
   btn.classList.add("custom");
 });
