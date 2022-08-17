@@ -785,22 +785,6 @@ notifToggle.addEventListener("input", (e) => {
     : localStorage.setItem("notifications", "disabled");
 });
 
-const externalToggle = document.querySelector(".external-toggle");
-const currentExternalSetting = localStorage.getItem("external-data");
-
-switch (currentExternalSetting) {
-  case "enabled":
-    externalToggle.checked = true;
-    break;
-  case "disabled":
-    externalToggle.checked = false;
-    break;
-}
-
-externalToggle.addEventListener("input", (e) => {
-  e.target.checked ? localStorage.setItem("external-data", "enabled") : localStorage.setItem("external-data", "disabled");
-});
-
 const motionToggle = document.querySelector(".motion-toggle");
 const currentMotionSetting = localStorage.getItem("reduced-motion");
 

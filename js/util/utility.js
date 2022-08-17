@@ -402,10 +402,6 @@ if (!localStorage.getItem("notifications")) {
   localStorage.setItem("notifications", "enabled");
 }
 
-if(!localStorage.getItem("external-data")) {
-  localStorage.setItem("external-data", "enabled");
-}
-
 document.body.style.setProperty(
   "--a-clr",
   localStorage.getItem("accent-color")
