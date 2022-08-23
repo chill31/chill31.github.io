@@ -348,13 +348,15 @@ body.menu-right #menu.active {
 }
 
 #menu {
+  --transition: 500ms;
+  
   position: fixed;
   top: 0;
   left: 0;
   background: transparent;
   z-index: 1000;
-  transition: 500ms ease;
-  transition-property: transform;
+  transition: var(--transition) cubic-bezier(.4, 1, 1, 1);
+  transition-property: transform, border-top-left-radius, border-bottom-right-radius;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,20 +364,39 @@ body.menu-right #menu.active {
   width: 100vw;
   background-color: rgba(255, 255, 255, 0.9);
   transform: scale(0);
-  transform-origin: bottom right;
-}
-
-#menu .items-container {
-  height: 0;
-}
-
-#menu.active .items-container {
-  height: fit-content;
+  transform-origin: top left;
+  border-bottom-right-radius: 500rem;
 }
 
 #menu.active {
   transform: scale(1);
-  transform-origin: top left;
+  border-bottom-right-radius: 0;
+}
+
+@keyframes border-down {
+  
+  100% {
+    border-bottom-right-radius: 0;
+  }
+  
+}
+
+@keyframes border-up {
+  
+  100% {
+    border-top-left-radius: 0;
+  }
+  
+}
+
+
+#menu .items-container {
+  height: 0;
+  transition: height 500ms ease;
+}
+
+#menu.active .items-container {
+  height: fit-content;
 }
 
 #menu .menu-item {
