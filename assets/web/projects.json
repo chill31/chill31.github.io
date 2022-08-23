@@ -9,8 +9,8 @@
     {
       "title": "Clock",
       "description": "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
-      "location": "/projects/Clock/",
-      "webLocation": "https://chill31.github.io/projects/Clock/"
+      "location": "/projects/Clock/index.html",
+      "webLocation": "https://chill31.github.io/projects/Clock/index.html"
     },
     {
       "title": "CoinFlip",
@@ -76,7 +76,7 @@
       "title": "Typing Test",
       "description": "A simple 1 minute typing test with over 50+ random paragraphs and sentences, test your speed!",
       "location": "/projects/typing/index.html",
-      "webLocation": "https://chill31.github.io/projects/typing/html"
+      "webLocation": "https://chill31.github.io/projects/typing/index.html"
     },
     {
       "title": "English Dictionary",
@@ -95,12 +95,6 @@
       "description": "An advanced tool with voice options which converts your text to speech with just a click of a button",
       "location": "/projects/TextToSpeech.html",
       "webLocation": "https://chill31.github.io/projects/TextToSpeech.html"
-    },
-    {
-      "title": "Net Speed Test",
-      "description": "A simple test which tells you your internet speed in MBPS",
-      "location": "/projects/NetSpeed.html",
-      "webLocation": "https://chill31.github.io/projects/NetSpeed.html"
     },
     {
       "title": "Country Information",

@@ -13,7 +13,7 @@ gridBtn.addEventListener("click", () => {
 
 const displayMode = localStorage.getItem("project-display");
 
-if(displayMode == "Grid") {
+if(displayMode.trim() == "Grid") {
   gridBtn.click();
 }
 

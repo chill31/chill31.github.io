@@ -1,7 +1,9 @@
 body {
  background: #8fc7fb;
- min-height: 650px;
- transform-style: preserve-3d;
+}
+
+.shortcut-menu {
+  box-sizing: border-box;
 }
 
 .display-option-container {
