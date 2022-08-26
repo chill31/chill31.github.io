@@ -26,7 +26,7 @@ body {
   min-height: 650px;
 }
 
-body.no-motion, body.no-motion *, body.no-motion *:where(::before, ::after){
+body.no-motion, body.no-motion *, body.no-motion *::before, body.no-motion *::after{
   transition: none !important;
   animation: none !important;
 }
