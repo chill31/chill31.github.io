@@ -44,7 +44,6 @@ body.menu-right .shortcut-menu {
   left: 0;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  transition: width calc(var(--transition) * 2) ease;
   z-index: 5;
 }
 
@@ -78,6 +77,8 @@ main {
 
 .sidebar-content {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: .75rem;
   width: calc(clamp(5rem, 7.5%, 8rem) - 1rem);
@@ -178,8 +179,8 @@ main {
 }
 
 .navigateTo::after {
-  content: "\f061";
-  font-family: "fontawesome";
+  content: "\F138";
+  font-family: "Bootstrap-icons";
 }
 
 .newPage,
@@ -294,8 +295,8 @@ main {
 }
 
 .choose[data-chosen]::after {
-  content: '\f00c';
-  font-family: 'fontawesome';
+  content: '\f272';
+  font-family: 'Bootstrap-icons';
 }
 
 .choose-theme-div {

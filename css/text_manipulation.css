@@ -81,7 +81,7 @@ body {
   align-items: center;
 }
 
-.icon > .svg-inline--fa.fa-arrow-left-long {
+.icon > i{
   font-size: 2rem;
   position: absolute;
   top: 0;

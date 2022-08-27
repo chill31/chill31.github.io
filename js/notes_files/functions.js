@@ -126,16 +126,16 @@ function showNotes() {
         </span>
 
         <div class="settings">
-            <i onclick="showSettingsMenu(this)" class="uil uil-ellipsis-h" data-show-menu></i>
+            <i onclick="showSettingsMenu(this)" class="bi-three-dots" data-show-menu></i>
             <ul class="menu">
 
                 <li onclick="updateNote(${index}, '${note.title}', '${note.description}')">
-                  <i class="uil uil-pen"></i>
+                  <i class="bi-pen"></i>
                   Edit
                 </li>
 
                 <li onclick="deleteNote(${index})">
-                  <i class="uil uil-trash"></i>
+                  <i class="bi-trash"></i>
                   Delete
                 </li>
 

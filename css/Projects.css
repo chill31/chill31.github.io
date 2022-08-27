@@ -12,9 +12,11 @@ body {
   transform: translate(-50%);
   height: 55px;
   font-size: 1.3rem;
-  padding: .75em 1.25em;
-  border: solid 1px black;
+  padding: 1rem;
   border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
@@ -55,41 +57,6 @@ body {
 
 .choose-display-button.selected:hover, .choose-display-button.selected:focus {
   background-color: var(--selection-color);
-}
-
-.choose-display-button::before {
-  content: attr(id);
-  font-size: 1.3rem;
-  text-transform: capitalize;
-  position: absolute;
-  bottom: -2.5rem;
-  padding: .15em .3em;
-  border-radius: .15rem;
-  z-index: 1;
-  background-color: var(--clr);
-  transform: scale(0);
-  opacity: 0;
-  transition: opacity 250ms ease;
-  z-index: 5
-}
-
-.choose-display-button::after {
-  content: "";
-  position: absolute;
-  bottom: -.5rem;
-  width: 0; 
-  height: 0; 
-  border-left: var(--arrow-size) solid transparent;
-  border-right: var(--arrow-size) solid transparent;
-  border-bottom: var(--arrow-size) solid var(--clr);
-  opacity: 0;
-  transition: opacity 250ms ease;
-  z-index: 5
-}
-
-.choose-display-button:hover::before, .choose-display-button.choose-display-button:hover::after {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .swiper {

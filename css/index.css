@@ -306,6 +306,9 @@ body {
 .nav-anchor {
   font-size: 1.4rem;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-anchor:hover,
@@ -316,32 +319,32 @@ body {
 }
 
 .nav-anchor::before {
-  font-family: "Fontawesome";
+  font-family: "bootstrap-icons";
   margin-right: 0.25rem;
 }
 
 .anchorHome::before {
-  content: "\f015";
+  content: "\f425";
 }
 
 .anchorProjects::before {
-  content: "\f07b";
+  content: "\f3d7";
 }
 
 .anchorSettings::before {
-  content: "\f013";
+  content: "\f3e5";
 }
 
 .anchorDiscord::before {
-  content: "\f392";
+  content: "\f300";
 }
 
 .anchorGithub::before {
-  content: "\f09b";
+  content: "\f3ed";
 }
 
 .anchorYoutube::before {
-  content: "\f167";
+  content: "\f62b";
 }
 
 .bottom-text {

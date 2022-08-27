@@ -18,6 +18,25 @@ function updateStrengthMeter() {
     reasonsContainer.appendChild(messageElement);
   });
   strengthMeter.style.setProperty("--strength", strength);
+  
+  console.log(strength);
+  if(strength <= 40){ 
+    strengthMeter.classList.add("weak");
+    strengthMeter.classList.remove("okay");
+    strengthMeter.classList.remove("strong");
+  }
+  
+  if(strength <= 99 && strength > 40){
+    strengthMeter.classList.add("okay");
+    strengthMeter.classList.remove("weak");
+    strengthMeter.classList.remove("strong");
+  }
+  
+  if(strength == 100){
+    strengthMeter.classList.add("strong");
+    strengthMeter.classList.remove("okay");
+    strengthMeter.classList.remove("weak");
+  }
 }
 
 function calculatePasswordStrength(password) {

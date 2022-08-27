@@ -56,10 +56,10 @@ body {
   position: absolute;
   top: 50%;
   color: var(--big-icon-fill);
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 
-.wrapper svg {
+.wrapper i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -67,7 +67,7 @@ body {
   height: 1.25rem !important;
 }
 
-.search svg {
+.search i{
   pointer-events: none;
   font-size: 16px;
 }
@@ -139,11 +139,12 @@ ul .word span {
   color: var(--big-icon-fill);
 }
 
-ul .word svg {
+ul .word i {
   color: var(--big-icon-fill);
   font-size: 15px;
   cursor: pointer;
 }
+
 
 ul .content {
   max-height: 215px;
@@ -176,7 +177,7 @@ ul .content {
   text-decoration: underline;
 }
 
-.search svg {
+.search i {
   height: 1rem;
   aspect-ratio: 1;
 }

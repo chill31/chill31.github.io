@@ -51,9 +51,9 @@ form img {
   display: none;
 }
 
-form .content svg {
+form .content i {
   color: var(--clr-neutral);
-  font-size: 55px;
+  font-size: 6rem;
 }
 
 form .content p {

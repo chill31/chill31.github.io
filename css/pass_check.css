@@ -31,12 +31,25 @@ body {
   position: relative;
   height: 2rem;
   width: 90%;
-  border: 3px solid var(--selection-color);
-  border-radius: 1rem;
+  border: 2px solid black;
+  border-radius: .25rem;
   margin: 0 auto;
   overflow: hidden;
   margin-top: 3rem !important;
   margin-bottom: 3rem;
+}
+
+
+.strength-meter.weak::before {
+  background: var(--clr-warning);
+}
+
+.strength-meter.okay::before {
+  background: #FF8F61;
+}
+
+.strength-meter.strong::before {
+  background: var(--clr-success);
 }
 
 .strength-meter::before {
@@ -45,7 +58,7 @@ body {
   left: 0;
   height: 100%;
   width: calc(1% * var(--strength, 0));
-  background-color: var(--a-clr);
+  background: var(--a-clr);
   transition: width 200ms;
 }
 
@@ -53,11 +66,10 @@ body {
   margin-top: 1rem;
   width: 90%;
   padding: 0.25rem 0.75rem;
-  background-color: var(--a-clr);
-  color: var(--clr-neutral);
+  background-color: transparent;
   padding: 10px 15px;
   font-size: 1.3rem;
-  border: 1px solid var(--a-clr);
+  border: 1px solid black;
   outline: none;
   text-align: center;
   border-radius: 0.3rem;
@@ -101,20 +113,16 @@ body {
   outline: none;
   margin-top: 0.5rem;
   cursor: pointer;
-  background-color: var(--selection-color);
+  background-color: transparent;
   border-radius: 0.5rem;
-  border: none;
+  border: solid 1px black;
   transition: outline 100ms ease;
   position: relative;
 }
 
-.btns svg {
-  height: 2rem;
-  width: 2rem;
-}
-
-.btns svg > path {
-  fill: black;
+.btns i {
+  font-size: 2rem;
+  color: black;
 }
 
 .weaknesses__toggle {

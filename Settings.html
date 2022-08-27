@@ -18,37 +18,31 @@
 
   <script src="/static/color/script.js"></script>
   <link rel="stylesheet" href="/static/color/style.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
 <body>
   <div class="sidebar">
     <button class="previous-page custom">
-      <i class="fa-solid fa-chevron-left"></i>
+      <i class="bi-chevron-left"></i>
     </button>
 
     <div class="sidebar-content">
       <button class="sidebar-button custom" data-redirect="display" data-nav="Display">
-        <i class="fa-solid fa-display"></i>
+        <i class="bi-display"></i>
       </button>
 
       <button class="sidebar-button custom" data-redirect="appearance" data-nav="Appearance">
-        <i class="fa-solid fa-palette"></i>
+        <i class="bi-palette"></i>
       </button>
 
       <button class="sidebar-button custom" data-redirect="preferences" data-nav="Preferences">
-        <i class="fa-solid fa-toggle-on"></i>
+        <i class="bi-toggles"></i>
       </button>
 
       <button class="sidebar-button danger custom" data-redirect="danger" data-nav="Danger Zone">
-        <i class="fa-solid fa-exclamation-triangle"></i>
+        <i class="bi-exclamation-triangle"></i>
       </button>
     </div>
   </div>
@@ -59,28 +53,28 @@
     <div class="nav nav-main">
       <button class="navigateTo navNew" id="goDisplay" data-redirect="display" data-nav="Display">
         <div class="navToContent">
-          <i class="fa-solid fa-display"></i>
+          <i class="bi-display"></i>
           <span class="navTitle">Display</span>
         </div>
       </button>
 
       <button class="navigateTo navNew" id="goAppearance" data-redirect="appearance" data-nav="Appearance">
         <div class="navToContent">
-          <i class="fa-solid fa-palette"></i>
+          <i class="bi-palette"></i>
           <span class="navTitle">Appearance</span>
         </div>
       </button>
 
       <button class="navigateTo navNew" id="goPreferences" data-redirect="preferences" data-nav="Preferences">
         <div class="navToContent">
-          <i class="fa-solid fa-toggle-on"></i>
+          <i class="bi-toggles"></i>
           <span class="navTitle">Preferences</span>
         </div>
       </button>
 
       <button class="navigateTo navNew" id="goDanger" data-redirect="danger" data-nav="Danger">
         <div class="navToContent">
-          <i class="fa-solid fa-triangle-exclamation"></i>
+          <i class="bi-exclamation-triangle"></i>
           Danger Zone
         </div>
       </button>
@@ -88,21 +82,21 @@
 
     <div class="newPage" id="display">
       <span class="currentLocation"><span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">Display</span>
       </span>
 
       <div class="nav nav-new">
         <button class="navigateTo navSub" id="goMenuPlacement" data-redirect="menuPlacement" data-nav="Menu Placement">
           <div class="navToContent">
-            <i class="fa-solid fa-bars"></i>
+            <i class="bi-list"></i>
             Menu Placement
           </div>
         </button>
 
         <button class="navigateTo navSub" id="goFonts" data-redirect="fonts" data-nav="Fonts">
           <div class="navToContent">
-            <i class="fa-solid fa-font"></i>
+            <i class="bi-fonts"></i>
             Fonts
           </div>
         </button>
@@ -110,7 +104,7 @@
         <button class="navigateTo navSub" id="goProjectDisplay" data-redirect="projectDisplay"
           data-nav="Projects Display">
           <div class="navToContent">
-            <i class="fa-solid fa-archive"></i>
+            <i class="bi-archive"></i>
             Projects Default Display
           </div>
         </button>
@@ -119,28 +113,28 @@
 
     <div class="newPage" id="appearance">
       <span class="currentLocation"><span class="go-previous goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="go-previous goSub">Appearance</span>
       </span>
 
       <div class="nav nav-new">
         <button class="navigateTo navSub" id="goColors" data-redirect="colors" data-nav="Custom Colors">
           <div class="navToContent">
-            <i class="fa-solid fa-brush"></i>
+            <i class="bi-brush"></i>
             Custom Colors
           </div>
         </button>
 
         <button class="navigateTo navSub" id="goThemes" data-redirect="themes" data-nav="Preset Themes">
           <div class="navToContent">
-            <i class="fa-solid fa-palette"></i>
+            <i class="bi-palette"></i>
             Preset Themes
           </div>
         </button>
 
         <button class="navigateTo navSub" id="goMotion" data-redirect="motion" data-nav="Reduced Motion">
           <div class="navToContent">
-            <i class="fa-solid fa-wind"></i>
+            <i class="bi-wind"></i>
             Reduced Motion
           </div>
         </button>
@@ -149,28 +143,28 @@
 
     <div class="newPage" id="preferences">
       <span class="currentLocation"><span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="go-previous goSub">Preferences</span>
       </span>
 
       <div class="nav nav-new">
         <button class="navigateTo navSub" id="goShortcuts" data-redirect="shortcuts" data-nav="Shortcuts">
           <div class="navToContent">
-            <i class="fa-solid fa-list"></i>
+            <i class="bi-list-ul"></i>
             Shortcuts
           </div>
         </button>
 
         <button class="navigateTo navSub" id="goParticles" data-redirect="particles" data-nav="Particles">
           <div class="navToContent">
-            <i class="fa-solid fa-splotch"></i>
+            <i class="bi-star"></i>
             Particles
           </div>
         </button>
 
         <button class="navigateTo navSub" id="goParticles" data-redirect="notifications" data-nav="Notifications">
           <div class="navToContent">
-            <i class="fa-solid fa-message"></i>
+            <i class="bi-bell"></i>
             Notifications
           </div>
         </button>
@@ -179,7 +173,7 @@
 
     <div class="newPage" id="danger">
       <span class="currentLocation"><span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">Danger Zone</span>
       </span>
 
@@ -195,9 +189,9 @@
     <div class="subPage" id="menuPlacement" data-main="display">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Menu Placement</span>
       </span>
 
@@ -210,9 +204,9 @@
     <div class="subPage" id="fonts" data-main="display">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Fonts</span>
       </span>
 
@@ -239,9 +233,9 @@
     <div class="subPage" id="projectDisplay" data-main="display">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Projects Default Display</span>
       </span>
 
@@ -256,9 +250,9 @@
     <div class="subPage" id="colors" data-main="appearance">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Custom Colors</span>
       </span>
 
@@ -309,9 +303,9 @@
     <div class="subPage" id="themes" data-main="appearance">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Preset Themes</span>
       </span>
 
@@ -356,9 +350,9 @@
     <div class="subPage" id="motion" data-main="appearance">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Reduced Motion</span>
       </span>
 
@@ -371,9 +365,9 @@
     <div class="subPage" id="shortcuts" data-main="preferences">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Shortcuts</span>
       </span>
 
@@ -386,9 +380,9 @@
     <div class="subPage" id="particles" data-main="preferences">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Particles</span>
       </span>
 
@@ -407,9 +401,9 @@
     <div class="subPage" id="notifications" data-main="preferences">
       <span class="currentLocation">
         <span class="goMain">Settings</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="goSub">...</span>
-        <i class="fa-solid fa-chevron-right"></i>
+        <i class="bi-chevron-right"></i>
         <span class="currentPage">Notifications</span>
       </span>
 
