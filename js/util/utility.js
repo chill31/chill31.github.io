@@ -10,6 +10,24 @@ function reverse(text) {
 }
 
 /**
+ * @param {*} text
+ * @returns capitalized text
+ */
+
+function capitalize(text) {
+
+  const words = text.split(" ");
+  const newWords = [];
+
+  words.forEach(word => {
+    const newWord = word[0].toUpperCase() + word.substring(1);
+    newWords.push(newWord);
+  });
+
+  return newWords.join(" ");
+}
+
+/**
  *
  * @param {*} m
  * @returns fixed month
