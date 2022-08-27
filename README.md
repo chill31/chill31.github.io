@@ -29,15 +29,15 @@ To navigate throughout the main pages, use the menu or the shortcut menu with th
 
 If you have a small screen and the icons are not visible, then click on the 3 lines and it will open up a menu with all the main navigation pages.
 
-*Ham Menu & Shortcut Menu*
-![84339F05-A7D6-496E-8C5B-9F8A5BCBC30C](https://user-images.githubusercontent.com/89910163/180656675-452bb8ae-995f-46bd-bb01-f6d0739dd15f.jpeg)
+*Navigation & Shortcut Menu*<br>
+<img width="200" alt="nav-menu-new" src="https://user-images.githubusercontent.com/89910163/187018644-aebeab8a-9cae-49d8-9aa8-4ec9da409782.png">
 
 
 ### Home Page:
 Basically the portfolio, tells a little about Chill31 ( me ) and then provides links in the end for you to navigate to.
 
 *Home Page [Default]*
-<img width="960" alt="home-page" src="https://user-images.githubusercontent.com/89910163/180845689-aa69ba06-2ce2-4825-9198-49377b5dcf5a.png">
+<img width="960" alt="home-page" src="https://user-images.githubusercontent.com/89910163/187018656-132e6e80-033a-4a18-a365-e3e0901fac60.png">
 
 
 there are about 5 sections, excluding the last links sections, and each of the headings in them is clickable, so if you are to click on them, it will scroll to the section the header was present in.
@@ -48,7 +48,7 @@ Here you can check out the utilities mentioned above, You can select a display m
 
 
 *Projects Page [default]*
-<img width="960" alt="projects-page" src="https://user-images.githubusercontent.com/89910163/180844152-47279840-012e-454d-80f0-a196c95be08c.png">
+<img width="960" alt="projects-page" src="https://user-images.githubusercontent.com/89910163/187018668-8e438415-4b60-4c4f-a407-c75efd10f05c.png">
 
 In here, there's a button after the main header, with the table like icon, when you click on it, it toggles between grid mode and slider mode, the grid mode is to explore all the slides at once, and the slider for one at a time with a clean animation.
 
@@ -61,35 +61,35 @@ Settings -> Display -> Projects Default Display -> *your display mode*.
 Customize everything here, you can disable the shortcuts, enable/disable notifications which appear after certain actions, or reset everything back to default. Explore the settings page divided into 3 sections.
 
 *Settings Page [default]*
-![4212E4B9-0D9D-46E1-8D43-01F7321636B8](https://user-images.githubusercontent.com/89910163/180657029-b5677f02-8e02-4d09-b6b5-93386264792e.jpeg)
+<img width="960" alt="settings-page" src="https://user-images.githubusercontent.com/89910163/187018690-2df100fe-86c8-4d3a-a373-a5ba844313a3.png">
 
 There are sub pages, like display, appearance, and preferences, which direct you to more options, like if you click on the display option, it shows you fonts, menu placement and more.
 The Basic Structure is:
 
-<ul>
+<pre>
+
+# -> All current Settings.
+
+- Display
+  - Menu Placement
+  - Fonts
+  - Projects Default Display
+
+- Appearance
+  - Custom Colors
+  - Preset Themes
+  - Reduced Motion
+
+- Preferences
+  - Shortcuts
+  - Particles
+  - Notifications
   
-  <li>Display</li>
-    <ul>
-      <li>Menu Placement</li>
-      <li>Fonts</li>
-      <li>Projects Default Display</li>
-    </ul>
-  
-  <li>Appearance</li>
-    <ul>
-      <li>Preset Themes</li>
-      <li>Custom Colors</li>
-      <li>Reduced Motion</li>
-    </ul>
-  
-  <li>Preferences</li>
-    <ul>
-      <li>Shortcuts</li>
-      <li>Particles</li>
-      <li>Notifications</li>
-    </ul>
-  
-</ul>
+
+--- Danger Zone ---
+ # clears all settings saved in the website.
+
+</pre>
 
 ## Suggestions
 
