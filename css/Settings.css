@@ -299,48 +299,6 @@ main {
   font-family: 'Bootstrap-icons';
 }
 
-.choose-theme-div {
-  display: grid;
-  grid-template-columns: repeat(3, 27%);
-  grid-template-rows: repeat(3, 220px);
-  grid-gap: 3.5rem;
-  position: absolute;
-  top: 20%;
-  left: calc(1.5rem + clamp(5rem, 7.5%, 8rem));
-}
-
-.theme-choose,
-.custom-theme {
-  color: white;
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 1rem 2rem;
-  background-color: #191D1E;
-  border-radius: 1rem;
-  border: solid 4px #0e0f10;
-  cursor: pointer;
-}
-
-
-svg.theme-image path {
-  fill: white;
-}
-
-.theme-choose * {
-  pointer-events: none;
-}
-
-.theme-choose[data-chosen] {
-  border: solid 4px #8BCBFF;
-}
-
-.theme-image {
-  height: 85%;
-  width: 100%;
-  border-radius: 1rem;
-}
-
-
 .font-choose-flex {
   display: flex;
   justify-content: center;
@@ -370,28 +328,32 @@ svg.theme-image path {
 
 .picker-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   place-items: center;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   text-align: center;
-  position: fixed;
+  position: absolute;
   top: 60%;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  overflow: scroll;
 }
 
 .grid-item {
-  height: 30vh;
-  width: 40vw;
+  position: relative;
+  height: 200px;
+  width: 35vw;
   border-radius: 0.5rem;
   border: solid 1px white;
+  background-color: var(--main);
   color: var(--main-color);
   display: flex;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
   gap: 1rem;
   flex-direction: column;
+  padding: 1rem;
 }
 
 .picker-header {
@@ -399,6 +361,10 @@ svg.theme-image path {
   margin: 1rem;
   font-size: x-large;
   color: white;
+}
+
+.pcr-button {
+  margin-top: 4.5rem;
 }
 
 /* The switch - the box around the slider */

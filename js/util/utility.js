@@ -397,8 +397,6 @@ if (!localStorage.getItem("particles"))
 if (!localStorage.getItem("particle-amount"))
   localStorage.setItem("particle-amount", 20);
 
-if (!localStorage.getItem("theme")) localStorage.setItem("theme", "Default");
-
 if (!localStorage.getItem("project-display"))
   localStorage.setItem("project-display", "Slider");
 
