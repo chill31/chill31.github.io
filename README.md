@@ -54,7 +54,7 @@ In here, there's a button after the main header, with the table like icon, when 
 
 You can select a default display mode through settings to always have it open to that display mode instead of changing it everytime you enter:
 
-Settings -> Display -> Projects Default Display -> *your display mode*.
+<pre>Settings -> Display -> Projects Default Display -> *your display mode*</pre>
 
 
 ### Settings Page:
