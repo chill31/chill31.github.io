@@ -9,9 +9,10 @@ This website contains projects ( for you guys ) inspired from youtube channels (
 
 <br>
 
-By the way, this website provides **total** customization over most things, from fonts to custom colors, anything you don't like, you change it. <br>
-There are 5 preset themes and infinite amounts of custom colors you can make. Fonts are of two types, Normal and Code. Normal is pretty much present everywhere on the website, while Code Font is present on textboxes, sometimes buttons, and some more things.
 
+There is a Settings page present where you can change things as you like, for example: <br>
+Disable notifications, change color scheme, toggle animations and reduced motion, etc.
+Scroll down below to find all the settings available.
 <br>
 
 There are particle and shortcut settings, which you can disable or enable, whichever you like.
