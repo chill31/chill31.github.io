@@ -99,7 +99,7 @@ header i {
   transition: background 500ms ease;
 }
 .input-part button:hover {
-  background: var(--top-btm-bg);
+  background: var(--selection-color);
 }
 .wrapper .weather-part {
   display: none;

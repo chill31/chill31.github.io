@@ -100,5 +100,5 @@ form button {
 }
 
 form button:hover {
-  background: var(--top-btm-bg);
+  background: var(--selection-color);
 }

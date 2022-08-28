@@ -303,13 +303,6 @@ setTimeout(() => {
   pickr3.hide();
 }, 100);
 
-const pickr4 = makePickr(".p4", localStorage.getItem("top-bottom-background"));
-
-pickr4.show();
-setTimeout(() => {
-  pickr4.hide();
-}, 100);
-
 const copy_btns = document.querySelectorAll(".pcr-copy");
 const save_btns = document.querySelectorAll(".pcr-save");
 const resColors = document.querySelectorAll(".pcr-result");
@@ -564,87 +557,6 @@ resetToDefBtns[2].addEventListener("click", () => {
   pickr3.setColor("#00b6ff");
   notify("Reset the Selection Color back to default", "info");
 });
-
-let clr4 = localStorage.getItem("top-bottom-background") ?? "#54c0eb";
-let color_scheme4;
-
-hexBtns[3].addEventListener("click", () => {
-  color_scheme4 = "hexa";
-});
-
-rgbBtns[3].addEventListener("click", () => {
-  color_scheme4 = "rgba";
-});
-
-hsvBtns[3].addEventListener("click", () => {
-  color_scheme4 = "hsva";
-});
-
-hslBtns[3].addEventListener("click", () => {
-  color_scheme4 = "hsla";
-});
-
-cmyBtns[3].addEventListener("click", () => {
-  color_scheme4 = "cmyk";
-});
-
-pickr4.on("save", (...color) => {
-  pickr4.hide();
-
-  if (color_scheme4 == "hexa") {
-    clr4 = color[0].toHEXA().toString();
-  } else if (color_scheme4 == "rgba") {
-    clr4 = color[0].toRGBA().toString();
-  } else if (color_scheme4 == "hsva") {
-    clr4 = color[0].toHSVA().toString();
-  } else if (color_scheme4 == "hsla") {
-    clr4 = color[0].toHSLA().toString();
-  } else if (color_scheme4 == "cmyk") {
-    clr4 = color[0].toCMYK().toString();
-  }
-
-  document.body.style.setProperty("--top-btm-bg", clr4);
-  localStorage.setItem("top-bottom-background", clr4);
-});
-
-save_copys[3].addEventListener("click", () => {
-  save_btns[3].click();
-  copyText(clr4);
-  notify("Copied the color to your clipboard!", "success");
-});
-
-save_btns[3].addEventListener("click", () => {
-  clr4 = resColors[3].value;
-  notify(
-    `Successfully saved the color with color scheme "${color_scheme4}"`,
-    "success"
-  );
-});
-
-clear_btns[3].addEventListener("click", () => {
-  notify("Cleared the color", "info");
-});
-
-pickr4.on("cancel", () => {
-  pickr4.hide();
-});
-
-copy_btns[3].addEventListener("click", () => {
-  try {
-    copyText(clr4);
-    notify("Successfully copied the color!", "success");
-  } catch (e) {
-    notify("there was an error while copying the color!", "error");
-  }
-
-  pickr4.hide();
-});
-
-resetToDefBtns[3].addEventListener("click", () => {
-  pickr4.setColor("#54c0eb");
-  notify("Reset the Top Header Color back to default", "info");
-});
-
 
 
 const shortcutToggle = document.querySelector(".shortcut-toggle");

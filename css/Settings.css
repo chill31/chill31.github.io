@@ -356,6 +356,10 @@ main {
   padding: 1rem;
 }
 
+.grid-item * {
+  opacity: 0;
+}
+
 .picker-header {
   display: block;
   margin: 1rem;
