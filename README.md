@@ -78,7 +78,6 @@ The Basic Structure is:
 
 - Appearance
   - Custom Colors
-  - Preset Themes
   - Reduced Motion
 
 - Preferences
