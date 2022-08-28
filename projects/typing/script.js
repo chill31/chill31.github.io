@@ -9,9 +9,12 @@ const typingText = document.querySelector(".typing-text p"),
 let timer,
   maxTime = 60,
   timeLeft = maxTime,
-  charIndex = (mistakes = isTyping = 0);
+  charIndex = (mistakes = isTyping = 0),
+  notif = 0;
 
 function loadParagraph() {
+  notif = 0;
+
   const ranIndex = Math.floor(Math.random() * paragraphs.length);
   const ranIndex2 = Math.floor(Math.random() * paragraphs.length);
   const ranIndex3 = Math.floor(Math.random() * paragraphs.length);
@@ -82,23 +85,20 @@ function initTyping() {
     cpmTag.innerText = charIndex - mistakes;
 
     localStorage.setItem("cpm", charIndex - mistakes);
-    localStorage.setItem("mstk", mistakes);
+    localStorage.setItem("mistakes", mistakes);
     localStorage.setItem("wpm", wpm);
+
   } else {
     clearInterval(timer);
     inpField.value = "";
 
-    notify(
-      `Finish!<br>Your Score is: ${localStorage.getItem(
-        "wpm"
-      )}WPM and ${localStorage.getItem(
-        "cpm"
-      )}CPM, you made ${localStorage.getItem(
-        "mstk"
-      )} mistakes<br><br>Click try again to try again.`,
-      "success",
-      "yehhs"
-    );
+    if(notif == 0){
+      notify(`
+      Finish!
+      You ended the test with ${localStorage.getItem("wpm")} WPM, with a CPM of ${localStorage.getItem("cpm")}.
+    `, "info");
+    }
+    notif++;
   }
 }
 
