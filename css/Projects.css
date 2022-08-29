@@ -147,7 +147,7 @@ body {
 .form__field:focus {
   padding-bottom: 6px;
   border-bottom-width: 3px;
-  border-image: linear-gradient(to right, var(--a-clr), var(--a-clr-dark));
+  border-color: var(--a-clr-dark);
   border-image-slice: 1;
 }
 .form__field:focus ~ .form__label {
