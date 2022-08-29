@@ -600,6 +600,33 @@ particleAmtRange.addEventListener("change", (e) => {
   localStorage.setItem("particle-amount", e.target.valueAsNumber);
 });
 
+const allBorderChoose = document.querySelectorAll(".border-choose");
+const roundBorderChoose = document.querySelector("#round");
+const sharpBorderChoose = document.querySelector("#sharp");
+const currentBorderSetting = localStorage.getItem("border-type");
+
+switch (currentBorderSetting) {
+  case "round":
+    makeChosen(roundBorderChoose, allBorderChoose);
+    break;
+    
+  case "sharp":
+    makeChosen(sharpBorderChoose, allBorderChoose);
+    break;
+}
+
+for (let i = 0; i < allBorderChoose.length; i++) {
+  
+  allBorderChoose[i].addEventListener("click", (e) => {
+    
+    allBorderChoose.forEach(borderDiv => borderDiv.removeAttribute("data-chosen"));
+    e.target.setAttribute("data-chosen", "");
+    localStorage.setItem("border-type", e.target.id)
+    
+  });
+  
+}
+
 const notifToggle = document.querySelector(".notif-toggle");
 const currentNotifSetting = localStorage.getItem("notifications");
 
