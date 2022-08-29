@@ -76,6 +76,10 @@ body {
   position: relative;
 }
 
+.swiper-slide .card-icon {
+  font-size: 5rem;
+}
+
 .swiper-slide .card-brief {
   font-size: 1.1rem;
   margin-inline: 4rem;
@@ -187,6 +191,10 @@ body.grid .grid-view {
 
 .grid-card.no-search {
   display: none;
+}
+
+.grid-card-icon {
+  font-size: 5rem;
 }
 
 .grid-card-brief {
