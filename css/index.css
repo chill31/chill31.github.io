@@ -21,6 +21,7 @@ body {
   background-color: var(--a-clr-dark);
   padding-top: 3rem;
   position: relative;
+  overflow: hidden;
 }
 
 .section__header {
