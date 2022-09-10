@@ -4,145 +4,169 @@
       "title": "Calculator",
       "description": "The calculator just like in phones, with advanced maths functions like SIN, COS, TAN, etc.",
       "location": "/projects/Calculator.html",
-      "webLocation": "https://chill31.github.io/projects/Calculator.html"
+      "webLocation": "https://chill31.github.io/projects/Calculator.html",
+      "icon": "bi-calculator"
     },
     {
       "title": "Clock",
       "description": "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
       "location": "/projects/Clock/index.html",
-      "webLocation": "https://chill31.github.io/projects/Clock/index.html"
+      "webLocation": "https://chill31.github.io/projects/Clock/index.html",
+      "icon": "bi-clock"
     },
     {
       "title": "CoinFlip",
       "description": "This provides a fair way to choose between heads and tails when you don't have a coin!",
       "location": "/projects/CoinFlip.html",
-      "webLocation": "https://chill31.github.io/projects/CoinFlip.html"
+      "webLocation": "https://chill31.github.io/projects/CoinFlip.html",
+      "icon": "bi-coin"
     },
     {
       "title": "Color Picker",
       "description": "The Color Picker, customised, lets you pick your colors, or some basic default colors if you are having some trouble choosing...",
       "location": "/projects/Color_picker.html",
-      "webLocation": "https://chill31.github.io/projects/Color_picker.html"
+      "webLocation": "https://chill31.github.io/projects/Color_picker.html",
+      "icon": "bi-palette"
     },
     {
       "title": "Currency Convertor",
       "description": "This currency tool helps you in converting currencies to another, because its a lot of trouble doing that yourself, most of the currencies are supported",
       "location": "/projects/Currency.html",
-      "webLocation": "https://chill31.github.io/projects/Currency.html"
+      "webLocation": "https://chill31.github.io/projects/Currency.html",
+      "icon": "bi-currency-exchange"
     },
     {
       "title": "Dice Roll",
       "description": "This simple tool rolls two die with random numbers from 1 - 6",
       "location": "/projects/Diceroll.html",
-      "webLocation": "https://chill31.github.io/projects/Diceroll.html"
+      "webLocation": "https://chill31.github.io/projects/Diceroll.html",
+      "icon": "bi-dice-4"
     },
     {
       "title": "Password Generator",
       "description": "Helps you build a custom strong password!",
       "location": "/projects/Passwords/Generator.html",
-      "webLocation": "https://chill31.github.io/projects/Passwords/Generator.html"
+      "webLocation": "https://chill31.github.io/projects/Passwords/Generator.html",
+      "icon": "bi-person-circle"
     },
     {
       "title": "Random Choice Picker",
       "description": "Picks a random choice from the list of choices you enter.",
       "location": "/projects/Random_Choice.html",
-      "webLocation": "https://chill31.github.io/projects/Random_Choice.html"
+      "webLocation": "https://chill31.github.io/projects/Random_Choice.html",
+      "icon": "bi-shuffle"
     },
     {
       "title": "Temperature Convertor",
       "description": "This basic tool helps you in converting celsius to fahrenheit or the vise-versa.",
       "location": "/projects/Temperature.html",
-      "webLocation": "https://chill31.github.io/projects/Temperature.html"
+      "webLocation": "https://chill31.github.io/projects/Temperature.html",
+      "icon": "bi-thermometer-half"
     },
     {
       "title": "Text Manipulation",
       "description": "This is a very useful tool for manipulating text cases to uppercase, lowercase, etc.",
       "location": "/projects/Text_manipulation.html",
-      "webLocation": "https://chill31.github.io/projects/Text_manipulation.html"
+      "webLocation": "https://chill31.github.io/projects/Text_manipulation.html",
+      "icon": "bi-card-text"
     },
     {
       "title": "TicTacToe",
       "description": "Not a tool, this is a game played by many, it takes skill, go on, play!",
       "location": "/projects/TicTacToe.html",
-      "webLocation": "https://chill31.github.io/projects/TicTacToe.html"
+      "webLocation": "https://chill31.github.io/projects/TicTacToe.html",
+      "icon": "bi-grid-3x3"
     },
     {
       "title": "Weather Reporter",
       "description": "Advanced weather reported for cities, type in the name of a city, press get weather, and there you go!",
       "location": "/projects/weather/index.html",
-      "webLocation": "https://chill31.github.io/projects/weather/index.html"
+      "webLocation": "https://chill31.github.io/projects/weather/index.html",
+      "icon": "bi-cloud-sun"
     },
     {
       "title": "Typing Test",
       "description": "A simple typing test with over 50+ random paragraphs and sentences, test your typing speed!",
       "location": "/projects/typing/index.html",
-      "webLocation": "https://chill31.github.io/projects/typing/index.html"
+      "webLocation": "https://chill31.github.io/projects/typing/index.html",
+      "icon": "bi-keyboard"
     },
     {
       "title": "English Dictionary",
       "description": "A simple dictionary ( english ) which gives the meaning and an example of the given word.",
       "location": "/projects/Dictionary.html",
-      "webLocation": "https://chill31.github.io/projects/Dictionary.html"
+      "webLocation": "https://chill31.github.io/projects/Dictionary.html",
+      "icon": "bi-book"
     },
     {
       "title": "QR Code Generator",
       "description": "A simple QR Code generator which generates custom QR Codes according to the entered value.",
       "location": "/projects/QR-Code/Generate.html",
-      "webLocation": "https://chill31.github.io/projects/QR-Code/Generate.html"
+      "webLocation": "https://chill31.github.io/projects/QR-Code/Generate.html",
+      "icon": "bi-qr-code"
     },
     {
       "title": "Text To Speech",
       "description": "An advanced tool with voice options which converts your text to speech with just a click of a button",
       "location": "/projects/TextToSpeech.html",
-      "webLocation": "https://chill31.github.io/projects/TextToSpeech.html"
+      "webLocation": "https://chill31.github.io/projects/TextToSpeech.html",
+      "icon": "bi-chat-text"
     },
     {
       "title": "Country Information",
       "description": "This tool provides you basic information of countries like their continent, population, capital, etc.",
       "location": "/projects/Country_Info.html",
-      "webLocation": "https://chill31.github.io/projects/Country_Info.html"
+      "webLocation": "https://chill31.github.io/projects/Country_Info.html",
+      "icon": "bi-flag"
     },
     {
       "title": "Notes App",
       "description": "This tool lets you make notes! You can update them, delete them, and create new ones...",
       "location": "/projects/Notes.html",
-      "webLocation": "https://chill31.github.io/projects/Notes.html"
+      "webLocation": "https://chill31.github.io/projects/Notes.html",
+      "icon": "bi-journal"
     },
     {
       "title": "Language Translator",
       "description": "A simple language translator tool with most languages",
       "location": "/projects/Language/index.html",
-      "webLocation": "https://chill31.github.io/projects/Language/index.html"
+      "webLocation": "https://chill31.github.io/projects/Language/index.html",
+      "icon": "bi-translate"
     },
     {
       "title": "QR-Code Reader",
       "description": "A simple QR Code reader where you can upload QR Codes and it shows you the QR's content",
       "location": "/projects/QR-Code/Reader.html",
-      "webLocation": "https://chill31.github.io/projects/QR-Code/Reader.html"
+      "webLocation": "https://chill31.github.io/projects/QR-Code/Reader.html",
+      "icon": "bi-qr-code-scan"
     },
     {
       "title": "Random Number Generator",
       "description": "this project generates a random number within the given range of minimum and maximum numbers.",
       "location": "/projects/Random-Number.html",
-      "webLocation": "https://chill31.github.io/projects/Random-Number.html"
+      "webLocation": "https://chill31.github.io/projects/Random-Number.html",
+      "icon": "bi-123"
     },
     {
       "title": "Live Character Counter",
       "description": "A live character count with included word and no-spaces character counter.",
       "location": "/projects/Character_Count.html",
-      "webLocation": "https://chill31.github.io/projects/Character_Count.html"
+      "webLocation": "https://chill31.github.io/projects/Character_Count.html",
+      "icon": "bi-body-text"
     },
     {
       "title": "Password Strength Checker",
       "description": "An advanced tool to check if your password is good to use or not",
       "location": "/projects/Passwords/Checker.html",
-      "webLocation": "https://chill31.github.io/projects/Checker.html"
+      "webLocation": "https://chill31.github.io/projects/Checker.html",
+      "icon": "bi-person-bounding-box"
     },
     {
       "title": "Weight Convertor",
       "description": "A tool which helps convert kilograms, pounds and ounces to the other units, enter in one, and get all the units values",
       "location": "/projects/Weight.html",
-      "webLocation": "https://chill31.github.io/Weight.html"
+      "webLocation": "https://chill31.github.io/Weight.html",
+      "icon": "bi-speedometer"
     }
   ]
 }

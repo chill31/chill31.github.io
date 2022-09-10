@@ -34,6 +34,8 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
   
       createdCard.innerHTML = `
     <h2 class="card-header">${projects[i].title}</h2>
+    
+    <i class="card-icon ${projects[i].icon}"></i>
 
     <p class="card-brief">${projects[i].description}</p>
 
@@ -47,6 +49,8 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
 
       gridCard.innerHTML = `
       <h2 class="grid-card-header">${projects[i].title}</h2>
+      
+      <i class="grid-card-icon ${projects[i].icon}"></i>
   
       <p class="grid-card-brief">${projects[i].description}</p>
   

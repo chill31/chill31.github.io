@@ -455,4 +455,14 @@ if(localStorage.getItem("reduced-motion") == "enabled") {
   document.body.classList.add("no-motion");
 }
 
+if(!localStorage.getItem("border-type")) {
+  localStorage.setItem("border-type", "round");
+}
+
+if(localStorage.getItem("border-type") == "round") {
+  document.body.classList.remove("sharp-borders");
+} else {
+  document.body.classList.add("sharp-borders");
+}
+
 document.body.classList.add(`menu-${localStorage.getItem("menu-placement")}`);
