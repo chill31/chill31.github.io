@@ -1,11 +1,37 @@
 import Swiper from "../static/slider/script.js";
 
-const headers = document.querySelectorAll(".section__header");
+const headers = document.querySelectorAll(".section__header:not(.no-click)");
 headers.forEach((header) => {
   header.addEventListener("click", (e) => {
     redirect("#" + e.target.parentElement.id);
   });
 });
+
+const introHeader = document.querySelector(".section__intro .section__header");
+const starContainer = document.querySelector(".star-container");
+const seeMoreAnchor = document.querySelector(".anchor__seeMore");
+
+const headerObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        introHeader.classList.add("scroll");
+        starContainer.classList.add("scroll");
+        seeMoreAnchor.classList.add("scroll");
+      } else {
+        introHeader.classList.remove("scroll");
+        starContainer.classList.remove("scroll");
+        seeMoreAnchor.classList.remove("scroll");
+      }
+    });
+  },
+  {
+    threshold: .5,
+  }
+);
+
+headerObserver.observe(document.querySelector(".section__intro"));
 
 const progressBars = document.querySelectorAll(".actual-progress");
 
