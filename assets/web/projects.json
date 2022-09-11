@@ -23,14 +23,14 @@
     },
     {
       "title": "Color Picker",
-      "description": "The Color Picker, customised, lets you pick your colors, or some basic default colors if you are having some trouble choosing...",
+      "description": "Customized color picker with many more options than the default one",
       "location": "/projects/Color_picker.html",
       "webLocation": "https://chill31.github.io/projects/Color_picker.html",
       "icon": "bi-palette"
     },
     {
       "title": "Currency Convertor",
-      "description": "This currency tool helps you in converting currencies to another, because its a lot of trouble doing that yourself, most of the currencies are supported",
+      "description": "This currency tool helps you in converting currencies to another, most of the currencies are supported",
       "location": "/projects/Currency.html",
       "webLocation": "https://chill31.github.io/projects/Currency.html",
       "icon": "bi-currency-exchange"

@@ -81,8 +81,8 @@ body {
 
 .swiper-slide .card-brief {
   font-size: 1.1rem;
-  margin-inline: 4rem;
-  margin-top: 3.5rem;
+  margin-inline: 3rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -209,17 +209,7 @@ body.grid .grid-view {
  color: white;
  border-radius: .25rem;
  position: absolute;
- bottom: 4rem;
+ bottom: 2rem;
  left: 50%;
  transform: translate(-50%);
-}
-
-particle {
-  position: fixed;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-  z-index: 19;
 }

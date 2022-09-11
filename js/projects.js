@@ -66,12 +66,6 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
     loop: true,
     focusableElements: 'button, input, svg, img, span, a',
 
-    // If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-
     // Navigation arrows
     navigation: {
       nextEl: ".swiper-button-next",
