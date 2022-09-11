@@ -19,68 +19,69 @@
 <body>
   <div class="loaded-content">
 
-    <div class="wrapper">
+    <h1 class="main-header">Calculator</h1>
 
-      <h1 class="main-header">Calculator</h1>
-
-      <div class="container">
-        <div class="display">
-          <input id="screen" type="text" placeholder="0" />
-        </div>
-
-        <div class="btns">
-          <div class="row">
-            <button id="ce">CE</button>
-            <button id="fact_">x!</button>
-            <button class="btn">(</button>
-            <button class="btn">)</button>
-            <button class="btn">%</button>
-            <button id="ac">AC</button>
-          </div>
-
-          <div class="row">
-            <button id="sin">sin</button>
-            <button id="pi">π</button>
-            <button class="btn">7</button>
-            <button class="btn">8</button>
-            <button class="btn">9</button>
-            <button class="btn">÷</button>
-          </div>
-
-          <div class="row">
-            <button id="cos">cos</button>
-            <button id="log">log</button>
-            <button class="btn">4</button>
-            <button class="btn">5</button>
-            <button class="btn">6</button>
-            <button class="btn">×</button>
-          </div>
-
-          <div class="row">
-            <button id="tan">tan</button>
-            <button id="sqrt">√</button>
-            <button class="btn">1</button>
-            <button class="btn">2</button>
-            <button class="btn">3</button>
-            <button class="btn">-</button>
-          </div>
-
-          <div class="row">
-            <button id="e">e</button>
-            <button id="pow">
-              x
-              <span style="position: relative; bottom: 0.4em; right: 0.1em">y</span>
-            </button>
-            <button class="btn">0</button>
-            <button class="btn">.</button>
-            <button id="eval">=</button>
-            <button class="btn">+</button>
-          </div>
-        </div>
+    <div class="container">
+      <div class="display">
+        <input id="screen" type="text" placeholder="0" />
       </div>
 
-    </div>
+      <div class="btns">
+        <div class="row">
+          <button id="fact_">x!</button>
+          <button id="tan">tan</button>
+          <button id="sin">sin</button>
+          <button id="pi">π</button>
+        </div>
 
+        <div class="row">
+          <button id="cos">cos</button>
+          <button id="log">log</button>
+          <button id="sqrt">√</button>
+          <button id="pow">x<sup>y</sup></button>
+        </div>
+
+        <div class="row">
+          <button class="btn">(</button>
+          <button class="btn">)</button>
+          <button class="btn">%</button>
+          <button class="btn">.</button>
+        </div>
+
+        <div class="row">
+          <button class="btn">×</button>
+          <button class="btn">÷</button>
+          <button class="btn">+</button>
+          <button class="btn">-</button>
+        </div>
+
+        <div class="row">
+          <button id="e">e</button>
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+        </div>
+
+        <div class="row">
+          <button class="btn">4</button>
+          <button class="btn">5</button>
+          <button class="btn">6</button>
+          <button class="btn">7</button>
+        </div>
+
+        <div class="row">
+          <button class="btn">8</button>
+          <button class="btn">9</button>
+          <button class="btn">0</button>
+          <button id="eval">=</button>
+        </div>
+
+        <div class="row">
+          <button id="ac">AC</button>
+          <button id="ce">CE</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="/js/util/utility.js"></script>

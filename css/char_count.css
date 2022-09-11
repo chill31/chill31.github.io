@@ -5,13 +5,13 @@ body {
 
 .counters {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   overflow: hidden;
-  min-height: 15vh;
-  max-height: 40vh;
-  width: 50vw;
+  width: 100%;
   position: absolute;
-  top: 5vh;
+  top: 35px;
   left: 50%;
   transform: translate(-50%);
   text-align: center;
@@ -20,32 +20,43 @@ body {
 
 .counters .counter {
   background-color: var(--clr-neutral);
-  height: 15vh;
-  padding: 1vw;
-  position: relative;
+  min-height: 6rem;
+  height: 15%;
+  padding: .75em 1.25em;
   border-radius: 0.5rem;
+  max-width: 7rem;
+  max-height: 6rem;
+  text-align: center;
 }
 
-.counter .counter__info {
-  color: gray;
+.counter__info {
+  color: #666;
+  font-family: var(--ff-code)  !important;
 }
 
 .user-input {
-  height: 40vh;
-  width: 55vw;
+  font-family: var(--ff-code);
+  resize: none;
   position: absolute;
-  top: 50%;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
-  resize: none;
-  font-family: var(--ff-code) !important;
-  padding: 5px 10px;
-  border: solid 1px black;
-  outline: none;
-  transition: background-color 250ms ease;
+  padding: 1.5em 3em;
+  border-radius: .5rem;
+  border: none;
+  height: 40%;
+  aspect-ratio: 2;
+}
+
+.user-input:where(:focus, :focus-visible, :focus-within) {
+  outline: none !important;
+  color: var(--clr-success);
 }
 
 .user-input::placeholder {
-  font-family: var(--ff-primary) !important;
   color: var(--clr-warning);
+}
+
+.user-input:where(:focus, :focus-visible, :focus-within)::placeholder {
+  color: black;
 }
