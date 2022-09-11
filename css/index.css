@@ -264,7 +264,7 @@ body {
 }
 
 .card, .card * {
-  --green: #44b898;
+  --green: #6dddbd;
   --dark: #2e333b;
   color: white;
 }
