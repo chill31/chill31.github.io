@@ -396,6 +396,10 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
+.swiper-pagination-bullet:where(:focus, :focus-within) {
+  outline: none !important;
+}
+
 .swiper-pagination-bullet:only-child {
   display: none !important;
 }

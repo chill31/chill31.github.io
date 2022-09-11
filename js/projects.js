@@ -39,7 +39,7 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
 
     <p class="card-brief">${projects[i].description}</p>
 
-    <a class="card-visit" href="${projects[i].location}">${randomize(anchorOptions)}</a>
+    <a class="card-visit" href="${projects[i].location}" tabindex="-1">${randomize(anchorOptions)}</a>
       `;
   
       cardsContainer.append(createdCard);
@@ -64,7 +64,7 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
   let swiper = new Swiper(".swiper", {
     effect: 'coverflow',
     loop: true,
-    focusableElements: 'button, input, svg, img, span',
+    focusableElements: 'button, input, svg, img, span, a',
 
     // If we need pagination
     pagination: {

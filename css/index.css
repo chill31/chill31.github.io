@@ -284,6 +284,12 @@ body {
   background-color: var(--dark);
   border-radius: .5rem;
   padding: 2rem;
+  transition: transform 500ms ease;
+}
+
+.card:where(:hover, :focus-within) {
+  transform: translate(-50%, -50%) scale(1.05);
+  outline: none !important;
 }
 
 .card-logo {
@@ -304,7 +310,7 @@ body {
   transition: top 500ms ease;
 }
 
-.card:hover .card-title {
+.card:where(:hover, :focus-within) .card-title {
   top: 4rem;
 }
 
@@ -321,7 +327,7 @@ body {
   transition: transform 500ms ease;
 }
 
-.card:hover .card-title::after {
+.card:where(:hover, :focus-within) .card-title::after {
   transform: scaleX(1);
   transform-origin: left;
   transition-delay: 500ms;
@@ -335,7 +341,7 @@ body {
   top: 12rem;
 }
 
-.card:hover .card-show {
+.card:where(:hover, :focus-within) .card-show {
   opacity: 1;
   pointer-events: all;
   transition-delay: 1000ms;
@@ -361,6 +367,7 @@ body {
   background-color: transparent;
   border: solid 1px white;
   color: white;
+  outline: none !important;
 }
 
 /** CONTACT SECTION STYLES */
@@ -414,7 +421,8 @@ body {
   background-color: var(--a-clr-dark);
   color: var(--clr-neutral);
   border: solid 2px var(--clr-neutral);
-  padding: .75em 1.25em;
+  border-radius: .2rem;
+  padding: .5em 1.25em;
   font-size: 1em;
   cursor: pointer;
   outline: none;
