@@ -284,6 +284,7 @@ body {
   background-color: var(--dark);
   border-radius: .5rem;
   padding: 2rem;
+  overflow: hidden;
   transition: transform 500ms ease;
 }
 
@@ -298,9 +299,14 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: .05;
+  opacity: .5;
   object-fit: cover;
   pointer-events: none;
+  transition: opacity 500ms ease;
+}
+
+.card:where(:hover, :focus-within) .card-logo {
+  opacity: .1;
 }
 
 .card-title {

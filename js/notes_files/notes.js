@@ -60,12 +60,9 @@ addBtn.addEventListener("click", (e) => {
     dateDay
   )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
 
-  let noteTitleVariable = noteTitle.replaceAll('"', "").replaceAll("'", "");
-  let noteDescVariable = noteDesc.replaceAll('"', "").replaceAll("'", "");
-
   let noteInfo = {
-    title: noteTitleVariable,
-    description: noteDescVariable,
+    title: noteTitle.replaceAll('"', "").replaceAll("'", ""),
+    description: noteDesc.replace(/(?:\r\n|\r|\n)/g, '\\n').replaceAll('"', "").replaceAll("'", ""),
     date: formattedDate,
     edited: false,
     edit_date: null,

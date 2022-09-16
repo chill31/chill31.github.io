@@ -118,7 +118,7 @@ function showNotes() {
 <li class="note">
     <div class="details">
         <p>${note.title}</p>
-        <span>${note.description}</span>
+        <span>${note.description.replaceAll("\\n", "<br>")}</span>
     </div>
     <div class="bottom-content">
         <span>
