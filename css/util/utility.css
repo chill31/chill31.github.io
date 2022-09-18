@@ -217,6 +217,7 @@ html {
   left: 2rem;
   animation: showNotification 500ms forwards alternate;
   text-align: left;
+  line-break: anywhere;
 }
 
 .notification.contextMenu {
@@ -645,7 +646,7 @@ italic {
 }
 
 bold {
-  font-style: bold;
+  font-weight: 700;  
 }
 
 underline {

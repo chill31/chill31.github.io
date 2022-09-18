@@ -167,6 +167,13 @@
       "location": "/projects/Weight.html",
       "webLocation": "https://chill31.github.io/Weight.html",
       "icon": "bi-speedometer"
+    },
+    {
+      "title": "Code Notes",
+      "description": "Here you can save your code (any language), just like notes, but for code. Save as much code as you want",
+      "location": "/projects/CodeSaver/index.html",
+      "webLocation": "https://chill31.github.io/projects/CodeSaver/index.html",
+      "icon": "bi-journal-code"
     }
   ]
 }
