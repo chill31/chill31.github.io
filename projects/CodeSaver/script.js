@@ -61,7 +61,7 @@ if (savedCodes) {
     </button>
   </div>
 
-  <textarea class="area edit-area" spellcheck="false">${codeObject.code}</textarea>
+  <textarea class="area edit-area hide" spellcheck="false" placeholder="edit your code...">${codeObject.code}</textarea>
   <pre class="language-${codeObject.lang} area code-area">${codeObject.code.replaceAll("\n", "\n").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")}</pre>
 `;
 
@@ -99,6 +99,7 @@ toggleEditBtns.forEach((btn, index) => {
 
     btn.querySelector("i").classList.toggle("bi-check-lg");
     textAreas[index].classList.toggle("hide");
+    editAreas[index].classList.toggle("hide");
   });
 
 });
@@ -156,59 +157,11 @@ allSelectLangs.forEach((select, index) => {
   })
 })
 
-const html = `
-  <input type="text" class="code-title" placeholder="untitled" maxlength="35">
-
-  <select class="select-lang">
-    <option value="html">HTML</option>
-    <option value="xml">XML</option>
-    <option value="javascript">Javascript</option>
-    <option value="css">CSS</option>
-    <option value="go">GO</option>
-    <option value="python">Python</option>
-    <option value="bash">BASH</option>
-    <option value="java">Java</option>
-    <option value="json">JSON</option>
-    <option value="typescript">Typescript</option>
-    <option value="c">C</option>
-    <option value="csharp">C#</option>
-    <option value="cpp">C++</option>
-    <option value="swift">Swift</option>
-    <option value="lua">Lua</option>
-    <option value="d">D</option>
-    <option value="php">PHP</option>
-    <option value="git">Git</option>
-    <option value="r">R</option>
-    <option value="ruby">Ruby</option>
-    <option value="yaml">YAML</option>
-    <option value="none">Other...</option>
-  </select>
-
-  <div class="btn-group">
-    <button class="btn btn-delete custom">
-      <i class="bi-trash"></i>
-    </button>
-
-    <button class="btn btn-copy custom">
-      <i class="bi-clipboard"></i>
-    </button>
-  </div>
-
-  <textarea class="area edit-area" spellcheck="false"></textarea>
-  <pre class="language-none area code-area"></pre>
-`;
-
 addCodeBtn.addEventListener("click", () => {
-  const createdDiv = document.createElement("div");
-  createdDiv.classList.add("code-div");
-
-  createdDiv.innerHTML = html;
-
-  mainContainer.prepend(createdDiv);
 
   const codeInfo = {
-    title: document.querySelectorAll(".code-title")[0].value,
-    code: document.querySelectorAll(".code-area")[0].textContent,
+    title: "",
+    code: "",
     lang: "none"
   };
 
