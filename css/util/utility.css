@@ -529,7 +529,7 @@ td {
   font-family: var(--ff-primary) !important;
 }
 
-code, textarea, input:not(:where([type="button"], [type="submit"])) {
+code, textarea, input:not(:where([type="button"], [type="submit"])), pre {
  font-family: var(--ff-code) !important;
 }
 
