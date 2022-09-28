@@ -280,7 +280,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 70%;
-  width: clamp(25rem, 35vw, 90vw);
+  width: 25rem;
+  max-width: 95vw;
   background-color: var(--dark);
   border-radius: .5rem;
   padding: 2rem;
@@ -325,7 +326,7 @@ body {
   position: absolute;
   bottom: -50%;
   left: 0;
-  width: 200%;
+  width: 125%;
   height: 4px;
   background-color: var(--green);
   transform: scaleX(0);
