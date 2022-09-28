@@ -62,7 +62,7 @@ You can select a default display mode through settings to always have it open to
 Customize everything here, you can disable the shortcuts, enable/disable notifications which appear after certain actions, or reset everything back to default. Explore the settings page divided into 3 sections.
 
 *Settings Page [default]*
-<img width=960" alt="settings page" src="https://user-images.githubusercontent.com/89910163/192753130-69c1e080-b2b2-49ab-a7c2-ee096bdcbe4d.jpeg">
+<img width="960" alt="settings page" src="https://user-images.githubusercontent.com/89910163/192753130-69c1e080-b2b2-49ab-a7c2-ee096bdcbe4d.jpeg">
 
 
 There are sub pages, like display, appearance, and preferences, which direct you to more options, like if you click on the display option, it shows you fonts, menu placement and more.
