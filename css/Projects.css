@@ -63,7 +63,8 @@ body {
   position: absolute;
   top: 125px;
   height: clamp(25rem, 325px, 60rem);
-  width: clamp(40rem, 50vw, 50rem);
+  width: 40rem;
+  max-width: 95vw;
 }
 
 .swiper-slide {
@@ -82,7 +83,6 @@ body {
 .swiper-slide .card-brief {
   font-size: 1.1rem;
   margin-inline: 3rem;
-  margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -91,6 +91,11 @@ body {
  background-color: var(--a-clr);
  color: white;
  border-radius: .25rem;
+ position: absolute;
+ bottom: 1rem;
+ left: 50%;
+ transform: translate(-50%);
+ min-width: max-content;
 }
 
 .grid-view {
@@ -181,7 +186,8 @@ body.grid .grid-view {
 
 .grid-card {
   height: clamp(25rem, 60vh, 35rem);
-  width: clamp(40rem, 45vw, 50rem);
+  width: 40rem;
+  max-width: 95vw;
   text-align: center;
   background-color: #fff;
   border-radius: 1rem;
@@ -199,7 +205,7 @@ body.grid .grid-view {
 .grid-card-brief {
   font-size: 1.1rem;
   margin-inline: 4rem;
-  margin-top: 3.5rem;
+  margin-top: .5rem;
   margin-bottom: 4rem;
 }
 
@@ -212,4 +218,5 @@ body.grid .grid-view {
  bottom: 2rem;
  left: 50%;
  transform: translate(-50%);
+ min-width: max-content;
 }

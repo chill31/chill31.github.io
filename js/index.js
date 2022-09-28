@@ -9,20 +9,16 @@ headers.forEach((header) => {
 
 const introHeader = document.querySelector(".section__intro .section__header");
 const starContainer = document.querySelector(".star-container");
-const seeMoreAnchor = document.querySelector(".anchor__seeMore");
 
 const headerObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      console.log(entry);
       if (entry.isIntersecting) {
         introHeader.classList.add("scroll");
         starContainer.classList.add("scroll");
-        seeMoreAnchor.classList.add("scroll");
       } else {
         introHeader.classList.remove("scroll");
         starContainer.classList.remove("scroll");
-        seeMoreAnchor.classList.remove("scroll");
       }
     });
   },

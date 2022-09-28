@@ -446,7 +446,7 @@ if(!localStorage.getItem("reduced-motion")) {
 }
 
 if(!localStorage.getItem("clr-picker-color")) {
-  localStorage.setItem("clr-picker-color", "white");
+  localStorage.setItem("clr-picker-color", "#445057");
 }
 
 if(localStorage.getItem("reduced-motion") == "enabled") {

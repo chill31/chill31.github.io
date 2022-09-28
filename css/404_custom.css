@@ -13,13 +13,25 @@ body {
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
-  height: clamp(30rem, 70vh, 40rem);
-  width: clamp(30rem, 60vw, 40rem);
+  height: 50rem;
+  max-height: 90vh;
+  width: 35rem;
+  max-width: 95vw;
   background-color: white;
   padding: 3rem;
   text-align: center;
   border-radius: 1rem;
   box-shadow: 0 0 .5rem var(--a-clr-dark);
+}
+
+@media (max-width: 500px) {
+  .brief-404 {
+    display: none;
+  }
+
+  .btns-flex {
+    flex-wrap: wrap;
+  }
 }
 
 .brief-404 {
@@ -33,6 +45,7 @@ body {
   font-size: 1.2rem;
   margin-top: 1rem;
   cursor: pointer;
+  text-align: center;
 }
 
 .btns-flex {

@@ -1,13 +1,6 @@
 {
   "projects": [
     {
-      "title": "Calculator",
-      "description": "The calculator just like in phones, with advanced maths functions like SIN, COS, TAN, etc.",
-      "location": "/projects/Calculator.html",
-      "webLocation": "https://chill31.github.io/projects/Calculator.html",
-      "icon": "bi-calculator"
-    },
-    {
       "title": "Clock",
       "description": "The International Clock provides the time of many cities ( 95% of cities ) in the GMT timezone.",
       "location": "/projects/Clock/index.html",
@@ -93,7 +86,7 @@
     },
     {
       "title": "English Dictionary",
-      "description": "A simple dictionary ( english ) which gives the meaning and an example of the given word.",
+      "description": "A simple english dictionary which gives the meaning and an example of the given word.",
       "location": "/projects/Dictionary.html",
       "webLocation": "https://chill31.github.io/projects/Dictionary.html",
       "icon": "bi-book"

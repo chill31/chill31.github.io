@@ -43,7 +43,7 @@ if (savedCodes) {
     <option value="r">R</option>
     <option value="ruby">Ruby</option>
     <option value="yaml">YAML</option>
-    <option value="none">Other...</option>
+    <option value="none">Select language</option>
   </select>
 
   <div class="btn-group">
