@@ -56,7 +56,7 @@ function updateNote(index, title, desc) {
       dateDate
     )} (${fixDay(
       dateDay
-    )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
+    )}), ${dateHour}:${dateMinute}:${dateSeconds}, ${dateYear}`;
 
     const stored = [];
     JSON.parse(localStorage.getItem("notes")).forEach((note) => {
@@ -84,7 +84,7 @@ function showDetails(count) {
   const title = JSON.parse(localStorage.getItem("notes"))[count].title;
   const description = JSON.parse(localStorage.getItem("notes"))[count]
     .description;
-  const date = JSON.parse(localStorage.getItem("notes"))[count].date;
+  const date = JSON.parse(localStorage.getItem("notes"))[count].date.replace("\\n", "<br>");
 
   const edited = JSON.parse(localStorage.getItem("notes"))[count].edited;
 
@@ -107,7 +107,7 @@ function showDetails(count) {
   popDate.textContent = "Created At: " + date;
   popDesc.textContent = description;
 
-  popEditSpan.textContent = `Last Edited At: ${e_text}`;
+  popEditSpan.textContent = e_text == "Not Edited" ? "Not Edited" : e_text;
 }
 
 function showNotes() {

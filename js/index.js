@@ -97,7 +97,3 @@ new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-document.querySelectorAll("button").forEach((btn) => {
-  btn.classList.add("custom");
-});

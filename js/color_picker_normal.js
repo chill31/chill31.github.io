@@ -50,12 +50,6 @@ const copy_btn = document.querySelector(".pcr-copy");
 const save_btn = document.querySelector(".pcr-save");
 const resColor = document.querySelector(".pcr-result");
 
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach((btn) => {
-  btn.classList.add("custom");
-});
-
 const clear_btn = document.querySelector(".pcr-clear");
 const save_copy = document.querySelector(".pcr-save-copy");
 
@@ -144,7 +138,3 @@ const showPickrBtn = document.querySelector(".open-picker");
 showPickrBtn.addEventListener("click", () => {
   pickr.show();
 });
-
-document.querySelectorAll("button").forEach(btn => {
-  btn.classList.add("custom");
-})

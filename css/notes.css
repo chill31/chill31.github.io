@@ -327,7 +327,7 @@ form button {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.15);
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
@@ -345,7 +345,8 @@ form button {
 
 .detail-popup .actual-popup {
   height: 85%;
-  aspect-ratio: 1;
+  width: 50rem;
+  max-width: 95vw;
   border-radius: 1rem;
   border: solid 1px black;
   text-align: center;

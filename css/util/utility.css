@@ -49,49 +49,8 @@ html {
 }
 
 @font-face {
-  font-family: "FiraCode";
-  src: url(/assets/fonts/CODE-FONTS/FiraCode.otf);
-}
-
-@font-face {
-  font-family: "Roboto Mono";
-  src: url(/assets/fonts/CODE-FONTS/RobotoMono-Regular.ttf);
-}
-
-@font-face {
   font-family: "Cascadia Code";
   src: url(/assets/fonts/CODE-FONTS/Cascadia-Code.ttf);
-}
-
-/**
-
-  FONT-FACE {QUICKSAND} - MULTIPLE.
-
-**/
-
-@font-face {
-  font-family: "Quicksand Light";
-  src: url(/assets/fonts/quicksand/Quicksand-Light.ttf);
-}
-
-@font-face {
-  font-family: "Quicksand";
-  src: url(/assets/fonts/quicksand/Quicksand-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Quicksand Medium";
-  src: url(/assets/fonts/quicksand/Quicksand-Medium.ttf);
-}
-
-@font-face {
-  font-family: "Quicksand Semibold";
-  src: url(/assets/fonts/quicksand/Quicksand-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: "Quicksand Bold";
-  src: url(/assets/fonts/quicksand/Quicksand-Bold.ttf);
 }
 
 /**
@@ -154,37 +113,6 @@ html {
 @font-face {
   font-family: "Poppins Bold";
   src: url(/assets/fonts/poppins/Poppins-Bold.otf);
-}
-
-/**
-
-  FONT-FACE {MONTSERRAT} - MULTIPLE.
-
-**/
-
-@font-face {
-  font-family: "Montserrat Light";
-  src: url(/assets/fonts/montserrat/Montserrat-Light.otf);
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url(/assets/fonts/montserrat/Montserrat-Regular.otf);
-}
-
-@font-face {
-  font-family: "Montserrat Medium";
-  src: url(/assets/fonts/montserrat/Montserrat-Medium.otf);
-}
-
-@font-face {
-  font-family: "Montserrat Semibold";
-  src: url(/assets/fonts/montserrat/Montserrat-SemiBold.otf);
-}
-
-@font-face {
-  font-family: "Montserrat Bold";
-  src: url(/assets/fonts/montserrat/Montserrat-Bold.otf);
 }
 
 /** NOTIFICATION CODE */
@@ -651,19 +579,6 @@ bold {
 
 underline {
   text-decoration: underline;
-}
-
-button:not(.custom) {
-  background-color: var(--a-clr);
-  padding: 0.75em 1em;
-  border: none;
-  border-radius: 0.5em;
-  transition: outline 100ms;
-  cursor: pointer;
-}
-
-button:focus {
-  outline: rgb(0, 0, 0) solid 3px !important;
 }
 
 abbr:hover {

@@ -58,7 +58,7 @@ addBtn.addEventListener("click", (e) => {
     dateDate
   )} (${fixDay(
     dateDay
-  )}), ${dateHour}:${dateMinute}:${dateSeconds}, Year ${dateYear}`;
+  )}), ${dateHour}:${dateMinute}:${dateSeconds}, ${dateYear}`;
 
   let noteInfo = {
     title: noteTitle.replaceAll('"', "").replaceAll("'", ""),

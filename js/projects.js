@@ -13,7 +13,7 @@ gridBtn.addEventListener("click", () => {
 
 const displayMode = localStorage.getItem("project-display");
 
-if(displayMode.trim() == "Grid") {
+if(displayMode.trim().toLowerCase() == "grid") {
   gridBtn.click();
 }
 
@@ -104,5 +104,3 @@ fetch("/assets/web/projects.json").then(res => res.json()).then(data => {
   });
 
 });
-
-document.querySelectorAll("button").forEach(btn => btn.classList.add("custom"));

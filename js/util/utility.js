@@ -307,7 +307,7 @@ allMenuHeaders.forEach(header => {
 });
 
 if (!localStorage.getItem("normalFont")) {
-  localStorage.setItem("normalFont", "Quicksand");
+  localStorage.setItem("normalFont", "Raleway");
 }
 
 if (!localStorage.getItem("codeFont")) {
@@ -317,26 +317,6 @@ if (!localStorage.getItem("codeFont")) {
 document.body.style.setProperty(
   "--ff-primary",
   localStorage.getItem("normalFont")
-);
-document.body.style.setProperty(
-  "--ff-primary-light",
-  `${localStorage.getItem("normalFont")} Light`
-);
-document.body.style.setProperty(
-  "--ff-primary-normal",
-  `${localStorage.getItem("normalFont")} normal`
-);
-document.body.style.setProperty(
-  "--ff-primary-medium",
-  `${localStorage.getItem("normalFont")} Medium`
-);
-document.body.style.setProperty(
-  "--ff-primary-semibold",
-  `${localStorage.getItem("normalFont")} Semibold`
-);
-document.body.style.setProperty(
-  "--ff-primary-bold",
-  `${localStorage.getItem("normalFont")} Bold`
 );
 
 document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
@@ -392,13 +372,8 @@ if (localStorage.getItem("shortcuts") == "enabled") {
   shortCutContainer.classList.add("disabled");
 }
 
-if (!localStorage.getItem("particles"))
-  localStorage.setItem("particles", "enabled");
-if (!localStorage.getItem("particle-amount"))
-  localStorage.setItem("particle-amount", 20);
-
 if (!localStorage.getItem("project-display"))
-  localStorage.setItem("project-display", "Slider");
+  localStorage.setItem("project-display", "slider");
 
 if (!localStorage.getItem("accent-color")) {
   localStorage.setItem("accent-color", "#2293fa");
@@ -410,10 +385,6 @@ if (!localStorage.getItem("accent-color-dark")) {
 
 if (!localStorage.getItem("selection-color")) {
   localStorage.setItem("selection-color", "#00b6ff");
-}
-
-if (!localStorage.getItem("top-bottom-background")) {
-  localStorage.setItem("top-bottom-background", "#54c0eb");
 }
 
 if (!localStorage.getItem("menu-placement")) {
@@ -435,10 +406,6 @@ document.body.style.setProperty(
 document.body.style.setProperty(
   "--selection-color",
   localStorage.getItem("selection-color")
-);
-document.body.style.setProperty(
-  "--top-btm-bg",
-  localStorage.getItem("top-bottom-background")
 );
 
 if(!localStorage.getItem("reduced-motion")) {

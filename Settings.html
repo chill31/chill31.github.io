@@ -2,376 +2,193 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta content="Chill31 Settings" property="og:title" />
-  <meta content="Customize the website chill31.github.io as much as you want" property="og:description" />
-  <meta content=https://chill31.github.io" property="og:url" />
-  <meta content="https://chill31.github.io/assets/favicons/android-chrome-512x512.png" property="og:image" />
-  <meta content="#2293fa" data-react-helmet="true" name="theme-color" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Settings31</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
 
-  <link rel="stylesheet" href="/css/util/utility.css" />
-  <link rel="stylesheet" href="/css/Settings.css" />
+  <link rel="stylesheet" href="/css/util/utility.css">
+  <link rel="stylesheet" href="/css/Settings.css">
 
-  <script src="/static/color/script.js"></script>
-  <link rel="stylesheet" href="/static/color/style.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://popifyjs.github.io/src/script.js"></script>
+  <link rel="stylesheet" href="https://popifyjs.github.io/src/style.css">
 </head>
 
 <body>
-  <div class="sidebar">
-    <button class="previous-page custom">
-      <i class="bi-chevron-left"></i>
-    </button>
 
-    <div class="sidebar-content">
-      <button class="sidebar-button custom" data-redirect="display" data-nav="Display">
-        <i class="bi-display"></i>
-      </button>
+  <h1 class="main-header">Settings</h1>
 
-      <button class="sidebar-button custom" data-redirect="appearance" data-nav="Appearance">
-        <i class="bi-palette"></i>
-      </button>
+  <div class="container">
 
-      <button class="sidebar-button custom" data-redirect="preferences" data-nav="Preferences">
-        <i class="bi-toggles"></i>
-      </button>
-
-      <button class="sidebar-button danger custom" data-redirect="danger" data-nav="Danger Zone">
-        <i class="bi-exclamation-triangle"></i>
-      </button>
-    </div>
-  </div>
-
-  <main>
-    <h1 class="main-header">Settings</h1>
-
-    <div class="nav nav-main">
-      <button class="navigateTo navNew" id="goDisplay" data-redirect="display" data-nav="Display">
-        <div class="navToContent">
-          <i class="bi-display"></i>
-          <span class="navTitle">Display</span>
-        </div>
-      </button>
-
-      <button class="navigateTo navNew" id="goAppearance" data-redirect="appearance" data-nav="Appearance">
-        <div class="navToContent">
-          <i class="bi-palette"></i>
-          <span class="navTitle">Appearance</span>
-        </div>
-      </button>
-
-      <button class="navigateTo navNew" id="goPreferences" data-redirect="preferences" data-nav="Preferences">
-        <div class="navToContent">
-          <i class="bi-toggles"></i>
-          <span class="navTitle">Preferences</span>
-        </div>
-      </button>
-
-      <button class="navigateTo navNew" id="goDanger" data-redirect="danger" data-nav="Danger">
-        <div class="navToContent">
-          <i class="bi-exclamation-triangle"></i>
-          Danger Zone
-        </div>
-      </button>
+    <div class="form__group field">
+      <input type="input" class="form__field search" placeholder="Search Settings" name="search" id="search-settings" />
+      <label for="search" class="form__label">Search Settings</label>
     </div>
 
-    <div class="newPage" id="display">
-      <span class="currentLocation"><span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">Display</span>
-      </span>
+    <div class="setting" id="setting-menu-placement">
 
-      <div class="nav nav-new">
-        <button class="navigateTo navSub" id="goMenuPlacement" data-redirect="menuPlacement" data-nav="Menu Placement">
-          <div class="navToContent">
-            <i class="bi-list"></i>
-            Menu Placement
-          </div>
-        </button>
+      <i class="setting-icon bi-list"></i>
+      <h2 class="setting-header">Menu Placement</h2>
 
-        <button class="navigateTo navSub" id="goFonts" data-redirect="fonts" data-nav="Fonts">
-          <div class="navToContent">
-            <i class="bi-fonts"></i>
-            Fonts
-          </div>
-        </button>
+      <div class="choose choose-menu">
 
-        <button class="navigateTo navSub" id="goProjectDisplay" data-redirect="projectDisplay"
-          data-nav="Projects Display">
-          <div class="navToContent">
-            <i class="bi-archive"></i>
-            Projects Default Display
-          </div>
-        </button>
+        <button class="choose-btn" id="menu-left">Left</button>
+        <button class="choose-btn" id="menu-right">Right</button>
+
       </div>
+
     </div>
 
-    <div class="newPage" id="appearance">
-      <span class="currentLocation"><span class="go-previous goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="go-previous goSub">Appearance</span>
-      </span>
+    <div class="setting" id="setting-fonts-normal">
 
-      <div class="nav nav-new">
-        <button class="navigateTo navSub" id="goColors" data-redirect="colors" data-nav="Custom Colors">
-          <div class="navToContent">
-            <i class="bi-brush"></i>
-            Custom Colors
-          </div>
-        </button>
+      <i class="setting-icon bi-fonts"></i>
+      <h2 class="setting-header">Fonts [Normal]</h2>
 
-        <button class="navigateTo navSub" id="goMotion" data-redirect="motion" data-nav="Reduced Motion">
-          <div class="navToContent">
-            <i class="bi-wind"></i>
-            Reduced Motion
-          </div>
-        </button>
+      <div class="choose choose-font-normal">
+
+        <button class="choose-btn" id="font-normal-raleway">Raleway</button>
+        <button class="choose-btn" id="font-normal-poppins">Poppins</button>
+        <button class="choose-btn" id="font-normal-system">System UI</button>
+
+      </div>
+
+    </div>
+
+    <div class="setting" id="setting-fonts-code">
+
+      <i class="setting-icon bi-fonts"></i>
+      <h2 class="setting-header">Fonts [Code]</h2>
+
+      <div class="choose choose-font-code">
+
+        <button class="choose-btn" id="font-code-jetbrains">Jetbrains Mono</button>
+        <button class="choose-btn" id="font-code-cascadia">Cascadia Code</button>
+        <button class="choose-btn" id="font-code-browser">Browser Default</button>
+
+      </div>
+
+    </div>
+
+    <div class="setting" id="setting-projects-display">
+
+      <i class="setting-icon bi-archive"></i>
+      <h2 class="setting-header">Projects Display</h2>
+
+      <div class="choose choose-project-display">
+
+        <button class="choose-btn" id="projects-display-slider">Slider</button>
+        <button class="choose-btn" id="projects-display-grid">Grid</button>
+
+      </div>
+
+    </div>
+
+    <div class="setting" id="setting-colors">
+
+      <i class="setting-icon bi-palette"></i>
+      <h2 class="setting-header">Colors</h2>
+
+      <div class="choose-color choose-accent">
+
+        <label class="select-label">Accent:</label>
+
+        <button class="color accent-color1" data-color="#2293fa"></button>
+        <button class="color accent-color2" data-color="#4caf50"></button>
+        <button class="color accent-color3" data-color="#ffa039"></button>
+        <button class="color accent-color4" data-color="#fa8abb"></button>
+
+      </div>
+
+      <br>
+
+      <div class="choose-color choose-dark-accent">
+
+        <label class="select-label">Dark: </label>
+
         
-        <button class="navigateTo navSub" id="goBorders" data-redirect="borders" data-nav="Borders Appearance">
-          <div class="navToContent">
-            <i class="bi-box"></i>
-            Borders Appearance
-          </div>
-        </button>
-      </div>
-    </div>
-
-    <div class="newPage" id="preferences">
-      <span class="currentLocation"><span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="go-previous goSub">Preferences</span>
-      </span>
-
-      <div class="nav nav-new">
-        <button class="navigateTo navSub" id="goShortcuts" data-redirect="shortcuts" data-nav="Shortcuts">
-          <div class="navToContent">
-            <i class="bi-list-ul"></i>
-            Shortcuts
-          </div>
-        </button>
-
-        <button class="navigateTo navSub" id="goParticles" data-redirect="particles" data-nav="Particles">
-          <div class="navToContent">
-            <i class="bi-star"></i>
-            Particles
-          </div>
-        </button>
-
-        <button class="navigateTo navSub" id="goParticles" data-redirect="notifications" data-nav="Notifications">
-          <div class="navToContent">
-            <i class="bi-bell"></i>
-            Notifications
-          </div>
-        </button>
-      </div>
-    </div>
-
-    <div class="newPage" id="danger">
-      <span class="currentLocation"><span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">Danger Zone</span>
-      </span>
-
-      <p class="danger-info">
-        Are you sure you want to delete every settings and data ever stored on
-        this website? This includes all the themes, custom colors, and all the
-        notes you made through the projects, basically Everything.
-      </p>
-
-      <button class="deleteAll">Yes, Delete All</button>
-    </div>
-
-    <div class="subPage" id="menuPlacement" data-main="display">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Menu Placement</span>
-      </span>
-
-      <div class="choose-div choose-menu-div">
-        <button class="choose menu-choose" id="choose-menu-left" data-chosen>Left</button>
-        <button class="choose menu-choose" id="choose-menu-right">Right</button>
-      </div>
-    </div>
-
-    <div class="subPage" id="fonts" data-main="display">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Fonts</span>
-      </span>
-
-      <div class="font-choose-flex">
-
-        <div class="choose-font-div choose-normal" data-type="Normal Font">
-          <span class="choose font-choose font-normal" id="quicksand" data-chosen>Quicksand</span>
-          <span class="choose font-choose font-normal" id="raleway">Raleway</span>
-          <span class="choose font-choose font-normal" id="poppins">Poppins</span>
-          <span class="choose font-choose font-normal" id="montserrat">Montserrat</span>
-          <span class="choose font-choose font-normal" id="system">System-UI</span>
-        </div>
-
-        <div class="choose-font-div choose-code" data-type="Code Font">
-          <span class="choose font-choose font-code" id="jetbrains" data-chosen>Jetbrains Mono</span>
-          <span class="choose font-choose font-code" id="fira">FiraCode</span>
-          <span class="choose font-choose font-code" id="robotoMono">Roboto Mono</span>
-          <span class="choose font-choose font-code" id="cascadiaCode">Cascadia Code</span>
-          <span class="choose font-choose font-code" id="browser">Monospace</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="subPage" id="projectDisplay" data-main="display">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Projects Default Display</span>
-      </span>
-
-      <div class="choose-div choose-display-div">
-
-        <div class="choose display-choose" id="slider" data-chosen>Slider</div>
-        <div class="choose display-choose" id="grid">Grid</div>
+        <button class="color dark-accent-color1" data-color="#121417"></button>
+        <button class="color dark-accent-color2" data-color="#2e3b2f"></button>
+        <button class="color dark-accent-color3" data-color="#4b443c"></button>
+        <button class="color dark-accent-color4" data-color="#4d3d44"></button>
 
       </div>
-    </div>
 
-    <div class="subPage" id="colors" data-main="appearance">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Custom Colors</span>
-      </span>
+      <br>
 
-      <div class="picker-grid">
+      <div class="choose-color choose-selection">
 
-        <div class="grid-item">
+        <label class="select-label">Selection: </label>
 
-          <span class="picker-header">Accent Color</span>
-          <div class="picker-div p1">
-
-          </div>
-
-        </div>
-
-
-        <div class="grid-item">
-
-          <span class="picker-header">Dark Accent Color</span>
-          <div class="picker-div p2">
-
-          </div>
-
-        </div>
-
-
-        <div class="grid-item">
-
-          <span class="picker-header">Selection Color</span>
-          <div class="picker-div p3">
-
-          </div>
-
-        </div>
+        
+        <button class="color selection-color1" data-color="#00b6ff"></button>
+        <button class="color selection-color2" data-color="#88e68c"></button>
+        <button class="color selection-color3" data-color="#deaa72"></button>
+        <button class="color selection-color4" data-color="#f4b4d0"></button>
 
       </div>
+
     </div>
 
-    <div class="subPage" id="motion" data-main="appearance">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Reduced Motion</span>
-      </span>
+    <div class="setting" id="setting-motion">
+
+      <i class="setting-icon bi-wind"></i>
+      <h2 class="setting-header">Reduced Motion</h2>
 
       <label class="switch">
-        <input type="checkbox" class="toggle motion-toggle">
-        <span class="slider round"></span>
-      </label>
-    </div>
-    
-    <div class="subPage" id="borders" data-main="appearance">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Borders Appearance</span>
-      </span>
-      
-      <div class="choose-div border-choose">
-        <div class="choose border-choose" id="round">Rounded (Default)</div>
-        <div class="choose border-choose" id="sharp">Sharp</div>
-      </div>
-    </div>
-
-    <div class="subPage" id="shortcuts" data-main="preferences">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Shortcuts</span>
-      </span>
-
-      <label class="switch">
-        <input type="checkbox" class="toggle shortcut-toggle">
-        <span class="slider round"></span>
-      </label>
-    </div>
-
-    <div class="subPage" id="particles" data-main="preferences">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Particles</span>
-      </span>
-
-      <label class="switch">
-        <input type="checkbox" class="toggle particles-toggle">
-        <span class="slider round"></span>
-      </label>
-
-      <label for="particle-amount-slider" class="particle-amount-label">Particles Amount: </label>
-      <input value="20" min="20" max="100" type="range" step="5" class="particle-range" id="particle-amount-slider">
-
-      <label class="particle-amount-show">20</label>
-
-    </div>
-
-    <div class="subPage" id="notifications" data-main="preferences">
-      <span class="currentLocation">
-        <span class="goMain">Settings</span>
-        <i class="bi-chevron-right"></i>
-        <span class="goSub">...</span>
-        <i class="bi-chevron-right"></i>
-        <span class="currentPage">Notifications</span>
-      </span>
-
-      <label class="switch">
-        <input type="checkbox" class="toggle notif-toggle">
+        <input class="motion-input" type="checkbox" checked>
         <span class="slider round"></span>
       </label>
 
     </div>
-  </main>
+
+    <div class="setting" id="setting-borders">
+
+      <i class="setting-icon bi-box"></i>
+      <h2 class="setting-header">Borders Appearance</h2>
+
+      <div class="choose choose-borders">
+
+        <button class="choose-btn" id="border-round">Round</button>
+        <button class="choose-btn" id="border-sharp">Sharp</button>
+
+      </div>
+
+    </div>
+
+    <div class="setting" id="setting-shortcuts">
+
+      <i class="setting-icon bi-list-ul"></i>
+      <h2 class="setting-header">Shortcuts</h2>
+
+      <label class="switch">
+        <input type="checkbox" class="shortcut-input" checked>
+        <span class="slider round"></span>
+      </label>
+
+    </div>
+
+    <div class="setting" id="setting-notifications">
+
+      <i class="setting-icon bi-bell"></i>
+      <h2 class="setting-header">Notifications</h2>
+
+      <label class="switch">
+        <input type="checkbox" class="notifications-input" checked>
+        <span class="slider round"></span>
+      </label>
+
+    </div>
+
+    <div class="setting" id="setting-reset">
+
+      <i class="setting-icon bi-trash"></i>
+      <h2 class="setting-header">Reset Settings</h2>
+
+      <button class="reset">Clear All Settings</button>
+
+    </div>
+
+  </div>
 
   <script src="/js/util/utility.js"></script>
   <script src="/js/settings.js"></script>
