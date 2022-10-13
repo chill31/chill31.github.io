@@ -3,20 +3,38 @@ body {
   margin: 0;
 }
 
-.wrapper {
-  width: 370px;
-  height: 60vh;
+.wrapper, .after-choice {
+  width: 375px;
+  height: 30rem;
+  max-height: 90vh;
+  max-width: 80vw;
   padding: 30px;
   border-radius: 7px;
   background: var(--clr-neutral);
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+.wrapper {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 5%;
-  overflow-y: scroll;
+}
+
+.after-choice {
+  transform: translate(-50%, -50%) scaleX(0);
+  transition: transform 250ms ease;
+  transform-origin: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.after-choice.active {
+  transform: translate(-50%, -50%) scaleX(1);
+  transform-origin: left;
 }
 
 .wrapper header,
@@ -43,33 +61,11 @@ body {
   color: var(--clr-neutral);
   outline: none;
   cursor: pointer;
-  transition: transform 300ms ease !important;
+  transition: transform 300ms ease;
 }
 
 .choice-btn:hover {
   transform: scale(0.96);
-}
-
-.after-choice {
-  width: 370px;
-  height: 60vh;
-  padding: 30px;
-  border-radius: 7px;
-  background: var(--clr-neutral);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scaleX(0);
-  transition: transform 250ms ease;
-  transform-origin: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.after-choice.active {
-  transform: translate(-50%, -50%) scaleX(1);
-  transform-origin: left;
 }
 
 .icon {
@@ -100,6 +96,20 @@ body {
   margin-top: 15%;
 }
 
-button {
-  color: white;
+.after-choice button {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  background: var(--a-clr);
+  border-radius: 5px;
+  color: var(--clr-neutral);
+  outline: none;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.after-choice button:hover {
+  transform: scale(0.96);
 }

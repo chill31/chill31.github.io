@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   background: var(--a-clr);
 }
 

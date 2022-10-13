@@ -41,7 +41,7 @@ body {
 
 .location404 {
   color: var(--a-clr);
-  font-family: var(--ff-code) !important;
+  font-family: "Code", monospace !important;
   font-size: 1.2rem;
   margin-top: 1rem;
   cursor: pointer;
@@ -90,7 +90,7 @@ body {
 
 .header-404 {
   --shadow-color: var(--a-clr-dark);
-  font-family: var(--ff-code) !important;
+  font-family: "Code", monospace !important;
   font-weight: 1000;
   font-size: 6.5rem;
   color: var(--a-clr);
@@ -99,7 +99,7 @@ body {
 }
 .header-404::before {
   content: attr(data-text);
-  font-family: var(--ff-code);
+  font-family: "Code", monospace;
   position: absolute;
   top: 0;
   left: 0;
@@ -112,7 +112,7 @@ body {
 }
 .header-404::after {
   content: attr(data-text);
-  font-family: var(--ff-code);
+  font-family: "Code", monospace;
   position: absolute;
   top: 0;
   left: 0;

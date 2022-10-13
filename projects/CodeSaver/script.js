@@ -116,27 +116,53 @@ copyBtns.forEach((btn, index) => {
 
 deleteBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    allCodeDivs[index].remove();
-    allCodeDivs = document.querySelectorAll(".code-div");
 
-    codesStatic = [];
-
-    allCodeDivs.forEach((div) => {
-      const divTitle = div.querySelector(".code-title").value;
-      const divCode = div.querySelector(".code-area").textContent;
-      const lang = div.querySelector(".select-lang")[div.querySelector(".select-lang").selectedIndex].value;
-
-      const newData = {
-        title: divTitle,
-        code: divCode,
-        lang: lang,
-      };
-
-      codesStatic.push(newData);
+    popify({
+      icon: "question",
+      headerContent: "Confirm Delete",
+      subText: `Are you sure you want to delete?<br> This process cannot be undone and your work will be lost forever.`,
+      short: true,
+      closeOnBackground: false,
+      closeOnEscape: true,
+      closeIcon: true,
+      buttons: [
+        {
+          text: "Cancel",
+          icon: "x-lg",
+          closePopup: true,
+        },
+        {
+          text: "Delete",
+          icon: "trash",
+          class: "popup__btn-delete",
+          closePopup: true,
+          run: () => {
+            allCodeDivs[index].remove();
+            allCodeDivs = document.querySelectorAll(".code-div");
+        
+            codesStatic = [];
+        
+            allCodeDivs.forEach((div) => {
+              const divTitle = div.querySelector(".code-title").value;
+              const divCode = div.querySelector(".code-area").textContent;
+              const lang = div.querySelector(".select-lang")[div.querySelector(".select-lang").selectedIndex].value;
+        
+              const newData = {
+                title: divTitle,
+                code: divCode,
+                lang: lang,
+              };
+        
+              codesStatic.push(newData);
+            });
+        
+            localStorage.setItem("codes", JSON.stringify(codesStatic));
+            refreshPage();
+          }
+        }
+      ]
     });
 
-    localStorage.setItem("codes", JSON.stringify(codesStatic));
-    refreshPage();
   });
 });
 

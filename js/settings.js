@@ -103,15 +103,15 @@ const fontNormalSetting = localStorage.getItem("normalFont");
 
 switch (fontNormalSetting.toLowerCase()) {
 
-  case "raleway":
+  case "/css/font-loader/raleway.css":
     makeActive(ralewayFont, allNormalFonts);
     break;
 
-  case "poppins":
+  case "/css/font-loader/poppins.css":
     makeActive(poppinsFont, allNormalFonts);
     break;
 
-  case "system-ui":
+  case "system":
     makeActive(systemFont, allNormalFonts);
     break;
 
@@ -121,7 +121,23 @@ allNormalFonts.forEach((font) => {
 
   font.addEventListener("click", () => {
     makeActive(font, allNormalFonts);
-    localStorage.setItem("normalFont", font.textContent.replaceAll(" ", "-").toLowerCase().trim());
+    
+    if(font.textContent.toLowerCase().trim() == "system ui") {
+      localStorage.setItem("normalFont", "system");
+    } else {
+
+      if(font.textContent.toLowerCase().trim() == "raleway") {
+
+        localStorage.setItem("normalFont", "/css/font-loader/raleway.css");
+
+      } else if(font.textContent.toLowerCase().trim() == "poppins") {
+
+        localStorage.setItem("normalFont", "/css/font-loader/poppins.css");
+
+      }
+
+    }
+
   });
 
 });
@@ -138,15 +154,15 @@ const fontCodeSetting = localStorage.getItem("codeFont");
 
 switch (fontCodeSetting.toLowerCase()) {
 
-  case "jetbrains mono":
+  case "/css/font-loader/jetbrains.css":
     makeActive(jetbrainsFont, allCodeFonts);
     break;
 
-  case "cascadia code":
+  case "/css/font-loader/cascadia.css":
     makeActive(cascadiaFont, allCodeFonts);
     break;
 
-  case "monospace":
+  case "browser":
     makeActive(browserFont, allCodeFonts);
     break;
 
@@ -156,15 +172,23 @@ allCodeFonts.forEach((font) => {
 
   font.addEventListener("click", () => {
 
+    makeActive(font, allCodeFonts);
+
     if(font.textContent.toLowerCase().trim() == "browser default") {
 
-      makeActive(font, allCodeFonts);
-      localStorage.setItem("codeFont", "monospace");
+      localStorage.setItem("codeFont", "browser");
 
     } else {
 
-      makeActive(font, allCodeFonts);
-      localStorage.setItem("codeFont", font.textContent.toLowerCase().trim());
+      if(font.textContent.toLowerCase().trim() == "jetbrains mono") {
+
+        localStorage.setItem("codeFont", "/css/font-loader/jetbrains.css");
+
+      } else if(font.textContent.toLowerCase().trim() == "cascadia code") {
+
+        localStorage.setItem("codeFont", "/css/font-loader/cascadia.css");
+
+      }
 
     }
 

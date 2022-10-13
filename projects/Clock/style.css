@@ -4,7 +4,8 @@ body {
 
 .wrapper {
   height: 420px;
-  width: clamp(30rem, 30vw, 50rem);
+  width: 30rem;
+  max-width: 95vw;
   background-color: #fff;
   border-radius: 1rem;
   position: absolute;
@@ -26,6 +27,7 @@ body {
 .input {
   margin-bottom: 3rem;
   font-size: 1.05rem;
+  max-width: 90%;
 }
 
 .result-time {

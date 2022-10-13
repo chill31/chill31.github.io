@@ -8,15 +8,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0 10px;
   background: var(--a-clr);
 }
 
 .wrapper {
   width: 370px;
+  max-width: 95vw;
   height: 50vh;
-  padding: 30px;
+  padding: 10px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-radius: 7px;
   background: #fff;
   display: grid;

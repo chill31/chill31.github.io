@@ -16,8 +16,8 @@ body {
   background: var(--clr-neutral);
   padding: 20px 25px 25px;
   border-radius: 5px;
-  max-width: 400px;
-  width: 100%;
+  max-width: 75vw;
+  width: 25rem;
 }
 
 .select-box.hide {

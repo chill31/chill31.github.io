@@ -8,14 +8,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0 10px;
   background: var(--a-clr);
 }
 
 .wrapper{
   width: 370px;
-  height: 50vh;
+  max-width: 90vw;
+  height: 60vh;
   padding: 30px;
   border-radius: 7px;
   background: var(--clr-neutral);
@@ -60,12 +59,12 @@ body{
   height: 5rem;
   resize: none;
   width: 100%;
-  border: solid .2rem black;
+  border: solid 2px #999;
   outline: none;
   font-size: 1.05rem;
   padding: .375rem;
 }
 
 .wrapper .content textarea:focus{
- border: solid .225rem var(--a-clr);
+ border: solid 2px var(--a-clr);
 }

@@ -5,10 +5,8 @@
 }
 body {
   display: flex;
-  padding: 0 10px;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   background: var(--a-clr);
 }
 .wrapper {

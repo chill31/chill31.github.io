@@ -2,16 +2,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0 10px;
   background: var(--a-clr);
   overflow: hidden;
 }
 
 .wrapper {
   width: 370px;
+  max-width: 95vw;
   height: 60vh;
-  padding: 30px;
+  padding: 5px;
   border-radius: 7px;
   background: #fff;
   display: grid;
@@ -21,6 +20,7 @@ body {
   font-size: 28px;
   font-weight: 500;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .content .container {

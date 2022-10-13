@@ -184,7 +184,8 @@ body {
 /* editing swiper JS styles */
 
 .swiper {
-  width: clamp(45vw, 50rem, 90vw);
+  width: 50rem;
+  max-width: 90vw;
   height: 500px;
   position: absolute;
   top: 5%;

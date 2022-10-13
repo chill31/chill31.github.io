@@ -2,16 +2,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0 10px;
   background: var(--a-clr);
   overflow: hidden;
 }
 
 .wrapper {
-  width: 370px;
+  width: 25rem;
+  padding: 1rem;
+  max-width: 85vw;
   height: 50vh;
-  padding: 30px;
   border-radius: 7px;
   background: var(--clr-neutral);
   display: grid;

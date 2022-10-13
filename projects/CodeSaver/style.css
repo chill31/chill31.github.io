@@ -143,7 +143,7 @@ body {
 }
 
 .area {
-  font-family: var(--ff-code);
+  font-family: "Code", monospace;
   font-size: 1.1rem;
   background-color: #444;
   height: 250px;
@@ -166,4 +166,13 @@ body {
 .code-area:focus {
   border: solid 2px white;
   outline: none !important;
+}
+
+.edit-area {
+  color: rgb(215, 215, 215);
+  line-height: 1.5;
+}
+
+.popup__btn-delete {
+  background: rgb(229, 98, 98) !important;
 }

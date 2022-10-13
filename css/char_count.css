@@ -31,11 +31,11 @@ body {
 
 .counter__info {
   color: #666;
-  font-family: var(--ff-code)  !important;
+  font-family: "Code", monospace  !important;
 }
 
 .user-input {
-  font-family: var(--ff-code);
+  font-family: "Code", monospace;
   resize: none;
   position: absolute;
   top: 350px;

@@ -307,19 +307,38 @@ allMenuHeaders.forEach(header => {
 });
 
 if (!localStorage.getItem("normalFont")) {
-  localStorage.setItem("normalFont", "Raleway");
+  localStorage.setItem("normalFont", "/css/font-loader/raleway.css");
 }
 
 if (!localStorage.getItem("codeFont")) {
-  localStorage.setItem("codeFont", "Jetbrains Mono");
+  localStorage.setItem("codeFont", "/css/font-loader/jetbrains.css");
 }
 
-document.body.style.setProperty(
-  "--ff-primary",
-  localStorage.getItem("normalFont")
-);
+if(localStorage.getItem("codeFont") == "browser") {
 
-document.body.style.setProperty("--ff-code", localStorage.getItem("codeFont"));
+  // do nothing
+  
+} else {
+
+  document.head.innerHTML += `
+    <link rel="stylesheet" href="${localStorage.getItem("codeFont")}">
+  `;
+
+}
+
+console.log(localStorage.getItem("normalFont"))
+
+if(localStorage.getItem("normalFont") == "system") {
+
+  // do nothing
+  
+} else {
+
+  document.head.innerHTML += `
+    <link rel="stylesheet" href="${localStorage.getItem("normalFont")}">  
+  `;
+
+}
 
 /** || inserting favicons || */
 
