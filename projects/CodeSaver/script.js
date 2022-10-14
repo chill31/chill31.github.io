@@ -118,51 +118,53 @@ deleteBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
 
     popify({
-      icon: "question",
-      headerContent: "Confirm Delete",
-      subText: `Are you sure you want to delete?<br> This process cannot be undone and your work will be lost forever.`,
       short: true,
       closeOnBackground: false,
       closeOnEscape: true,
+      overlay: true,
       closeIcon: true,
+      icon: "error",
+      headerContent: "Confirm Delete",
+      subText: "Are you sure you want to delete this code?",
       buttons: [
         {
           text: "Cancel",
-          icon: "x-lg",
           closePopup: true,
+          type: "none",
+          icon: ""
         },
         {
           text: "Delete",
-          icon: "trash",
-          class: "popup__btn-delete",
           closePopup: true,
+          type: "error",
+          icon: "trash",
           run: () => {
             allCodeDivs[index].remove();
             allCodeDivs = document.querySelectorAll(".code-div");
-        
+            
             codesStatic = [];
-        
+            
             allCodeDivs.forEach((div) => {
               const divTitle = div.querySelector(".code-title").value;
               const divCode = div.querySelector(".code-area").textContent;
               const lang = div.querySelector(".select-lang")[div.querySelector(".select-lang").selectedIndex].value;
-        
+            
               const newData = {
                 title: divTitle,
                 code: divCode,
                 lang: lang,
               };
-        
+            
               codesStatic.push(newData);
             });
-        
+            
             localStorage.setItem("codes", JSON.stringify(codesStatic));
             refreshPage();
           }
         }
       ]
     });
-
+    
   });
 });
 
