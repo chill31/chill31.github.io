@@ -1,4 +1,5 @@
 const nameHeader = document.querySelector(".name");
+const btnGroup = document.querySelector(".btn-group");
 const starButton = document.querySelector(".star-github");
 const projectsButton = document.querySelector(".go-projects");
 const briefPara = document.querySelector(".brief");
@@ -11,6 +12,7 @@ const headerObserver = new IntersectionObserver(
 
       if(entry.isIntersecting) {
         nameHeader.classList.add("loaded");
+        btnGroup.classList.add("loaded");
         starButton.classList.add("loaded");
         projectsButton.classList.add("loaded");
 

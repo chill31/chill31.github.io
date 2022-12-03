@@ -14,6 +14,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   height: 100vh;
   min-height: 650px;
   width: 100vw;
@@ -60,36 +61,44 @@ h1, h2, h3, p, span, input {
   left: 0;
 }
 
-.star-github {
+.btn-group {
   position: absolute;
   top: 4.5rem;
-  padding: .75rem 1.25rem;
-  font-size: 1.1rem;
+  padding: 0;
   left: 17rem;
-  color: white;
-  background-color: rgb(23, 26, 30);
-  text-decoration: none;
-  border-radius: .3rem;
-  transition: opacity 600ms ease-in, top 600ms ease, left 600ms ease-in, background-color 250ms ease-in-out;
-  opacity: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transition: top 650ms ease, left 650ms ease;
+  overflow: hidden;
 }
 
-.star-github.loaded {
+.btn-group.loaded {
   top: 3rem;
-  opacity: 1;
 }
 
 @media (max-width: 520px) {
-  
-  .star-github {
-    top: 10.9rem !important;
+
+  .btn-group {
+    top: 9.4rem !important;
     left: 2rem !important;
   }
 
-  .star-github.loaded {
-    top: 9.4rem !important;
-  }
+}
 
+.btn {
+  background-color: rgb(23, 26, 30);
+  padding: .75rem 1.25rem;
+  text-decoration: none;
+  border-radius: .3rem;
+  transition: opacity 600ms ease-in, background-color 250ms ease-in-out;
+  color: white;
+  opacity: 0;
+  min-width: max-content;
+}
+
+.btn.loaded {
+  opacity: 1;
 }
 
 .btn:where(:hover, :focus) {
@@ -98,38 +107,6 @@ h1, h2, h3, p, span, input {
 
 .star-github i {
   color: gold;
-}
-
-.go-projects {
-  position: absolute;
-  top: 4.5rem;
-  padding: .75rem 1.25rem;
-  font-size: 1.1rem;
-  left: 24rem;
-  color: white;
-  background-color: rgb(23, 26, 30);
-  text-decoration: none;
-  border-radius: .3rem;
-  transition: opacity 600ms ease-in, top 600ms ease, left 600ms ease-in, background-color 250ms ease-in-out;
-  opacity: 0;
-}
-
-.go-projects.loaded {
-  top: 3rem;
-  opacity: 1;
-}
-
-@media (max-width: 520px) {
-  
-  .go-projects {
-    top: 10.9rem !important;
-    left: 9rem !important;
-  }
-
-  .go-projects.loaded {
-    top: 9.4rem !important;
-  }
-
 }
 
 .go-projects i {
