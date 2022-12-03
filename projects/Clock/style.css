@@ -1,5 +1,5 @@
 body {
-  background-color: var(--a-clr);
+  background-color: var(--accent);
 }
 
 .wrapper {
@@ -13,6 +13,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.main-header {
+  font-weight: 500;
 }
 
 .content {

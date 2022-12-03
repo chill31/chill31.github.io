@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Character Counter</title>
+
+  <link rel="stylesheet" href="/style/utility.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="counters">
+    <div class="counter char-count">
+      <code class="counter__info">Characters:</code>
+      <br />
+      <h2 class="counter__header">0</h2>
+    </div>
+
+    <div class="counter word-count">
+      <code class="counter__info">Words:</code>
+      <br />
+      <h2 class="counter__header">0</h2>
+    </div>
+
+    <div class="counter char-count-nospace">
+      <code class="counter__info">No Spaces:</code>
+      <br />
+      <h2 class="counter__header">0</h2>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <textarea
+      class="user-input"
+      placeholder="Enter text here..."
+      spellcheck="false"
+    ></textarea>
+  </div>
+
+  <script src="/scripts/utility.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

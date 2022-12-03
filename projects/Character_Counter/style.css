@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background-color: var(--accent);
+}
+
+.counters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.counters .counter {
+  background-color: white;
+  min-height: 6rem;
+  height: 15%;
+  padding: .75em 1.25em;
+  border-radius: 0.5rem;
+  max-width: 7rem;
+  max-height: 6rem;
+  text-align: center;
+}
+
+.counter__info {
+  color: #666;
+}
+
+.user-input {
+  resize: none;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5em 3em;
+  border-radius: .5rem;
+  border: none;
+  height: 40%;
+  aspect-ratio: 2;
+}
+
+.user-input:where(:focus, :focus-visible, :focus-within) {
+  outline: none !important;
+}
+
+.user-input::placeholder {
+  color: var(--clr-warning);
+}
+
+.user-input:where(:focus, :focus-visible, :focus-within)::placeholder {
+  color: black;
+}

@@ -53,17 +53,17 @@ function weatherDetails(info) {
     const { temp, feels_like, humidity } = info.main;
 
     if (id == 800) {
-      wIcon.src = "/assets/img/clear.svg";
+      wIcon.src = "/imgs/clear.svg";
     } else if (id >= 200 && id <= 232) {
-      wIcon.src = "/assets/img/storm.svg";
+      wIcon.src = "/imgs/storm.svg";
     } else if (id >= 600 && id <= 622) {
-      wIcon.src = "/assets/img/snow.svg";
+      wIcon.src = "/imgs/snow.svg";
     } else if (id >= 701 && id <= 781) {
-      wIcon.src = "/assets/img/haze.svg";
+      wIcon.src = "/imgs/haze.svg";
     } else if (id >= 801 && id <= 804) {
-      wIcon.src = "/assets/img/cloud.svg";
+      wIcon.src = "/imgs/cloud.svg";
     } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
-      wIcon.src = "/assets/img/rain.svg";
+      wIcon.src = "/imgs/rain.svg";
     }
 
     document.querySelector(".wrapper .weather-part .temp .numb").innerText =

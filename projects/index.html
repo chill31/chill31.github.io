@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta content="Chill31: Projects" property="og:title" />
-    <meta content="Check out the projects available on chill31.github.io" property="og:description" />
-    <meta content=https://chill31.github.io" property="og:url" />
-    <meta content="https://chill31.github.io/assets/favicons/android-chrome-512x512.png" property="og:image" />
-    <meta content="#2293fa" data-react-helmet="true" name="theme-color" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
-  </head>
-  <body>
-    <!-- Just so if anyone has the idea of opening the directory of /projects/, it redirects to The Actual Projects Page. -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Projects</title>
 
-    <script>
-      window.location.href = "/Projects.html";
-    </script>
-  </body>
+  <link rel="stylesheet" href="/import/slider/style.css">
+  
+  <link rel="stylesheet" href="/style/utility.css">
+  <link rel="stylesheet" href="/style/projects.css">
+</head>
+<body>
+
+  <h1 class="main-header">Projects</h1>
+
+  <div class="display-option-container">
+
+    <div class="flex">        
+
+      <button class="choose-display-button" id="grid">
+        <i class="bi-columns"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-btns swiper-button-prev"></div>
+    <div class="swiper-btns swiper-button-next"></div>
+  </div>
+
+  <div class="grid-view">
+
+    <div class="form__group field">
+      <input type="input" class="form__field" placeholder="Search projects" name="search" id='search-projects-input' />
+      <label for="search" class="form__label">Search projects</label>
+    </div>
+
+    <div class="card-container">
+
+    </div>
+
+  </div>
+  
+  <script src="/scripts/utility.js"></script>
+  <script src="/import/slider/script.js" type="module"></script>
+  <script src="/scripts/projects.js" type="module"></script>  
+</body>
 </html>

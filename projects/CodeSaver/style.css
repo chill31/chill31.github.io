@@ -1,5 +1,5 @@
 body {
-  background-color: var(--a-clr);
+  background-color: var(--accent);
   overflow-x: hidden !important;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .btn {
-  background-color: var(--a-clr);
+  background-color: var(--accent);
   font-size: 1.2rem;
   padding: .35em 1.25em;
   border: solid 1px transparent;
@@ -143,7 +143,6 @@ body {
 }
 
 .area {
-  font-family: "Code", monospace;
   font-size: 1.1rem;
   background-color: #444;
   height: 250px;

@@ -1,180 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta content="Chill31" property="og:title" />
-  <meta content="the perfect utility website" property="og:description" />
-  <meta content=https://chill31.github.io" property="og:url" />
-  <meta content="https://chill31.github.io/assets/favicons/android-chrome-512x512.png" property="og:image" />
-  <meta content="#2293fa" data-react-helmet="true" name="theme-color" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chill31: My Portfolio</title>
 
-  <link rel="stylesheet" href="/css/index.css" />
-  <link rel="stylesheet" href="/css/util/utility.css" />
-  <link rel="stylesheet" href="/static/slider/style.css" />
-  <title>Home</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-  <script async defer src="/static/github-buttons/star.js"></script>
+  <link rel="stylesheet" href="/style/utility.css">
+  <link rel="stylesheet" href="/style/style.css">
 </head>
-
 <body>
-  <div class="loaded-content">
-    <section class="section section__intro" id="hero">
-      <h1 class="section__header no-click">CHILL31</h1>
-      <span class="slogan">High quality projects. All day, everyday</span>
 
+  <div class="wrapper">
 
-      <div class="star-container">
+    <h1 class="name">Chill31</h1>
+    <p class="brief">The Chill Dev</p>
 
-        <a class="github-button" href="https://github.com/chill31/chill31.github.io" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star chill31/chill31.github.io on GitHub">Star</a>
+    <a href="https://github.com/chill31/chill31.github.io" class="btn star-github"><i class="bi-star-half"></i>  Star</a>
+    <a href="/projects/" class="btn go-projects"><i class="bi-folder-fill"></i> Projects</a>
 
-      </div>
+    <p class="description">I am a boy who likes to play sports and have fun with my friends. I like to spend my free time making projects with programming languages such as python, JS, HTML, CSS, etc. I love playing table tennis and football, they are my hobby in school and with friends.</p>
 
-      <img src="/assets/favicons/android-chrome-512x512.png" alt="Chill31 Logo" class="favicon">
-    </section>
+    <div class="project-box box-languages">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="project-icon icon-html"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg>
 
-    <section class="section section__skills" id="skills">
-      <h1 class="section__header">Experience / Skills</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="project-icon icon-css"><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg>
 
-      <div class="progress-container">
-        <span class="full-progress-bar full-html" data-lang="HTML" data-progress=" (95%)">
-          <span class="actual-progress progress-html" data-progress="95%"></span>
-        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="project-icon icon-js"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg>
 
-        <span class="full-progress-bar full-css" data-lang="CSS" data-progress=" (75%)">
-          <span class="actual-progress progress-css" data-progress="75%"></span>
-        </span>
+        <svg viewBox="0 0 256 255" xmlns="http://www.w3.org/2000/svg" class="project-icon" >
+          <defs>
+            <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
+              <stop stop-color="#387EB8" offset="0%"></stop>
+              <stop stop-color="#366994" offset="100%"></stop>
+            </linearGradient>
+            <linearGradient x1="19.127525%" y1="20.5791813%" x2="90.7415328%" y2="88.4290372%" id="linearGradient-2">
+              <stop stop-color="#FFE052" offset="0%"></stop>
+              <stop stop-color="#FFC331" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g>
+            <path d="M126.915866,0.0722755491 C62.0835831,0.0722801733 66.1321288,28.1874648 66.1321288,28.1874648 L66.2044043,57.3145115 L128.072276,57.3145115 L128.072276,66.0598532 L41.6307171,66.0598532 C41.6307171,66.0598532 0.144551098,61.3549438 0.144551098,126.771315 C0.144546474,192.187673 36.3546019,189.867871 36.3546019,189.867871 L57.9649915,189.867871 L57.9649915,159.51214 C57.9649915,159.51214 56.8001363,123.302089 93.5968379,123.302089 L154.95878,123.302089 C154.95878,123.302089 189.434218,123.859386 189.434218,89.9830604 L189.434218,33.9695088 C189.434218,33.9695041 194.668541,0.0722755491 126.915866,0.0722755491 L126.915866,0.0722755491 L126.915866,0.0722755491 Z M92.8018069,19.6589497 C98.9572068,19.6589452 103.932242,24.6339846 103.932242,30.7893845 C103.932246,36.9447844 98.9572068,41.9198193 92.8018069,41.9198193 C86.646407,41.9198239 81.6713721,36.9447844 81.6713721,30.7893845 C81.6713674,24.6339846 86.646407,19.6589497 92.8018069,19.6589497 L92.8018069,19.6589497 L92.8018069,19.6589497 Z" fill="url(#linearGradient-1)"></path>
+            <path d="M128.757101,254.126271 C193.589403,254.126271 189.540839,226.011081 189.540839,226.011081 L189.468564,196.884035 L127.600692,196.884035 L127.600692,188.138693 L214.042251,188.138693 C214.042251,188.138693 255.528417,192.843589 255.528417,127.427208 C255.52844,62.0108566 219.318366,64.3306589 219.318366,64.3306589 L197.707976,64.3306589 L197.707976,94.6863832 C197.707976,94.6863832 198.87285,130.896434 162.07613,130.896434 L100.714182,130.896434 C100.714182,130.896434 66.238745,130.339138 66.238745,164.215486 L66.238745,220.229038 C66.238745,220.229038 61.0044225,254.126271 128.757101,254.126271 L128.757101,254.126271 L128.757101,254.126271 Z M162.87116,234.539597 C156.715759,234.539597 151.740726,229.564564 151.740726,223.409162 C151.740726,217.253759 156.715759,212.278727 162.87116,212.278727 C169.026563,212.278727 174.001595,217.253759 174.001595,223.409162 C174.001618,229.564564 169.026563,234.539597 162.87116,234.539597 L162.87116,234.539597 L162.87116,234.539597 Z" fill="url(#linearGradient-2)"></path>
+          </g>
+        </svg>
+    </div>
 
-        <span class="full-progress-bar full-js" data-lang="JS" data-progress=" (55%)">
-          <span class="actual-progress progress-js" data-progress="55%"></span>
-        </span>
-
-        <span class="full-progress-bar full-python" data-lang="PYTHON" data-progress=" (30%)">
-          <span class="actual-progress progress-python" data-progress="30%"></span>
-        </span>
-
-        <span class="full-progress-bar full-java" data-lang="JAVA" data-progress=" (10%)">
-          <span class="actual-progress progress-java" data-progress="10%"></span>
-        </span>
-      </div>
-    </section>
-
-    <section class="section section__projects" id="explore">
-      <h1 class="section__header">Explore</h1>
-
-      <div class="swiper">
-        <!-- actual container for everything to work. -->
-        <div class="swiper-wrapper">
-          <!-- required, every child element inside is a slide -->
-          <div class="swiper-slide" tabindex="-1">
-            <svg class="slide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z" />
-            </svg>
-            <h1 class="slide-header">Projects</h1>
-            <p class="slide-description">Explore projects or utilities which can probably help you</p>
-
-            <button class="explore-btn custom" data-redirect="/Projects.html" tabindex="-1">
-              Explore
-            </button>
-          </div>
-
-          <div class="swiper-slide" tabindex="-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="slide-icon" viewBox="0 0 16 16">
-              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-            </svg>
-            <h1 class="slide-header">Settings</h1>
-            <p class="slide-description">Customize the website through this page</p>
-
-            <button class="explore-btn custom" data-redirect="/Settings.html" tabindex="-1">
-              Explore
-            </button>
-          </div>
-
-          <div class="swiper-slide" tabindex="-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="slide-icon" viewBox="0 0 16 16">
-              <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
-            </svg>
-            <h1 class="slide-header">My Work</h1>
-            <p class="slide-description">
-              Check out what work I have done other than this website
-            </p>
-
-            <button class="explore-btn custom" data-redirect="#work" tabindex="-1">
-              Explore
-            </button>
-          </div>
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <!-- nav button, go to previous -->
-        <div class="swiper-button-next"></div>
-        <!-- nav button, go to next -->
-      </div>
-    </section>
-
-    <section class="section section__work" id="work">
-      <h1 class="section__header">My Work</h1>
-
-      <!-- <p class="no-work">I have worked on some minecraft server's websites and some freelancing, but those either got shut down, or I could not match the request of the customer.</p> -->
-
-       <div class="card card-mercity" tabindex="0">
-
-        <img src="/assets/favicons/mercity_icon.png" alt="Mercity Logo" class="card-logo">
-
-        <span class="card-title">Mercity SMP</span>
-
-        <div class="card-show">
-          <p class="card-brief">Whitelist only, minimal rules, cross-device play, 24/7 online. Everything you want in one place. Mercity.</p>
-          <a href="https://mercitysmp.cf" class="card-visit">Visit Mercity</a>
-        </div>
-
-       </div>
-    </section>
-
-    <section class="section section__contact" id="contact">
-      <h1 class="section__header">Contact Me</h1>
-
-      <div class="contact__flex">
-        <form action="mailto:shaurya3110@outlook.com" class="contact-form">
-          <input type="text" class="form__name" name="subject" placeholder="Your Name" />
-          <textarea class="form__message" name="body" placeholder="Your Message"></textarea>
-
-          <input type="submit" class="form__submit" value="Send Mail" />
-        </form>
-      </div>
-    </section>
-
-    <section class="section section__footer" id="thanks">
-      <h1 class="section__header">Thanks For Visiting</h1>
-
-      <section class="footerSection fsMore">
-        <div class="navigation-flex pages-nav">
-          <a href="/" class="nav-anchor anchorHome">Home</a>
-          <a href="/Projects.html" class="nav-anchor anchorProjects">Projects</a>
-          <a href="Settings.html" class="nav-anchor anchorSettings">Settings</a>
-        </div>
-
-        <div class="navigation-flex socialMedia-nav">
-          <a href="https://discord.gg/xSvc2kQezt" class="nav-anchor anchorDiscord">Discord</a>
-          <a href="https://github.com/Chill31" class="nav-anchor anchorGithub">Github</a>
-          <a href="https://www.youtube.com/channel/UCtH_hO_5HDAni7FC_x-hxDA"
-            class="nav-anchor anchorYoutube">Youtube</a>
-        </div>
-      </section>
-
-      <footer class="bottom-text">&copy; Chill31 2022.</footer>
-    </section>
   </div>
 
-  <script src="js/util/utility.js"></script>
-  <script src="/static/slider/script.js" type="module"></script>
-  <script src="js/index.js" type="module"></script>
+  <script src="/scripts/utility.js"></script>
+  <script src="/scripts/script.js"></script>
 </body>
-
 </html>

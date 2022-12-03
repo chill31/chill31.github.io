@@ -7,12 +7,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--a-clr);
+  background: var(--accent);
 }
 .wrapper {
   width: 770px;
   padding: 35px;
-  background: var(--clr-neutral);
+  background: white;
   border-radius: 10px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
   overflow: scroll;
@@ -49,7 +49,7 @@ body {
   border-radius: 4px;
 }
 .typing-text p span.active {
-  color: var(--a-clr);
+  color: var(--accent);
 }
 .typing-text p span.active::before {
   position: absolute;
@@ -60,7 +60,7 @@ body {
   left: 0;
   opacity: 0;
   border-radius: 5px;
-  background: var(--a-clr);
+  background: var(--accent);
   animation: blink 1s ease-in-out infinite;
 }
 @keyframes blink {
@@ -81,12 +81,12 @@ body {
   outline: none;
   border: none;
   width: 105px;
-  color: var(--clr-neutral);
+  color: white;
   padding: 8px 0;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  background: var(--a-clr);
+  background: var(--accent);
   transition: transform 300ms ease;
 }
 .content button:active {

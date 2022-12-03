@@ -1,0 +1,248 @@
+body {
+  background-color: var(--accent);
+}
+
+*::selection {
+  background-color: #51b5e3;
+  color: black;
+}
+
+.main-header {
+  color: black;
+  margin-top: 2rem;
+}
+
+.shortcut-menu {
+  box-sizing: border-box;
+}
+
+.display-option-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-display-button {
+  --arrow-size: 10px;
+  
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 5rem;
+  cursor: pointer;
+  border: solid 2px white;
+  border-radius: .25rem;
+  outline: none !important;
+  background-color: var(--secondary-accent);
+  color: white;
+  transition: 250ms ease;
+  transition-property: background-color, filter, color;
+}
+
+.choose-display-button:hover,
+.choose-display-button:focus {
+  filter: brightness(85%);
+}
+
+.choose-display-button.selected {
+  border: solid 2px black;
+  background-color: var(--selection-color);
+  color: black;
+}
+
+.choose-display-button.selected:hover,
+.choose-display-button.selected:focus {
+  filter: brightness(85%);
+}
+
+.swiper {
+  position: absolute;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  height: clamp(25rem, 325px, 60rem);
+  width: 40rem;
+  max-width: 95vw;
+}
+
+@media (max-height: 580px) {
+
+  .swiper {
+    top: 70% !important;
+  }
+
+}
+
+.swiper-slide {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.swiper-slide .card-icon {
+  font-size: 5rem;
+}
+
+.swiper-slide .card-brief {
+  font-size: 1.1rem;
+  margin-inline: 3rem;
+  margin-bottom: 4rem;
+}
+
+.swiper-slide .card-visit {
+  padding: .5em 1.25em;
+  background-color: var(--accent);
+  color: white;
+  border-radius: .25rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: max-content;
+}
+
+.grid-view {
+  width: 100%;
+  min-height: 50vh;
+  position: absolute;
+  top: calc(125px + 2.5rem);
+  left: 50%;
+  transform: translate(-50%) scale(0);
+  z-index: 20;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.form__field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #444;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #444;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 350ms;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 350ms;
+  font-size: 1rem;
+  color: #444;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  border-bottom-width: 3px;
+  border-color: black;
+  border-image-slice: 1;
+  color: black;
+}
+
+.form__field:focus~.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: black;
+}
+
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+body.grid .swiper {
+  transform: scale(0);
+}
+
+body.grid .grid-view {
+  transform: translate(-50%) scale(1);
+}
+
+.card-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-card {
+  height: clamp(25rem, 60vh, 35rem);
+  width: 40rem;
+  max-width: 95vw;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.grid-card.no-search {
+  display: none;
+}
+
+.grid-card-icon {
+  font-size: 5rem;
+}
+
+.grid-card-brief {
+  font-size: 1.1rem;
+  margin-inline: 4rem;
+  margin-top: .5rem;
+  margin-bottom: 4rem;
+}
+
+.grid-card-visit {
+  padding: .5em 1.25em;
+  background-color: var(--accent);
+  color: white;
+  border-radius: .25rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: max-content;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Manipulation</title>
+
+  <link rel="stylesheet" href="/style/utility.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <header>Text Manipulation</header>
+    <br />
+    <div class="content">
+      <div class="container">
+        <button class="choice-btn custom btn__toOppositeCase">
+          OpPoSiTe Case
+        </button>
+        <button class="choice-btn custom btn__toToggleCase">
+          tOGGLE Case
+        </button>
+        <button class="choice-btn custom btn__toCapitalize">
+          Capitalize Case
+        </button>
+        <button class="choice-btn custom btn__toUpperCase">
+          UPPER Case
+        </button>
+        <button class="choice-btn custom btn__toLowerCase">
+          lower Case
+        </button>
+        <button class="choice-btn custom btn__reverseText">
+          Reverse text
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="after-choice">
+    <div class="icon">
+      <i class="bi-arrow-left"></i>
+    </div>
+    <header>No Type Provided</header>
+    <br />
+
+    <div class="container">
+      <textarea
+        placeholder="Enter your text here"
+        name="userText"
+        class="_text_ input"
+        spellcheck="false"
+      ></textarea>
+
+      <button class="copy-text">COPY RESULT</button>
+      <button class="generate">GET RESULT</button>
+    </div>
+  </div>
+
+  <script src="/scripts/utility.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

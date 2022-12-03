@@ -8,14 +8,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--a-clr);
+  background: var(--accent);
 }
 
 .container {
   max-width: 690px;
   width: 100%;
   padding: 30px;
-  background: var(--clr-neutral);
+  background: white;
   border-radius: 7px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.01);
 }
@@ -42,7 +42,7 @@ body {
 }
 
 .text-input textarea::placeholder {
-  color: var(--big-icon-fill);
+  color: black;
 }
 
 .controls,
@@ -77,7 +77,7 @@ li {
 }
 
 .controls .row select {
-  color: var(--big-icon-fill);
+  color: black;
   border: none;
   outline: none;
   font-size: 18px;
@@ -86,7 +86,7 @@ li {
 }
 
 .controls .exchange {
-  color: var(--big-icon-fill);
+  color: black;
   cursor: pointer;
   font-size: 16px;
   transition: transform 200ms ease;
@@ -101,12 +101,12 @@ li {
   padding: 14px;
   outline: none;
   border: none;
-  color: var(--clr-neutral);
+  color: white;
   cursor: pointer;
   margin-top: 20px;
   font-size: 17px;
   border-radius: 5px;
-  background-color: var(--a-clr);
+  background-color: var(--accent);
 
   transition: 500ms ease;
 }

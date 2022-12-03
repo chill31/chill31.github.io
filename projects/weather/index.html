@@ -1,72 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Get Weather</title>
-    <meta content="Chill31: Weather Reporter" property="og:title" />
-    <meta content="check on the weather of any place/area : chill31.github.io" property="og:description" />
-    <meta content=https://chill31.github.io" property="og:url" />
-    <meta content="https://chill31.github.io/assets/favicons/android-chrome-512x512.png" property="og:image" />
-    <meta content="#2293fa" data-react-helmet="true" name="theme-color" />
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/css/util/utility.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Reporter</title>
 
-  <body>
-    <div class="loaded-content">
-      <div class="wrapper">
-        <header><i class="bi-arrow-left"></i>Weather App</header>
-        <section class="input-part">
-          <p class="info-txt"></p>
-          <div class="content">
-            <input
-              type="text"
-              spellcheck="false"
-              placeholder="Enter city name"
-              required
-            />
-            <div class="separator"></div>
-            <button>Get Weather</button>
-          </div>
-        </section>
-        <section class="weather-part">
-          <img src="" alt="Weather Icon" />
-          <div class="temp">
-            <span class="numb">_</span>
-            <span class="deg">°</span>C
-          </div>
-          <div class="weather">_ _</div>
-          <div class="location">
-            <i class="bi-geo-alt-fill"></i>
-            <span>_, _</span>
-          </div>
-          <div class="bottom-details">
-            <div class="column feels">
-              <i class="bi-thermometer"></i>
-              <div class="details">
-                <div class="temp">
-                  <span class="numb-2">_</span>
-                  <span class="deg">°</span>C
-                </div>
-                <p>Feels like</p>
-              </div>
-            </div>
-            <div class="column humidity">
-              <i class="bi-droplet-half"></i>
-              <div class="details">
-                <span>_</span>
-                <p>Humidity</p>
-              </div>
-            </div>
-          </div>
-        </section>
+  <link rel="stylesheet" href="/style/utility.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <header><i class="bi-arrow-left"></i>Weather App</header>
+    <section class="input-part">
+      <p class="info-txt"></p>
+      <div class="content">
+        <input
+          type="text"
+          spellcheck="false"
+          placeholder="Enter city name"
+          required
+        />
+        <div class="separator"></div>
+        <button>Get Weather</button>
       </div>
-    </div>
+    </section>
+    <section class="weather-part">
+      <img src="" alt="Weather Icon" />
+      <div class="temp">
+        <span class="numb">_</span>
+        <span class="deg">°</span>C
+      </div>
+      <div class="weather">_ _</div>
+      <div class="location">
+        <i class="bi-geo-alt-fill"></i>
+        <span>_, _</span>
+      </div>
+      <div class="bottom-details">
+        <div class="column feels">
+          <i class="bi-thermometer"></i>
+          <div class="details">
+            <div class="temp">
+              <span class="numb-2">_</span>
+              <span class="deg">°</span>C
+            </div>
+            <p>Feels like</p>
+          </div>
+        </div>
+        <div class="column humidity">
+          <i class="bi-droplet-half"></i>
+          <div class="details">
+            <span>_</span>
+            <p>Humidity</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <script src="/js/util/utility.js"></script>
-    <script src="script.js"></script>
-  </body>
+  <script src="/scripts/utility.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
