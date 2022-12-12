@@ -326,7 +326,7 @@ body {
 
 .pcr-app .pcr-interaction .pcr-save-copy {
   background: linear-gradient(to right, var(--accent), var(--clr-success));
-  color: var(--accent);
+  color: black;
 }
 
 .pcr-app .pcr-interaction .pcr-clear,
