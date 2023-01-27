@@ -117,53 +117,27 @@ copyBtns.forEach((btn, index) => {
 deleteBtns.forEach((btn, index) => {
   btn.addEventListener("click", () => {
 
-    popify({
-      short: true,
-      closeOnBackground: false,
-      closeOnEscape: true,
-      overlay: true,
-      closeIcon: true,
-      icon: "error",
-      headerContent: "Confirm Delete",
-      subText: "Are you sure you want to delete this code?",
-      buttons: [
-        {
-          text: "Cancel",
-          closePopup: true,
-          type: "none",
-          icon: ""
-        },
-        {
-          text: "Delete",
-          closePopup: true,
-          type: "error",
-          icon: "trash",
-          run: () => {
-            allCodeDivs[index].remove();
-            allCodeDivs = document.querySelectorAll(".code-div");
-            
-            codesStatic = [];
-            
-            allCodeDivs.forEach((div) => {
-              const divTitle = div.querySelector(".code-title").value;
-              const divCode = div.querySelector(".code-area").textContent;
-              const lang = div.querySelector(".select-lang")[div.querySelector(".select-lang").selectedIndex].value;
-            
-              const newData = {
-                title: divTitle,
-                code: divCode,
-                lang: lang,
-              };
-            
-              codesStatic.push(newData);
-            });
-            
-            localStorage.setItem("codes", JSON.stringify(codesStatic));
-            refreshPage();
-          }
-        }
-      ]
+    allCodeDivs[index].remove();
+    allCodeDivs = document.querySelectorAll(".code-div");
+    
+    codesStatic = [];
+    
+    allCodeDivs.forEach((div) => {
+      const divTitle = div.querySelector(".code-title").value;
+      const divCode = div.querySelector(".code-area").textContent;
+      const lang = div.querySelector(".select-lang")[div.querySelector(".select-lang").selectedIndex].value;
+    
+      const newData = {
+        title: divTitle,
+        code: divCode,
+        lang: lang,
+      };
+    
+      codesStatic.push(newData);
     });
+    
+    localStorage.setItem("codes", JSON.stringify(codesStatic));
+    refreshPage();
     
   });
 });
