@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
-
 @font-face {
   font-family: "Main";
   src: url(/fonts/font-manrope.ttf);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   font-family: "Main";
 }
 
@@ -27,111 +27,6 @@ body {
   color: black;
 }
 
-#notification-area {
-  position: fixed;
-  bottom: 1rem;
-  right: 10px;
-  width: 250px;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-#notification-area.disabled {
-  transform: scale(0);
-}
-
-#notification-area .notification {
-  position: relative;
-  padding: 0.875rem 1.75rem;
-  background: linear-gradient(to right, var(--accent), var(--selection-color), var(--selection-color));
-  color: #f5f5f5;
-  font-family: "Main";
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  opacity: 0;
-  left: 2rem;
-  animation: showNotification 500ms forwards alternate;
-  text-align: left;
-  line-break: strict;
-}
-
-.notif.notif-timer {
-  position: absolute;
-  bottom: 0;
-  border-radius: 0.5rem;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
-
-  animation: notf-timer 5000ms ease-in-out forwards;
-}
-
-@keyframes showNotification {
-  to {
-    opacity: 1;
-    left: 0px;
-  }
-}
-
-@keyframes notf-timer {
-  to {
-    width: 0;
-  }
-}
-
-#notification-area .notification.success {
-  background: #49cc7b;
-}
-#notification-area .notification.error {
-  background: rgb(190, 51, 0);
-}
-#notification-area .notification.info {
-  background: #00acee;
-}
-
-.notification:not(.notification.info)::selection {
-  background: var(--selection-color);
-}
-
-.notification.info::selection {
-  background: var(--accent);
-}
-
-.cross {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  height: 1rem;
-  width: 1rem;
-  background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-}
-
-.cross span:first-of-type {
-  position: absolute;
-  top: 0.5rem;
-  right: 0;
-  height: 0.15rem;
-  width: 100%;
-  background-color: white;
-  transform: rotate(45deg);
-}
-
-.cross span:last-of-type {
-  position: absolute;
-  top: 0.5rem;
-  right: 0;
-  height: 0.15rem;
-  width: 100%;
-  background-color: white;
-  transform: rotate(-45deg);
-}
-
-
 a {
   text-decoration: none;
 }
@@ -143,7 +38,6 @@ h4,
 h5,
 h6,
 header {
-  font-family: "Main";
   font-weight: 100;
   color: var(--text-color);
   text-align: center;
@@ -153,42 +47,8 @@ h1 {
   font-weight: 500;
 }
 
-*,
-div,
-div > *,
-a,
-p,
-input,
-label,
-span,
-li,
-i,
-b,
-select,
-strong,
-textarea,
-button,
-output,
-abbr,
-footer,
-sub,
-sup,
-details,
-summary,
-article,
-section,
-table,
-th,
-td {
-  font-family: "Main" !important;
-}
-
-code, textarea, input:not(:where([type="button"], [type="submit"])), pre, pre * {
- font-family: "Jetbrains Mono", monospace !important;
-}
-
 button {
- min-width: max-content !important;
+  min-width: max-content !important;
 }
 
 .home-button {

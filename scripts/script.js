@@ -1,10 +1,9 @@
 const nameHeader = document.querySelector(".name");
 const btnGroup = document.querySelector(".btn-group");
-const starButton = document.querySelector(".star-github");
-const projectsButton = document.querySelector(".go-projects");
+const gitButton = document.querySelector(".github");
+const newSiteBtn = document.querySelector(".go-newsite");
 const briefPara = document.querySelector(".brief");
 const descriptionPara = document.querySelector(".description"); 
-const projectBox = document.querySelector(".project-box");
 
 const headerObserver = new IntersectionObserver(
   (entries) => {
@@ -13,8 +12,8 @@ const headerObserver = new IntersectionObserver(
       if(entry.isIntersecting) {
         nameHeader.classList.add("loaded");
         btnGroup.classList.add("loaded");
-        starButton.classList.add("loaded");
-        projectsButton.classList.add("loaded");
+        gitButton.classList.add("loaded");
+        newSiteBtn.classList.add("loaded");
 
         setTimeout(() => {
           briefPara.classList.add("loaded");
@@ -23,14 +22,7 @@ const headerObserver = new IntersectionObserver(
         setTimeout(() => {
           descriptionPara.classList.add("loaded");
         }, 900);
-
-        setTimeout(() => {
-          projectBox.classList.add("loaded")
-        }, 1350);
-      } else {
-        // do nothing
       }
-
     })
   }
 );

@@ -28,13 +28,18 @@ body {
   background-color: rgb(11, 14, 18);
 }
 
-h1, h2, h3, p, span, input {
+h1,
+h2,
+h3,
+p,
+span,
+input {
   color: white;
 }
 
 .name {
   margin-left: 2rem;
-  font-size: 3rem;
+  font-size: 3.4rem;
   font-weight: 500;
   position: relative;
   width: fit-content;
@@ -65,7 +70,7 @@ h1, h2, h3, p, span, input {
   position: absolute;
   top: 4.5rem;
   padding: 0;
-  left: 17rem;
+  left: 18rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -77,11 +82,15 @@ h1, h2, h3, p, span, input {
   top: 3rem;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 550px) {
 
   .btn-group {
-    top: 9.4rem !important;
+    top: 12rem !important;
     left: 2rem !important;
+  }
+
+  .description {
+    margin-top: 5rem !important;
   }
 
 }
@@ -95,6 +104,11 @@ h1, h2, h3, p, span, input {
   color: white;
   opacity: 0;
   min-width: max-content;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 
 .btn.loaded {
@@ -105,11 +119,7 @@ h1, h2, h3, p, span, input {
   background-color: rgb(4, 5, 5) !important;
 }
 
-.star-github i {
-  color: gold;
-}
-
-.go-projects i {
+.go-newsite i {
   color: #5eaace;
 }
 
@@ -161,77 +171,10 @@ h1, h2, h3, p, span, input {
   opacity: 1;
 }
 
-.project-box {
-  height: 470px;
-  max-height: 65vh;
-  width: 27rem;
-  max-width: calc(100vw - 5rem);
-  border: solid 1px white;
+.iframe {
+  width: 50vw;
+  height: 100vh;
   position: absolute;
-  top: 7rem;
-  right: 3rem;
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: .25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  background-image: url(/imgs/code-solid.svg);
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center;
-  margin-top: 4rem;
-  opacity: 0;
-  transition: margin-top 500ms ease-in-out, opacity 600ms ease-out;
-}
-
-.project-box.loaded {
-  opacity: 1;
-  margin-top: 0;
-}
-
-.project-icon {
-  height: 5rem;
-}
-
-@media (max-width: 1050px) {
-
-  .project-box {
-    width: 20rem;
-    height: 350px;
-    gap: 1rem;
-  }
-
-  .project-icon {
-    height: 4rem;
-  }
-
-}
-
-@media (max-width: 940px) {
-
-  .project-box {
-    position: relative;
-    left: 2rem;
-    top: 4rem;
-    height: 250px;
-    width: 25rem;
-  }
-
-}
-
-.project-icon.icon-html path {
-  fill: #ff7856;
-}
-
-.project-icon.icon-css path {
-  fill: #3d61ef;
-}
-
-.project-icon.icon-js path {
-  fill: rgb(232, 232, 110);
-}
-
-.home-button {
-  display: none;
+  top: 0;
+  right: 0;
 }
