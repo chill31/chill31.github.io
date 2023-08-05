@@ -1,7 +1,7 @@
 const nameHeader = document.querySelector(".name");
 const btnGroup = document.querySelector(".btn-group");
 const gitButton = document.querySelector(".github");
-const newSiteBtn = document.querySelector(".go-newsite");
+const newSiteBtn = document.querySelector(".go-projects");
 const briefPara = document.querySelector(".brief");
 const descriptionPara = document.querySelector(".description"); 
 

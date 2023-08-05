@@ -12,6 +12,7 @@
 body {
   height: 100vh;
   min-height: 650px;
+  background-color: var(--secondary-accent);
 }
 
 :root {
@@ -19,7 +20,7 @@ body {
   --secondary-accent: rgb(36, 41, 48);
   --clr-warning: #eb3d3d;
   --clr-success: #47d368;
-  --selection-color: #7ed6ff;
+  --selection-color: #51b5e3;
 }
 
 *::selection {
@@ -27,52 +28,23 @@ body {
   color: black;
 }
 
+h1, h2, h3, p, span {
+  color: white;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
 a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header {
-  font-weight: 100;
-  color: var(--text-color);
-  text-align: center;
-}
-
-h1 {
-  font-weight: 500;
-}
-
 button {
   min-width: max-content !important;
-}
-
-.home-button {
-  position: fixed;
-  z-index: 100;
-  top: 1rem;
-  left: 2rem;
-  padding: .8rem .9rem;
-  background-color: rgb(14, 15, 17);
-  transition: background-color 250ms ease;
-  cursor: pointer;
-  border-radius: .2rem;
-}
-
-.home-button:hover {
-  background-color: black;
-}
-
-.home-button i {
-  color: #777;
-  font-size: 1.2rem;
-  transition: color 250ms ease;
-}
-
-.home-button:hover i {
-  color: white;
 }

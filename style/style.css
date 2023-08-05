@@ -8,11 +8,6 @@ body {
   gap: 0;
 }
 
-*::selection {
-  background-color: #51b5e3;
-  color: black;
-}
-
 .wrapper {
   position: relative;
   height: 100vh;
@@ -28,19 +23,8 @@ body {
   background-color: rgb(11, 14, 18);
 }
 
-h1,
-h2,
-h3,
-p,
-span,
-input {
-  color: white;
-}
-
 .name {
   margin-left: 2rem;
-  font-size: 3.4rem;
-  font-weight: 500;
   position: relative;
   width: fit-content;
   opacity: 0;
@@ -103,7 +87,6 @@ input {
   transition: opacity 600ms ease-in, background-color 250ms ease-in-out;
   color: white;
   opacity: 0;
-  min-width: max-content;
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
@@ -124,7 +107,6 @@ input {
 }
 
 .brief {
-  font-size: 1.2rem;
   position: relative;
   left: 2rem;
   top: 0;

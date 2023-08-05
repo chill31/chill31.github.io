@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: var(--accent);
 }
 
 .container {
@@ -60,27 +56,25 @@ body {
 }
 
 .nav-button {
-  background-color: rgb(14, 15, 17);
-  color: rgb(176, 176, 176);
-  border: solid 2px transparent;
-  padding: .75rem 1.5rem;
-  font-size: 1.1rem;
+  background-color: rgb(23, 26, 30);
+  padding: .75rem 1.25rem;
+  text-decoration: none;
+  border-radius: .3rem;
+  border: none;
   cursor: pointer;
-  border-radius: .5rem;
-  outline: none !important;
-  transition: 250ms ease;
-  transition-property: color, background-color;
+  color: white;
+  font-size: 1.1rem;
+  transition: 250ms background-color ease-in-out;
 }
 
 .nav-button:where(:hover, :focus) {
-  background-color: black;
-  color: white;
+  background-color: rgb(4, 5, 5);
 }
 
 /* glitch text effect for header */
 
 .header-404 {
-  --shadow-color: black;
+  --shadow-color: var(--secondary-accent);
   font-family: "Jetbrains Mono";
   font-weight: 1000;
   font-size: 6.5rem;
@@ -105,7 +99,7 @@ body {
 
 .header-404::after {
   content: attr(data-text);
-  font-family: "Code", monospace;
+  font-family: "Jetbrains Mono";
   position: absolute;
   top: 0;
   left: 0;
