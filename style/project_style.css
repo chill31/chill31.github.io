@@ -1,3 +1,172 @@
-.title, .projects-brief {
+.title, .page-brief {
   text-align: center;
+}
+
+.title {
+  opacity: 0;
+  position: relative;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%);
+  transition: opacity 500ms ease-in-out;
+}
+
+.title::after {
+  content: "";
+  height: .3rem;
+  width: 120%;
+  background-color: #5eaace;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: 500ms 500ms ease;
+  transition-property: opacity, top;
+}
+
+.title.active {
+  opacity: 1;
+}
+
+.title.active::after {
+  top: 105%;
+  opacity: 1;
+}
+
+.page-brief {
+  position: relative;
+  width: fit-content;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.page-brief::before {
+  content: "";
+  width: 50%;
+  background-color: var(--secondary-accent);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+
+}
+
+.page-brief::after {
+  content: "";
+  width: 50%;
+  background-color: var(--secondary-accent);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-origin: right;
+}
+
+.page-brief::before, .page-brief::after {
+  transition: transform 500ms 1000ms ease;
+}
+
+.page-brief.active::before, .page-brief.active::after {
+  transform: scaleX(0);
+}
+
+.page-brief.active-done::before, .page-brief.active-done::after {
+  all: unset;
+}
+
+/** actual design code */
+
+.projects-container {
+  display: flex;
+  width: calc(100vw - 6rem);
+  position: relative;
+  top: 5rem;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  padding-bottom: 4rem;
+
+  transition: opacity 300ms 1500ms ease-in;
+
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+.projects-container.active {
+  opacity: 1;  
+}
+
+.project {
+  width: 50rem;
+  max-width: calc(100vw - 3rem);
+  min-height: 25rem;
+  height: fit-content;
+  background-color: rgb(0, 0, 0, .3);
+  padding: 1rem;
+  position: relative;
+  border-radius: .4rem;
+}
+
+.project-title {
+  font-size: 2rem;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1ch;
+}
+
+.tag {
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, .5);
+  padding: .3rem;
+  padding-inline: .6rem;
+  border-radius: 1023904px;
+  display: flex;
+  align-items: center;
+}
+
+.tag::before {
+  content: "\F40A";
+  font-family: "Bootstrap-icons";
+}
+
+.project-functions {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2ch;
+}
+
+.function {
+  font-size: 1.3rem;
+  padding: .2rem;
+  border-radius: 100%;
+  height: 2.4rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.function:where(:hover, :focus) {
+  background-color: black;
+  outline: none;
+}
+
+.function:focus {
+  outline: solid 1px white;
 }
